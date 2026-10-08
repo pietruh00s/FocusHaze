@@ -68,7 +68,7 @@ To build the release packages (x64 and ARM64 zips plus `SHA256SUMS.txt`):
 pwsh ./build-release.ps1
 ```
 
-The packages are written to `artifacts\`. See [CHANGELOG.md](CHANGELOG.md) for release history.
+The packages are written to `artifacts\`. Each zip contains a `WinDimmer` folder with only `WinDimmer.exe` and `LICENSE` at the top level: the exe is a tiny .NET Framework 4.8 launcher (`Launcher/`, built into every supported Windows) that starts the real app from the `app\` subfolder, which holds everything else. See [CHANGELOG.md](CHANGELOG.md) for release history.
 
 Settings are stored in `%LOCALAPPDATA%\WinDimmer\settings.json`.
 

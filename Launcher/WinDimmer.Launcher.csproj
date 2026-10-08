@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Root-folder launcher for release packages; starts app\WinDimmer.exe. -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>WinDimmer</AssemblyName>
+    <RootNamespace>WinDimmer.Launcher</RootNamespace>
+    <ApplicationIcon>..\Assets\WinDimmer.ico</ApplicationIcon>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <GenerateAppConfig>false</GenerateAppConfig>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <DebugType>none</DebugType>
+    <AssemblyTitle>WinDimmer</AssemblyTitle>
+    <Description>WinDimmer launcher</Description>
+  </PropertyGroup>
+
+</Project>
