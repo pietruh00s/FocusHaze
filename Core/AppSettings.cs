@@ -17,14 +17,14 @@ internal sealed class AppSettings
     public bool Enabled { get; set; } = true;
 
     /// <summary>Haze opacity in percent.</summary>
-    public int Intensity { get; set; } = 40;
+    public int Intensity { get; set; } = 50;
 
     /// <summary>Haze color as #RRGGBB.</summary>
     public string Color { get; set; } = "#000000";
 
     public bool Animate { get; set; } = true;
 
-    public int FadeDurationMs { get; set; } = 200;
+    public int FadeDurationMs { get; set; } = 500;
 
     /// <summary>Dim only the display that contains the active window.</summary>
     public bool ActiveDisplayOnly { get; set; }

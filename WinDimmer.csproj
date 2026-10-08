@@ -18,7 +18,7 @@
     <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Product>WinDimmer</Product>
     <AssemblyTitle>WinDimmer</AssemblyTitle>
     <Description>Dims every window except the active one</Description>

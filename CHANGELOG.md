@@ -1,6 +1,9 @@
 # Changelog
 
-## [Unreleased]
+## [1.0.1] – 2026-10-08
+
+### Zmienione
+- Domyślna intensywność to teraz 50%, a domyślny czas przejścia 500 ms (dotyczy nowych instalacji)
 
 ### Poprawione
 - Otwarcie okna ustawień resetowało intensywność do 5% i czas przejścia do 50 ms
