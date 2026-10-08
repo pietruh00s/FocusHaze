@@ -19,7 +19,9 @@ public sealed partial class MainWindow : Window
     private static readonly string[] PresetColors = ["#000000", "#1B1F3B", "#2B1B10", "#0F2A1E", "#3A3A3A"];
 
     // Guards against control events echoing back into settings while the UI is being synced.
-    private bool _syncing;
+    // Starts true: InitializeComponent coerces slider values to their Minimum and raises
+    // ValueChanged, which must not overwrite the saved settings.
+    private bool _syncing = true;
 
     private static AppSettings Settings => App.Current.Settings;
 

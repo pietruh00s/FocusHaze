@@ -1,34 +1,42 @@
 # WinDimmer
 
-Odpowiednik [HazeOver](https://hazeover.com/) dla Windows 11, napisany w WinUI 3: przyciemnia wszystkie okna poza aktywnym, żeby łatwiej było się skupić.
+**English** | [Polski](README.pl.md)
 
-## Funkcje
+A [HazeOver](https://hazeover.com/)-style focus tool for Windows 11, built with WinUI 3. WinDimmer dims every window except the one you're working in, so the rest of the screen fades into the background.
 
-- Półprzezroczysta zasłona pod aktywnym oknem, przepuszczająca kliknięcia
-- Regulowana intensywność i kolor zasłony
-- Płynne przejścia przy zmianie okna (z regulowanym czasem trwania)
-- Przyciemnianie wszystkich monitorów albo tylko tego z aktywnym oknem
-- Ikona w zasobniku systemowym: lewy klik otwiera ustawienia, prawy otwiera menu
-- Globalny skrót **Ctrl+Alt+H** włącza i wyłącza przyciemnianie
-- Opcjonalne uruchamianie razem z Windows (startuje od razu w zasobniku)
-- Działa tylko jedna instancja; ponowne uruchomienie otwiera ustawienia działającej aplikacji
-- 14 języków interfejsu, przełączanych na żywo: angielski, polski, niemiecki, francuski, hiszpański, włoski, portugalski, niderlandzki, ukraiński, rosyjski, turecki, japoński, koreański i chiński uproszczony. Domyślnie aplikacja używa języka Windows.
+<p align="center">
+  <img src="docs/screenshot.png" alt="WinDimmer settings window" width="480">
+</p>
 
-## Tłumaczenia
+## Download
 
-Teksty są w `Localization/Strings.resx` (angielski, język zapasowy) i w `Localization/Strings.<kod>.resx`. Nowy język dodajesz tak:
+Get the latest version from [**Releases**](https://github.com/pietruh00s/WinDimmer/releases/latest):
 
-1. Skopiuj `Strings.resx` jako `Strings.<kod>.resx` (np. `Strings.cs.resx`) i przetłumacz wartości.
-2. Dopisz kod języka do `Loc.SupportedLanguages` w `Localization/Loc.cs`.
+- `WinDimmer-<version>-win-x64.zip`: most PCs (Intel / AMD)
+- `WinDimmer-<version>-win-arm64.zip`: ARM PCs (e.g. Snapdragon X)
 
-W XAML tekst podpinasz przez `loc:Localize.Key="NazwaKlucza"`, a w kodzie przez `Loc.Get("NazwaKlucza")`.
+Unzip the package anywhere and run `WinDimmer.exe`. You don't need to install .NET or the Windows App SDK, because everything is included.
 
-## Wymagania
+> The executable isn't code-signed yet, so Windows SmartScreen may warn you the first time you run it. Choose **More info → Run anyway**.
 
-- Windows 10 19041+ / Windows 11
-- .NET 10 SDK
+## Features
 
-## Budowanie i uruchamianie
+- Translucent haze under the active window; clicks go through it to the windows below
+- Adjustable intensity and haze color
+- Smooth fade when you switch windows, with an adjustable duration
+- Dim all displays, or only the display with the active window
+- System tray icon: left-click opens settings, right-click opens a menu
+- Global hotkey **Ctrl+Alt+H** to turn dimming on or off
+- Optional start with Windows (straight to the tray)
+- Single instance: launching it again opens the running app's settings
+- 14 UI languages, switchable on the fly: English, Polish, German, French, Spanish, Italian, Portuguese, Dutch, Ukrainian, Russian, Turkish, Japanese, Korean and Simplified Chinese. The app follows your Windows display language by default.
+
+## Requirements
+
+- Windows 10 version 2004 (build 19041) or later; Windows 11 recommended
+- To build from source: .NET 10 SDK
+
+## Building
 
 ```bash
 dotnet build -c Release
@@ -38,26 +46,36 @@ dotnet build -c Release
 dotnet run
 ```
 
-Aplikacja jest „unpackaged” i ma dołączony Windows App SDK, więc katalog `bin\Release\net10.0-windows10.0.22621.0\win-x64\` można po prostu skopiować w inne miejsce. Wersję na ARM64 zbudujesz przez `-p:Platform=ARM64`.
+The app is unpackaged and bundles the Windows App SDK, so the build output folder can be copied anywhere. Pass `-p:Platform=ARM64` to build for ARM64.
 
-Paczki z wydaniem (zip dla x64 i ARM64 oraz plik `SHA256SUMS.txt`) budujesz poleceniem:
+To build the release packages (x64 and ARM64 zips plus `SHA256SUMS.txt`):
 
 ```bash
 pwsh ./build-release.ps1
 ```
 
-Gotowe pliki trafią do `artifacts\`. Historia zmian jest w [CHANGELOG.md](CHANGELOG.md).
+The packages are written to `artifacts\`. See [CHANGELOG.md](CHANGELOG.md) for release history.
 
-Ustawienia są zapisywane w `%LOCALAPPDATA%\WinDimmer\settings.json`.
+Settings are stored in `%LOCALAPPDATA%\WinDimmer\settings.json`.
 
-## Jak to działa
+## How it works
 
-- `Core/DimOverlay.cs`: natywne okno Win32 (`WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_NOACTIVATE`) wypełnione jednolitym kolorem, z przezroczystością ustawianą przez `SetLayeredWindowAttributes`.
-- `Core/DimController.cs`: przez `SetWinEventHook` nasłuchuje zmian okna pierwszoplanowego, minimalizacji, zamknięcia i ukrycia okien, a potem `SetWindowPos` wstawia zasłonę w Z-order **bezpośrednio pod** aktywnym oknem. Wszystko, co leży pod spodem, zostaje przyciemnione. Gdy aktywny jest pulpit, zasłona znika. Pasek zadań, przełącznik Alt+Tab i menu Start są ignorowane.
-- `Core/TrayHost.cs`: ukryte okno, które obsługuje ikonę w zasobniku, menu kontekstowe, skrót globalny i sygnał od kolejnej instancji.
-- `MainWindow.xaml`: okno ustawień w WinUI 3 (Mica, własny pasek tytułu).
+- `Core/DimOverlay.cs`: a native Win32 window (`WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_NOACTIVATE`) filled with a solid color, with its opacity set through `SetLayeredWindowAttributes`.
+- `Core/DimController.cs`: uses `SetWinEventHook` to watch foreground changes, minimizing, closing and hiding of windows, then calls `SetWindowPos` to place the haze in the Z-order **directly beneath** the active window, so everything behind it is dimmed. The haze disappears when the desktop is focused. The taskbar, the Alt+Tab switcher and the Start menu don't affect it.
+- `Core/TrayHost.cs`: a hidden window that owns the tray icon, its context menu, the global hotkey and the signal from a second instance.
+- `MainWindow.xaml`: the WinUI 3 settings window (Mica, custom title bar).
 
-## Licencja
+## Translations
 
-Projekt jest udostępniony na licencji [MIT](LICENSE).
+UI strings live in `Localization/Strings.resx` (English, the fallback) and `Localization/Strings.<code>.resx`. To add a language:
 
+1. Copy `Strings.resx` to `Strings.<code>.resx` (e.g. `Strings.cs.resx`) and translate the values.
+2. Add the language code to `Loc.SupportedLanguages` in `Localization/Loc.cs`.
+
+In XAML, bind text with `loc:Localize.Key="KeyName"`; in code, use `Loc.Get("KeyName")`.
+
+Improvements to the existing translations are welcome too.
+
+## License
+
+[MIT](LICENSE)
