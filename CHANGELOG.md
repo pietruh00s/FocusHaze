@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+### Poprawione
+- Otwarcie okna ustawień resetowało intensywność do 5% i czas przejścia do 50 ms
+
 ## [1.0.0] – 2026-10-08
 
 Pierwsze wydanie.
