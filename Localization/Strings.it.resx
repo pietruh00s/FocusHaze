@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppHeading" xml:space="preserve"><value>Oscuramento dello sfondo</value></data>
+  <data name="AppDescription" xml:space="preserve"><value>Tutte le finestre tranne quella attiva vengono coperte da un velo semitrasparente, così è più facile concentrarsi su ciò che stai facendo.</value></data>
+  <data name="Enabled_Title" xml:space="preserve"><value>Oscura le finestre in secondo piano</value></data>
+  <data name="Hotkey_Available" xml:space="preserve"><value>Scorciatoia da tastiera: {0}</value></data>
+  <data name="Hotkey_Taken" xml:space="preserve"><value>La scorciatoia {0} è già usata da un&apos;altra app</value></data>
+  <data name="Intensity_Title" xml:space="preserve"><value>Intensità</value></data>
+  <data name="Intensity_Description" xml:space="preserve"><value>Quanto vengono oscurate le finestre inattive</value></data>
+  <data name="Color_Title" xml:space="preserve"><value>Colore del velo</value></data>
+  <data name="Color_Description" xml:space="preserve"><value>Il nero è il più naturale, ma puoi scegliere qualsiasi colore</value></data>
+  <data name="Animate_Title" xml:space="preserve"><value>Transizioni fluide</value></data>
+  <data name="Animate_Description" xml:space="preserve"><value>Il velo appare e scompare dolcemente quando cambi finestra</value></data>
+  <data name="FadeDuration_Label" xml:space="preserve"><value>Durata della transizione</value></data>
+  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Solo lo schermo con la finestra attiva</value></data>
+  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Gli altri monitor non verranno oscurati</value></data>
+  <data name="Section_App" xml:space="preserve"><value>App</value></data>
+  <data name="Language_Title" xml:space="preserve"><value>Lingua</value></data>
+  <data name="Language_Description" xml:space="preserve"><value>Le modifiche vengono applicate subito</value></data>
+  <data name="Language_System" xml:space="preserve"><value>Predefinita di sistema</value></data>
+  <data name="Startup_Title" xml:space="preserve"><value>Avvia con Windows</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer si avvierà nell&apos;area di notifica</value></data>
+  <data name="Background_Title" xml:space="preserve"><value>Esecuzione in background</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Chiudendo questa finestra, WinDimmer resta attivo nell&apos;area di notifica</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>Esci da WinDimmer</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>Impostazioni…</value></data>
+  <data name="Tray_Dimming" xml:space="preserve"><value>Oscuramento</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>Esci</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – oscuramento attivo</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – oscuramento disattivato</value></data>
+</root>

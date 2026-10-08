@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppHeading" xml:space="preserve"><value>背景の減光</value></data>
+  <data name="AppDescription" xml:space="preserve"><value>アクティブなウィンドウ以外を半透明のベールで覆い、作業中の内容に集中しやすくします。</value></data>
+  <data name="Enabled_Title" xml:space="preserve"><value>背景のウィンドウを暗くする</value></data>
+  <data name="Hotkey_Available" xml:space="preserve"><value>ショートカット キー: {0}</value></data>
+  <data name="Hotkey_Taken" xml:space="preserve"><value>ショートカット {0} は別のアプリで使用されています</value></data>
+  <data name="Intensity_Title" xml:space="preserve"><value>濃さ</value></data>
+  <data name="Intensity_Description" xml:space="preserve"><value>非アクティブなウィンドウを暗くする度合い</value></data>
+  <data name="Color_Title" xml:space="preserve"><value>ベールの色</value></data>
+  <data name="Color_Description" xml:space="preserve"><value>黒が最も自然ですが、任意の色を選べます</value></data>
+  <data name="Animate_Title" xml:space="preserve"><value>なめらかな切り替え</value></data>
+  <data name="Animate_Description" xml:space="preserve"><value>ウィンドウを切り替えるとベールがなめらかに表示・非表示になります</value></data>
+  <data name="FadeDuration_Label" xml:space="preserve"><value>切り替え時間</value></data>
+  <data name="ActiveDisplay_Title" xml:space="preserve"><value>アクティブなウィンドウがある画面のみ</value></data>
+  <data name="ActiveDisplay_Description" xml:space="preserve"><value>他のモニターは暗くなりません</value></data>
+  <data name="Section_App" xml:space="preserve"><value>アプリ</value></data>
+  <data name="Language_Title" xml:space="preserve"><value>言語</value></data>
+  <data name="Language_Description" xml:space="preserve"><value>変更はすぐに反映されます</value></data>
+  <data name="Language_System" xml:space="preserve"><value>システムの既定</value></data>
+  <data name="Startup_Title" xml:space="preserve"><value>Windows の起動時に開始</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer はシステム トレイで起動します</value></data>
+  <data name="Background_Title" xml:space="preserve"><value>バックグラウンドでの動作</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>このウィンドウを閉じても WinDimmer はシステム トレイで動作し続けます</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>WinDimmer を終了</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>設定…</value></data>
+  <data name="Tray_Dimming" xml:space="preserve"><value>減光</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>終了</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – 減光オン</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – 減光オフ</value></data>
+</root>

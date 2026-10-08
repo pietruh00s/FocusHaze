@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppHeading" xml:space="preserve"><value>Background dimming</value></data>
+  <data name="AppDescription" xml:space="preserve"><value>Every window except the active one is covered with a translucent haze, making it easier to focus on what you&apos;re working on.</value></data>
+  <data name="Enabled_Title" xml:space="preserve"><value>Dim background windows</value></data>
+  <data name="Hotkey_Available" xml:space="preserve"><value>Keyboard shortcut: {0}</value></data>
+  <data name="Hotkey_Taken" xml:space="preserve"><value>The {0} shortcut is already used by another app</value></data>
+  <data name="Intensity_Title" xml:space="preserve"><value>Intensity</value></data>
+  <data name="Intensity_Description" xml:space="preserve"><value>How strongly inactive windows are dimmed</value></data>
+  <data name="Color_Title" xml:space="preserve"><value>Haze color</value></data>
+  <data name="Color_Description" xml:space="preserve"><value>Black looks the most natural, but you can choose any color</value></data>
+  <data name="Animate_Title" xml:space="preserve"><value>Smooth transitions</value></data>
+  <data name="Animate_Description" xml:space="preserve"><value>The haze fades in and out gently when you switch windows</value></data>
+  <data name="FadeDuration_Label" xml:space="preserve"><value>Transition time</value></data>
+  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Only the display with the active window</value></data>
+  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Other monitors won&apos;t be dimmed</value></data>
+  <data name="Section_App" xml:space="preserve"><value>App</value></data>
+  <data name="Language_Title" xml:space="preserve"><value>Language</value></data>
+  <data name="Language_Description" xml:space="preserve"><value>Changes apply immediately</value></data>
+  <data name="Language_System" xml:space="preserve"><value>System default</value></data>
+  <data name="Startup_Title" xml:space="preserve"><value>Start with Windows</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer will start in the system tray</value></data>
+  <data name="Background_Title" xml:space="preserve"><value>Running in the background</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Closing this window keeps WinDimmer running in the system tray</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>Quit WinDimmer</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>Settings…</value></data>
+  <data name="Tray_Dimming" xml:space="preserve"><value>Dimming</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>Quit</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – dimming on</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – dimming off</value></data>
+</root>

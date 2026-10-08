@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppHeading" xml:space="preserve"><value>Затемнення фону</value></data>
+  <data name="AppDescription" xml:space="preserve"><value>Усі вікна, крім активного, вкриваються напівпрозорою завісою, тож легше зосередитися на тому, над чим ви працюєте.</value></data>
+  <data name="Enabled_Title" xml:space="preserve"><value>Затемнювати фонові вікна</value></data>
+  <data name="Hotkey_Available" xml:space="preserve"><value>Сполучення клавіш: {0}</value></data>
+  <data name="Hotkey_Taken" xml:space="preserve"><value>Сполучення {0} вже використовує інша програма</value></data>
+  <data name="Intensity_Title" xml:space="preserve"><value>Інтенсивність</value></data>
+  <data name="Intensity_Description" xml:space="preserve"><value>Наскільки сильно затемнюються неактивні вікна</value></data>
+  <data name="Color_Title" xml:space="preserve"><value>Колір завіси</value></data>
+  <data name="Color_Description" xml:space="preserve"><value>Чорний виглядає найприродніше, але можна вибрати будь-який колір</value></data>
+  <data name="Animate_Title" xml:space="preserve"><value>Плавні переходи</value></data>
+  <data name="Animate_Description" xml:space="preserve"><value>Завіса плавно з&apos;являється та зникає під час перемикання вікон</value></data>
+  <data name="FadeDuration_Label" xml:space="preserve"><value>Тривалість переходу</value></data>
+  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Лише екран з активним вікном</value></data>
+  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Інші монітори не затемнюватимуться</value></data>
+  <data name="Section_App" xml:space="preserve"><value>Програма</value></data>
+  <data name="Language_Title" xml:space="preserve"><value>Мова</value></data>
+  <data name="Language_Description" xml:space="preserve"><value>Зміни застосовуються одразу</value></data>
+  <data name="Language_System" xml:space="preserve"><value>Як у системі</value></data>
+  <data name="Startup_Title" xml:space="preserve"><value>Запускати разом з Windows</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer запускатиметься в системному треї</value></data>
+  <data name="Background_Title" xml:space="preserve"><value>Робота у фоні</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Після закриття цього вікна WinDimmer продовжить працювати в системному треї</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>Вийти з WinDimmer</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>Налаштування…</value></data>
+  <data name="Tray_Dimming" xml:space="preserve"><value>Затемнення</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>Вийти</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – затемнення увімкнено</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – затемнення вимкнено</value></data>
+</root>

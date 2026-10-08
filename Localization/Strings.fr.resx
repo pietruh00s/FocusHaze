@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppHeading" xml:space="preserve"><value>Assombrissement de l&apos;arrière-plan</value></data>
+  <data name="AppDescription" xml:space="preserve"><value>Toutes les fenêtres sauf la fenêtre active sont recouvertes d&apos;un voile translucide pour vous aider à rester concentré sur votre travail.</value></data>
+  <data name="Enabled_Title" xml:space="preserve"><value>Assombrir les fenêtres en arrière-plan</value></data>
+  <data name="Hotkey_Available" xml:space="preserve"><value>Raccourci clavier : {0}</value></data>
+  <data name="Hotkey_Taken" xml:space="preserve"><value>Le raccourci {0} est déjà utilisé par une autre application</value></data>
+  <data name="Intensity_Title" xml:space="preserve"><value>Intensité</value></data>
+  <data name="Intensity_Description" xml:space="preserve"><value>Niveau d&apos;assombrissement des fenêtres inactives</value></data>
+  <data name="Color_Title" xml:space="preserve"><value>Couleur du voile</value></data>
+  <data name="Color_Description" xml:space="preserve"><value>Le noir est le plus naturel, mais vous pouvez choisir n&apos;importe quelle couleur</value></data>
+  <data name="Animate_Title" xml:space="preserve"><value>Transitions fluides</value></data>
+  <data name="Animate_Description" xml:space="preserve"><value>Le voile apparaît et disparaît en douceur lorsque vous changez de fenêtre</value></data>
+  <data name="FadeDuration_Label" xml:space="preserve"><value>Durée de la transition</value></data>
+  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Uniquement l&apos;écran de la fenêtre active</value></data>
+  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Les autres écrans ne seront pas assombris</value></data>
+  <data name="Section_App" xml:space="preserve"><value>Application</value></data>
+  <data name="Language_Title" xml:space="preserve"><value>Langue</value></data>
+  <data name="Language_Description" xml:space="preserve"><value>Les modifications s&apos;appliquent immédiatement</value></data>
+  <data name="Language_System" xml:space="preserve"><value>Langue du système</value></data>
+  <data name="Startup_Title" xml:space="preserve"><value>Démarrer avec Windows</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer démarrera dans la zone de notification</value></data>
+  <data name="Background_Title" xml:space="preserve"><value>Exécution en arrière-plan</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Fermer cette fenêtre laisse WinDimmer actif dans la zone de notification</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>Quitter WinDimmer</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>Paramètres…</value></data>
+  <data name="Tray_Dimming" xml:space="preserve"><value>Assombrissement</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>Quitter</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – assombrissement activé</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – assombrissement désactivé</value></data>
+</root>

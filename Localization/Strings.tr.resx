@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppHeading" xml:space="preserve"><value>Arka planı karartma</value></data>
+  <data name="AppDescription" xml:space="preserve"><value>Etkin pencere dışındaki tüm pencereler yarı saydam bir perdeyle örtülür; böylece üzerinde çalıştığınız işe daha kolay odaklanırsınız.</value></data>
+  <data name="Enabled_Title" xml:space="preserve"><value>Arka plandaki pencereleri karart</value></data>
+  <data name="Hotkey_Available" xml:space="preserve"><value>Klavye kısayolu: {0}</value></data>
+  <data name="Hotkey_Taken" xml:space="preserve"><value>{0} kısayolu başka bir uygulama tarafından kullanılıyor</value></data>
+  <data name="Intensity_Title" xml:space="preserve"><value>Yoğunluk</value></data>
+  <data name="Intensity_Description" xml:space="preserve"><value>Etkin olmayan pencerelerin ne kadar karartılacağı</value></data>
+  <data name="Color_Title" xml:space="preserve"><value>Perde rengi</value></data>
+  <data name="Color_Description" xml:space="preserve"><value>Siyah en doğal görünendir, ancak istediğiniz rengi seçebilirsiniz</value></data>
+  <data name="Animate_Title" xml:space="preserve"><value>Yumuşak geçişler</value></data>
+  <data name="Animate_Description" xml:space="preserve"><value>Pencere değiştirdiğinizde perde yumuşakça belirir ve kaybolur</value></data>
+  <data name="FadeDuration_Label" xml:space="preserve"><value>Geçiş süresi</value></data>
+  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Yalnızca etkin pencerenin bulunduğu ekran</value></data>
+  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Diğer monitörler karartılmaz</value></data>
+  <data name="Section_App" xml:space="preserve"><value>Uygulama</value></data>
+  <data name="Language_Title" xml:space="preserve"><value>Dil</value></data>
+  <data name="Language_Description" xml:space="preserve"><value>Değişiklikler hemen uygulanır</value></data>
+  <data name="Language_System" xml:space="preserve"><value>Sistem varsayılanı</value></data>
+  <data name="Startup_Title" xml:space="preserve"><value>Windows ile başlat</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer sistem tepsisinde başlar</value></data>
+  <data name="Background_Title" xml:space="preserve"><value>Arka planda çalışma</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Bu pencereyi kapattığınızda WinDimmer sistem tepsisinde çalışmaya devam eder</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>WinDimmer&apos;dan çık</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>Ayarlar…</value></data>
+  <data name="Tray_Dimming" xml:space="preserve"><value>Karartma</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>Çıkış</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – karartma açık</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – karartma kapalı</value></data>
+</root>

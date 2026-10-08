@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppHeading" xml:space="preserve"><value>Escurecimento do fundo</value></data>
+  <data name="AppDescription" xml:space="preserve"><value>Todas as janelas, exceto a ativa, ficam cobertas por um véu translúcido, facilitando o foco no que você está fazendo.</value></data>
+  <data name="Enabled_Title" xml:space="preserve"><value>Escurecer janelas em segundo plano</value></data>
+  <data name="Hotkey_Available" xml:space="preserve"><value>Atalho de teclado: {0}</value></data>
+  <data name="Hotkey_Taken" xml:space="preserve"><value>O atalho {0} já está sendo usado por outro aplicativo</value></data>
+  <data name="Intensity_Title" xml:space="preserve"><value>Intensidade</value></data>
+  <data name="Intensity_Description" xml:space="preserve"><value>O quanto as janelas inativas são escurecidas</value></data>
+  <data name="Color_Title" xml:space="preserve"><value>Cor do véu</value></data>
+  <data name="Color_Description" xml:space="preserve"><value>O preto parece mais natural, mas você pode escolher qualquer cor</value></data>
+  <data name="Animate_Title" xml:space="preserve"><value>Transições suaves</value></data>
+  <data name="Animate_Description" xml:space="preserve"><value>O véu aparece e desaparece suavemente ao trocar de janela</value></data>
+  <data name="FadeDuration_Label" xml:space="preserve"><value>Duração da transição</value></data>
+  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Somente a tela com a janela ativa</value></data>
+  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Os outros monitores não serão escurecidos</value></data>
+  <data name="Section_App" xml:space="preserve"><value>Aplicativo</value></data>
+  <data name="Language_Title" xml:space="preserve"><value>Idioma</value></data>
+  <data name="Language_Description" xml:space="preserve"><value>As alterações são aplicadas imediatamente</value></data>
+  <data name="Language_System" xml:space="preserve"><value>Padrão do sistema</value></data>
+  <data name="Startup_Title" xml:space="preserve"><value>Iniciar com o Windows</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>O WinDimmer será iniciado na bandeja do sistema</value></data>
+  <data name="Background_Title" xml:space="preserve"><value>Execução em segundo plano</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Fechar esta janela mantém o WinDimmer na bandeja do sistema</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>Sair do WinDimmer</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>Configurações…</value></data>
+  <data name="Tray_Dimming" xml:space="preserve"><value>Escurecimento</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>Sair</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – escurecimento ativado</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – escurecimento desativado</value></data>
+</root>
