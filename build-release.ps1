@@ -39,7 +39,8 @@ foreach ($target in $targets) {
     Copy-Item (Join-Path $launcherDir 'WinDimmer.exe') $package
     Copy-Item LICENSE $package
 
-    $zip = Join-Path $artifacts "WinDimmer-$version-$($target.Rid).zip"
+    # Version-less name so README buttons can link to releases/latest/download/<name>.
+    $zip = Join-Path $artifacts "WinDimmer-$($target.Rid).zip"
     Compress-Archive -Path $package -DestinationPath $zip -CompressionLevel Optimal
 }
 

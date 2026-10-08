@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/pietruh00s/WinDimmer/releases/download/v1.0.2/WinDimmer-1.0.2-win-x64.zip"><img src="https://img.shields.io/badge/Download-x64-0078D4?style=for-the-badge" alt="Download x64"></a>
+  <a href="https://github.com/pietruh00s/WinDimmer/releases/latest/download/WinDimmer-win-x64.zip"><img src="https://img.shields.io/badge/Download-x64-0078D4?style=for-the-badge" alt="Download x64"></a>
   &nbsp;
-  <a href="https://github.com/pietruh00s/WinDimmer/releases/download/v1.0.2/WinDimmer-1.0.2-win-arm64.zip"><img src="https://img.shields.io/badge/Download-ARM64-0078D4?style=for-the-badge" alt="Download ARM64"></a>
+  <a href="https://github.com/pietruh00s/WinDimmer/releases/latest/download/WinDimmer-win-arm64.zip"><img src="https://img.shields.io/badge/Download-ARM64-0078D4?style=for-the-badge" alt="Download ARM64"></a>
 </p>
 
 <p align="center">
@@ -26,8 +26,8 @@ A [HazeOver](https://hazeover.com/)-style focus tool for Windows 11, built with 
 
 Get the latest version from [**Releases**](https://github.com/pietruh00s/WinDimmer/releases/latest):
 
-- `WinDimmer-<version>-win-x64.zip`: most PCs (Intel / AMD)
-- `WinDimmer-<version>-win-arm64.zip`: ARM PCs (e.g. Snapdragon X)
+- `WinDimmer-win-x64.zip`: most PCs (Intel / AMD)
+- `WinDimmer-win-arm64.zip`: ARM PCs (e.g. Snapdragon X)
 
 Unzip the package anywhere and run `WinDimmer.exe`. You don't need to install .NET or the Windows App SDK, because everything is included.
 
