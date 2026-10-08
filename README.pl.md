@@ -66,7 +66,7 @@ Paczki z wydaniem (zip dla x64 i ARM64 oraz plik `SHA256SUMS.txt`) budujesz pole
 pwsh ./build-release.ps1
 ```
 
-Gotowe pliki trafią do `artifacts\`. Historia zmian jest w [CHANGELOG.md](CHANGELOG.md).
+Gotowe pliki trafią do `artifacts\`. Każdy zip zawiera folder `WinDimmer`, w którym na wierzchu są tylko `WinDimmer.exe` i `LICENSE`. Ten exe to malutki launcher na .NET Framework 4.8 (`Launcher/`, wbudowany w każdy obsługiwany Windows), który uruchamia właściwą aplikację z podfolderu `app\`, gdzie jest cała reszta. Historia zmian jest w [CHANGELOG.md](CHANGELOG.md).
 
 Ustawienia są zapisywane w `%LOCALAPPDATA%\WinDimmer\settings.json`.
 

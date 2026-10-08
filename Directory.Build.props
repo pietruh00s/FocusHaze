@@ -1,0 +1,9 @@
+<Project>
+  <!-- Shared by the app and the release launcher so both always carry the same version. -->
+  <PropertyGroup>
+    <Version>1.0.2</Version>
+    <Product>WinDimmer</Product>
+    <Authors>Piotr Osika</Authors>
+    <Copyright>© 2026 Piotr Osika</Copyright>
+  </PropertyGroup>
+</Project>

@@ -18,12 +18,8 @@
     <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>1.0.1</Version>
-    <Product>WinDimmer</Product>
     <AssemblyTitle>WinDimmer</AssemblyTitle>
     <Description>Dims every window except the active one</Description>
-    <Authors>Piotr Osika</Authors>
-    <Copyright>© 2026 Piotr Osika</Copyright>
   </PropertyGroup>
 
   <!-- Release publish: self-contained (no .NET or Windows App SDK install needed), precompiled for faster startup. -->
@@ -37,7 +33,13 @@
   <ItemGroup>
     <Content Include="Assets\WinDimmer.ico" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="Assets\WinDimmer.png" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="LICENSE" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- The release launcher is a separate project (see build-release.ps1). -->
+  <ItemGroup>
+    <Compile Remove="Launcher\**" />
+    <None Remove="Launcher\**" />
+    <Content Remove="Launcher\**" />
   </ItemGroup>
 
   <ItemGroup>

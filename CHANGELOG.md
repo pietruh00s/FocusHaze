@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.2] – 2026-10-08
+
+### Zmienione
+- Uporządkowana paczka zip: w głównym folderze są tylko `WinDimmer.exe` (mały launcher) i `LICENSE`, a cała aplikacja (DLL, .NET, Windows App SDK, języki) jest w podfolderze `app`.
+
 ## [1.0.1] – 2026-10-08
 
 ### Zmienione
