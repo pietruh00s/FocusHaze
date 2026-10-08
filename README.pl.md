@@ -2,6 +2,10 @@
 
 [English](README.md) | **Polski**
 
+[![Najnowsze wydanie](https://img.shields.io/github/v/release/pietruh00s/WinDimmer)](https://github.com/pietruh00s/WinDimmer/releases/latest)
+[![Licencja: MIT](https://img.shields.io/github/license/pietruh00s/WinDimmer)](LICENSE)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/piotrosika)
+
 Odpowiednik [HazeOver](https://hazeover.com/) dla Windows 11, napisany w WinUI 3: przyciemnia wszystkie okna poza aktywnym, żeby łatwiej było się skupić.
 
 <p align="center">
@@ -62,6 +66,12 @@ Ustawienia są zapisywane w `%LOCALAPPDATA%\WinDimmer\settings.json`.
 - `Core/DimController.cs`: przez `SetWinEventHook` nasłuchuje zmian okna pierwszoplanowego, minimalizacji, zamknięcia i ukrycia okien, a potem `SetWindowPos` wstawia zasłonę w Z-order **bezpośrednio pod** aktywnym oknem. Wszystko, co leży pod spodem, zostaje przyciemnione. Gdy aktywny jest pulpit, zasłona znika. Pasek zadań, przełącznik Alt+Tab i menu Start są ignorowane.
 - `Core/TrayHost.cs`: ukryte okno, które obsługuje ikonę w zasobniku, menu kontekstowe, skrót globalny i sygnał od kolejnej instancji.
 - `MainWindow.xaml`: okno ustawień w WinUI 3 (Mica, własny pasek tytułu).
+
+## Wsparcie
+
+Jeśli WinDimmer pomaga Ci się skupić, możesz postawić mi kawę ☕
+
+<a href="https://buymeacoffee.com/piotrosika"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" height="48"></a>
 
 ## Licencja
 
