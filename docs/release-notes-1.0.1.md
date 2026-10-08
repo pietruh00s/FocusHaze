@@ -18,13 +18,3 @@ Unzip the package anywhere and run `WinDimmer.exe`. You don't need to install .N
 > The executable isn't code-signed yet, so Windows SmartScreen may warn you the first time you run it. Choose **More info → Run anyway**.
 
 SHA-256 checksums are in `SHA256SUMS.txt`.
-
----
-
-## Poprawione
-
-- Otwarcie okna ustawień nie resetuje już **intensywności** do 5% ani **czasu przejścia** do 50 ms. Jeśli wersja 1.0.0 nadpisała Twoje wartości, ustaw je jeszcze raz, a zostaną zapamiętane.
-
-## Zmienione
-
-- Nowe wartości domyślne: intensywność **50%** i czas przejścia **500 ms**. Istniejące ustawienia zostają bez zmian.
