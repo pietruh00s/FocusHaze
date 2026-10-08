@@ -3,9 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/pietruh00s/WinDimmer/releases/download/v1.0.1/WinDimmer-1.0.1-win-x64.zip"><img src="https://img.shields.io/badge/Download-x64-0078D4?style=for-the-badge" alt="Download x64"></a>
+  <a href="https://github.com/pietruh00s/WinDimmer/releases/download/v1.0.2/WinDimmer-1.0.2-win-x64.zip"><img src="https://img.shields.io/badge/Download-x64-0078D4?style=for-the-badge" alt="Download x64"></a>
   &nbsp;
-  <a href="https://github.com/pietruh00s/WinDimmer/releases/download/v1.0.1/WinDimmer-1.0.1-win-arm64.zip"><img src="https://img.shields.io/badge/Download-ARM64-0078D4?style=for-the-badge" alt="Download ARM64"></a>
+  <a href="https://github.com/pietruh00s/WinDimmer/releases/download/v1.0.2/WinDimmer-1.0.2-win-arm64.zip"><img src="https://img.shields.io/badge/Download-ARM64-0078D4?style=for-the-badge" alt="Download ARM64"></a>
 </p>
 
 <p align="center">
