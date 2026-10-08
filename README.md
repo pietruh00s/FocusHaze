@@ -40,6 +40,14 @@ dotnet run
 
 Aplikacja jest „unpackaged” i ma dołączony Windows App SDK, więc katalog `bin\Release\net10.0-windows10.0.22621.0\win-x64\` można po prostu skopiować w inne miejsce. Wersję na ARM64 zbudujesz przez `-p:Platform=ARM64`.
 
+Paczki z wydaniem (zip dla x64 i ARM64 oraz plik `SHA256SUMS.txt`) budujesz poleceniem:
+
+```bash
+pwsh ./build-release.ps1
+```
+
+Gotowe pliki trafią do `artifacts\`. Historia zmian jest w [CHANGELOG.md](CHANGELOG.md).
+
 Ustawienia są zapisywane w `%LOCALAPPDATA%\WinDimmer\settings.json`.
 
 ## Jak to działa

@@ -19,6 +19,19 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <Version>1.0.0</Version>
+    <Product>WinDimmer</Product>
+    <AssemblyTitle>WinDimmer</AssemblyTitle>
+    <Description>Dims every window except the active one</Description>
+    <Authors>Piotr Osika</Authors>
+    <Copyright>© 2026 Piotr Osika</Copyright>
+  </PropertyGroup>
+
+  <!-- Release publish: self-contained (no .NET or Windows App SDK install needed), precompiled for faster startup. -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <SelfContained>true</SelfContained>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <DebugType>none</DebugType>
+    <SatelliteResourceLanguages>en;pl;de;fr;es;it;pt;nl;uk;ru;tr;ja;ko;zh-Hans</SatelliteResourceLanguages>
   </PropertyGroup>
 
   <ItemGroup>
