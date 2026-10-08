@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+### Poprawione
+- Płynne przejścia: przy zmianie okna przyciemnia się płynnie tylko okno, które straciło fokus. Reszta ekranu nie miga już od zera do ustawionej wartości.
+
 ## [1.0.2] – 2026-10-08
 
 ### Zmienione
