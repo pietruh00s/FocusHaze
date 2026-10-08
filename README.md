@@ -2,6 +2,10 @@
 
 **English** | [Polski](README.pl.md)
 
+[![Latest release](https://img.shields.io/github/v/release/pietruh00s/WinDimmer)](https://github.com/pietruh00s/WinDimmer/releases/latest)
+[![License: MIT](https://img.shields.io/github/license/pietruh00s/WinDimmer)](LICENSE)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/piotrosika)
+
 A [HazeOver](https://hazeover.com/)-style focus tool for Windows 11, built with WinUI 3. WinDimmer dims every window except the one you're working in, so the rest of the screen fades into the background.
 
 <p align="center">
@@ -75,6 +79,12 @@ UI strings live in `Localization/Strings.resx` (English, the fallback) and `Loca
 In XAML, bind text with `loc:Localize.Key="KeyName"`; in code, use `Loc.Get("KeyName")`.
 
 Improvements to the existing translations are welcome too.
+
+## Support
+
+If WinDimmer helps you focus, you can buy me a coffee ☕
+
+<a href="https://buymeacoffee.com/piotrosika"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" height="48"></a>
 
 ## License
 
