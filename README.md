@@ -56,3 +56,8 @@ Ustawienia są zapisywane w `%LOCALAPPDATA%\WinDimmer\settings.json`.
 - `Core/DimController.cs`: przez `SetWinEventHook` nasłuchuje zmian okna pierwszoplanowego, minimalizacji, zamknięcia i ukrycia okien, a potem `SetWindowPos` wstawia zasłonę w Z-order **bezpośrednio pod** aktywnym oknem. Wszystko, co leży pod spodem, zostaje przyciemnione. Gdy aktywny jest pulpit, zasłona znika. Pasek zadań, przełącznik Alt+Tab i menu Start są ignorowane.
 - `Core/TrayHost.cs`: ukryte okno, które obsługuje ikonę w zasobniku, menu kontekstowe, skrót globalny i sygnał od kolejnej instancji.
 - `MainWindow.xaml`: okno ustawień w WinUI 3 (Mica, własny pasek tytułu).
+
+## Licencja
+
+Projekt jest udostępniony na licencji [MIT](LICENSE).
+

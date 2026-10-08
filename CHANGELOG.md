@@ -15,3 +15,4 @@ Pierwsze wydanie.
 - Działa tylko jedna kopia aplikacji
 - 14 języków interfejsu przełączanych na żywo: EN, PL, DE, FR, ES, IT, PT, NL, UK, RU, TR, JA, KO, ZH-Hans
 - Wersje dla x64 i ARM64, nie wymagają instalowania .NET ani Windows App SDK
+- Licencja MIT
