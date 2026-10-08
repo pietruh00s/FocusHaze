@@ -6,8 +6,8 @@
 
 | Package | For |
 |---|---|
-| `WinDimmer-1.0.2-win-x64.zip` | most PCs (Intel / AMD) |
-| `WinDimmer-1.0.2-win-arm64.zip` | ARM PCs (e.g. Snapdragon X) |
+| `WinDimmer-win-x64.zip` | most PCs (Intel / AMD) |
+| `WinDimmer-win-arm64.zip` | ARM PCs (e.g. Snapdragon X) |
 
 Unzip the package anywhere and run `WinDimmer.exe`. You don't need to install .NET or the Windows App SDK.
 
