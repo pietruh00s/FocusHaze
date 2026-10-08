@@ -1,32 +1,34 @@
-Pierwsze wydanie WinDimmer: odpowiednika [HazeOver](https://hazeover.com/) dla Windows 11. Aplikacja przyciemnia wszystkie okna poza aktywnym, żeby łatwiej było się skupić.
+> ⚠️ **Please use [1.0.1](https://github.com/pietruh00s/WinDimmer/releases/tag/v1.0.1) or newer.** In 1.0.0, opening the settings window resets Intensity to 5% and Transition time to 50 ms.
 
-## Funkcje
+The first release of WinDimmer, a [HazeOver](https://hazeover.com/)-style focus tool for Windows 11. It dims every window except the active one, so it's easier to focus on what you're working on.
 
-- 🌘 **Przyciemnianie tła**: zasłona leży tuż pod aktywnym oknem i przepuszcza kliknięcia
-- 🎚️ **Intensywność i kolor** regulowane na żywo
-- ✨ **Płynne przejścia** przy zmianie okna
-- 🖥️ **Wiele monitorów**: przyciemnianie wszystkich ekranów albo tylko tego z aktywnym oknem
-- ⌨️ **Skrót Ctrl+Alt+H** włącza i wyłącza przyciemnianie
-- 🔔 **Zasobnik systemowy**: lewy klik otwiera ustawienia, prawy otwiera menu
-- 🚀 **Start razem z Windows** (opcjonalnie)
-- 🌍 **14 języków**: English, Polski, Deutsch, Français, Español, Italiano, Português, Nederlands, Українська, Русский, Türkçe, 日本語, 한국어, 中文(简体)
+## Features
 
-## Instalacja
+- 🌘 **Background dimming**: the haze sits right beneath the active window and lets clicks through
+- 🎚️ **Intensity and color**, adjustable live
+- ✨ **Smooth transitions** when you switch windows
+- 🖥️ **Multi-monitor**: dim all displays, or only the one with the active window
+- ⌨️ **Ctrl+Alt+H** turns dimming on or off
+- 🔔 **System tray**: left-click opens settings, right-click opens a menu
+- 🚀 **Start with Windows** (optional)
+- 🌍 **14 languages**: English, Polski, Deutsch, Français, Español, Italiano, Português, Nederlands, Українська, Русский, Türkçe, 日本語, 한국어, 中文(简体)
 
-1. Pobierz paczkę dla swojego procesora:
-   - `WinDimmer-1.0.0-win-x64.zip` – większość komputerów (Intel / AMD)
-   - `WinDimmer-1.0.0-win-arm64.zip` – komputery ARM (np. Snapdragon X)
-2. Rozpakuj ją w dowolne miejsce, np. `%LOCALAPPDATA%\Programs\WinDimmer`.
-3. Uruchom `WinDimmer.exe`.
+## Installation
 
-Nie trzeba instalować .NET ani Windows App SDK, bo wszystko jest w paczce.
+1. Download the package for your processor:
+   - `WinDimmer-1.0.0-win-x64.zip`: most PCs (Intel / AMD)
+   - `WinDimmer-1.0.0-win-arm64.zip`: ARM PCs (e.g. Snapdragon X)
+2. Unzip it anywhere, e.g. `%LOCALAPPDATA%\Programs\WinDimmer`.
+3. Run `WinDimmer.exe`.
 
-> **SmartScreen:** plik exe nie jest podpisany cyfrowo, więc przy pierwszym uruchomieniu Windows może pokazać ostrzeżenie. Kliknij wtedy **Więcej informacji → Uruchom mimo to**.
+You don't need to install .NET or the Windows App SDK, because everything is included.
 
-## Wymagania
+> **SmartScreen:** the executable isn't code-signed yet, so Windows may warn you the first time you run it. Choose **More info → Run anyway**.
 
-Windows 10 w wersji 2004 (19041) lub nowszy. Zalecany Windows 11.
+## Requirements
 
-## Sumy kontrolne
+Windows 10 version 2004 (build 19041) or later; Windows 11 recommended.
 
-Sumy SHA-256 są w pliku `SHA256SUMS.txt`.
+## Checksums
+
+SHA-256 checksums are in `SHA256SUMS.txt`.
