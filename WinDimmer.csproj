@@ -37,6 +37,7 @@
   <ItemGroup>
     <Content Include="Assets\WinDimmer.ico" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="Assets\WinDimmer.png" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="LICENSE" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>
