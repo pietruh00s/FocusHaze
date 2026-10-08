@@ -22,8 +22,12 @@ internal static class Win32
 
     public const int SW_HIDE = 0;
 
+    public const uint SWP_NOSIZE = 0x0001;
+    public const uint SWP_NOMOVE = 0x0002;
+    public const uint SWP_NOZORDER = 0x0004;
     public const uint SWP_NOACTIVATE = 0x0010;
     public const uint SWP_SHOWWINDOW = 0x0040;
+    public const uint SWP_HIDEWINDOW = 0x0080;
     public const uint SWP_NOOWNERZORDER = 0x0200;
 
     public static readonly IntPtr HWND_TOP = IntPtr.Zero;
@@ -87,6 +91,7 @@ internal static class Win32
     public static readonly IntPtr IDI_APPLICATION = new(32512);
 
     public const int ASFW_ANY = -1;
+    public const int DWMWA_EXTENDED_FRAME_BOUNDS = 9;
     public const int DWMWA_CLOAKED = 14;
 
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
@@ -113,6 +118,14 @@ internal static class Win32
         public RECT(int left, int top, int right, int bottom) { Left = left; Top = top; Right = right; Bottom = bottom; }
         public readonly int Width => Right - Left;
         public readonly int Height => Bottom - Top;
+        public readonly bool IsEmpty => Right <= Left || Bottom <= Top;
+
+        public readonly RECT Intersect(RECT other) => new(
+            Math.Max(Left, other.Left), Math.Max(Top, other.Top),
+            Math.Min(Right, other.Right), Math.Min(Bottom, other.Bottom));
+
+        public readonly bool Equals(RECT other) =>
+            Left == other.Left && Top == other.Top && Right == other.Right && Bottom == other.Bottom;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -165,6 +178,16 @@ internal static class Win32
 
     [DllImport("user32.dll")]
     public static extern bool SetWindowPos(IntPtr hWnd, IntPtr insertAfter, int x, int y, int cx, int cy, uint flags);
+
+    [DllImport("user32.dll")]
+    public static extern IntPtr BeginDeferWindowPos(int numWindows);
+
+    [DllImport("user32.dll")]
+    public static extern IntPtr DeferWindowPos(IntPtr winPosInfo, IntPtr hWnd, IntPtr insertAfter,
+        int x, int y, int cx, int cy, uint flags);
+
+    [DllImport("user32.dll")]
+    public static extern bool EndDeferWindowPos(IntPtr winPosInfo);
 
     [DllImport("user32.dll")]
     public static extern bool SetLayeredWindowAttributes(IntPtr hWnd, uint crKey, byte alpha, uint flags);
@@ -283,6 +306,15 @@ internal static class Win32
 
     [DllImport("dwmapi.dll")]
     public static extern int DwmGetWindowAttribute(IntPtr hWnd, int attribute, out int value, int size);
+
+    [DllImport("dwmapi.dll")]
+    public static extern int DwmGetWindowAttribute(IntPtr hWnd, int attribute, out RECT value, int size);
+
+    /// <summary>The window's visible frame, without the invisible resize borders and shadow.</summary>
+    public static bool TryGetFrameBounds(IntPtr hWnd, out RECT bounds) =>
+        DwmGetWindowAttribute(hWnd, DWMWA_EXTENDED_FRAME_BOUNDS, out bounds, Marshal.SizeOf<RECT>()) == 0;
+
+    public static bool IsTopmost(IntPtr hWnd) => ((long)GetWindowLongPtr(hWnd, GWL_EXSTYLE) & WS_EX_TOPMOST) != 0;
 
     public static string GetClassName(IntPtr hWnd)
     {
