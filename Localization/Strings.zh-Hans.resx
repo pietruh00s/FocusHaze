@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppHeading" xml:space="preserve"><value>背景变暗</value></data>
+  <data name="AppDescription" xml:space="preserve"><value>除活动窗口外，所有窗口都会被半透明遮罩覆盖，让你更容易专注于手头的工作。</value></data>
+  <data name="Enabled_Title" xml:space="preserve"><value>使后台窗口变暗</value></data>
+  <data name="Hotkey_Available" xml:space="preserve"><value>快捷键：{0}</value></data>
+  <data name="Hotkey_Taken" xml:space="preserve"><value>快捷键 {0} 已被其他应用占用</value></data>
+  <data name="Intensity_Title" xml:space="preserve"><value>强度</value></data>
+  <data name="Intensity_Description" xml:space="preserve"><value>非活动窗口变暗的程度</value></data>
+  <data name="Color_Title" xml:space="preserve"><value>遮罩颜色</value></data>
+  <data name="Color_Description" xml:space="preserve"><value>黑色看起来最自然，但你可以选择任意颜色</value></data>
+  <data name="Animate_Title" xml:space="preserve"><value>平滑过渡</value></data>
+  <data name="Animate_Description" xml:space="preserve"><value>切换窗口时遮罩会平滑地淡入淡出</value></data>
+  <data name="FadeDuration_Label" xml:space="preserve"><value>过渡时长</value></data>
+  <data name="ActiveDisplay_Title" xml:space="preserve"><value>仅限活动窗口所在的屏幕</value></data>
+  <data name="ActiveDisplay_Description" xml:space="preserve"><value>其他显示器不会变暗</value></data>
+  <data name="Section_App" xml:space="preserve"><value>应用</value></data>
+  <data name="Language_Title" xml:space="preserve"><value>语言</value></data>
+  <data name="Language_Description" xml:space="preserve"><value>更改会立即生效</value></data>
+  <data name="Language_System" xml:space="preserve"><value>跟随系统</value></data>
+  <data name="Startup_Title" xml:space="preserve"><value>随 Windows 启动</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer 将在系统托盘中启动</value></data>
+  <data name="Background_Title" xml:space="preserve"><value>后台运行</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>关闭此窗口后，WinDimmer 会继续在系统托盘中运行</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>退出 WinDimmer</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>设置…</value></data>
+  <data name="Tray_Dimming" xml:space="preserve"><value>变暗</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>退出</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – 变暗已开启</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – 变暗已关闭</value></data>
+</root>

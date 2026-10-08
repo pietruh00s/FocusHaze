@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppHeading" xml:space="preserve"><value>Achtergrond dimmen</value></data>
+  <data name="AppDescription" xml:space="preserve"><value>Alle vensters behalve het actieve worden bedekt met een doorschijnende waas, zodat je je makkelijker kunt concentreren op waar je mee bezig bent.</value></data>
+  <data name="Enabled_Title" xml:space="preserve"><value>Achtergrondvensters dimmen</value></data>
+  <data name="Hotkey_Available" xml:space="preserve"><value>Sneltoets: {0}</value></data>
+  <data name="Hotkey_Taken" xml:space="preserve"><value>De sneltoets {0} wordt al door een andere app gebruikt</value></data>
+  <data name="Intensity_Title" xml:space="preserve"><value>Intensiteit</value></data>
+  <data name="Intensity_Description" xml:space="preserve"><value>Hoe sterk inactieve vensters worden gedimd</value></data>
+  <data name="Color_Title" xml:space="preserve"><value>Kleur van de waas</value></data>
+  <data name="Color_Description" xml:space="preserve"><value>Zwart oogt het natuurlijkst, maar je kunt elke kleur kiezen</value></data>
+  <data name="Animate_Title" xml:space="preserve"><value>Vloeiende overgangen</value></data>
+  <data name="Animate_Description" xml:space="preserve"><value>De waas verschijnt en verdwijnt geleidelijk wanneer je van venster wisselt</value></data>
+  <data name="FadeDuration_Label" xml:space="preserve"><value>Duur van de overgang</value></data>
+  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Alleen het scherm met het actieve venster</value></data>
+  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Andere beeldschermen worden niet gedimd</value></data>
+  <data name="Section_App" xml:space="preserve"><value>App</value></data>
+  <data name="Language_Title" xml:space="preserve"><value>Taal</value></data>
+  <data name="Language_Description" xml:space="preserve"><value>Wijzigingen worden direct toegepast</value></data>
+  <data name="Language_System" xml:space="preserve"><value>Systeemstandaard</value></data>
+  <data name="Startup_Title" xml:space="preserve"><value>Starten met Windows</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer start in het systeemvak</value></data>
+  <data name="Background_Title" xml:space="preserve"><value>Op de achtergrond</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Als je dit venster sluit, blijft WinDimmer actief in het systeemvak</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>WinDimmer afsluiten</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>Instellingen…</value></data>
+  <data name="Tray_Dimming" xml:space="preserve"><value>Dimmen</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>Afsluiten</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – dimmen aan</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – dimmen uit</value></data>
+</root>

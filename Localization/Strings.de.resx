@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppHeading" xml:space="preserve"><value>Hintergrund abdunkeln</value></data>
+  <data name="AppDescription" xml:space="preserve"><value>Alle Fenster außer dem aktiven werden von einem halbtransparenten Schleier überdeckt, damit du dich leichter auf deine Arbeit konzentrieren kannst.</value></data>
+  <data name="Enabled_Title" xml:space="preserve"><value>Hintergrundfenster abdunkeln</value></data>
+  <data name="Hotkey_Available" xml:space="preserve"><value>Tastenkombination: {0}</value></data>
+  <data name="Hotkey_Taken" xml:space="preserve"><value>Die Tastenkombination {0} wird bereits von einer anderen App verwendet</value></data>
+  <data name="Intensity_Title" xml:space="preserve"><value>Intensität</value></data>
+  <data name="Intensity_Description" xml:space="preserve"><value>Wie stark inaktive Fenster abgedunkelt werden</value></data>
+  <data name="Color_Title" xml:space="preserve"><value>Schleierfarbe</value></data>
+  <data name="Color_Description" xml:space="preserve"><value>Schwarz wirkt am natürlichsten, aber du kannst jede Farbe wählen</value></data>
+  <data name="Animate_Title" xml:space="preserve"><value>Sanfte Übergänge</value></data>
+  <data name="Animate_Description" xml:space="preserve"><value>Der Schleier wird beim Fensterwechsel sanft ein- und ausgeblendet</value></data>
+  <data name="FadeDuration_Label" xml:space="preserve"><value>Übergangsdauer</value></data>
+  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Nur der Bildschirm mit dem aktiven Fenster</value></data>
+  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Andere Monitore werden nicht abgedunkelt</value></data>
+  <data name="Section_App" xml:space="preserve"><value>App</value></data>
+  <data name="Language_Title" xml:space="preserve"><value>Sprache</value></data>
+  <data name="Language_Description" xml:space="preserve"><value>Änderungen werden sofort übernommen</value></data>
+  <data name="Language_System" xml:space="preserve"><value>Systemstandard</value></data>
+  <data name="Startup_Title" xml:space="preserve"><value>Mit Windows starten</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer startet im Infobereich der Taskleiste</value></data>
+  <data name="Background_Title" xml:space="preserve"><value>Ausführung im Hintergrund</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Wenn du dieses Fenster schließt, läuft WinDimmer im Infobereich weiter</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>WinDimmer beenden</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>Einstellungen…</value></data>
+  <data name="Tray_Dimming" xml:space="preserve"><value>Abdunkeln</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>Beenden</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – Abdunkeln aktiviert</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – Abdunkeln deaktiviert</value></data>
+</root>

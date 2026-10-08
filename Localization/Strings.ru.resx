@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppHeading" xml:space="preserve"><value>Затемнение фона</value></data>
+  <data name="AppDescription" xml:space="preserve"><value>Все окна, кроме активного, покрываются полупрозрачной завесой, чтобы было проще сосредоточиться на работе.</value></data>
+  <data name="Enabled_Title" xml:space="preserve"><value>Затемнять фоновые окна</value></data>
+  <data name="Hotkey_Available" xml:space="preserve"><value>Сочетание клавиш: {0}</value></data>
+  <data name="Hotkey_Taken" xml:space="preserve"><value>Сочетание {0} уже используется другим приложением</value></data>
+  <data name="Intensity_Title" xml:space="preserve"><value>Интенсивность</value></data>
+  <data name="Intensity_Description" xml:space="preserve"><value>Насколько сильно затемняются неактивные окна</value></data>
+  <data name="Color_Title" xml:space="preserve"><value>Цвет завесы</value></data>
+  <data name="Color_Description" xml:space="preserve"><value>Чёрный выглядит естественнее всего, но можно выбрать любой цвет</value></data>
+  <data name="Animate_Title" xml:space="preserve"><value>Плавные переходы</value></data>
+  <data name="Animate_Description" xml:space="preserve"><value>Завеса плавно появляется и исчезает при переключении окон</value></data>
+  <data name="FadeDuration_Label" xml:space="preserve"><value>Длительность перехода</value></data>
+  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Только экран с активным окном</value></data>
+  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Другие мониторы не будут затемняться</value></data>
+  <data name="Section_App" xml:space="preserve"><value>Приложение</value></data>
+  <data name="Language_Title" xml:space="preserve"><value>Язык</value></data>
+  <data name="Language_Description" xml:space="preserve"><value>Изменения применяются сразу</value></data>
+  <data name="Language_System" xml:space="preserve"><value>Как в системе</value></data>
+  <data name="Startup_Title" xml:space="preserve"><value>Запускать вместе с Windows</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer будет запускаться в области уведомлений</value></data>
+  <data name="Background_Title" xml:space="preserve"><value>Работа в фоне</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>После закрытия этого окна WinDimmer продолжит работать в области уведомлений</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>Выйти из WinDimmer</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>Настройки…</value></data>
+  <data name="Tray_Dimming" xml:space="preserve"><value>Затемнение</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>Выход</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – затемнение включено</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – затемнение выключено</value></data>
+</root>
