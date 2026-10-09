@@ -1,35 +1,35 @@
 <p align="center">
-  <img src="docs/banner.png" alt="WinDimmer – HazeOver-style focus tool for Windows 11" width="100%">
+  <img src="docs/banner.png" alt="FocusHaze – HazeOver-style focus tool for Windows 11" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://github.com/pietruh00s/WinDimmer/releases/latest/download/WinDimmer-win-x64.zip"><img src="https://img.shields.io/badge/Download-x64-0078D4?style=for-the-badge" alt="Download x64"></a>
+  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest/download/FocusHaze-win-x64.zip"><img src="https://img.shields.io/badge/Download-x64-0078D4?style=for-the-badge" alt="Download x64"></a>
   &nbsp;
-  <a href="https://github.com/pietruh00s/WinDimmer/releases/latest/download/WinDimmer-win-arm64.zip"><img src="https://img.shields.io/badge/Download-ARM64-0078D4?style=for-the-badge" alt="Download ARM64"></a>
+  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest/download/FocusHaze-win-arm64.zip"><img src="https://img.shields.io/badge/Download-ARM64-0078D4?style=for-the-badge" alt="Download ARM64"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/pietruh00s/WinDimmer/releases/latest"><img src="https://img.shields.io/github/v/release/pietruh00s/WinDimmer" alt="Latest release"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/pietruh00s/WinDimmer" alt="License: MIT"></a>
+  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest"><img src="https://img.shields.io/github/v/release/pietruh00s/FocusHaze" alt="Latest release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/pietruh00s/FocusHaze" alt="License: MIT"></a>
   <a href="https://buymeacoffee.com/piotrosika"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee"></a>
 </p>
 
 <p align="center"><b>English</b> | <a href="README.pl.md">Polski</a></p>
 
-A [HazeOver](https://hazeover.com/)-style focus tool for Windows 11, built with WinUI 3. WinDimmer dims every window except the one you're working in, so the rest of the screen fades into the background.
+A [HazeOver](https://hazeover.com/)-style focus tool for Windows 11, built with WinUI 3 (formerly **WinDimmer**). FocusHaze dims every window except the one you're working in, so the rest of the screen fades into the background.
 
 <p align="center">
-  <img src="docs/screenshot.png" alt="WinDimmer settings window" width="480">
+  <img src="docs/screenshot.png" alt="FocusHaze settings window" width="480">
 </p>
 
 ## Download
 
-Get the latest version from [**Releases**](https://github.com/pietruh00s/WinDimmer/releases/latest):
+Get the latest version from [**Releases**](https://github.com/pietruh00s/FocusHaze/releases/latest):
 
-- `WinDimmer-win-x64.zip`: most PCs (Intel / AMD)
-- `WinDimmer-win-arm64.zip`: ARM PCs (e.g. Snapdragon X)
+- `FocusHaze-win-x64.zip`: most PCs (Intel / AMD)
+- `FocusHaze-win-arm64.zip`: ARM PCs (e.g. Snapdragon X)
 
-Unzip the package anywhere and run `WinDimmer.exe`. You don't need to install .NET or the Windows App SDK, because everything is included.
+Unzip the package anywhere and run `FocusHaze.exe`. You don't need to install .NET or the Windows App SDK, because everything is included.
 
 > The executable isn't code-signed yet, so Windows SmartScreen may warn you the first time you run it. Choose **More info → Run anyway**.
 
@@ -68,9 +68,9 @@ To build the release packages (x64 and ARM64 zips plus `SHA256SUMS.txt`):
 pwsh ./build-release.ps1
 ```
 
-The packages are written to `artifacts\`. Each zip contains a `WinDimmer` folder with only `WinDimmer.exe` and `LICENSE` at the top level: the exe is a tiny .NET Framework 4.8 launcher (`Launcher/`, built into every supported Windows) that starts the real app from the `app\` subfolder, which holds everything else. See [CHANGELOG.md](CHANGELOG.md) for release history.
+The packages are written to `artifacts\`. Each zip contains a `FocusHaze` folder with only `FocusHaze.exe` and `LICENSE` at the top level: the exe is a tiny .NET Framework 4.8 launcher (`Launcher/`, built into every supported Windows) that starts the real app from the `app\` subfolder, which holds everything else. See [CHANGELOG.md](CHANGELOG.md) for release history.
 
-Settings are stored in `%LOCALAPPDATA%\WinDimmer\settings.json`.
+Settings are stored in `%LOCALAPPDATA%\FocusHaze\settings.json`.
 
 ## How it works
 
@@ -92,7 +92,7 @@ Improvements to the existing translations are welcome too.
 
 ## Support
 
-If WinDimmer helps you focus, you can buy me a coffee ☕
+If FocusHaze helps you focus, you can buy me a coffee ☕
 
 <a href="https://buymeacoffee.com/piotrosika"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" height="48"></a>
 

@@ -6,13 +6,13 @@ using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Media;
 using Windows.Graphics;
-using WinDimmer.Core;
-using WinDimmer.Localization;
-using WinDimmer.Native;
+using FocusHaze.Core;
+using FocusHaze.Localization;
+using FocusHaze.Native;
 using WinRT.Interop;
 using Color = Windows.UI.Color;
 
-namespace WinDimmer;
+namespace FocusHaze;
 
 public sealed partial class MainWindow : Window
 {
@@ -31,7 +31,7 @@ public sealed partial class MainWindow : Window
 
         ExtendsContentIntoTitleBar = true;
         SetTitleBar(AppTitleBar);
-        AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "Assets", "WinDimmer.ico"));
+        AppWindow.SetIcon(Path.Combine(AppContext.BaseDirectory, "Assets", "FocusHaze.ico"));
         if (AppWindow.Presenter is OverlappedPresenter presenter)
             presenter.IsMaximizable = false;
         SizeAndCenter(620, 760);

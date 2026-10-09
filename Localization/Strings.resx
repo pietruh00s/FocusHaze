@@ -23,13 +23,13 @@
   <data name="Language_Description" xml:space="preserve"><value>Changes apply immediately</value></data>
   <data name="Language_System" xml:space="preserve"><value>System default</value></data>
   <data name="Startup_Title" xml:space="preserve"><value>Start with Windows</value></data>
-  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer will start in the system tray</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>FocusHaze will start in the system tray</value></data>
   <data name="Background_Title" xml:space="preserve"><value>Running in the background</value></data>
-  <data name="Background_Description" xml:space="preserve"><value>Closing this window keeps WinDimmer running in the system tray</value></data>
-  <data name="Quit_Button" xml:space="preserve"><value>Quit WinDimmer</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Closing this window keeps FocusHaze running in the system tray</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>Quit FocusHaze</value></data>
   <data name="Tray_Settings" xml:space="preserve"><value>Settings…</value></data>
   <data name="Tray_Dimming" xml:space="preserve"><value>Dimming</value></data>
   <data name="Tray_Quit" xml:space="preserve"><value>Quit</value></data>
-  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – dimming on</value></data>
-  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – dimming off</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – dimming on</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – dimming off</value></data>
 </root>

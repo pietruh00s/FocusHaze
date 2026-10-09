@@ -1,6 +1,6 @@
-using WinDimmer.Native;
+using FocusHaze.Native;
 
-namespace WinDimmer.Core;
+namespace FocusHaze.Core;
 
 /// <summary>
 /// A click-through, layered Win32 window that paints a solid haze with an animatable opacity.
@@ -37,7 +37,7 @@ internal sealed class DimOverlay : IDisposable
     public DimOverlay(string className, uint colorRef)
     {
         _wndProc = WndProc;
-        _hwnd = Win32.CreateNativeWindow(className, "WinDimmer Overlay", Win32.WS_POPUP,
+        _hwnd = Win32.CreateNativeWindow(className, "FocusHaze Overlay", Win32.WS_POPUP,
             Win32.WS_EX_LAYERED | Win32.WS_EX_TRANSPARENT | Win32.WS_EX_TOOLWINDOW | Win32.WS_EX_NOACTIVATE,
             _wndProc);
         SetColor(colorRef);

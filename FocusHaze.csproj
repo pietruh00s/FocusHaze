@@ -4,10 +4,10 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net10.0-windows10.0.22621.0</TargetFramework>
     <TargetPlatformMinVersion>10.0.19041.0</TargetPlatformMinVersion>
-    <RootNamespace>WinDimmer</RootNamespace>
-    <AssemblyName>WinDimmer</AssemblyName>
+    <RootNamespace>FocusHaze</RootNamespace>
+    <AssemblyName>FocusHaze</AssemblyName>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <ApplicationIcon>Assets\WinDimmer.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\FocusHaze.ico</ApplicationIcon>
     <Platforms>x64;ARM64</Platforms>
     <RuntimeIdentifiers>win-x64;win-arm64</RuntimeIdentifiers>
     <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == '' and '$(Platform)' == 'ARM64'">win-arm64</RuntimeIdentifier>
@@ -18,7 +18,7 @@
     <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyTitle>WinDimmer</AssemblyTitle>
+    <AssemblyTitle>FocusHaze</AssemblyTitle>
     <Description>Dims every window except the active one</Description>
   </PropertyGroup>
 
@@ -31,8 +31,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Assets\WinDimmer.ico" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Assets\WinDimmer.png" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\FocusHaze.ico" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\FocusHaze.png" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <!-- The release launcher is a separate project (see build-release.ps1). -->

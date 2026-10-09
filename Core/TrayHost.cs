@@ -1,8 +1,8 @@
 using System.Runtime.InteropServices;
-using WinDimmer.Localization;
-using WinDimmer.Native;
+using FocusHaze.Localization;
+using FocusHaze.Native;
 
-namespace WinDimmer.Core;
+namespace FocusHaze.Core;
 
 /// <summary>
 /// Hidden window that owns the notification-area icon, its context menu and the global hotkey.
@@ -10,7 +10,7 @@ namespace WinDimmer.Core;
 /// </summary>
 internal sealed class TrayHost : IDisposable
 {
-    public const string ClassName = "WinDimmer.TrayHost";
+    public const string ClassName = "FocusHaze.TrayHost";
     public const uint WM_SHOW_SETTINGS = Win32.WM_APP + 2;
     public const string HotkeyDisplayName = "Ctrl+Alt+H";
 
@@ -42,7 +42,7 @@ internal sealed class TrayHost : IDisposable
     {
         _enabled = enabled;
         _wndProc = WndProc;
-        _hwnd = Win32.CreateNativeWindow(ClassName, "WinDimmer", 0, 0, _wndProc);
+        _hwnd = Win32.CreateNativeWindow(ClassName, "FocusHaze", 0, 0, _wndProc);
         _taskbarCreatedMessage = Win32.RegisterWindowMessage("TaskbarCreated");
         (_icon, _ownsIcon) = LoadIcon();
 
@@ -60,7 +60,7 @@ internal sealed class TrayHost : IDisposable
 
     private static (IntPtr Icon, bool Owned) LoadIcon()
     {
-        string path = Path.Combine(AppContext.BaseDirectory, "Assets", "WinDimmer.ico");
+        string path = Path.Combine(AppContext.BaseDirectory, "Assets", "FocusHaze.ico");
         IntPtr icon = Win32.LoadImage(IntPtr.Zero, path, Win32.IMAGE_ICON,
             Win32.GetSystemMetrics(Win32.SM_CXSMICON), Win32.GetSystemMetrics(Win32.SM_CYSMICON), Win32.LR_LOADFROMFILE);
         return icon != IntPtr.Zero

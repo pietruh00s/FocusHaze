@@ -23,13 +23,13 @@
   <data name="Language_Description" xml:space="preserve"><value>Les modifications s&apos;appliquent immédiatement</value></data>
   <data name="Language_System" xml:space="preserve"><value>Langue du système</value></data>
   <data name="Startup_Title" xml:space="preserve"><value>Démarrer avec Windows</value></data>
-  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer démarrera dans la zone de notification</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>FocusHaze démarrera dans la zone de notification</value></data>
   <data name="Background_Title" xml:space="preserve"><value>Exécution en arrière-plan</value></data>
-  <data name="Background_Description" xml:space="preserve"><value>Fermer cette fenêtre laisse WinDimmer actif dans la zone de notification</value></data>
-  <data name="Quit_Button" xml:space="preserve"><value>Quitter WinDimmer</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Fermer cette fenêtre laisse FocusHaze actif dans la zone de notification</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>Quitter FocusHaze</value></data>
   <data name="Tray_Settings" xml:space="preserve"><value>Paramètres…</value></data>
   <data name="Tray_Dimming" xml:space="preserve"><value>Assombrissement</value></data>
   <data name="Tray_Quit" xml:space="preserve"><value>Quitter</value></data>
-  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – assombrissement activé</value></data>
-  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – assombrissement désactivé</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – assombrissement activé</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – assombrissement désactivé</value></data>
 </root>

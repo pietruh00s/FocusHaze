@@ -23,13 +23,13 @@
   <data name="Language_Description" xml:space="preserve"><value>변경 사항이 즉시 적용됩니다</value></data>
   <data name="Language_System" xml:space="preserve"><value>시스템 기본값</value></data>
   <data name="Startup_Title" xml:space="preserve"><value>Windows 시작 시 실행</value></data>
-  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer가 시스템 트레이에서 시작됩니다</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>FocusHaze가 시스템 트레이에서 시작됩니다</value></data>
   <data name="Background_Title" xml:space="preserve"><value>백그라운드 실행</value></data>
-  <data name="Background_Description" xml:space="preserve"><value>이 창을 닫아도 WinDimmer는 시스템 트레이에서 계속 실행됩니다</value></data>
-  <data name="Quit_Button" xml:space="preserve"><value>WinDimmer 종료</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>이 창을 닫아도 FocusHaze는 시스템 트레이에서 계속 실행됩니다</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>FocusHaze 종료</value></data>
   <data name="Tray_Settings" xml:space="preserve"><value>설정…</value></data>
   <data name="Tray_Dimming" xml:space="preserve"><value>어둡게 하기</value></data>
   <data name="Tray_Quit" xml:space="preserve"><value>종료</value></data>
-  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – 어둡게 하기 켜짐</value></data>
-  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – 어둡게 하기 꺼짐</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – 어둡게 하기 켜짐</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – 어둡게 하기 꺼짐</value></data>
 </root>

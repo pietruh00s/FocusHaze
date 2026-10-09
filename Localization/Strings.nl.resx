@@ -23,13 +23,13 @@
   <data name="Language_Description" xml:space="preserve"><value>Wijzigingen worden direct toegepast</value></data>
   <data name="Language_System" xml:space="preserve"><value>Systeemstandaard</value></data>
   <data name="Startup_Title" xml:space="preserve"><value>Starten met Windows</value></data>
-  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer start in het systeemvak</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>FocusHaze start in het systeemvak</value></data>
   <data name="Background_Title" xml:space="preserve"><value>Op de achtergrond</value></data>
-  <data name="Background_Description" xml:space="preserve"><value>Als je dit venster sluit, blijft WinDimmer actief in het systeemvak</value></data>
-  <data name="Quit_Button" xml:space="preserve"><value>WinDimmer afsluiten</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Als je dit venster sluit, blijft FocusHaze actief in het systeemvak</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>FocusHaze afsluiten</value></data>
   <data name="Tray_Settings" xml:space="preserve"><value>Instellingen…</value></data>
   <data name="Tray_Dimming" xml:space="preserve"><value>Dimmen</value></data>
   <data name="Tray_Quit" xml:space="preserve"><value>Afsluiten</value></data>
-  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – dimmen aan</value></data>
-  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – dimmen uit</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – dimmen aan</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – dimmen uit</value></data>
 </root>

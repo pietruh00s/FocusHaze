@@ -23,13 +23,13 @@
   <data name="Language_Description" xml:space="preserve"><value>Zmiana działa natychmiast</value></data>
   <data name="Language_System" xml:space="preserve"><value>Domyślny systemu</value></data>
   <data name="Startup_Title" xml:space="preserve"><value>Uruchamiaj razem z Windows</value></data>
-  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer wystartuje w zasobniku systemowym</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>FocusHaze wystartuje w zasobniku systemowym</value></data>
   <data name="Background_Title" xml:space="preserve"><value>Działanie w tle</value></data>
-  <data name="Background_Description" xml:space="preserve"><value>Zamknięcie tego okna pozostawia WinDimmer w zasobniku systemowym</value></data>
-  <data name="Quit_Button" xml:space="preserve"><value>Zakończ WinDimmer</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Zamknięcie tego okna pozostawia FocusHaze w zasobniku systemowym</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>Zakończ FocusHaze</value></data>
   <data name="Tray_Settings" xml:space="preserve"><value>Ustawienia…</value></data>
   <data name="Tray_Dimming" xml:space="preserve"><value>Przyciemnianie</value></data>
   <data name="Tray_Quit" xml:space="preserve"><value>Zakończ</value></data>
-  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – przyciemnianie włączone</value></data>
-  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – przyciemnianie wyłączone</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – przyciemnianie włączone</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – przyciemnianie wyłączone</value></data>
 </root>

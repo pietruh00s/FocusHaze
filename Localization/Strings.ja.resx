@@ -23,13 +23,13 @@
   <data name="Language_Description" xml:space="preserve"><value>変更はすぐに反映されます</value></data>
   <data name="Language_System" xml:space="preserve"><value>システムの既定</value></data>
   <data name="Startup_Title" xml:space="preserve"><value>Windows の起動時に開始</value></data>
-  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer はシステム トレイで起動します</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>FocusHaze はシステム トレイで起動します</value></data>
   <data name="Background_Title" xml:space="preserve"><value>バックグラウンドでの動作</value></data>
-  <data name="Background_Description" xml:space="preserve"><value>このウィンドウを閉じても WinDimmer はシステム トレイで動作し続けます</value></data>
-  <data name="Quit_Button" xml:space="preserve"><value>WinDimmer を終了</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>このウィンドウを閉じても FocusHaze はシステム トレイで動作し続けます</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>FocusHaze を終了</value></data>
   <data name="Tray_Settings" xml:space="preserve"><value>設定…</value></data>
   <data name="Tray_Dimming" xml:space="preserve"><value>減光</value></data>
   <data name="Tray_Quit" xml:space="preserve"><value>終了</value></data>
-  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – 減光オン</value></data>
-  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – 減光オフ</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – 減光オン</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – 減光オフ</value></data>
 </root>

@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+### Zmienione
+- Nowa nazwa: **FocusHaze** (dawniej WinDimmer), bo nazwa WinDimmer jest już zajęta w Microsoft Store. Ustawienia i autostart z WinDimmera są przenoszone automatycznie przy pierwszym uruchomieniu.
+
 ## [1.0.3] – 2026-10-08
 
 ### Poprawione
