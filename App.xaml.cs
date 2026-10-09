@@ -1,14 +1,14 @@
 using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
-using WinDimmer.Core;
-using WinDimmer.Localization;
-using WinDimmer.Native;
+using FocusHaze.Core;
+using FocusHaze.Localization;
+using FocusHaze.Native;
 
-namespace WinDimmer;
+namespace FocusHaze;
 
 public partial class App : Application
 {
-    private const string MutexName = @"Local\WinDimmer.SingleInstance";
+    private const string MutexName = @"Local\FocusHaze.SingleInstance";
 
     private static Mutex? s_instanceMutex;
 
@@ -45,6 +45,7 @@ public partial class App : Application
 
         _dispatcher = DispatcherQueue.GetForCurrentThread();
         Settings = AppSettings.Load();
+        StartupManager.MigrateLegacy();
         Loc.SetLanguage(Settings.Language);
 
         _dimmer = new DimController(Settings);

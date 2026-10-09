@@ -1,8 +1,8 @@
 <Project>
   <!-- Shared by the app and the release launcher so both always carry the same version. -->
   <PropertyGroup>
-    <Version>1.0.3</Version>
-    <Product>WinDimmer</Product>
+    <Version>1.1.0</Version>
+    <Product>FocusHaze</Product>
     <Authors>Piotr Osika</Authors>
     <Copyright>© 2026 Piotr Osika</Copyright>
   </PropertyGroup>

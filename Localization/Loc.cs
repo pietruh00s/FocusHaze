@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Resources;
 
-namespace WinDimmer.Localization;
+namespace FocusHaze.Localization;
 
 /// <summary>Looks up UI strings from Strings.*.resx for the selected (or system) language.</summary>
 internal static class Loc
@@ -10,7 +10,7 @@ internal static class Loc
     public static readonly string[] SupportedLanguages =
         ["en", "pl", "de", "fr", "es", "it", "pt", "nl", "uk", "ru", "tr", "ja", "ko", "zh-Hans"];
 
-    private static readonly ResourceManager Resources = new("WinDimmer.Localization.Strings", typeof(Loc).Assembly);
+    private static readonly ResourceManager Resources = new("FocusHaze.Localization.Strings", typeof(Loc).Assembly);
     private static readonly CultureInfo SystemCulture = CultureInfo.CurrentUICulture;
 
     public static CultureInfo Culture { get; private set; } = SystemCulture;

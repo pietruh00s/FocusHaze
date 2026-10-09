@@ -1,25 +1,25 @@
 <p align="center">
-  <img src="docs/banner.png" alt="WinDimmer – odpowiednik HazeOver dla Windows 11" width="100%">
+  <img src="docs/banner.png" alt="FocusHaze – odpowiednik HazeOver dla Windows 11" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://github.com/pietruh00s/WinDimmer/releases/latest/download/WinDimmer-win-x64.zip"><img src="https://img.shields.io/badge/Pobierz-x64-0078D4?style=for-the-badge" alt="Pobierz x64"></a>
+  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest/download/FocusHaze-win-x64.zip"><img src="https://img.shields.io/badge/Pobierz-x64-0078D4?style=for-the-badge" alt="Pobierz x64"></a>
   &nbsp;
-  <a href="https://github.com/pietruh00s/WinDimmer/releases/latest/download/WinDimmer-win-arm64.zip"><img src="https://img.shields.io/badge/Pobierz-ARM64-0078D4?style=for-the-badge" alt="Pobierz ARM64"></a>
+  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest/download/FocusHaze-win-arm64.zip"><img src="https://img.shields.io/badge/Pobierz-ARM64-0078D4?style=for-the-badge" alt="Pobierz ARM64"></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/pietruh00s/WinDimmer/releases/latest"><img src="https://img.shields.io/github/v/release/pietruh00s/WinDimmer" alt="Najnowsze wydanie"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/pietruh00s/WinDimmer" alt="Licencja: MIT"></a>
+  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest"><img src="https://img.shields.io/github/v/release/pietruh00s/FocusHaze" alt="Najnowsze wydanie"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/pietruh00s/FocusHaze" alt="Licencja: MIT"></a>
   <a href="https://buymeacoffee.com/piotrosika"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee"></a>
 </p>
 
 <p align="center"><a href="README.md">English</a> | <b>Polski</b></p>
 
-Odpowiednik [HazeOver](https://hazeover.com/) dla Windows 11, napisany w WinUI 3: przyciemnia wszystkie okna poza aktywnym, żeby łatwiej było się skupić.
+**FocusHaze** (dawniej **WinDimmer**) to odpowiednik [HazeOver](https://hazeover.com/) dla Windows 11, napisany w WinUI 3: przyciemnia wszystkie okna poza aktywnym, żeby łatwiej było się skupić.
 
 <p align="center">
-  <img src="docs/screenshot.png" alt="Okno ustawień WinDimmer" width="480">
+  <img src="docs/screenshot.png" alt="Okno ustawień FocusHaze" width="480">
 </p>
 
 ## Funkcje
@@ -66,9 +66,9 @@ Paczki z wydaniem (zip dla x64 i ARM64 oraz plik `SHA256SUMS.txt`) budujesz pole
 pwsh ./build-release.ps1
 ```
 
-Gotowe pliki trafią do `artifacts\`. Każdy zip zawiera folder `WinDimmer`, w którym na wierzchu są tylko `WinDimmer.exe` i `LICENSE`. Ten exe to malutki launcher na .NET Framework 4.8 (`Launcher/`, wbudowany w każdy obsługiwany Windows), który uruchamia właściwą aplikację z podfolderu `app\`, gdzie jest cała reszta. Historia zmian jest w [CHANGELOG.md](CHANGELOG.md).
+Gotowe pliki trafią do `artifacts\`. Każdy zip zawiera folder `FocusHaze`, w którym na wierzchu są tylko `FocusHaze.exe` i `LICENSE`. Ten exe to malutki launcher na .NET Framework 4.8 (`Launcher/`, wbudowany w każdy obsługiwany Windows), który uruchamia właściwą aplikację z podfolderu `app\`, gdzie jest cała reszta. Historia zmian jest w [CHANGELOG.md](CHANGELOG.md).
 
-Ustawienia są zapisywane w `%LOCALAPPDATA%\WinDimmer\settings.json`.
+Ustawienia są zapisywane w `%LOCALAPPDATA%\FocusHaze\settings.json`.
 
 ## Jak to działa
 
@@ -79,7 +79,7 @@ Ustawienia są zapisywane w `%LOCALAPPDATA%\WinDimmer\settings.json`.
 
 ## Wsparcie
 
-Jeśli WinDimmer pomaga Ci się skupić, możesz postawić mi kawę ☕
+Jeśli FocusHaze pomaga Ci się skupić, możesz postawić mi kawę ☕
 
 <a href="https://buymeacoffee.com/piotrosika"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" height="48"></a>
 

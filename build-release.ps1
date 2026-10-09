@@ -2,8 +2,8 @@
 # Usage: pwsh ./build-release.ps1
 #
 # Package layout (the root holds only the launcher and the license):
-#   WinDimmer\
-#     WinDimmer.exe   launcher that starts app\WinDimmer.exe
+#   FocusHaze\
+#     FocusHaze.exe   launcher that starts app\FocusHaze.exe
 #     LICENSE
 #     app\            the self-contained app (.NET, Windows App SDK, resources)
 $ErrorActionPreference = 'Stop'
@@ -18,7 +18,7 @@ New-Item -ItemType Directory $artifacts | Out-Null
 
 Write-Host 'Building launcher...'
 $launcherDir = Join-Path $artifacts 'launcher'
-dotnet build Launcher\WinDimmer.Launcher.csproj -c Release -o $launcherDir
+dotnet build Launcher\FocusHaze.Launcher.csproj -c Release -o $launcherDir
 if ($LASTEXITCODE -ne 0) { throw 'Launcher build failed' }
 
 $targets = @(
@@ -29,18 +29,18 @@ $targets = @(
 foreach ($target in $targets) {
     $publishDir = Join-Path $artifacts "publish\$($target.Rid)"
     Write-Host "Publishing $($target.Rid)..."
-    dotnet publish WinDimmer.csproj -c Release -r $target.Rid -p:Platform=$($target.Platform) -o $publishDir
+    dotnet publish FocusHaze.csproj -c Release -r $target.Rid -p:Platform=$($target.Platform) -o $publishDir
     if ($LASTEXITCODE -ne 0) { throw "dotnet publish failed for $($target.Rid)" }
 
-    # Zip a top-level WinDimmer folder so extracting doesn't scatter files.
-    $package = Join-Path $artifacts "package\$($target.Rid)\WinDimmer"
+    # Zip a top-level FocusHaze folder so extracting doesn't scatter files.
+    $package = Join-Path $artifacts "package\$($target.Rid)\FocusHaze"
     New-Item -ItemType Directory -Force $package | Out-Null
     Copy-Item $publishDir (Join-Path $package 'app') -Recurse
-    Copy-Item (Join-Path $launcherDir 'WinDimmer.exe') $package
+    Copy-Item (Join-Path $launcherDir 'FocusHaze.exe') $package
     Copy-Item LICENSE $package
 
     # Version-less name so README buttons can link to releases/latest/download/<name>.
-    $zip = Join-Path $artifacts "WinDimmer-$($target.Rid).zip"
+    $zip = Join-Path $artifacts "FocusHaze-$($target.Rid).zip"
     Compress-Archive -Path $package -DestinationPath $zip -CompressionLevel Optimal
 }
 

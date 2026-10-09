@@ -23,13 +23,13 @@
   <data name="Language_Description" xml:space="preserve"><value>Değişiklikler hemen uygulanır</value></data>
   <data name="Language_System" xml:space="preserve"><value>Sistem varsayılanı</value></data>
   <data name="Startup_Title" xml:space="preserve"><value>Windows ile başlat</value></data>
-  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer sistem tepsisinde başlar</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>FocusHaze sistem tepsisinde başlar</value></data>
   <data name="Background_Title" xml:space="preserve"><value>Arka planda çalışma</value></data>
-  <data name="Background_Description" xml:space="preserve"><value>Bu pencereyi kapattığınızda WinDimmer sistem tepsisinde çalışmaya devam eder</value></data>
-  <data name="Quit_Button" xml:space="preserve"><value>WinDimmer&apos;dan çık</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Bu pencereyi kapattığınızda FocusHaze sistem tepsisinde çalışmaya devam eder</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>FocusHaze&apos;dan çık</value></data>
   <data name="Tray_Settings" xml:space="preserve"><value>Ayarlar…</value></data>
   <data name="Tray_Dimming" xml:space="preserve"><value>Karartma</value></data>
   <data name="Tray_Quit" xml:space="preserve"><value>Çıkış</value></data>
-  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – karartma açık</value></data>
-  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – karartma kapalı</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – karartma açık</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – karartma kapalı</value></data>
 </root>

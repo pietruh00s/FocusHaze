@@ -4,7 +4,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace WinDimmer.Launcher
+namespace FocusHaze.Launcher
 {
     /// <summary>
     /// Tiny .NET Framework stub that sits in the root of the release folder and starts the real app
@@ -14,7 +14,7 @@ namespace WinDimmer.Launcher
     internal static class Program
     {
         private const string AppFolder = "app";
-        private const string AppExe = "WinDimmer.exe";
+        private const string AppExe = "FocusHaze.exe";
 
         [STAThread]
         private static int Main(string[] args)
@@ -23,8 +23,8 @@ namespace WinDimmer.Launcher
             if (!File.Exists(target))
             {
                 MessageBox(IntPtr.Zero,
-                    "Can't find " + Path.Combine(AppFolder, AppExe) + ".\n\nExtract the whole WinDimmer folder from the zip and try again.",
-                    "WinDimmer", 0x10 /* MB_ICONERROR */);
+                    "Can't find " + Path.Combine(AppFolder, AppExe) + ".\n\nExtract the whole FocusHaze folder from the zip and try again.",
+                    "FocusHaze", 0x10 /* MB_ICONERROR */);
                 return 1;
             }
 

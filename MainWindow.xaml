@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Window
-    x:Class="WinDimmer.MainWindow"
+    x:Class="FocusHaze.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:loc="using:WinDimmer.Localization"
-    Title="WinDimmer">
+    xmlns:loc="using:FocusHaze.Localization"
+    Title="FocusHaze">
 
     <Window.SystemBackdrop>
         <MicaBackdrop />
@@ -19,8 +19,8 @@
         <!-- Custom title bar -->
         <Grid x:Name="AppTitleBar" Height="48" Padding="16,0,0,0">
             <StackPanel Orientation="Horizontal" Spacing="12" VerticalAlignment="Center">
-                <Image Source="ms-appx:///Assets/WinDimmer.png" Width="16" Height="16" />
-                <TextBlock Text="WinDimmer" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" />
+                <Image Source="ms-appx:///Assets/FocusHaze.png" Width="16" Height="16" />
+                <TextBlock Text="FocusHaze" Style="{StaticResource CaptionTextBlockStyle}" VerticalAlignment="Center" />
             </StackPanel>
         </Grid>
 

@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace WinDimmer.Native;
+namespace FocusHaze.Native;
 
 /// <summary>Minimal Win32 interop surface used by the overlay, tray icon and event hooks.</summary>
 internal static class Win32

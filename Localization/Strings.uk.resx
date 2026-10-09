@@ -23,13 +23,13 @@
   <data name="Language_Description" xml:space="preserve"><value>Зміни застосовуються одразу</value></data>
   <data name="Language_System" xml:space="preserve"><value>Як у системі</value></data>
   <data name="Startup_Title" xml:space="preserve"><value>Запускати разом з Windows</value></data>
-  <data name="Startup_Description" xml:space="preserve"><value>WinDimmer запускатиметься в системному треї</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>FocusHaze запускатиметься в системному треї</value></data>
   <data name="Background_Title" xml:space="preserve"><value>Робота у фоні</value></data>
-  <data name="Background_Description" xml:space="preserve"><value>Після закриття цього вікна WinDimmer продовжить працювати в системному треї</value></data>
-  <data name="Quit_Button" xml:space="preserve"><value>Вийти з WinDimmer</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Після закриття цього вікна FocusHaze продовжить працювати в системному треї</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>Вийти з FocusHaze</value></data>
   <data name="Tray_Settings" xml:space="preserve"><value>Налаштування…</value></data>
   <data name="Tray_Dimming" xml:space="preserve"><value>Затемнення</value></data>
   <data name="Tray_Quit" xml:space="preserve"><value>Вийти</value></data>
-  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – затемнення увімкнено</value></data>
-  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – затемнення вимкнено</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – затемнення увімкнено</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – затемнення вимкнено</value></data>
 </root>

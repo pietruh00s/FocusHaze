@@ -2,7 +2,7 @@ using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace WinDimmer.Core;
+namespace FocusHaze.Core;
 
 internal sealed class AppSettings
 {
@@ -10,6 +10,10 @@ internal sealed class AppSettings
     public const int MaxIntensity = 90;
 
     private static readonly string FilePath = Path.Combine(
+        Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "FocusHaze", "settings.json");
+
+    // Versions up to 1.0.3 shipped as "WinDimmer"; their settings are picked up until the first save.
+    private static readonly string LegacyFilePath = Path.Combine(
         Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "WinDimmer", "settings.json");
 
     private static readonly JsonSerializerOptions JsonOptions = new() { WriteIndented = true };
@@ -60,8 +64,9 @@ internal sealed class AppSettings
     {
         try
         {
-            if (File.Exists(FilePath))
-                return JsonSerializer.Deserialize<AppSettings>(File.ReadAllText(FilePath), JsonOptions) ?? new AppSettings();
+            string path = File.Exists(FilePath) ? FilePath : LegacyFilePath;
+            if (File.Exists(path))
+                return JsonSerializer.Deserialize<AppSettings>(File.ReadAllText(path), JsonOptions) ?? new AppSettings();
         }
         catch (Exception ex) when (ex is IOException or JsonException or UnauthorizedAccessException)
         {

@@ -1,6 +1,6 @@
-using WinDimmer.Native;
+using FocusHaze.Native;
 
-namespace WinDimmer.Core;
+namespace FocusHaze.Core;
 
 /// <summary>
 /// Watches foreground/minimize/destroy events system-wide and keeps the haze positioned under the active window.
@@ -44,9 +44,9 @@ internal sealed class DimController : IDisposable
     public DimController(AppSettings settings)
     {
         _settings = settings;
-        _haze = new DimOverlay("WinDimmer.Overlay", settings.ColorRef);
+        _haze = new DimOverlay("FocusHaze.Overlay", settings.ColorRef);
         _haze.DisplayChanged += () => Refresh();
-        _transition = new DimOverlay("WinDimmer.TransitionOverlay", settings.ColorRef);
+        _transition = new DimOverlay("FocusHaze.TransitionOverlay", settings.ColorRef);
         _ownWindows.Add(_haze.Handle);
         _ownWindows.Add(_transition.Handle);
 

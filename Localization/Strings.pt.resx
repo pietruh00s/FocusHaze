@@ -23,13 +23,13 @@
   <data name="Language_Description" xml:space="preserve"><value>As alterações são aplicadas imediatamente</value></data>
   <data name="Language_System" xml:space="preserve"><value>Padrão do sistema</value></data>
   <data name="Startup_Title" xml:space="preserve"><value>Iniciar com o Windows</value></data>
-  <data name="Startup_Description" xml:space="preserve"><value>O WinDimmer será iniciado na bandeja do sistema</value></data>
+  <data name="Startup_Description" xml:space="preserve"><value>O FocusHaze será iniciado na bandeja do sistema</value></data>
   <data name="Background_Title" xml:space="preserve"><value>Execução em segundo plano</value></data>
-  <data name="Background_Description" xml:space="preserve"><value>Fechar esta janela mantém o WinDimmer na bandeja do sistema</value></data>
-  <data name="Quit_Button" xml:space="preserve"><value>Sair do WinDimmer</value></data>
+  <data name="Background_Description" xml:space="preserve"><value>Fechar esta janela mantém o FocusHaze na bandeja do sistema</value></data>
+  <data name="Quit_Button" xml:space="preserve"><value>Sair do FocusHaze</value></data>
   <data name="Tray_Settings" xml:space="preserve"><value>Configurações…</value></data>
   <data name="Tray_Dimming" xml:space="preserve"><value>Escurecimento</value></data>
   <data name="Tray_Quit" xml:space="preserve"><value>Sair</value></data>
-  <data name="Tray_TooltipOn" xml:space="preserve"><value>WinDimmer – escurecimento ativado</value></data>
-  <data name="Tray_TooltipOff" xml:space="preserve"><value>WinDimmer – escurecimento desativado</value></data>
+  <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – escurecimento ativado</value></data>
+  <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – escurecimento desativado</value></data>
 </root>

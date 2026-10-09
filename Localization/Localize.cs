@@ -1,7 +1,7 @@
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 
-namespace WinDimmer.Localization;
+namespace FocusHaze.Localization;
 
 /// <summary>
 /// Attached property for XAML: <c>loc:Localize.Key="Intensity_Title"</c> fills a TextBlock's Text
