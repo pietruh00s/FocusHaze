@@ -32,4 +32,5 @@
   <data name="Tray_Quit" xml:space="preserve"><value>終了</value></data>
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – 減光オン</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – 減光オフ</value></data>
+  <data name="Startup_Blocked" xml:space="preserve"><value>Windows の設定 › アプリ › スタートアップ でオフになっています。FocusHaze を Windows と一緒に起動するには、そこでオンにしてください。</value></data>
 </root>

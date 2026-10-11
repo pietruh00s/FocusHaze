@@ -105,7 +105,7 @@ public sealed partial class MainWindow : Window
             FadeText.Text = $"{Settings.FadeDurationMs} ms";
             FadePanel.Visibility = Settings.Animate ? Visibility.Visible : Visibility.Collapsed;
             ActiveDisplayToggle.IsOn = Settings.ActiveDisplayOnly;
-            StartupToggle.IsOn = StartupManager.IsEnabled;
+            _ = RefreshStartupAsync();
 
             HotkeyText.Text = Loc.Format(App.Current.HotkeyAvailable ? "Hotkey_Available" : "Hotkey_Taken",
                 TrayHost.HotkeyDisplayName);
@@ -173,10 +173,43 @@ public sealed partial class MainWindow : Window
         }
     }
 
-    private void OnStartupToggled(object sender, RoutedEventArgs e)
+    private async void OnStartupToggled(object sender, RoutedEventArgs e)
     {
         if (_syncing) return;
-        StartupManager.SetEnabled(StartupToggle.IsOn);
+        try
+        {
+            ShowStartupState(await StartupManager.SetEnabledAsync(StartupToggle.IsOn));
+        }
+        catch (Exception ex)
+        {
+            CrashLog.Write(ex, "startup toggle");
+            await RefreshStartupAsync();
+        }
+    }
+
+    private async Task RefreshStartupAsync()
+    {
+        try
+        {
+            ShowStartupState(await StartupManager.GetStateAsync());
+        }
+        catch (Exception ex)
+        {
+            CrashLog.Write(ex, "startup state");
+        }
+    }
+
+    private void ShowStartupState(StartupState state)
+    {
+        bool wasSyncing = _syncing;
+        _syncing = true;
+        StartupToggle.IsOn = state == StartupState.Enabled;
+        _syncing = wasSyncing;
+
+        // When the user turned startup off in Windows Settings, only they can turn it back on there.
+        bool blocked = state is StartupState.BlockedByUser or StartupState.BlockedByPolicy;
+        StartupToggle.IsEnabled = state != StartupState.BlockedByPolicy;
+        Localize.SetKey(StartupDescription, blocked ? "Startup_Blocked" : "Startup_Description");
     }
 
     private void OnQuitClicked(object sender, RoutedEventArgs e) => App.Current.Shutdown();

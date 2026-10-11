@@ -80,7 +80,20 @@ internal sealed class DimController : IDisposable
             _hooks.Add(hook);
     }
 
+    // Called from native code: an exception escaping here would terminate the process.
     private void OnWinEvent(IntPtr hook, uint eventType, IntPtr hwnd, int idObject, int idChild, uint thread, uint time)
+    {
+        try
+        {
+            OnWinEventCore(eventType, hwnd, idObject, idChild);
+        }
+        catch (Exception ex)
+        {
+            CrashLog.Write(ex, "win event 0x" + eventType.ToString("X4"));
+        }
+    }
+
+    private void OnWinEventCore(uint eventType, IntPtr hwnd, int idObject, int idChild)
     {
         if (idObject != Win32.OBJID_WINDOW || idChild != 0)
             return;

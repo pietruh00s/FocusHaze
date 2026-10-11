@@ -32,4 +32,5 @@
   <data name="Tray_Quit" xml:space="preserve"><value>Beenden</value></data>
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – Abdunkeln aktiviert</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – Abdunkeln deaktiviert</value></data>
+  <data name="Startup_Blocked" xml:space="preserve"><value>In den Windows-Einstellungen › Apps › Autostart deaktiviert. Aktiviere es dort, damit FocusHaze mit Windows startet.</value></data>
 </root>

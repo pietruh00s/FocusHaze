@@ -183,7 +183,7 @@
                         <FontIcon Glyph="&#xE7E8;" Style="{StaticResource SettingsIconStyle}" />
                         <StackPanel Grid.Column="1" VerticalAlignment="Center">
                             <TextBlock loc:Localize.Key="Startup_Title" />
-                            <TextBlock loc:Localize.Key="Startup_Description" Style="{StaticResource SettingsDescriptionStyle}" />
+                            <TextBlock x:Name="StartupDescription" loc:Localize.Key="Startup_Description" Style="{StaticResource SettingsDescriptionStyle}" />
                         </StackPanel>
                         <ToggleSwitch x:Name="StartupToggle" Grid.Column="2" OnContent="" OffContent=""
                                       MinWidth="0" Toggled="OnStartupToggled" />

@@ -31,6 +31,23 @@ public partial class App : Application
         InitializeComponent();
         // The app lives in the tray; closing the settings window must not end the process.
         DispatcherShutdownMode = DispatcherShutdownMode.OnExplicitShutdown;
+
+        // Record unexpected errors and keep running instead of closing on the user.
+        UnhandledException += (_, e) =>
+        {
+            CrashLog.Write(e.Exception, "UI");
+            e.Handled = true;
+        };
+        AppDomain.CurrentDomain.UnhandledException += (_, e) =>
+        {
+            if (e.ExceptionObject is Exception ex)
+                CrashLog.Write(ex, "AppDomain");
+        };
+        TaskScheduler.UnobservedTaskException += (_, e) =>
+        {
+            CrashLog.Write(e.Exception, "Task");
+            e.SetObserved();
+        };
     }
 
     protected override void OnLaunched(LaunchActivatedEventArgs args)
@@ -57,8 +74,7 @@ public partial class App : Application
         // Defer: the request arrives from inside the tray window's own message handler.
         _tray.ExitRequested += () => _dispatcher.TryEnqueue(Shutdown);
 
-        bool startInTray = Environment.GetCommandLineArgs().Contains("--tray", StringComparer.OrdinalIgnoreCase);
-        if (!startInTray)
+        if (!AppEnvironment.LaunchedAtStartup())
             ShowSettings();
     }
 

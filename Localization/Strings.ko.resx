@@ -32,4 +32,5 @@
   <data name="Tray_Quit" xml:space="preserve"><value>종료</value></data>
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – 어둡게 하기 켜짐</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – 어둡게 하기 꺼짐</value></data>
+  <data name="Startup_Blocked" xml:space="preserve"><value>Windows 설정 › 앱 › 시작 프로그램에서 꺼져 있습니다. FocusHaze를 Windows와 함께 시작하려면 그곳에서 켜세요.</value></data>
 </root>

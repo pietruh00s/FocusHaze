@@ -32,4 +32,5 @@
   <data name="Tray_Quit" xml:space="preserve"><value>Quitter</value></data>
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – assombrissement activé</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – assombrissement désactivé</value></data>
+  <data name="Startup_Blocked" xml:space="preserve"><value>Désactivé dans Paramètres Windows › Applications › Démarrage. Activez-le à cet endroit pour lancer FocusHaze avec Windows.</value></data>
 </root>

@@ -31,7 +31,8 @@ public sealed class Localize
 
     private static void OnKeyChanged(DependencyObject element, DependencyPropertyChangedEventArgs e)
     {
-        s_targets.Add(new WeakReference<DependencyObject>(element));
+        if (!s_targets.Exists(target => target.TryGetTarget(out var tracked) && ReferenceEquals(tracked, element)))
+            s_targets.Add(new WeakReference<DependencyObject>(element));
         Apply(element);
     }
 

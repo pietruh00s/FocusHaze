@@ -72,6 +72,16 @@ The packages are written to `artifacts\`. Each zip contains a `FocusHaze` folder
 
 Settings are stored in `%LOCALAPPDATA%\FocusHaze\settings.json`.
 
+### Microsoft Store package
+
+`build-store.ps1` builds an unsigned `.msixbundle` (x64 + ARM64) for upload to Partner Center; the Store signs it. Pass the identity values from Partner Center › Product identity:
+
+```bash
+pwsh ./build-store.ps1 -IdentityName <Name> -Publisher <CN=...>
+```
+
+The packaged app uses the Windows App SDK framework package and a `StartupTask` for **Start with Windows**. Store listings, screenshots and certification notes are in [docs/store](docs/store).
+
 ## How it works
 
 - `Core/DimOverlay.cs`: a native Win32 window (`WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_NOACTIVATE`) filled with a solid color, with its opacity set through `SetLayeredWindowAttributes`.
@@ -95,6 +105,10 @@ Improvements to the existing translations are welcome too.
 If FocusHaze helps you focus, you can buy me a coffee ☕
 
 <a href="https://buymeacoffee.com/piotrosika"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me a Coffee" height="48"></a>
+
+## Privacy
+
+FocusHaze collects no data and makes no network connections. See [PRIVACY.md](PRIVACY.md).
 
 ## License
 

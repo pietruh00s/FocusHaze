@@ -32,4 +32,5 @@
   <data name="Tray_Quit" xml:space="preserve"><value>Zakończ</value></data>
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – przyciemnianie włączone</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – przyciemnianie wyłączone</value></data>
+  <data name="Startup_Blocked" xml:space="preserve"><value>Wyłączone w Ustawieniach Windows › Aplikacje › Uruchamianie. Włącz je tam, aby FocusHaze startował razem z Windows.</value></data>
 </root>

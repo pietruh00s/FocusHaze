@@ -32,4 +32,5 @@
   <data name="Tray_Quit" xml:space="preserve"><value>Afsluiten</value></data>
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – dimmen aan</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – dimmen uit</value></data>
+  <data name="Startup_Blocked" xml:space="preserve"><value>Uitgeschakeld in Windows-instellingen › Apps › Opstarten. Schakel het daar in om FocusHaze met Windows te starten.</value></data>
 </root>

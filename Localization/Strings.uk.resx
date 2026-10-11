@@ -32,4 +32,5 @@
   <data name="Tray_Quit" xml:space="preserve"><value>Вийти</value></data>
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – затемнення увімкнено</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – затемнення вимкнено</value></data>
+  <data name="Startup_Blocked" xml:space="preserve"><value>Вимкнено в Параметрах Windows › Програми › Автозавантаження. Увімкніть там, щоб FocusHaze запускався разом з Windows.</value></data>
 </root>

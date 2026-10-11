@@ -112,7 +112,21 @@ internal sealed class TrayHost : IDisposable
         }
     }
 
+    // Called from native code: an exception escaping here would terminate the process.
     private IntPtr WndProc(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam)
+    {
+        try
+        {
+            return WndProcCore(hWnd, msg, wParam, lParam);
+        }
+        catch (Exception ex)
+        {
+            CrashLog.Write(ex, "tray message 0x" + msg.ToString("X4"));
+            return Win32.DefWindowProc(hWnd, msg, wParam, lParam);
+        }
+    }
+
+    private IntPtr WndProcCore(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam)
     {
         switch (msg)
         {

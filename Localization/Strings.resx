@@ -32,4 +32,5 @@
   <data name="Tray_Quit" xml:space="preserve"><value>Quit</value></data>
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – dimming on</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – dimming off</value></data>
+  <data name="Startup_Blocked" xml:space="preserve"><value>Turned off in Windows Settings › Apps › Startup. Turn it on there to start FocusHaze with Windows.</value></data>
 </root>

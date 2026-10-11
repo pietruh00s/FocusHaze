@@ -151,7 +151,21 @@ internal sealed class DimOverlay : IDisposable
         Win32.SetLayeredWindowAttributes(_hwnd, 0, (byte)Math.Round(_alpha), Win32.LWA_ALPHA);
     }
 
+    // Called from native code: an exception escaping here would terminate the process.
     private IntPtr WndProc(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam)
+    {
+        try
+        {
+            return WndProcCore(hWnd, msg, wParam, lParam);
+        }
+        catch (Exception ex)
+        {
+            CrashLog.Write(ex, "overlay message 0x" + msg.ToString("X4"));
+            return Win32.DefWindowProc(hWnd, msg, wParam, lParam);
+        }
+    }
+
+    private IntPtr WndProcCore(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam)
     {
         switch (msg)
         {

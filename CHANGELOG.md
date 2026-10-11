@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+### Dodane
+- Pakiet MSIX do Microsoft Store (`build-store.ps1`), z autostartem przez `StartupTask`. Jeśli autostart wyłączono w Ustawieniach Windows, aplikacja to pokazuje.
+- Polityka prywatności (`PRIVACY.md`), opisy do Sklepu w 14 językach, zrzuty i notatki dla certyfikacji (`docs/store`).
+- Nieoczekiwane błędy trafiają do lokalnego `error.log`, zamiast zamykać aplikację.
+
+## [1.1.0] – 2026-10-09
+
 ### Zmienione
 - Nowa nazwa: **FocusHaze** (dawniej WinDimmer), bo nazwa WinDimmer jest już zajęta w Microsoft Store. Ustawienia i autostart z WinDimmera są przenoszone automatycznie przy pierwszym uruchomieniu.
 

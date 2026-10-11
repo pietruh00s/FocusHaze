@@ -32,4 +32,5 @@
   <data name="Tray_Quit" xml:space="preserve"><value>Esci</value></data>
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – oscuramento attivo</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – oscuramento disattivato</value></data>
+  <data name="Startup_Blocked" xml:space="preserve"><value>Disattivato in Impostazioni di Windows › App › Avvio. Attivalo lì per avviare FocusHaze con Windows.</value></data>
 </root>

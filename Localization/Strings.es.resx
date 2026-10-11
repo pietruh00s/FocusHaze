@@ -32,4 +32,5 @@
   <data name="Tray_Quit" xml:space="preserve"><value>Salir</value></data>
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – atenuación activada</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – atenuación desactivada</value></data>
+  <data name="Startup_Blocked" xml:space="preserve"><value>Desactivado en Configuración de Windows › Aplicaciones › Inicio. Actívalo allí para que FocusHaze se inicie con Windows.</value></data>
 </root>

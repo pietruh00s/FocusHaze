@@ -32,4 +32,5 @@
   <data name="Tray_Quit" xml:space="preserve"><value>Sair</value></data>
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – escurecimento ativado</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – escurecimento desativado</value></data>
+  <data name="Startup_Blocked" xml:space="preserve"><value>Desativado em Configurações do Windows › Aplicativos › Inicialização. Ative lá para iniciar o FocusHaze com o Windows.</value></data>
 </root>

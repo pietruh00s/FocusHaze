@@ -32,4 +32,5 @@
   <data name="Tray_Quit" xml:space="preserve"><value>Çıkış</value></data>
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – karartma açık</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – karartma kapalı</value></data>
+  <data name="Startup_Blocked" xml:space="preserve"><value>Windows Ayarları › Uygulamalar › Başlangıç bölümünde kapalı. FocusHaze&apos;in Windows ile başlaması için oradan açın.</value></data>
 </root>
