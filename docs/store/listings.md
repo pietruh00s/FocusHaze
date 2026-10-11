@@ -7,6 +7,7 @@ Text to paste into Partner Center › Store listings, one section per language d
 - Search terms: at most 7 per language.
 - Privacy policy URL (all languages): https://github.com/pietruh00s/FocusHaze/blob/main/PRIVACY.md
 - Screenshots: `docs/store/screenshot-*.png` (neutral background, no third-party imagery).
+- CSV import: the same text lives in [listings.json](listings.json); `build-listings-csv.ps1 -Template <exported.csv>` fills the template exported from Partner Center (Store listings › Export listing) and stages the screenshots for **Import listings › Import folder**. Keep this file and listings.json in sync.
 
 ---
 
