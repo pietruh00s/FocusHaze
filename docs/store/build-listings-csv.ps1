@@ -9,7 +9,9 @@
 param(
     [Parameter(Mandatory)][string]$Template,
     [string]$OutRoot = (Join-Path $PSScriptRoot '..\..\artifacts\store'),
-    [string]$FolderName = 'FocusHazeListings'
+    [string]$FolderName = 'FocusHazeListings',
+    # Replace screenshots already uploaded to Partner Center (exported as URLs) with the files in docs/store.
+    [switch]$ReplaceScreenshots
 )
 $ErrorActionPreference = 'Stop'
 
@@ -52,7 +54,8 @@ foreach ($locale in $listings.PSObject.Properties.Name) {
         if ($values.ContainsKey($field)) {
             [void]$used.Add($field)
             # Keep images already uploaded to Partner Center (exported as URLs) instead of uploading them again.
-            if ($field -like 'DesktopScreenshot*' -and $row.$locale -match '^https?://') { continue }
+            # Pass -ReplaceScreenshots to upload the files from docs/store instead.
+            if ($field -like 'DesktopScreenshot*' -and $row.$locale -match '^https?://' -and -not $ReplaceScreenshots) { continue }
             $row.$locale = $values[$field]
         }
     }
