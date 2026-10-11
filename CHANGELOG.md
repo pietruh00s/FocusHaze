@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [1.2.0] – 2026-10-11
 
 ### Dodane
 - Pakiet MSIX do Microsoft Store (`build-store.ps1`), z autostartem przez `StartupTask`. Jeśli autostart wyłączono w Ustawieniach Windows, aplikacja to pokazuje.

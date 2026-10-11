@@ -13,8 +13,11 @@ Set-Location $PSScriptRoot
 $version = $props.Project.PropertyGroup.Version
 $artifacts = Join-Path $PSScriptRoot 'artifacts'
 
-if (Test-Path $artifacts) { Remove-Item $artifacts -Recurse -Force }
-New-Item -ItemType Directory $artifacts | Out-Null
+# Clean only this script's outputs (artifacts\store holds the Microsoft Store bundle from build-store.ps1).
+New-Item -ItemType Directory -Force $artifacts | Out-Null
+foreach ($item in 'launcher', 'publish', 'package', '*.zip', 'SHA256SUMS.txt') {
+    Remove-Item (Join-Path $artifacts $item) -Recurse -Force -ErrorAction SilentlyContinue
+}
 
 Write-Host 'Building launcher...'
 $launcherDir = Join-Path $artifacts 'launcher'
