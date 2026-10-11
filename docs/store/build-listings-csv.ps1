@@ -22,8 +22,9 @@ $fieldColumn = $columns[0]   # "Field"
 $typeColumn = $columns[2]    # "Type (Type)"
 
 # Keep only text fields: deleting a row leaves that field untouched in Partner Center (per Microsoft's docs),
-# while image rows with local paths would require a folder import.
-$rows = @($rows | Where-Object { $_.$typeColumn -notlike 'Relative path*' })
+# while image rows with local paths would require a folder import. Trailer rows are the documented exception
+# (they must not be deleted), so they stay exactly as exported.
+$rows = @($rows | Where-Object { $_.$typeColumn -notlike 'Relative path*' -or $_.$fieldColumn -like 'Trailer*' })
 
 $problems = [System.Collections.Generic.List[string]]::new()
 $used = [System.Collections.Generic.HashSet[string]]::new()
