@@ -24,7 +24,8 @@
       "window highlight"
     ],
     "ReleaseNotes": "First Microsoft Store release.",
-    "Screenshot": "screenshot-en.png"
+    "Screenshot": "screenshot-en.png",
+    "ScreenshotCaption": "Adjust the dimming intensity, haze color and smooth transitions"
   },
   "pl-pl": {
     "Title": "FocusHaze",
@@ -51,7 +52,8 @@
       "podświetlenie okna"
     ],
     "ReleaseNotes": "Pierwsze wydanie w Microsoft Store.",
-    "Screenshot": "screenshot-pl.png"
+    "Screenshot": "screenshot-pl.png",
+    "ScreenshotCaption": "Dostosuj intensywność przyciemniania, kolor mgiełki i płynne przejścia"
   },
   "de-de": {
     "Title": "FocusHaze",
@@ -78,7 +80,8 @@
       "Fenster hervorheben"
     ],
     "ReleaseNotes": "Erste Veröffentlichung im Microsoft Store.",
-    "Screenshot": "screenshot-de.png"
+    "Screenshot": "screenshot-de.png",
+    "ScreenshotCaption": "Passe Intensität der Abdunklung, Schleierfarbe und sanfte Übergänge an"
   },
   "fr-fr": {
     "Title": "FocusHaze",
@@ -105,7 +108,8 @@
       "mise en valeur fenêtre"
     ],
     "ReleaseNotes": "Première version sur le Microsoft Store.",
-    "Screenshot": "screenshot-fr.png"
+    "Screenshot": "screenshot-fr.png",
+    "ScreenshotCaption": "Réglez l'intensité de l'assombrissement, la couleur du voile et les transitions fluides"
   },
   "es-es": {
     "Title": "FocusHaze",
@@ -132,7 +136,8 @@
       "resaltar ventana"
     ],
     "ReleaseNotes": "Primera versión en Microsoft Store.",
-    "Screenshot": "screenshot-es.png"
+    "Screenshot": "screenshot-es.png",
+    "ScreenshotCaption": "Ajusta la intensidad de la atenuación, el color del velo y las transiciones suaves"
   },
   "it-it": {
     "Title": "FocusHaze",
@@ -159,7 +164,8 @@
       "evidenziare finestra"
     ],
     "ReleaseNotes": "Prima versione su Microsoft Store.",
-    "Screenshot": "screenshot-it.png"
+    "Screenshot": "screenshot-it.png",
+    "ScreenshotCaption": "Regola l'intensità dell'oscuramento, il colore del velo e le transizioni fluide"
   },
   "pt-br": {
     "Title": "FocusHaze",
@@ -186,7 +192,8 @@
       "destacar janela"
     ],
     "ReleaseNotes": "Primeira versão na Microsoft Store.",
-    "Screenshot": "screenshot-pt.png"
+    "Screenshot": "screenshot-pt.png",
+    "ScreenshotCaption": "Ajuste a intensidade do escurecimento, a cor do véu e as transições suaves"
   },
   "nl-nl": {
     "Title": "FocusHaze",
@@ -213,7 +220,8 @@
       "venster markeren"
     ],
     "ReleaseNotes": "Eerste release in de Microsoft Store.",
-    "Screenshot": "screenshot-nl.png"
+    "Screenshot": "screenshot-nl.png",
+    "ScreenshotCaption": "Stel de intensiteit van het dimmen, de kleur van de waas en vloeiende overgangen in"
   },
   "uk-ua": {
     "Title": "FocusHaze",
@@ -240,7 +248,8 @@
       "підсвічування вікна"
     ],
     "ReleaseNotes": "Перший випуск у Microsoft Store.",
-    "Screenshot": "screenshot-uk.png"
+    "Screenshot": "screenshot-uk.png",
+    "ScreenshotCaption": "Налаштуйте інтенсивність затемнення, колір завіси та плавні переходи"
   },
   "ru-ru": {
     "Title": "FocusHaze",
@@ -267,7 +276,8 @@
       "подсветка окна"
     ],
     "ReleaseNotes": "Первый выпуск в Microsoft Store.",
-    "Screenshot": "screenshot-ru.png"
+    "Screenshot": "screenshot-ru.png",
+    "ScreenshotCaption": "Настройте интенсивность затемнения, цвет завесы и плавные переходы"
   },
   "tr-tr": {
     "Title": "FocusHaze",
@@ -294,7 +304,8 @@
       "pencere vurgulama"
     ],
     "ReleaseNotes": "Microsoft Store'daki ilk sürüm.",
-    "Screenshot": "screenshot-tr.png"
+    "Screenshot": "screenshot-tr.png",
+    "ScreenshotCaption": "Karartma yoğunluğunu, perde rengini ve yumuşak geçişleri ayarlayın"
   },
   "ja-jp": {
     "Title": "FocusHaze",
@@ -321,7 +332,8 @@
       "ウィンドウ強調"
     ],
     "ReleaseNotes": "Microsoft Store での最初のリリース。",
-    "Screenshot": "screenshot-ja.png"
+    "Screenshot": "screenshot-ja.png",
+    "ScreenshotCaption": "減光の濃さ、ベールの色、なめらかな切り替えを調整できます"
   },
   "ko-kr": {
     "Title": "FocusHaze",
@@ -348,7 +360,8 @@
       "창 강조"
     ],
     "ReleaseNotes": "Microsoft Store 첫 출시.",
-    "Screenshot": "screenshot-ko.png"
+    "Screenshot": "screenshot-ko.png",
+    "ScreenshotCaption": "어둡게 하기 강도, 막 색상, 부드러운 전환을 조정하세요"
   },
   "zh-cn": {
     "Title": "FocusHaze",
@@ -375,6 +388,7 @@
       "窗口高亮"
     ],
     "ReleaseNotes": "首次在 Microsoft Store 发布。",
-    "Screenshot": "screenshot-zh-Hans.png"
+    "Screenshot": "screenshot-zh-Hans.png",
+    "ScreenshotCaption": "调整变暗强度、遮罩颜色和平滑过渡"
   }
 }

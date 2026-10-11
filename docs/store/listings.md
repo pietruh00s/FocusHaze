@@ -444,3 +444,24 @@ FocusHaze 不收集任何数据，不进行网络连接，也不显示广告。
 **搜索词:** 专注; 调暗窗口; 屏幕变暗; 聚焦; 效率; 免打扰; 窗口高亮
 
 **新增功能:** 首次在 Microsoft Store 发布。
+
+---
+
+## Screenshot captions (DesktopScreenshotCaption1)
+
+| Language | Caption |
+|---|---|
+| en-us | Adjust the dimming intensity, haze color and smooth transitions |
+| pl-pl | Dostosuj intensywność przyciemniania, kolor mgiełki i płynne przejścia |
+| de-de | Passe Intensität der Abdunklung, Schleierfarbe und sanfte Übergänge an |
+| fr-fr | Réglez l'intensité de l'assombrissement, la couleur du voile et les transitions fluides |
+| es-es | Ajusta la intensidad de la atenuación, el color del velo y las transiciones suaves |
+| it-it | Regola l'intensità dell'oscuramento, il colore del velo e le transizioni fluide |
+| pt-br | Ajuste a intensidade do escurecimento, a cor do véu e as transições suaves |
+| nl-nl | Stel de intensiteit van het dimmen, de kleur van de waas en vloeiende overgangen in |
+| uk-ua | Налаштуйте інтенсивність затемнення, колір завіси та плавні переходи |
+| ru-ru | Настройте интенсивность затемнения, цвет завесы и плавные переходы |
+| tr-tr | Karartma yoğunluğunu, perde rengini ve yumuşak geçişleri ayarlayın |
+| ja-jp | 減光の濃さ、ベールの色、なめらかな切り替えを調整できます |
+| ko-kr | 어둡게 하기 강도, 막 색상, 부드러운 전환을 조정하세요 |
+| zh-cn | 调整变暗强度、遮罩颜色和平滑过渡 |
