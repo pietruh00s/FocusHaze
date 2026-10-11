@@ -14,7 +14,8 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $listings = Get-Content (Join-Path $PSScriptRoot 'listings.json') -Raw -Encoding utf8 | ConvertFrom-Json
-$rows = @(Import-Csv $Template -Encoding utf8)
+# Trailing blank lines in the export come through as empty rows; drop them.
+$rows = @(Import-Csv $Template -Encoding utf8 | Where-Object { $_.PSObject.Properties.Value[0] })
 if ($rows.Count -eq 0) { throw "Template has no rows: $Template" }
 $columns = @($rows[0].PSObject.Properties.Name)
 $fieldColumn = $columns[0]   # "Field"
@@ -36,6 +37,8 @@ foreach ($locale in $listings.PSObject.Properties.Name) {
     Copy-Item (Join-Path $PSScriptRoot $data.Screenshot) (Join-Path $folder "screenshots\$($data.Screenshot)")
     $values = @{
         'Title'              = $data.Title
+        # ShortTitle is a shorter product name, not a tagline; FocusHaze is short already, so leave it empty.
+        'ShortTitle'         = ''
         'ShortDescription'   = $data.ShortDescription
         'Description'        = $data.Description
         'ReleaseNotes'       = $data.ReleaseNotes
@@ -47,8 +50,10 @@ foreach ($locale in $listings.PSObject.Properties.Name) {
     foreach ($row in $rows) {
         $field = $row.$fieldColumn
         if ($values.ContainsKey($field)) {
-            $row.$locale = $values[$field]
             [void]$used.Add($field)
+            # Keep images already uploaded to Partner Center (exported as URLs) instead of uploading them again.
+            if ($field -like 'DesktopScreenshot*' -and $row.$locale -match '^https?://') { continue }
+            $row.$locale = $values[$field]
         }
     }
 

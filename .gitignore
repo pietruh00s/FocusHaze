@@ -3,3 +3,4 @@ obj/
 .vs/
 *.user
 artifacts/
+docs/store/listingData-*.csv
