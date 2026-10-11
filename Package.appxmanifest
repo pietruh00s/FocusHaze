@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   MSIX manifest for the Microsoft Store package (built with build-store.ps1; the zip release ignores it).
-  Identity Name/Publisher and PublisherDisplayName come from Partner Center (Product identity) and are
-  filled in by build-store.ps1, which also sets Version from Directory.Build.props.
+  Identity Name/Publisher and PublisherDisplayName are the values from Partner Center › Product identity.
+  build-store.ps1 sets Version from Directory.Build.props.
 -->
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -12,8 +12,8 @@
   IgnorableNamespaces="uap uap5 rescap">
 
   <Identity
-    Name="FocusHaze.Dev"
-    Publisher="CN=FocusHaze Dev"
+    Name="PiotrOsika.FocusHaze"
+    Publisher="CN=AA3B8BEC-E366-47D0-AC85-FF7587FD30FC"
     Version="1.0.0.0" />
 
   <Properties>

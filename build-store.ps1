@@ -1,12 +1,14 @@
 # Builds the Microsoft Store upload: one .msixbundle (x64 + ARM64) in .\artifacts\store
 # Usage:
-#   pwsh ./build-store.ps1 -IdentityName <Package/Identity/Name> -Publisher <Package/Identity/Publisher> `
+#   pwsh ./build-store.ps1
+#   (optional overrides) -IdentityName <Package/Identity/Name> -Publisher <Package/Identity/Publisher> `
 #                          [-PublisherDisplayName <Package/Properties/PublisherDisplayName>]
 # The three values are shown in Partner Center under Product management › Product identity.
 # The bundle is unsigned: the Store signs it during certification.
 param(
-    [string]$IdentityName = 'FocusHaze.Dev',
-    [string]$Publisher = 'CN=FocusHaze Dev',
+    # Defaults are FocusHaze's Partner Center identity (Store ID 9P3J7F0RK3RT).
+    [string]$IdentityName = 'PiotrOsika.FocusHaze',
+    [string]$Publisher = 'CN=AA3B8BEC-E366-47D0-AC85-FF7587FD30FC',
     [string]$PublisherDisplayName = 'Piotr Osika'
 )
 $ErrorActionPreference = 'Stop'
