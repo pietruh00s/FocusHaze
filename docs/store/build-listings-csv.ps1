@@ -1,17 +1,15 @@
-# Fills the Store listings CSV exported from Partner Center with docs/store/listings.json (all 14 languages)
-# and stages the screenshots, producing a folder to import with "Import listings › Import folder".
+# Fills the Store listings CSV exported from Partner Center with the text from docs/store/listings.json
+# (all 14 languages). Screenshots are not part of the import: add them in Partner Center (docs/store/screenshot-*.png).
 #
 # 1. Partner Center › FocusHaze › Store listings › Export listing  (saves a .csv template)
 # 2. pwsh ./docs/store/build-listings-csv.ps1 -Template <path to exported .csv>
-# 3. Partner Center › Import listings › Import folder › artifacts/store/FocusHazeListings
+# 3. Partner Center › Import listings › Import .csv › artifacts/store/listings.csv
 #
 # The Field/ID/Type columns of the template are kept exactly as exported (Partner Center requires that).
+# Rows for screenshots and other images are left out of the output, so whatever is set in Partner Center stays.
 param(
     [Parameter(Mandatory)][string]$Template,
-    [string]$OutRoot = (Join-Path $PSScriptRoot '..\..\artifacts\store'),
-    [string]$FolderName = 'FocusHazeListings',
-    # Replace screenshots already uploaded to Partner Center (exported as URLs) with the files in docs/store.
-    [switch]$ReplaceScreenshots
+    [string]$Out = (Join-Path $PSScriptRoot '..\..\artifacts\store\listings.csv')
 )
 $ErrorActionPreference = 'Stop'
 
@@ -21,10 +19,11 @@ $rows = @(Import-Csv $Template -Encoding utf8 | Where-Object { $_.PSObject.Prope
 if ($rows.Count -eq 0) { throw "Template has no rows: $Template" }
 $columns = @($rows[0].PSObject.Properties.Name)
 $fieldColumn = $columns[0]   # "Field"
+$typeColumn = $columns[2]    # "Type (Type)"
 
-$folder = Join-Path ([IO.Path]::GetFullPath($OutRoot)) $FolderName
-if (Test-Path $folder) { Get-ChildItem $folder -Recurse -File | ForEach-Object { $_.Delete() } }
-New-Item -ItemType Directory -Force (Join-Path $folder 'screenshots') | Out-Null
+# Keep only text fields: deleting a row leaves that field untouched in Partner Center (per Microsoft's docs),
+# while image rows with local paths would require a folder import.
+$rows = @($rows | Where-Object { $_.$typeColumn -notlike 'Relative path*' })
 
 $problems = [System.Collections.Generic.List[string]]::new()
 $used = [System.Collections.Generic.HashSet[string]]::new()
@@ -36,15 +35,13 @@ foreach ($locale in $listings.PSObject.Properties.Name) {
         foreach ($row in $rows) { $row | Add-Member -NotePropertyName $locale -NotePropertyValue '' }
     }
 
-    Copy-Item (Join-Path $PSScriptRoot $data.Screenshot) (Join-Path $folder "screenshots\$($data.Screenshot)")
     $values = @{
-        'Title'              = $data.Title
+        'Title'            = $data.Title
         # ShortTitle is a shorter product name, not a tagline; FocusHaze is short already, so leave it empty.
-        'ShortTitle'         = ''
-        'ShortDescription'   = $data.ShortDescription
-        'Description'        = $data.Description
-        'ReleaseNotes'       = $data.ReleaseNotes
-        'DesktopScreenshot1' = "$FolderName/screenshots/$($data.Screenshot)"
+        'ShortTitle'       = ''
+        'ShortDescription' = $data.ShortDescription
+        'Description'      = $data.Description
+        'ReleaseNotes'     = $data.ReleaseNotes
     }
     for ($i = 0; $i -lt $data.Features.Count; $i++) { $values["Feature$($i + 1)"] = $data.Features[$i] }
     for ($i = 0; $i -lt $data.SearchTerms.Count; $i++) { $values["SearchTerm$($i + 1)"] = $data.SearchTerms[$i] }
@@ -52,11 +49,8 @@ foreach ($locale in $listings.PSObject.Properties.Name) {
     foreach ($row in $rows) {
         $field = $row.$fieldColumn
         if ($values.ContainsKey($field)) {
-            [void]$used.Add($field)
-            # Keep images already uploaded to Partner Center (exported as URLs) instead of uploading them again.
-            # Pass -ReplaceScreenshots to upload the files from docs/store instead.
-            if ($field -like 'DesktopScreenshot*' -and $row.$locale -match '^https?://' -and -not $ReplaceScreenshots) { continue }
             $row.$locale = $values[$field]
+            [void]$used.Add($field)
         }
     }
 
@@ -72,13 +66,13 @@ foreach ($locale in $listings.PSObject.Properties.Name) {
     if ($words -gt 21) { $problems.Add("$locale search terms have $words words (max 21)") }
 }
 
-$expected = @('Title', 'ShortDescription', 'Description', 'ReleaseNotes', 'DesktopScreenshot1', 'Feature1', 'SearchTerm1')
+$expected = @('Title', 'ShortDescription', 'Description', 'ReleaseNotes', 'Feature1', 'SearchTerm1')
 $missing = $expected | Where-Object { -not $used.Contains($_) }
 if ($missing) { $problems.Add("Template has no rows for: $($missing -join ', ') (field names may differ; check the template)") }
 
-$csv = Join-Path $folder 'listings.csv'
-$rows | Select-Object $columns | Export-Csv $csv -NoTypeInformation -UseQuotes Always -Encoding utf8BOM
+$Out = [IO.Path]::GetFullPath($Out)
+New-Item -ItemType Directory -Force (Split-Path $Out) | Out-Null
+$rows | Select-Object $columns | Export-Csv $Out -NoTypeInformation -UseQuotes Always -Encoding utf8BOM
 
-"Wrote $csv"
-"Languages: $(@($listings.PSObject.Properties.Name).Count), screenshots: $((Get-ChildItem (Join-Path $folder 'screenshots')).Count)"
+"Wrote $Out ($($rows.Count) rows, $(@($listings.PSObject.Properties.Name).Count) languages, no image rows)"
 if ($problems.Count) { "Problems:"; $problems | ForEach-Object { "  - $_" } } else { "No problems found." }
