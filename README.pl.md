@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest"><img src="https://img.shields.io/github/v/release/pietruh00s/FocusHaze" alt="Najnowsze wydanie"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/pietruh00s/FocusHaze" alt="Licencja: MIT"></a>
-  <a href="https://buymeacoffee.com/piotrosika"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee"></a>
+  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest"><img src="https://img.shields.io/github/v/release/pietruh00s/FocusHaze?style=for-the-badge&label=wydanie&color=0078D4" alt="Najnowsze wydanie"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/pietruh00s/FocusHaze?style=for-the-badge&label=licencja&color=0078D4" alt="Licencja: MIT"></a>
+  <a href="https://buymeacoffee.com/piotrosika"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee"></a>
 </p>
 
 <p align="center"><a href="README.md">English</a> | <b>Polski</b></p>
