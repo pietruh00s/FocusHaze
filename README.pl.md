@@ -70,15 +70,6 @@ Gotowe pliki trafią do `artifacts\`. Każdy zip zawiera folder `FocusHaze`, w k
 
 Ustawienia są zapisywane w `%LOCALAPPDATA%\FocusHaze\settings.json`.
 
-### Pakiet do Microsoft Store
-
-`build-store.ps1` buduje niepodpisany `.msixbundle` (x64 + ARM64) do wgrania w Partner Center; podpisuje go Sklep. Podaj wartości z Partner Center › Product identity:
-
-```bash
-pwsh ./build-store.ps1 -IdentityName <Name> -Publisher <CN=...>
-```
-
-Wersja ze Sklepu korzysta z pakietu Windows App SDK instalowanego przez Sklep i z `StartupTask` dla **Uruchamiaj razem z Windows**. Opisy do Sklepu, zrzuty i notatki dla certyfikacji są w [docs/store](docs/store).
 
 ## Jak to działa
 

@@ -3,7 +3,7 @@
 ## [1.2.0] – 2026-10-11
 
 ### Dodane
-- Pakiet MSIX do Microsoft Store (`build-store.ps1`), z autostartem przez `StartupTask`. Jeśli autostart wyłączono w Ustawieniach Windows, aplikacja to pokazuje.
+- Pakiet MSIX do Microsoft Store, z autostartem przez `StartupTask`. Jeśli autostart wyłączono w Ustawieniach Windows, aplikacja to pokazuje.
 - Polityka prywatności (`PRIVACY.md`), opisy do Sklepu w 14 językach, zrzuty i notatki dla certyfikacji (`docs/store`).
 - Nieoczekiwane błędy trafiają do lokalnego `error.log`, zamiast zamykać aplikację.
 

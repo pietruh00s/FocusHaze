@@ -4,3 +4,8 @@ obj/
 *.user
 artifacts/
 docs/store/listingData-*.csv
+
+# Microsoft Store packaging (kept locally only)
+build-store.ps1
+Package.appxmanifest
+FocusHaze.Local.props

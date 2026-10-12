@@ -1,6 +1,6 @@
 # Microsoft Store listings
 
-Text to paste into Partner Center › Store listings, one section per language declared in `Package.appxmanifest`
+Text to paste into Partner Center › Store listings, one section per language the app supports
 (Store policy 10.7 requires a listing for each). Policy notes:
 
 - Don't mention other products (e.g. HazeOver) in the description or search terms (policies 10.1.1, 10.1.3, 11.2).

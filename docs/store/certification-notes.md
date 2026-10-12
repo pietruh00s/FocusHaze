@@ -29,5 +29,5 @@ FocusHaze is a desktop (Win32/WinUI 3) app. Full trust is required to create the
 - **Privacy policy URL:** https://github.com/pietruh00s/FocusHaze/blob/main/PRIVACY.md
 - **Website:** https://github.com/pietruh00s/FocusHaze
 - **Support contact:** https://github.com/pietruh00s/FocusHaze/issues
-- **Package:** `artifacts/store/FocusHaze_<version>.msixbundle` built by `pwsh ./build-store.ps1 -IdentityName … -Publisher …` with the values from Product management › Product identity.
+- **Package:** the `.msixbundle` (x64 + ARM64) uploaded under Packages.
 - **Store listings and screenshots:** see [listings.md](listings.md) and `screenshot-*.png` in this folder.

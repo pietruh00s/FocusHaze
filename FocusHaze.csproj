@@ -30,22 +30,9 @@
     <SatelliteResourceLanguages>en;pl;de;fr;es;it;pt;nl;uk;ru;tr;ja;ko;zh-Hans</SatelliteResourceLanguages>
   </PropertyGroup>
 
-  <!-- Microsoft Store package (pwsh ./build-store.ps1): an unsigned MSIX for upload (the Store signs it) that
-       depends on the Windows App SDK framework package, which the Store installs alongside it. -->
-  <PropertyGroup Condition="'$(StorePackage)' == 'true'">
-    <WindowsPackageType>MSIX</WindowsPackageType>
-    <WindowsAppSDKSelfContained>false</WindowsAppSDKSelfContained>
-    <GenerateAppxPackageOnBuild>true</GenerateAppxPackageOnBuild>
-    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
-    <AppxBundle>Never</AppxBundle>
-    <AppxSymbolPackageEnabled>false</AppxSymbolPackageEnabled>
-    <AppxPackageDir>$(MSBuildThisFileDirectory)artifacts\store\packages\</AppxPackageDir>
-  </PropertyGroup>
+  <!-- Optional local build settings that are not part of the repository. -->
+  <Import Project="FocusHaze.Local.props" Condition="Exists('$(MSBuildThisFileDirectory)FocusHaze.Local.props')" />
 
-  <ItemGroup Condition="'$(StorePackage)' == 'true'">
-    <AppxManifest Include="Package.appxmanifest" />
-    <Content Include="Assets\Store\*.png" />
-  </ItemGroup>
   <ItemGroup Condition="'$(StorePackage)' != 'true'">
     <None Remove="Package.appxmanifest" />
     <Content Remove="Assets\Store\**" />

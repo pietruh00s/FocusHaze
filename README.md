@@ -72,15 +72,6 @@ The packages are written to `artifacts\`. Each zip contains a `FocusHaze` folder
 
 Settings are stored in `%LOCALAPPDATA%\FocusHaze\settings.json`.
 
-### Microsoft Store package
-
-`build-store.ps1` builds an unsigned `.msixbundle` (x64 + ARM64) for upload to Partner Center; the Store signs it. Pass the identity values from Partner Center › Product identity:
-
-```bash
-pwsh ./build-store.ps1 -IdentityName <Name> -Publisher <CN=...>
-```
-
-The packaged app uses the Windows App SDK framework package and a `StartupTask` for **Start with Windows**. Store listings, screenshots and certification notes are in [docs/store](docs/store).
 
 ## How it works
 
