@@ -49,6 +49,10 @@
     <Compile Remove="Launcher\**" />
     <None Remove="Launcher\**" />
     <Content Remove="Launcher\**" />
+    <!-- Local helper tools (not part of the app). -->
+    <Compile Remove="tools\**" />
+    <None Remove="tools\**" />
+    <Content Remove="tools\**" />
   </ItemGroup>
 
   <ItemGroup>
