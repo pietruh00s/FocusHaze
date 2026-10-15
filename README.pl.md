@@ -3,6 +3,10 @@
 </p>
 
 <p align="center">
+  <a href="https://apps.microsoft.com/detail/9P3J7F0RK3RT"><img src="https://get.microsoft.com/images/pl%20dark.svg" alt="Pobierz z Microsoft" width="200"></a>
+</p>
+
+<p align="center">
   <a href="https://github.com/pietruh00s/FocusHaze/releases/latest/download/FocusHaze-win-x64.zip"><img src="https://img.shields.io/badge/Pobierz-x64-0078D4?style=for-the-badge" alt="Pobierz x64"></a>
   &nbsp;
   <a href="https://github.com/pietruh00s/FocusHaze/releases/latest/download/FocusHaze-win-arm64.zip"><img src="https://img.shields.io/badge/Pobierz-ARM64-0078D4?style=for-the-badge" alt="Pobierz ARM64"></a>
@@ -21,6 +25,12 @@
 <p align="center">
   <img src="docs/screenshot.png" alt="Okno ustawień FocusHaze" width="480">
 </p>
+
+## Pobieranie
+
+**[Microsoft Store](https://apps.microsoft.com/detail/9P3J7F0RK3RT)** – instalacja jednym kliknięciem, automatyczne aktualizacje i brak ostrzeżenia SmartScreen.
+
+Albo pobierz zip z [**Releases**](https://github.com/pietruh00s/FocusHaze/releases/latest) (`FocusHaze-win-x64.zip` dla większości komputerów, `FocusHaze-win-arm64.zip` dla komputerów ARM), rozpakuj go w dowolnym miejscu i uruchom `FocusHaze.exe`.
 
 ## Funkcje
 

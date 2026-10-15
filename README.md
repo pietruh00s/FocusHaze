@@ -3,6 +3,10 @@
 </p>
 
 <p align="center">
+  <a href="https://apps.microsoft.com/detail/9P3J7F0RK3RT"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" width="200"></a>
+</p>
+
+<p align="center">
   <a href="https://github.com/pietruh00s/FocusHaze/releases/latest/download/FocusHaze-win-x64.zip"><img src="https://img.shields.io/badge/Download-x64-0078D4?style=for-the-badge" alt="Download x64"></a>
   &nbsp;
   <a href="https://github.com/pietruh00s/FocusHaze/releases/latest/download/FocusHaze-win-arm64.zip"><img src="https://img.shields.io/badge/Download-ARM64-0078D4?style=for-the-badge" alt="Download ARM64"></a>
@@ -24,7 +28,9 @@ A [HazeOver](https://hazeover.com/)-style focus tool for Windows 11, built with 
 
 ## Download
 
-Get the latest version from [**Releases**](https://github.com/pietruh00s/FocusHaze/releases/latest):
+**[Microsoft Store](https://apps.microsoft.com/detail/9P3J7F0RK3RT)** – installs in one click, updates automatically and runs without a SmartScreen warning.
+
+Or get the zip from [**Releases**](https://github.com/pietruh00s/FocusHaze/releases/latest):
 
 - `FocusHaze-win-x64.zip`: most PCs (Intel / AMD)
 - `FocusHaze-win-arm64.zip`: ARM PCs (e.g. Snapdragon X)
