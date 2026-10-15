@@ -7,13 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest/download/FocusHaze-win-x64.zip"><img src="https://img.shields.io/badge/Pobierz-x64-0078D4?style=for-the-badge" alt="Pobierz x64"></a>
-  &nbsp;
-  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest/download/FocusHaze-win-arm64.zip"><img src="https://img.shields.io/badge/Pobierz-ARM64-0078D4?style=for-the-badge" alt="Pobierz ARM64"></a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest"><img src="https://img.shields.io/github/v/release/pietruh00s/FocusHaze?style=for-the-badge&label=wydanie&color=0078D4" alt="Najnowsze wydanie"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/github/v/release/pietruh00s/FocusHaze?style=for-the-badge&label=wersja&color=0078D4" alt="Wersja"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/pietruh00s/FocusHaze?style=for-the-badge&label=licencja&color=0078D4" alt="Licencja: MIT"></a>
   <a href="https://buymeacoffee.com/piotrosika"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee"></a>
 </p>
@@ -28,9 +22,7 @@
 
 ## Pobieranie
 
-**[Microsoft Store](https://apps.microsoft.com/detail/9P3J7F0RK3RT)** – instalacja jednym kliknięciem, automatyczne aktualizacje i brak ostrzeżenia SmartScreen.
-
-Albo pobierz zip z [**Releases**](https://github.com/pietruh00s/FocusHaze/releases/latest) (`FocusHaze-win-x64.zip` dla większości komputerów, `FocusHaze-win-arm64.zip` dla komputerów ARM), rozpakuj go w dowolnym miejscu i uruchom `FocusHaze.exe`.
+FocusHaze jest dostępny w **[Microsoft Store](https://apps.microsoft.com/detail/9P3J7F0RK3RT)**: instalacja jednym kliknięciem i automatyczne aktualizacje, na komputery x64 i ARM64.
 
 ## Funkcje
 
@@ -70,13 +62,7 @@ dotnet run
 
 Aplikacja jest „unpackaged” i ma dołączony Windows App SDK, więc katalog `bin\Release\net10.0-windows10.0.22621.0\win-x64\` można po prostu skopiować w inne miejsce. Wersję na ARM64 zbudujesz przez `-p:Platform=ARM64`.
 
-Paczki z wydaniem (zip dla x64 i ARM64 oraz plik `SHA256SUMS.txt`) budujesz poleceniem:
-
-```bash
-pwsh ./build-release.ps1
-```
-
-Gotowe pliki trafią do `artifacts\`. Każdy zip zawiera folder `FocusHaze`, w którym na wierzchu są tylko `FocusHaze.exe` i `LICENSE`. Ten exe to malutki launcher na .NET Framework 4.8 (`Launcher/`, wbudowany w każdy obsługiwany Windows), który uruchamia właściwą aplikację z podfolderu `app\`, gdzie jest cała reszta. Historia zmian jest w [CHANGELOG.md](CHANGELOG.md).
+Historia zmian jest w [CHANGELOG.md](CHANGELOG.md).
 
 Ustawienia są zapisywane w `%LOCALAPPDATA%\FocusHaze\settings.json`.
 

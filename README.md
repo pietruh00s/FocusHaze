@@ -7,13 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest/download/FocusHaze-win-x64.zip"><img src="https://img.shields.io/badge/Download-x64-0078D4?style=for-the-badge" alt="Download x64"></a>
-  &nbsp;
-  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest/download/FocusHaze-win-arm64.zip"><img src="https://img.shields.io/badge/Download-ARM64-0078D4?style=for-the-badge" alt="Download ARM64"></a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/pietruh00s/FocusHaze/releases/latest"><img src="https://img.shields.io/github/v/release/pietruh00s/FocusHaze?style=for-the-badge&label=release&color=0078D4" alt="Latest release"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/github/v/release/pietruh00s/FocusHaze?style=for-the-badge&label=version&color=0078D4" alt="Version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/pietruh00s/FocusHaze?style=for-the-badge&label=license&color=0078D4" alt="License: MIT"></a>
   <a href="https://buymeacoffee.com/piotrosika"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee"></a>
 </p>
@@ -28,16 +22,7 @@ A [HazeOver](https://hazeover.com/)-style focus tool for Windows 11, built with 
 
 ## Download
 
-**[Microsoft Store](https://apps.microsoft.com/detail/9P3J7F0RK3RT)** – installs in one click, updates automatically and runs without a SmartScreen warning.
-
-Or get the zip from [**Releases**](https://github.com/pietruh00s/FocusHaze/releases/latest):
-
-- `FocusHaze-win-x64.zip`: most PCs (Intel / AMD)
-- `FocusHaze-win-arm64.zip`: ARM PCs (e.g. Snapdragon X)
-
-Unzip the package anywhere and run `FocusHaze.exe`. You don't need to install .NET or the Windows App SDK, because everything is included.
-
-> The executable isn't code-signed yet, so Windows SmartScreen may warn you the first time you run it. Choose **More info → Run anyway**.
+FocusHaze is available on the **[Microsoft Store](https://apps.microsoft.com/detail/9P3J7F0RK3RT)**. It installs in one click and updates automatically, for both x64 and ARM64 PCs.
 
 ## Features
 
@@ -68,13 +53,7 @@ dotnet run
 
 The app is unpackaged and bundles the Windows App SDK, so the build output folder can be copied anywhere. Pass `-p:Platform=ARM64` to build for ARM64.
 
-To build the release packages (x64 and ARM64 zips plus `SHA256SUMS.txt`):
-
-```bash
-pwsh ./build-release.ps1
-```
-
-The packages are written to `artifacts\`. Each zip contains a `FocusHaze` folder with only `FocusHaze.exe` and `LICENSE` at the top level: the exe is a tiny .NET Framework 4.8 launcher (`Launcher/`, built into every supported Windows) that starts the real app from the `app\` subfolder, which holds everything else. See [CHANGELOG.md](CHANGELOG.md) for release history.
+See [CHANGELOG.md](CHANGELOG.md) for release history.
 
 Settings are stored in `%LOCALAPPDATA%\FocusHaze\settings.json`.
 
