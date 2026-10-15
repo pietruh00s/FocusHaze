@@ -44,7 +44,7 @@
     <Content Include="Assets\FocusHaze.png" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
-  <!-- The release launcher is a separate project (see build-release.ps1). -->
+  <!-- Local-only helper projects (not part of the app). -->
   <ItemGroup>
     <Compile Remove="Launcher\**" />
     <None Remove="Launcher\**" />

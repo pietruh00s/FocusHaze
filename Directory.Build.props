@@ -1,5 +1,5 @@
 <Project>
-  <!-- Shared by the app and the release launcher so both always carry the same version. -->
+  <!-- Version and product metadata. -->
   <PropertyGroup>
     <Version>1.2.0</Version>
     <Product>FocusHaze</Product>

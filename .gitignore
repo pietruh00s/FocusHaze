@@ -5,6 +5,10 @@ obj/
 artifacts/
 docs/store/listingData-*.csv
 
+# Former zip release packaging (kept locally only)
+build-release.ps1
+Launcher/
+
 # Microsoft Store packaging (kept locally only)
 build-store.ps1
 Package.appxmanifest
