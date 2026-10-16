@@ -43,9 +43,10 @@ foreach ($locale in $listings.PSObject.Properties.Name) {
         'ShortDescription' = $data.ShortDescription
         'Description'      = $data.Description
         'ReleaseNotes'     = $data.ReleaseNotes
-        # Caption for the first screenshot (the screenshots themselves are added in Partner Center).
-        'DesktopScreenshotCaption1' = $data.ScreenshotCaption
     }
+    # Captions for screenshots 1–N, in the order they are uploaded in Partner Center
+    # (artifacts/store/screenshots/<lang>/: 1 focus-mail, 2 focus-browser, 3 compare, 4 settings).
+    for ($i = 0; $i -lt $data.ScreenshotCaptions.Count; $i++) { $values["DesktopScreenshotCaption$($i + 1)"] = $data.ScreenshotCaptions[$i] }
     for ($i = 0; $i -lt $data.Features.Count; $i++) { $values["Feature$($i + 1)"] = $data.Features[$i] }
     for ($i = 0; $i -lt $data.SearchTerms.Count; $i++) { $values["SearchTerm$($i + 1)"] = $data.SearchTerms[$i] }
 
@@ -61,7 +62,7 @@ foreach ($locale in $listings.PSObject.Properties.Name) {
     if ($data.Description.Length -gt 10000) { $problems.Add("$locale Description is longer than 10000 characters") }
     if ($data.ShortDescription.Length -gt 1000) { $problems.Add("$locale ShortDescription is longer than 1000 characters") }
     if ($data.ReleaseNotes.Length -gt 1500) { $problems.Add("$locale ReleaseNotes is longer than 1500 characters") }
-    if ($data.ScreenshotCaption.Length -gt 200) { $problems.Add("$locale ScreenshotCaption is longer than 200 characters") }
+    $data.ScreenshotCaptions | Where-Object { $_.Length -gt 200 } | ForEach-Object { $problems.Add("$locale screenshot caption over 200 characters: $_") }
     if ($data.Features.Count -gt 20) { $problems.Add("$locale has more than 20 features") }
     $data.Features | Where-Object { $_.Length -gt 200 } | ForEach-Object { $problems.Add("$locale feature over 200 characters: $_") }
     if ($data.SearchTerms.Count -gt 7) { $problems.Add("$locale has more than 7 search terms") }
@@ -70,7 +71,7 @@ foreach ($locale in $listings.PSObject.Properties.Name) {
     if ($words -gt 21) { $problems.Add("$locale search terms have $words words (max 21)") }
 }
 
-$expected = @('Title', 'ShortDescription', 'Description', 'ReleaseNotes', 'DesktopScreenshotCaption1', 'Feature1', 'SearchTerm1')
+$expected = @('Title', 'ShortDescription', 'Description', 'ReleaseNotes', 'DesktopScreenshotCaption1', 'DesktopScreenshotCaption4', 'Feature1', 'SearchTerm1')
 $missing = $expected | Where-Object { -not $used.Contains($_) }
 if ($missing) { $problems.Add("Template has no rows for: $($missing -join ', ') (field names may differ; check the template)") }
 

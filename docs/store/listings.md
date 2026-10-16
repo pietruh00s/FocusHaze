@@ -447,21 +447,23 @@ FocusHaze 不收集任何数据，不进行网络连接，也不显示广告。
 
 ---
 
-## Screenshot captions (DesktopScreenshotCaption1)
+## Screenshot captions (DesktopScreenshotCaption1–4)
 
-| Language | Caption |
-|---|---|
-| en-us | Adjust the dimming intensity, haze color and smooth transitions |
-| pl-pl | Dostosuj intensywność przyciemniania, kolor mgiełki i płynne przejścia |
-| de-de | Passe Intensität der Abdunklung, Schleierfarbe und sanfte Übergänge an |
-| fr-fr | Réglez l'intensité de l'assombrissement, la couleur du voile et les transitions fluides |
-| es-es | Ajusta la intensidad de la atenuación, el color del velo y las transiciones suaves |
-| it-it | Regola l'intensità dell'oscuramento, il colore del velo e le transizioni fluide |
-| pt-br | Ajuste a intensidade do escurecimento, a cor do véu e as transições suaves |
-| nl-nl | Stel de intensiteit van het dimmen, de kleur van de waas en vloeiende overgangen in |
-| uk-ua | Налаштуйте інтенсивність затемнення, колір завіси та плавні переходи |
-| ru-ru | Настройте интенсивность затемнения, цвет завесы и плавные переходы |
-| tr-tr | Karartma yoğunluğunu, perde rengini ve yumuşak geçişleri ayarlayın |
-| ja-jp | 減光の濃さ、ベールの色、なめらかな切り替えを調整できます |
-| ko-kr | 어둡게 하기 강도, 막 색상, 부드러운 전환을 조정하세요 |
-| zh-cn | 调整变暗强度、遮罩颜色和平滑过渡 |
+Order matches the files in `artifacts/store/screenshots/<lang>/`: 1 focus-mail, 2 focus-browser, 3 compare, 4 settings.
+
+| Language | 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| en-us | Everything except your active window fades into a soft haze | Switch windows and the haze follows your focus | Without FocusHaze and with it | Adjust the intensity, color and transitions |
+| pl-pl | Wszystko poza aktywnym oknem znika pod delikatną mgiełką | Przełącz okno, a mgiełka podąży za tobą | Bez FocusHaze i z nim | Dostosuj intensywność, kolor i przejścia |
+| de-de | Alles außer deinem aktiven Fenster verschwindet hinter einem sanften Schleier | Wechsle das Fenster, und der Schleier folgt deinem Fokus | Ohne FocusHaze und mit FocusHaze | Passe Intensität, Farbe und Übergänge an |
+| fr-fr | Tout sauf votre fenêtre active s'efface sous un léger voile | Changez de fenêtre et le voile suit votre attention | Sans FocusHaze et avec FocusHaze | Réglez l'intensité, la couleur et les transitions |
+| es-es | Todo excepto tu ventana activa se difumina bajo un velo suave | Cambia de ventana y el velo sigue tu foco | Sin FocusHaze y con FocusHaze | Ajusta la intensidad, el color y las transiciones |
+| it-it | Tutto tranne la finestra attiva svanisce sotto un velo leggero | Cambia finestra e il velo segue la tua attenzione | Senza FocusHaze e con FocusHaze | Regola intensità, colore e transizioni |
+| pt-br | Tudo, exceto a janela ativa, some sob um véu suave | Troque de janela e o véu acompanha seu foco | Sem o FocusHaze e com o FocusHaze | Ajuste a intensidade, a cor e as transições |
+| nl-nl | Alles behalve je actieve venster verdwijnt achter een zachte waas | Wissel van venster en de waas volgt je focus | Zonder FocusHaze en met FocusHaze | Stel de intensiteit, kleur en overgangen in |
+| uk-ua | Усе, крім активного вікна, ховається під м'якою завісою | Перемкніть вікно, і завіса піде за вами | Без FocusHaze і з FocusHaze | Налаштуйте інтенсивність, колір і переходи |
+| ru-ru | Всё, кроме активного окна, скрывается под мягкой завесой | Переключите окно, и завеса последует за вами | Без FocusHaze и с FocusHaze | Настройте интенсивность, цвет и переходы |
+| tr-tr | Etkin pencere dışındaki her şey yumuşak bir perdenin ardında kaybolur | Pencere değiştirin, perde de odağınızı takip etsin | FocusHaze olmadan ve FocusHaze ile | Yoğunluğu, rengi ve geçişleri ayarlayın |
+| ja-jp | アクティブなウィンドウ以外が、やわらかなベールの向こうに沈みます | ウィンドウを切り替えると、ベールがフォーカスに追従します | FocusHaze なし / FocusHaze あり | 濃さ、色、切り替えを調整できます |
+| ko-kr | 활성 창을 제외한 모든 것이 부드러운 막 뒤로 사라집니다 | 창을 전환하면 막이 포커스를 따라갑니다 | FocusHaze 없이, 그리고 FocusHaze와 함께 | 강도, 색상, 전환 효과를 조정하세요 |
+| zh-cn | 除活动窗口外，其他一切都隐入柔和的遮罩 | 切换窗口，遮罩随焦点移动 | 不使用 FocusHaze 与使用 FocusHaze 对比 | 调整强度、颜色和过渡效果 |

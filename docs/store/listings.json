@@ -25,7 +25,12 @@
     ],
     "ReleaseNotes": "First Microsoft Store release.",
     "Screenshot": "screenshot-en.png",
-    "ScreenshotCaption": "Adjust the dimming intensity, haze color and smooth transitions"
+    "ScreenshotCaptions": [
+      "Everything except your active window fades into a soft haze",
+      "Switch windows and the haze follows your focus",
+      "Without FocusHaze and with it",
+      "Adjust the intensity, color and transitions"
+    ]
   },
   "pl-pl": {
     "Title": "FocusHaze",
@@ -53,7 +58,12 @@
     ],
     "ReleaseNotes": "Pierwsze wydanie w Microsoft Store.",
     "Screenshot": "screenshot-pl.png",
-    "ScreenshotCaption": "Dostosuj intensywność przyciemniania, kolor mgiełki i płynne przejścia"
+    "ScreenshotCaptions": [
+      "Wszystko poza aktywnym oknem znika pod delikatną mgiełką",
+      "Przełącz okno, a mgiełka podąży za tobą",
+      "Bez FocusHaze i z nim",
+      "Dostosuj intensywność, kolor i przejścia"
+    ]
   },
   "de-de": {
     "Title": "FocusHaze",
@@ -81,7 +91,12 @@
     ],
     "ReleaseNotes": "Erste Veröffentlichung im Microsoft Store.",
     "Screenshot": "screenshot-de.png",
-    "ScreenshotCaption": "Passe Intensität der Abdunklung, Schleierfarbe und sanfte Übergänge an"
+    "ScreenshotCaptions": [
+      "Alles außer deinem aktiven Fenster verschwindet hinter einem sanften Schleier",
+      "Wechsle das Fenster, und der Schleier folgt deinem Fokus",
+      "Ohne FocusHaze und mit FocusHaze",
+      "Passe Intensität, Farbe und Übergänge an"
+    ]
   },
   "fr-fr": {
     "Title": "FocusHaze",
@@ -109,7 +124,12 @@
     ],
     "ReleaseNotes": "Première version sur le Microsoft Store.",
     "Screenshot": "screenshot-fr.png",
-    "ScreenshotCaption": "Réglez l'intensité de l'assombrissement, la couleur du voile et les transitions fluides"
+    "ScreenshotCaptions": [
+      "Tout sauf votre fenêtre active s'efface sous un léger voile",
+      "Changez de fenêtre et le voile suit votre attention",
+      "Sans FocusHaze et avec FocusHaze",
+      "Réglez l'intensité, la couleur et les transitions"
+    ]
   },
   "es-es": {
     "Title": "FocusHaze",
@@ -137,7 +157,12 @@
     ],
     "ReleaseNotes": "Primera versión en Microsoft Store.",
     "Screenshot": "screenshot-es.png",
-    "ScreenshotCaption": "Ajusta la intensidad de la atenuación, el color del velo y las transiciones suaves"
+    "ScreenshotCaptions": [
+      "Todo excepto tu ventana activa se difumina bajo un velo suave",
+      "Cambia de ventana y el velo sigue tu foco",
+      "Sin FocusHaze y con FocusHaze",
+      "Ajusta la intensidad, el color y las transiciones"
+    ]
   },
   "it-it": {
     "Title": "FocusHaze",
@@ -165,7 +190,12 @@
     ],
     "ReleaseNotes": "Prima versione su Microsoft Store.",
     "Screenshot": "screenshot-it.png",
-    "ScreenshotCaption": "Regola l'intensità dell'oscuramento, il colore del velo e le transizioni fluide"
+    "ScreenshotCaptions": [
+      "Tutto tranne la finestra attiva svanisce sotto un velo leggero",
+      "Cambia finestra e il velo segue la tua attenzione",
+      "Senza FocusHaze e con FocusHaze",
+      "Regola intensità, colore e transizioni"
+    ]
   },
   "pt-br": {
     "Title": "FocusHaze",
@@ -193,7 +223,12 @@
     ],
     "ReleaseNotes": "Primeira versão na Microsoft Store.",
     "Screenshot": "screenshot-pt.png",
-    "ScreenshotCaption": "Ajuste a intensidade do escurecimento, a cor do véu e as transições suaves"
+    "ScreenshotCaptions": [
+      "Tudo, exceto a janela ativa, some sob um véu suave",
+      "Troque de janela e o véu acompanha seu foco",
+      "Sem o FocusHaze e com o FocusHaze",
+      "Ajuste a intensidade, a cor e as transições"
+    ]
   },
   "nl-nl": {
     "Title": "FocusHaze",
@@ -221,7 +256,12 @@
     ],
     "ReleaseNotes": "Eerste release in de Microsoft Store.",
     "Screenshot": "screenshot-nl.png",
-    "ScreenshotCaption": "Stel de intensiteit van het dimmen, de kleur van de waas en vloeiende overgangen in"
+    "ScreenshotCaptions": [
+      "Alles behalve je actieve venster verdwijnt achter een zachte waas",
+      "Wissel van venster en de waas volgt je focus",
+      "Zonder FocusHaze en met FocusHaze",
+      "Stel de intensiteit, kleur en overgangen in"
+    ]
   },
   "uk-ua": {
     "Title": "FocusHaze",
@@ -249,7 +289,12 @@
     ],
     "ReleaseNotes": "Перший випуск у Microsoft Store.",
     "Screenshot": "screenshot-uk.png",
-    "ScreenshotCaption": "Налаштуйте інтенсивність затемнення, колір завіси та плавні переходи"
+    "ScreenshotCaptions": [
+      "Усе, крім активного вікна, ховається під м'якою завісою",
+      "Перемкніть вікно, і завіса піде за вами",
+      "Без FocusHaze і з FocusHaze",
+      "Налаштуйте інтенсивність, колір і переходи"
+    ]
   },
   "ru-ru": {
     "Title": "FocusHaze",
@@ -277,7 +322,12 @@
     ],
     "ReleaseNotes": "Первый выпуск в Microsoft Store.",
     "Screenshot": "screenshot-ru.png",
-    "ScreenshotCaption": "Настройте интенсивность затемнения, цвет завесы и плавные переходы"
+    "ScreenshotCaptions": [
+      "Всё, кроме активного окна, скрывается под мягкой завесой",
+      "Переключите окно, и завеса последует за вами",
+      "Без FocusHaze и с FocusHaze",
+      "Настройте интенсивность, цвет и переходы"
+    ]
   },
   "tr-tr": {
     "Title": "FocusHaze",
@@ -305,7 +355,12 @@
     ],
     "ReleaseNotes": "Microsoft Store'daki ilk sürüm.",
     "Screenshot": "screenshot-tr.png",
-    "ScreenshotCaption": "Karartma yoğunluğunu, perde rengini ve yumuşak geçişleri ayarlayın"
+    "ScreenshotCaptions": [
+      "Etkin pencere dışındaki her şey yumuşak bir perdenin ardında kaybolur",
+      "Pencere değiştirin, perde de odağınızı takip etsin",
+      "FocusHaze olmadan ve FocusHaze ile",
+      "Yoğunluğu, rengi ve geçişleri ayarlayın"
+    ]
   },
   "ja-jp": {
     "Title": "FocusHaze",
@@ -333,7 +388,12 @@
     ],
     "ReleaseNotes": "Microsoft Store での最初のリリース。",
     "Screenshot": "screenshot-ja.png",
-    "ScreenshotCaption": "減光の濃さ、ベールの色、なめらかな切り替えを調整できます"
+    "ScreenshotCaptions": [
+      "アクティブなウィンドウ以外が、やわらかなベールの向こうに沈みます",
+      "ウィンドウを切り替えると、ベールがフォーカスに追従します",
+      "FocusHaze なし / FocusHaze あり",
+      "濃さ、色、切り替えを調整できます"
+    ]
   },
   "ko-kr": {
     "Title": "FocusHaze",
@@ -361,7 +421,12 @@
     ],
     "ReleaseNotes": "Microsoft Store 첫 출시.",
     "Screenshot": "screenshot-ko.png",
-    "ScreenshotCaption": "어둡게 하기 강도, 막 색상, 부드러운 전환을 조정하세요"
+    "ScreenshotCaptions": [
+      "활성 창을 제외한 모든 것이 부드러운 막 뒤로 사라집니다",
+      "창을 전환하면 막이 포커스를 따라갑니다",
+      "FocusHaze 없이, 그리고 FocusHaze와 함께",
+      "강도, 색상, 전환 효과를 조정하세요"
+    ]
   },
   "zh-cn": {
     "Title": "FocusHaze",
@@ -389,6 +454,11 @@
     ],
     "ReleaseNotes": "首次在 Microsoft Store 发布。",
     "Screenshot": "screenshot-zh-Hans.png",
-    "ScreenshotCaption": "调整变暗强度、遮罩颜色和平滑过渡"
+    "ScreenshotCaptions": [
+      "除活动窗口外，其他一切都隐入柔和的遮罩",
+      "切换窗口，遮罩随焦点移动",
+      "不使用 FocusHaze 与使用 FocusHaze 对比",
+      "调整强度、颜色和过渡效果"
+    ]
   }
 }
