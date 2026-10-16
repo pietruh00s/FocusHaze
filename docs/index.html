@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FocusHaze – Dim inactive windows on Windows 11 | HazeOver alternative</title>
+  <meta name="description" content="FocusHaze dims every window except the one you're working in, so you can focus. A HazeOver-style focus tool for Windows 10 and 11, available on the Microsoft Store.">
+  <meta name="keywords" content="HazeOver for Windows, HazeOver alternative, dim inactive windows, dim background windows, Windows 11 focus, focus mode Windows, screen dimmer, distraction free">
+  <link rel="canonical" href="https://pietruh00s.github.io/FocusHaze/">
+  <link rel="icon" href="assets/favicon.ico">
+  <meta name="theme-color" content="#0b140e">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FocusHaze – One window. Full focus.">
+  <meta property="og:description" content="Dims every window except the one you're working in. A HazeOver-style focus tool for Windows 11.">
+  <meta property="og:url" content="https://pietruh00s.github.io/FocusHaze/">
+  <meta property="og:image" content="https://pietruh00s.github.io/FocusHaze/banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "FocusHaze",
+    "operatingSystem": "Windows 10, Windows 11",
+    "applicationCategory": "UtilitiesApplication",
+    "description": "Dims every window except the one you're working in, so you can focus.",
+    "image": "https://pietruh00s.github.io/FocusHaze/assets/focus-mail.jpg",
+    "author": { "@type": "Person", "name": "Piotr Osika" },
+    "offers": { "@type": "Offer", "price": "0.99", "priceCurrency": "USD", "url": "https://apps.microsoft.com/detail/9P3J7F0RK3RT" }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0b140e;
+      --bg-2: #101b14;
+      --card: rgba(255, 255, 255, 0.045);
+      --card-line: rgba(255, 255, 255, 0.09);
+      --text: #f3f5f4;
+      --muted: #a3aca6;
+      --accent: #86e684;
+      --accent-ink: #0a1e0c;
+      --radius: 18px;
+      --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+      --font-display: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+      --mono: "Cascadia Mono", "Cascadia Code", Consolas, ui-monospace, monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.6 var(--font);
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Soft green light, like the blurred mountain backdrop in the trailer. */
+    body::before {
+      content: "";
+      position: fixed; inset: 0; z-index: -1;
+      background:
+        radial-gradient(60vw 50vw at 75% 10%, rgba(134, 230, 132, 0.12), transparent 60%),
+        radial-gradient(50vw 40vw at 10% 60%, rgba(70, 120, 90, 0.18), transparent 65%),
+        linear-gradient(180deg, #101b14 0%, #0b140e 60%);
+    }
+    a { color: var(--accent); }
+    img, video { display: block; max-width: 100%; height: auto; }
+    .wrap { width: min(1160px, 100% - 32px); margin: 0 auto; }
+
+    header.top {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--text); text-decoration: none; font-weight: 600; font-size: 19px; }
+    .brand img { width: 34px; height: 34px; }
+    nav.links { display: flex; gap: 22px; font-size: 15px; }
+    nav.links a { color: var(--muted); text-decoration: none; }
+    nav.links a:hover { color: var(--text); }
+
+    .hero { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; padding: 48px 0 72px; }
+    .eyebrow { font: 600 13px/1 var(--mono); letter-spacing: 0.22em; color: var(--accent); text-transform: uppercase; }
+    h1 { font: 700 clamp(44px, 6vw, 76px)/1.02 var(--font-display); margin: 18px 0 20px; letter-spacing: -0.02em; }
+    h1 .accent, h2 .accent { color: var(--accent); }
+    .lead { color: var(--muted); font-size: 20px; max-width: 30ch; margin: 0 0 32px; }
+    .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
+    .store-badge img { height: 58px; width: auto; }
+    .cta small { color: var(--muted); font-size: 14px; }
+
+    .video {
+      border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--card-line);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+      background: #000;
+    }
+    .video video { width: 100%; aspect-ratio: 16 / 9; }
+
+    section { padding: 72px 0; }
+    h2 { font: 700 clamp(32px, 4vw, 48px)/1.1 var(--font-display); margin: 12px 0 16px; letter-spacing: -0.015em; }
+    .section-lead { color: var(--muted); max-width: 62ch; margin: 0 0 40px; }
+
+    /* Grid items default to min-width:auto, which lets a 1920px image stretch the page. */
+    .hero > *, .step > * { min-width: 0; }
+    .step { display: grid; grid-template-columns: 0.8fr 1.4fr; gap: 48px; align-items: center; margin-bottom: 72px; }
+    .step:nth-child(even) { grid-template-columns: 1.4fr 0.8fr; }
+    .step:nth-child(even) .step-text { order: 2; }
+    .step h3 { font: 700 30px/1.2 var(--font-display); margin: 12px 0 10px; }
+    .step p { color: var(--muted); margin: 0; }
+    .shot { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--card-line); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4); }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: var(--card); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 26px; }
+    .card .icon { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(134, 230, 132, 0.12); color: var(--accent); margin-bottom: 16px; }
+    .card .icon svg { width: 22px; height: 22px; }
+    .card h3 { margin: 0 0 6px; font-size: 19px; }
+    .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+    .langs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .langs span { border: 1px solid var(--card-line); border-radius: 999px; padding: 6px 14px; font-size: 14px; color: var(--muted); background: var(--card); }
+
+    details { background: var(--card); border: 1px solid var(--card-line); border-radius: 14px; padding: 18px 22px; margin-bottom: 12px; }
+    summary { cursor: pointer; font-weight: 600; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; float: right; color: var(--accent); font-weight: 400; font-size: 22px; line-height: 1; }
+    details[open] summary::after { content: "–"; }
+    details p { color: var(--muted); margin: 12px 0 0; }
+
+    .final { text-align: center; padding: 96px 0; }
+    .final img.app-icon { width: 120px; height: 120px; margin: 0 auto 24px; filter: drop-shadow(0 20px 40px rgba(134, 230, 132, 0.25)); }
+    .final .cta { justify-content: center; }
+
+    footer { border-top: 1px solid var(--card-line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+    footer a { color: var(--muted); }
+
+    @media (max-width: 880px) {
+      .hero, .step, .step:nth-child(even) { grid-template-columns: 1fr; gap: 28px; }
+      .step:nth-child(even) .step-text { order: 0; }
+      .grid { grid-template-columns: 1fr; }
+      nav.links { display: none; }
+      section { padding: 48px 0; }
+      .step { margin-bottom: 48px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="wrap top">
+    <a class="brand" href="#"><img src="assets/icon.png" alt="" width="34" height="34">FocusHaze</a>
+    <nav class="links" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero" aria-labelledby="hero-title">
+      <div>
+        <div class="eyebrow">Focus tool for Windows 11</div>
+        <h1 id="hero-title">One window.<br><span class="accent">Full focus.</span></h1>
+        <p class="lead">FocusHaze dims every window except the one you're working in, so the rest of your screen fades into the background.</p>
+        <div class="cta">
+          <a class="store-badge" href="https://apps.microsoft.com/detail/9P3J7F0RK3RT"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" width="174" height="58"></a>
+          <small>Windows 10 &amp; 11 · x64 and ARM64</small>
+        </div>
+      </div>
+      <div class="video">
+        <video src="assets/focushaze-trailer.mp4" poster="assets/trailer-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="FocusHaze trailer"></video>
+      </div>
+    </section>
+
+    <section class="wrap" id="how" aria-labelledby="how-title">
+      <div class="eyebrow">How it works</div>
+      <h2 id="how-title">The haze follows <span class="accent">your focus.</span></h2>
+      <p class="section-lead">A translucent haze sits right beneath the active window. Clicks pass straight through it, so you work exactly as before – just with less noise around you.</p>
+
+      <div class="steps">
+
+      <div class="step">
+        <div class="step-text">
+          <div class="eyebrow">01 — Focus</div>
+          <h3>Dim the rest</h3>
+          <p>Everything except the window you're working in fades into a soft haze: other apps, the desktop, all of it.</p>
+        </div>
+        <img class="shot" src="assets/focus-mail.jpg" alt="Mail window active and bright, all other windows dimmed by FocusHaze" width="1920" height="1080" loading="lazy">
+      </div>
+
+      <div class="step">
+        <div class="step-text">
+          <div class="eyebrow">02 — Follow</div>
+          <h3>Switch, and it follows</h3>
+          <p>Click any window and the haze moves with you. The window you leave fades out smoothly instead of flashing.</p>
+        </div>
+        <img class="shot" src="assets/focus-browser.jpg" alt="Browser window active after switching, the rest dimmed" width="1920" height="1080" loading="lazy">
+      </div>
+
+      <div class="step">
+        <div class="step-text">
+          <div class="eyebrow">03 — Compare</div>
+          <h3>Calmer at a glance</h3>
+          <p>Left: a normal busy desktop. Right: the same desktop with FocusHaze. Your eyes go straight to what matters.</p>
+        </div>
+        <img class="shot" src="assets/compare.jpg" alt="Split view: desktop without FocusHaze on the left, with FocusHaze on the right" width="1920" height="1080" loading="lazy">
+      </div>
+
+      <div class="step">
+        <div class="step-text">
+          <div class="eyebrow">04 — Tune</div>
+          <h3>Make it yours</h3>
+          <p>Choose how strong the haze is, its color and how fast it follows you. Changes apply instantly.</p>
+        </div>
+        <img class="shot" src="assets/settings.jpg" alt="FocusHaze settings window: intensity, haze color, smooth transitions" width="1920" height="1080" loading="lazy">
+      </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="features" aria-labelledby="features-title">
+      <div class="eyebrow">Features</div>
+      <h2 id="features-title">Hotkey, tray, every display. <span class="accent">Covered.</span></h2>
+      <p class="section-lead">FocusHaze runs quietly in your notification area and stays out of your way.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2.5"/><path d="M6 10h.01M9 10h.01M12 10h.01M15 10h.01M18 10h.01M7 14h10"/></svg></div>
+          <h3>Ctrl+Alt+H</h3>
+          <p>Turn dimming on and off from anywhere.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l5.5 15 2.2-6.3L19 9.5z"/><path d="M13 13l5 5"/></svg></div>
+          <h3>Click-through haze</h3>
+          <p>It never gets in the way of your clicks.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="4" width="13" height="9" rx="1.5"/><rect x="9" y="10" width="12.5" height="8.5" rx="1.5"/></svg></div>
+          <h3>Every display</h3>
+          <p>Dim all monitors or only the one with the active window.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v8"/><path d="M6.3 6.5a8 8 0 1 0 11.4 0"/></svg></div>
+          <h3>Starts with Windows</h3>
+          <p>Optional – it starts quietly in the tray.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg></div>
+          <h3>14 languages</h3>
+          <p>Follows your Windows display language.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3>Private by design</h3>
+          <p>No data collection, no ads, no network connections.</p>
+        </div>
+      </div>
+      <div class="langs" aria-label="Supported languages">
+        <span>English</span><span>Polski</span><span>Deutsch</span><span>Français</span><span>Español</span><span>Italiano</span><span>Português</span><span>Nederlands</span><span>Українська</span><span>Русский</span><span>Türkçe</span><span>日本語</span><span>한국어</span><span>中文(简体)</span>
+      </div>
+    </section>
+
+    <section class="wrap" id="faq" aria-labelledby="faq-title">
+      <div class="eyebrow">FAQ</div>
+      <h2 id="faq-title">Questions</h2>
+      <details>
+        <summary>Is FocusHaze like HazeOver for Windows?</summary>
+        <p>Yes – FocusHaze brings the same idea to Windows: everything except the active window is dimmed so you can concentrate. It was inspired by HazeOver for macOS, but it's an independent app built natively for Windows 10 and 11.</p>
+      </details>
+      <details>
+        <summary>Can I still click on dimmed windows?</summary>
+        <p>Yes. The haze is click-through: clicking any dimmed window activates it, and the haze moves beneath it.</p>
+      </details>
+      <details>
+        <summary>Does it work with multiple monitors?</summary>
+        <p>Yes. You can dim all displays, or only the display that contains the active window.</p>
+      </details>
+      <details>
+        <summary>Does FocusHaze collect any data?</summary>
+        <p>No. It makes no network connections, has no telemetry and shows no ads. Your settings stay on your PC. See the <a href="https://github.com/pietruh00s/FocusHaze/blob/main/PRIVACY.md">privacy policy</a>.</p>
+      </details>
+      <details>
+        <summary>Which Windows versions are supported?</summary>
+        <p>Windows 10 version 2004 or later and Windows 11, on both x64 and ARM64 PCs.</p>
+      </details>
+      <details>
+        <summary>Can I install it with winget?</summary>
+        <p>Yes: <code>winget install 9P3J7F0RK3RT</code> installs FocusHaze from the Microsoft Store.</p>
+      </details>
+    </section>
+
+    <section class="final" aria-labelledby="final-title">
+      <div class="wrap">
+        <img class="app-icon" src="assets/icon.png" alt="FocusHaze icon" width="120" height="120">
+        <h2 id="final-title">Less noise. <span class="accent">More focus.</span></h2>
+        <p class="section-lead" style="margin: 0 auto 32px;">Install FocusHaze from the Microsoft Store – it updates automatically.</p>
+        <div class="cta">
+          <a class="store-badge" href="https://apps.microsoft.com/detail/9P3J7F0RK3RT"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" width="174" height="58"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Piotr Osika</span>
+      <span><a href="https://github.com/pietruh00s/FocusHaze">Source on GitHub</a> · <a href="https://github.com/pietruh00s/FocusHaze/blob/main/PRIVACY.md">Privacy</a> · <a href="https://buymeacoffee.com/piotrosika">Buy me a coffee</a></span>
+    </div>
+  </footer>
+</body>
+</html>
