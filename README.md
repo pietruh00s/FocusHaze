@@ -7,7 +7,6 @@
 </p>
 
 <p align="center">
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/github/v/release/pietruh00s/FocusHaze?style=for-the-badge&label=version&color=0078D4" alt="Version"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/pietruh00s/FocusHaze?style=for-the-badge&label=license&color=0078D4" alt="License: MIT"></a>
   <a href="https://pietruh00s.github.io/FocusHaze/"><img src="https://img.shields.io/badge/website-pietruh00s.github.io%2FFocusHaze-0078D4?style=for-the-badge" alt="Website"></a>
   <a href="https://buymeacoffee.com/piotrosika"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy Me a Coffee"></a>
