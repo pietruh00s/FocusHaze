@@ -17,6 +17,7 @@ namespace FocusHaze;
 public sealed partial class MainWindow : Window
 {
     private static readonly string[] PresetColors = ["#000000", "#1B1F3B", "#2B1B10", "#0F2A1E", "#3A3A3A"];
+    private static readonly int[] DelayOptionsMs = [0, 1000, 2000, 5000, 10000, 30000, 60000, 120000, 300000];
 
     // Guards against control events echoing back into settings while the UI is being synced.
     // Starts true: InitializeComponent coerces slider values to their Minimum and raises
@@ -38,6 +39,8 @@ public sealed partial class MainWindow : Window
 
         BuildColorPresets();
         BuildLanguageList();
+        foreach (int ms in DelayOptionsMs)
+            DelayCombo.Items.Add(new ComboBoxItem { Tag = ms });
         SyncFromSettings();
 
         App.Current.SettingsChanged += SyncFromSettings;
@@ -94,6 +97,7 @@ public sealed partial class MainWindow : Window
                 .FirstOrDefault(item => (string)item.Tag == Loc.Language) ?? LanguageCombo.Items[0];
             AutomationProperties.SetName(ColorButton, Loc.Get("Color_Title"));
             AutomationProperties.SetName(LanguageCombo, Loc.Get("Language_Title"));
+            AutomationProperties.SetName(DelayCombo, Loc.Get("Delay_Title"));
 
             EnabledToggle.IsOn = Settings.Enabled;
             IntensitySlider.Value = Settings.Intensity;
@@ -105,6 +109,10 @@ public sealed partial class MainWindow : Window
             FadeText.Text = $"{Settings.FadeDurationMs} ms";
             FadePanel.Visibility = Settings.Animate ? Visibility.Visible : Visibility.Collapsed;
             ActiveDisplayToggle.IsOn = Settings.ActiveDisplayOnly;
+            foreach (ComboBoxItem item in DelayCombo.Items)
+                item.Content = DelayText((int)item.Tag);
+            // A delay set by hand in settings.json shows up as the nearest option at or below it.
+            DelayCombo.SelectedItem = DelayCombo.Items.Cast<ComboBoxItem>().Last(item => (int)item.Tag <= Math.Max(0, Settings.DimDelayMs));
             _ = RefreshStartupAsync();
 
             HotkeyText.Text = Loc.Format(App.Current.HotkeyAvailable ? "Hotkey_Available" : "Hotkey_Taken",
@@ -152,6 +160,19 @@ public sealed partial class MainWindow : Window
 
     private void OnActiveDisplayToggled(object sender, RoutedEventArgs e) =>
         Update(s => s.ActiveDisplayOnly = ActiveDisplayToggle.IsOn);
+
+    private void OnDelayChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (DelayCombo.SelectedItem is ComboBoxItem { Tag: int ms })
+            Update(s => s.DimDelayMs = ms);
+    }
+
+    private static string DelayText(int ms) => ms switch
+    {
+        0 => Loc.Get("Delay_Immediately"),
+        < 60000 => Loc.Format("Delay_Seconds", ms / 1000),
+        _ => Loc.Format("Delay_Minutes", ms / 60000),
+    };
 
     private void OnLanguageChanged(object sender, SelectionChangedEventArgs e)
     {

@@ -33,4 +33,9 @@
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – dimming on</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – dimming off</value></data>
   <data name="Startup_Blocked" xml:space="preserve"><value>Turned off in Windows Settings › Apps › Startup. Turn it on there to start FocusHaze with Windows.</value></data>
+  <data name="Delay_Title" xml:space="preserve"><value>Delay before dimming</value></data>
+  <data name="Delay_Description" xml:space="preserve"><value>After you switch windows, the previous one stays bright for a moment</value></data>
+  <data name="Delay_Immediately" xml:space="preserve"><value>Immediately</value></data>
+  <data name="Delay_Seconds" xml:space="preserve"><value>{0} s</value></data>
+  <data name="Delay_Minutes" xml:space="preserve"><value>{0} min</value></data>
 </root>

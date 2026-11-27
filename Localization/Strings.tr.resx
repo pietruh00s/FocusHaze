@@ -33,4 +33,9 @@
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – karartma açık</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – karartma kapalı</value></data>
   <data name="Startup_Blocked" xml:space="preserve"><value>Windows Ayarları › Uygulamalar › Başlangıç bölümünde kapalı. FocusHaze&apos;in Windows ile başlaması için oradan açın.</value></data>
+  <data name="Delay_Title" xml:space="preserve"><value>Karartma gecikmesi</value></data>
+  <data name="Delay_Description" xml:space="preserve"><value>Pencere değiştirdikten sonra önceki pencere bir süre daha parlak kalır</value></data>
+  <data name="Delay_Immediately" xml:space="preserve"><value>Hemen</value></data>
+  <data name="Delay_Seconds" xml:space="preserve"><value>{0} sn</value></data>
+  <data name="Delay_Minutes" xml:space="preserve"><value>{0} dk</value></data>
 </root>

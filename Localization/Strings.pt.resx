@@ -33,4 +33,9 @@
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – escurecimento ativado</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – escurecimento desativado</value></data>
   <data name="Startup_Blocked" xml:space="preserve"><value>Desativado em Configurações do Windows › Aplicativos › Inicialização. Ative lá para iniciar o FocusHaze com o Windows.</value></data>
+  <data name="Delay_Title" xml:space="preserve"><value>Atraso antes de escurecer</value></data>
+  <data name="Delay_Description" xml:space="preserve"><value>Ao trocar de janela, a anterior continua clara por um momento</value></data>
+  <data name="Delay_Immediately" xml:space="preserve"><value>Imediatamente</value></data>
+  <data name="Delay_Seconds" xml:space="preserve"><value>{0} s</value></data>
+  <data name="Delay_Minutes" xml:space="preserve"><value>{0} min</value></data>
 </root>

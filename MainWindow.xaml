@@ -134,6 +134,24 @@
                     </Grid>
                 </Border>
 
+                <!-- Delay -->
+                <Border Style="{StaticResource SettingsCardStyle}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <FontIcon Glyph="&#xE823;" Style="{StaticResource SettingsIconStyle}" />
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                            <TextBlock loc:Localize.Key="Delay_Title" />
+                            <TextBlock loc:Localize.Key="Delay_Description" Style="{StaticResource SettingsDescriptionStyle}" />
+                        </StackPanel>
+                        <ComboBox x:Name="DelayCombo" Grid.Column="2" MinWidth="140" VerticalAlignment="Center"
+                                  SelectionChanged="OnDelayChanged" />
+                    </Grid>
+                </Border>
+
                 <!-- Displays -->
                 <Border Style="{StaticResource SettingsCardStyle}">
                     <Grid>

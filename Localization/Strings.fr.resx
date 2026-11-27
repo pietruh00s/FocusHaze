@@ -33,4 +33,9 @@
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – assombrissement activé</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – assombrissement désactivé</value></data>
   <data name="Startup_Blocked" xml:space="preserve"><value>Désactivé dans Paramètres Windows › Applications › Démarrage. Activez-le à cet endroit pour lancer FocusHaze avec Windows.</value></data>
+  <data name="Delay_Title" xml:space="preserve"><value>Délai avant l&apos;assombrissement</value></data>
+  <data name="Delay_Description" xml:space="preserve"><value>Après un changement de fenêtre, la précédente reste claire un instant</value></data>
+  <data name="Delay_Immediately" xml:space="preserve"><value>Immédiatement</value></data>
+  <data name="Delay_Seconds" xml:space="preserve"><value>{0} s</value></data>
+  <data name="Delay_Minutes" xml:space="preserve"><value>{0} min</value></data>
 </root>

@@ -30,6 +30,9 @@ internal sealed class AppSettings
 
     public int FadeDurationMs { get; set; } = 500;
 
+    /// <summary>How long to wait after a window switch before the rest of the screen is dimmed.</summary>
+    public int DimDelayMs { get; set; }
+
     /// <summary>Dim only the display that contains the active window.</summary>
     public bool ActiveDisplayOnly { get; set; }
 

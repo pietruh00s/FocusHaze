@@ -33,4 +33,9 @@
   <data name="Tray_TooltipOn" xml:space="preserve"><value>FocusHaze – 減光オン</value></data>
   <data name="Tray_TooltipOff" xml:space="preserve"><value>FocusHaze – 減光オフ</value></data>
   <data name="Startup_Blocked" xml:space="preserve"><value>Windows の設定 › アプリ › スタートアップ でオフになっています。FocusHaze を Windows と一緒に起動するには、そこでオンにしてください。</value></data>
+  <data name="Delay_Title" xml:space="preserve"><value>暗くするまでの遅延</value></data>
+  <data name="Delay_Description" xml:space="preserve"><value>ウィンドウを切り替えた後、前のウィンドウはしばらく明るいままです</value></data>
+  <data name="Delay_Immediately" xml:space="preserve"><value>すぐに</value></data>
+  <data name="Delay_Seconds" xml:space="preserve"><value>{0} 秒</value></data>
+  <data name="Delay_Minutes" xml:space="preserve"><value>{0} 分</value></data>
 </root>

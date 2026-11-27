@@ -1,4 +1,5 @@
 using FocusHaze.Native;
+using Microsoft.UI.Dispatching;
 
 namespace FocusHaze.Core;
 
@@ -41,6 +42,10 @@ internal sealed class DimController : IDisposable
     private AppSettings _settings;
     private IntPtr _target;
 
+    // Holds back dimming after a window switch for AppSettings.DimDelayMs.
+    private readonly DispatcherQueueTimer _delay;
+    private IntPtr _delayFor;
+
     public DimController(AppSettings settings)
     {
         _settings = settings;
@@ -49,6 +54,10 @@ internal sealed class DimController : IDisposable
         _transition = new DimOverlay("FocusHaze.TransitionOverlay", settings.ColorRef);
         _ownWindows.Add(_haze.Handle);
         _ownWindows.Add(_transition.Handle);
+
+        _delay = DispatcherQueue.GetForCurrentThread().CreateTimer();
+        _delay.IsRepeating = false;
+        _delay.Tick += OnDelayElapsed;
 
         _winEventProc = OnWinEvent;
         Hook(Win32.EVENT_SYSTEM_FOREGROUND);
@@ -134,7 +143,19 @@ internal sealed class DimController : IDisposable
 
     private int FadeMs => _settings.Animate ? _settings.FadeDurationMs : 0;
 
-    public void Refresh(bool switching = false)
+    private void OnDelayElapsed(DispatcherQueueTimer timer, object args)
+    {
+        try
+        {
+            Refresh(switching: true, delayed: true);
+        }
+        catch (Exception ex)
+        {
+            CrashLog.Write(ex, "dim delay");
+        }
+    }
+
+    public void Refresh(bool switching = false, bool delayed = false)
     {
         if (!_settings.Enabled)
         {
@@ -151,6 +172,20 @@ internal sealed class DimController : IDisposable
                 HideAll();
                 return;
         }
+
+        // The newly activated window is already above the haze, so until the delay runs out the window
+        // that lost focus simply stays bright as well.
+        if (switching && !delayed && _settings.DimDelayMs > 0 && foreground != _target)
+        {
+            // Repeated events for the same window must not restart the countdown.
+            if (_delay.IsRunning && _delayFor == foreground)
+                return;
+            _delayFor = foreground;
+            _delay.Interval = TimeSpan.FromMilliseconds(_settings.DimDelayMs);
+            _delay.Start();
+            return;
+        }
+        _delay.Stop();
 
         // A switch that arrives mid-transition snaps the previous one to its end state first.
         CompleteTransition();
@@ -213,6 +248,7 @@ internal sealed class DimController : IDisposable
 
     private void HideAll()
     {
+        _delay.Stop();
         _target = IntPtr.Zero;
         if (_transitionFrom != IntPtr.Zero)
         {
@@ -268,6 +304,7 @@ internal sealed class DimController : IDisposable
         foreach (IntPtr hook in _hooks)
             Win32.UnhookWinEvent(hook);
         _hooks.Clear();
+        _delay.Stop();
         _transition.Dispose();
         _haze.Dispose();
     }
