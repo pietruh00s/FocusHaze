@@ -12,15 +12,15 @@ How to test:
 No account, sign-in or network connection is needed.
 
 Technical notes:
-- runFullTrust: FocusHaze is a WinUI 3 desktop app. It shows its overlay as a click-through layered window (WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_NOACTIVATE) that it positions directly below the foreground window with SetWindowPos.
-- To know which window is active it uses SetWinEventHook (WINEVENT_OUTOFCONTEXT) for EVENT_SYSTEM_FOREGROUND, minimize, move/size-end, destroy, hide and cloak events, which is the documented way to observe foreground changes. It reads only window handles, class names, visibility and bounds; it never reads window contents, injects into other processes or uses UI Automation to control other apps.
+- runFullTrust: FocusHaze is a WinUI 3 desktop app. It shows its overlay as click-through layered windows (WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_NOACTIVATE), one per display when each display keeps its own active window, positioned directly below the foreground window with SetWindowPos. The optional taskbar dimming uses one more click-through, topmost window cut to the taskbar area.
+- To know which window is active it uses SetWinEventHook (WINEVENT_OUTOFCONTEXT) for EVENT_SYSTEM_FOREGROUND, minimize, move/size-end, destroy, show/hide and cloak/uncloak events, which is the documented way to observe foreground changes. It reads only window handles, class names, visibility and bounds; it never reads window contents, injects into other processes or uses UI Automation to control other apps.
 - The global shortcut is registered with RegisterHotKey (Ctrl+Alt+H).
 - "Start with Windows" uses the package's StartupTask (windows.startupTask), off by default and turned on only by the user in the app's settings.
 - The app does not change any Windows settings, makes no network connections and collects no data. Privacy policy: https://github.com/pietruh00s/FocusHaze/blob/main/PRIVACY.md
 
 ## Restricted capability justification (runFullTrust)
 
-FocusHaze is a desktop (Win32/WinUI 3) app. Full trust is required to create the click-through overlay window, keep it in the z-order below the foreground window and observe foreground-window changes system-wide, which is the app's only function.
+FocusHaze is a desktop (Win32/WinUI 3) app. Full trust is required to create its click-through overlay windows (one per display, plus an optional one over the taskbar), keep them in the z-order directly below the foreground window, and observe foreground-window changes system-wide with SetWinEventHook. Dimming everything except the active window is the app's only function. It reads no window contents, injects nothing into other processes, makes no network connections and collects no data.
 
 ## Other submission fields
 
