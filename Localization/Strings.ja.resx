@@ -38,4 +38,6 @@
   <data name="Delay_Immediately" xml:space="preserve"><value>すぐに</value></data>
   <data name="Delay_Seconds" xml:space="preserve"><value>{0} 秒</value></data>
   <data name="Delay_Minutes" xml:space="preserve"><value>{0} 分</value></data>
+  <data name="Taskbar_Title" xml:space="preserve"><value>タスクバーを暗くする</value></data>
+  <data name="Taskbar_Description" xml:space="preserve"><value>非アクティブなウィンドウと一緒にタスクバーも暗くします</value></data>
 </root>

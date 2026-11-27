@@ -33,6 +33,8 @@ internal sealed class AppSettings
     /// <summary>How long to wait after a window switch before the rest of the screen is dimmed.</summary>
     public int DimDelayMs { get; set; }
 
+    public bool DimTaskbar { get; set; }
+
     /// <summary>Dim only the display that contains the active window.</summary>
     public bool ActiveDisplayOnly { get; set; }
 

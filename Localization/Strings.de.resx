@@ -38,4 +38,6 @@
   <data name="Delay_Immediately" xml:space="preserve"><value>Sofort</value></data>
   <data name="Delay_Seconds" xml:space="preserve"><value>{0} s</value></data>
   <data name="Delay_Minutes" xml:space="preserve"><value>{0} min</value></data>
+  <data name="Taskbar_Title" xml:space="preserve"><value>Taskleiste abdunkeln</value></data>
+  <data name="Taskbar_Description" xml:space="preserve"><value>Die Taskleiste wird zusammen mit inaktiven Fenstern abgedunkelt</value></data>
 </root>

@@ -31,6 +31,9 @@ internal static class Win32
     public const uint SWP_NOOWNERZORDER = 0x0200;
 
     public static readonly IntPtr HWND_TOP = IntPtr.Zero;
+    public static readonly IntPtr HWND_TOPMOST = new(-1);
+
+    public const int RGN_OR = 2;
 
     public const uint GA_ROOT = 2;
 
@@ -271,6 +274,15 @@ internal static class Win32
     public static extern IntPtr FindWindow(string? className, string? windowName);
 
     [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+    public static extern IntPtr FindWindowEx(IntPtr parent, IntPtr childAfter, string? className, string? windowName);
+
+    [DllImport("user32.dll")]
+    public static extern bool GetWindowRect(IntPtr hWnd, out RECT rect);
+
+    [DllImport("user32.dll")]
+    public static extern int SetWindowRgn(IntPtr hWnd, IntPtr region, bool redraw);
+
+    [DllImport("user32.dll", CharSet = CharSet.Unicode)]
     public static extern uint RegisterWindowMessage(string message);
 
     [DllImport("user32.dll", CharSet = CharSet.Unicode)]
@@ -299,6 +311,12 @@ internal static class Win32
 
     [DllImport("gdi32.dll")]
     public static extern bool DeleteObject(IntPtr obj);
+
+    [DllImport("gdi32.dll")]
+    public static extern IntPtr CreateRectRgn(int left, int top, int right, int bottom);
+
+    [DllImport("gdi32.dll")]
+    public static extern int CombineRgn(IntPtr dest, IntPtr src1, IntPtr src2, int mode);
 
     [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
     public static extern IntPtr GetModuleHandle(string? moduleName);

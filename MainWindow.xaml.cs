@@ -109,6 +109,7 @@ public sealed partial class MainWindow : Window
             FadeText.Text = $"{Settings.FadeDurationMs} ms";
             FadePanel.Visibility = Settings.Animate ? Visibility.Visible : Visibility.Collapsed;
             ActiveDisplayToggle.IsOn = Settings.ActiveDisplayOnly;
+            TaskbarToggle.IsOn = Settings.DimTaskbar;
             foreach (ComboBoxItem item in DelayCombo.Items)
                 item.Content = DelayText((int)item.Tag);
             // A delay set by hand in settings.json shows up as the nearest option at or below it.
@@ -160,6 +161,9 @@ public sealed partial class MainWindow : Window
 
     private void OnActiveDisplayToggled(object sender, RoutedEventArgs e) =>
         Update(s => s.ActiveDisplayOnly = ActiveDisplayToggle.IsOn);
+
+    private void OnTaskbarToggled(object sender, RoutedEventArgs e) =>
+        Update(s => s.DimTaskbar = TaskbarToggle.IsOn);
 
     private void OnDelayChanged(object sender, SelectionChangedEventArgs e)
     {

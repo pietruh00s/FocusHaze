@@ -36,6 +36,9 @@ internal sealed class DimController : IDisposable
     private readonly DimOverlay _transition;
     private IntPtr _transitionFrom;
 
+    // Topmost haze cut to the taskbars of dimmed displays (AppSettings.DimTaskbar); spans the virtual screen.
+    private readonly DimOverlay _taskbar;
+
     private readonly Win32.WinEventProc _winEventProc;
     private readonly List<IntPtr> _hooks = [];
     private readonly HashSet<IntPtr> _ownWindows = [];
@@ -53,7 +56,9 @@ internal sealed class DimController : IDisposable
         _haze.DisplayChanged += () => Refresh();
         _transition = new DimOverlay("FocusHaze.TransitionOverlay", settings.ColorRef);
         _ownWindows.Add(_haze.Handle);
+        _taskbar = new DimOverlay("FocusHaze.TaskbarOverlay", settings.ColorRef);
         _ownWindows.Add(_transition.Handle);
+        _ownWindows.Add(_taskbar.Handle);
 
         _delay = DispatcherQueue.GetForCurrentThread().CreateTimer();
         _delay.IsRepeating = false;
@@ -77,6 +82,7 @@ internal sealed class DimController : IDisposable
         _settings = settings;
         _haze.SetColor(settings.ColorRef);
         _transition.SetColor(settings.ColorRef);
+        _taskbar.SetColor(settings.ColorRef);
         Refresh();
     }
 
@@ -167,6 +173,9 @@ internal sealed class DimController : IDisposable
         switch (Classify(foreground))
         {
             case TargetKind.Ignore:
+                // Using the taskbar, Start or the tray: show the taskbar undimmed meanwhile.
+                if (IsShellSurface(foreground))
+                    _taskbar.Hide(FadeMs);
                 return;
             case TargetKind.Hide:
                 HideAll();
@@ -195,6 +204,7 @@ internal sealed class DimController : IDisposable
         Win32.RECT bounds = GetBounds(foreground);
         byte alpha = _settings.Alpha;
         int fadeMs = FadeMs;
+        ShowTaskbarHaze(bounds, alpha, fadeMs);
 
         // Switching windows within an already dimmed area: only the window that lost focus fades in.
         if (switching && fadeMs > 0 && previous != foreground && _haze.IsShown && _haze.Bounds.Equals(bounds)
@@ -208,6 +218,41 @@ internal sealed class DimController : IDisposable
 
         _haze.Place(InsertBelow(foreground), bounds);
         _haze.FadeTo(alpha, fadeMs);
+    }
+
+    private void ShowTaskbarHaze(Win32.RECT dimmed, byte alpha, int fadeMs)
+    {
+        var rects = _settings.DimTaskbar
+            ? TaskbarRects().Select(r => r.Intersect(dimmed)).Where(r => !r.IsEmpty).ToList()
+            : [];
+        if (rects.Count == 0)
+        {
+            _taskbar.Hide(fadeMs);
+            return;
+        }
+
+        // Hidden means fully transparent, so nothing shows before the region is set.
+        if (!_taskbar.IsShown)
+            _taskbar.SetAlpha(0);
+        // Placing it again each time puts it back above the taskbar, which raises itself when used.
+        _taskbar.Place(Win32.HWND_TOPMOST, VirtualScreen());
+        _taskbar.SetRegion(rects);
+        _taskbar.FadeTo(alpha, fadeMs);
+    }
+
+    // shortcut: an auto-hiding taskbar is dimmed where it was at the last refresh, not as it slides in;
+    // tracking EVENT_OBJECT_LOCATIONCHANGE for the taskbar windows would fix that if people ask.
+    private static IEnumerable<Win32.RECT> TaskbarRects()
+    {
+        foreach (string className in (string[])["Shell_TrayWnd", "Shell_SecondaryTrayWnd"])
+        {
+            for (IntPtr h = Win32.FindWindowEx(IntPtr.Zero, IntPtr.Zero, className, null); h != IntPtr.Zero;
+                 h = Win32.FindWindowEx(IntPtr.Zero, h, className, null))
+            {
+                if (Win32.IsWindowVisible(h) && Win32.GetWindowRect(h, out var rect))
+                    yield return rect;
+            }
+        }
     }
 
     private bool TryStartTransition(IntPtr previous, IntPtr foreground, Win32.RECT bounds, byte alpha, int fadeMs)
@@ -256,10 +301,18 @@ internal sealed class DimController : IDisposable
             _transition.HideNow();
         }
         _haze.Hide(FadeMs);
+        _taskbar.Hide(FadeMs);
     }
 
     // A regular window can't sit between topmost ones; for a topmost target, go above all regular windows.
     private static IntPtr InsertBelow(IntPtr target) => Win32.IsTopmost(target) ? Win32.HWND_TOP : target;
+
+    // Popup menus are ignored too, but they belong to apps rather than to the taskbar.
+    private static bool IsShellSurface(IntPtr hwnd)
+    {
+        string className = Win32.GetClassName(hwnd);
+        return className != "#32768" && IgnoredClasses.Contains(className);
+    }
 
     private TargetKind Classify(IntPtr hwnd)
     {
@@ -292,6 +345,11 @@ internal sealed class DimController : IDisposable
                 return info.rcMonitor;
         }
 
+        return VirtualScreen();
+    }
+
+    private static Win32.RECT VirtualScreen()
+    {
         int x = Win32.GetSystemMetrics(Win32.SM_XVIRTUALSCREEN);
         int y = Win32.GetSystemMetrics(Win32.SM_YVIRTUALSCREEN);
         return new Win32.RECT(x, y,
@@ -306,6 +364,7 @@ internal sealed class DimController : IDisposable
         _hooks.Clear();
         _delay.Stop();
         _transition.Dispose();
+        _taskbar.Dispose();
         _haze.Dispose();
     }
 }

@@ -62,6 +62,20 @@ internal sealed class DimOverlay : IDisposable
         IsShown = true;
     }
 
+    /// <summary>Limits the visible haze to <paramref name="rects"/> (screen coordinates) within its bounds.</summary>
+    public void SetRegion(IEnumerable<Win32.RECT> rects)
+    {
+        IntPtr region = Win32.CreateRectRgn(0, 0, 0, 0);
+        foreach (Win32.RECT r in rects)
+        {
+            IntPtr part = Win32.CreateRectRgn(r.Left - Bounds.Left, r.Top - Bounds.Top, r.Right - Bounds.Left, r.Bottom - Bounds.Top);
+            Win32.CombineRgn(region, region, part, Win32.RGN_OR);
+            Win32.DeleteObject(part);
+        }
+        // The window owns the region from here on.
+        Win32.SetWindowRgn(_hwnd, region, true);
+    }
+
     /// <summary>Queues re-placing the haze (at its current bounds) beneath <paramref name="insertAfter"/>.</summary>
     public IntPtr DeferPlace(IntPtr batch, IntPtr insertAfter)
     {
