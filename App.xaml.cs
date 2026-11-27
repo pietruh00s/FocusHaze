@@ -15,6 +15,7 @@ public partial class App : Application
     private DispatcherQueue _dispatcher = null!;
     private DimController? _dimmer;
     private TrayHost? _tray;
+    private TrayMenu? _trayMenu;
     private MainWindow? _window;
 
     internal static new App Current => (App)Application.Current;
@@ -71,8 +72,7 @@ public partial class App : Application
 
         _tray.OpenSettingsRequested += ShowSettings;
         _tray.ToggleRequested += ToggleEnabled;
-        // Defer: the request arrives from inside the tray window's own message handler.
-        _tray.ExitRequested += () => _dispatcher.TryEnqueue(Shutdown);
+        _tray.ContextMenuRequested += ShowTrayMenu;
 
         if (!AppEnvironment.LaunchedAtStartup())
             ShowSettings();
@@ -98,6 +98,21 @@ public partial class App : Application
         _window.Activate();
     }
 
+    private void ShowTrayMenu()
+    {
+        if (_trayMenu is null)
+        {
+            // Created on first use and kept: a WinUI window is slow to create the first time.
+            _trayMenu = new TrayMenu();
+            _dimmer?.AddIgnoredWindow(_trayMenu.Handle);
+            _trayMenu.SettingsRequested += ShowSettings;
+            _trayMenu.ToggleRequested += ToggleEnabled;
+            // Defer: the menu item's click handler is still running.
+            _trayMenu.ExitRequested += () => _dispatcher.TryEnqueue(Shutdown);
+        }
+        _trayMenu.Show(Settings.Enabled);
+    }
+
     internal void ToggleEnabled()
     {
         Settings.Enabled = !Settings.Enabled;
@@ -117,6 +132,7 @@ public partial class App : Application
     internal void Shutdown()
     {
         _window?.Close();
+        _trayMenu?.Close();
         _dimmer?.Dispose();
         _tray?.Dispose();
         s_instanceMutex?.ReleaseMutex();

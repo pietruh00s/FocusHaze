@@ -5,7 +5,7 @@ using FocusHaze.Native;
 namespace FocusHaze.Core;
 
 /// <summary>
-/// Hidden window that owns the notification-area icon, its context menu and the global hotkey.
+/// Hidden window that owns the notification-area icon and the global hotkey; the icon's menu is <see cref="TrayMenu"/>.
 /// A second app instance finds it by class name and asks it to show the settings window.
 /// </summary>
 internal sealed class TrayHost : IDisposable
@@ -19,10 +19,6 @@ internal sealed class TrayHost : IDisposable
     private const int HotkeyId = 1;
     private const uint HotkeyVirtualKey = 'H';
 
-    private const uint CmdSettings = 1;
-    private const uint CmdToggle = 2;
-    private const uint CmdExit = 3;
-
     private readonly Win32.WndProc _wndProc;
     private readonly IntPtr _hwnd;
     private readonly IntPtr _icon;
@@ -33,7 +29,7 @@ internal sealed class TrayHost : IDisposable
 
     public event Action? OpenSettingsRequested;
     public event Action? ToggleRequested;
-    public event Action? ExitRequested;
+    public event Action? ContextMenuRequested;
 
     public IntPtr Handle => _hwnd;
     public bool HotkeyRegistered { get; }
@@ -87,31 +83,6 @@ internal sealed class TrayHost : IDisposable
         Win32.Shell_NotifyIcon(Win32.NIM_ADD, ref data);
     }
 
-    private void ShowContextMenu()
-    {
-        IntPtr menu = Win32.CreatePopupMenu();
-        Win32.AppendMenu(menu, Win32.MF_STRING, CmdSettings, Loc.Get("Tray_Settings"));
-        Win32.AppendMenu(menu, Win32.MF_STRING | (_enabled ? Win32.MF_CHECKED : 0), CmdToggle,
-            $"{Loc.Get("Tray_Dimming")}\t{HotkeyDisplayName}");
-        Win32.AppendMenu(menu, Win32.MF_SEPARATOR, 0, null);
-        Win32.AppendMenu(menu, Win32.MF_STRING, CmdExit, Loc.Get("Tray_Quit"));
-
-        Win32.GetCursorPos(out var point);
-        // Required so the menu closes when the user clicks elsewhere.
-        Win32.SetForegroundWindow(_hwnd);
-        int command = Win32.TrackPopupMenuEx(menu, Win32.TPM_RIGHTBUTTON | Win32.TPM_RETURNCMD | Win32.TPM_NONOTIFY,
-            point.X, point.Y, _hwnd, IntPtr.Zero);
-        Win32.PostMessage(_hwnd, Win32.WM_NULL, IntPtr.Zero, IntPtr.Zero);
-        Win32.DestroyMenu(menu);
-
-        switch ((uint)command)
-        {
-            case CmdSettings: OpenSettingsRequested?.Invoke(); break;
-            case CmdToggle: ToggleRequested?.Invoke(); break;
-            case CmdExit: ExitRequested?.Invoke(); break;
-        }
-    }
-
     // Called from native code: an exception escaping here would terminate the process.
     private IntPtr WndProc(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam)
     {
@@ -134,7 +105,7 @@ internal sealed class TrayHost : IDisposable
                 switch ((uint)lParam)
                 {
                     case Win32.WM_LBUTTONUP: OpenSettingsRequested?.Invoke(); break;
-                    case Win32.WM_RBUTTONUP: ShowContextMenu(); break;
+                    case Win32.WM_RBUTTONUP: ContextMenuRequested?.Invoke(); break;
                 }
                 return IntPtr.Zero;
 

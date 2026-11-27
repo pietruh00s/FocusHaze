@@ -38,12 +38,12 @@ internal static class Win32
     public const int RGN_OR = 2;
 
     public const uint GA_ROOT = 2;
+    public const uint GA_ROOTOWNER = 3;
 
     public const uint GW_HWNDNEXT = 2;
     public const uint GW_OWNER = 4;
 
     // Messages
-    public const uint WM_NULL = 0x0000;
     public const uint WM_ERASEBKGND = 0x0014;
     public const uint WM_DISPLAYCHANGE = 0x007E;
     public const uint WM_TIMER = 0x0113;
@@ -82,14 +82,6 @@ internal static class Win32
     public const uint NIF_MESSAGE = 0x1;
     public const uint NIF_ICON = 0x2;
     public const uint NIF_TIP = 0x4;
-
-    // Menus
-    public const uint MF_STRING = 0x0000;
-    public const uint MF_CHECKED = 0x0008;
-    public const uint MF_SEPARATOR = 0x0800;
-    public const uint TPM_RIGHTBUTTON = 0x0002;
-    public const uint TPM_NONOTIFY = 0x0080;
-    public const uint TPM_RETURNCMD = 0x0100;
 
     // Hotkeys
     public const uint MOD_ALT = 0x1;
@@ -220,6 +212,9 @@ internal static class Win32
     [DllImport("user32.dll", EntryPoint = "GetWindowLongPtrW")]
     public static extern IntPtr GetWindowLongPtr(IntPtr hWnd, int index);
 
+    [DllImport("user32.dll", EntryPoint = "SetWindowLongPtrW")]
+    public static extern IntPtr SetWindowLongPtr(IntPtr hWnd, int index, IntPtr value);
+
     [DllImport("user32.dll")]
     public static extern bool IsWindow(IntPtr hWnd);
 
@@ -265,18 +260,6 @@ internal static class Win32
 
     [DllImport("user32.dll")]
     public static extern bool UnregisterHotKey(IntPtr hWnd, int id);
-
-    [DllImport("user32.dll")]
-    public static extern IntPtr CreatePopupMenu();
-
-    [DllImport("user32.dll", CharSet = CharSet.Unicode)]
-    public static extern bool AppendMenu(IntPtr menu, uint flags, nuint id, string? text);
-
-    [DllImport("user32.dll")]
-    public static extern int TrackPopupMenuEx(IntPtr menu, uint flags, int x, int y, IntPtr hWnd, IntPtr tpm);
-
-    [DllImport("user32.dll")]
-    public static extern bool DestroyMenu(IntPtr menu);
 
     [DllImport("user32.dll")]
     public static extern bool GetCursorPos(out POINT point);

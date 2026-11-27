@@ -338,7 +338,8 @@ internal sealed class DimController : IDisposable
     {
         if (hwnd == IntPtr.Zero || !Win32.IsWindow(hwnd))
             return TargetKind.Hide;
-        if (_ownWindows.Contains(hwnd))
+        // Also the tray menu's popup, which is owned by the menu's host window.
+        if (_ownWindows.Contains(hwnd) || _ownWindows.Contains(Win32.GetAncestor(hwnd, Win32.GA_ROOTOWNER)))
             return TargetKind.Ignore;
 
         string className = Win32.GetClassName(hwnd);
