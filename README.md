@@ -29,7 +29,9 @@ FocusHaze is available on the **[Microsoft Store](https://apps.microsoft.com/det
 - Translucent haze under the active window; clicks go through it to the windows below
 - Adjustable intensity and haze color
 - Smooth fade when you switch windows, with an adjustable duration
-- Dim all displays, or only the display with the active window
+- Dim all displays, only the display with the active window, or each display separately (every monitor keeps its most recently used window bright)
+- Optional delay before dimming after you switch windows (up to 5 minutes)
+- Optional taskbar dimming
 - System tray icon: left-click opens settings, right-click opens a menu
 - Global hotkey **Ctrl+Alt+H** to turn dimming on or off
 - Optional start with Windows (straight to the tray)
@@ -61,7 +63,7 @@ Settings are stored in `%LOCALAPPDATA%\FocusHaze\settings.json`.
 ## How it works
 
 - `Core/DimOverlay.cs`: a native Win32 window (`WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_NOACTIVATE`) filled with a solid color, with its opacity set through `SetLayeredWindowAttributes`.
-- `Core/DimController.cs`: uses `SetWinEventHook` to watch foreground changes, minimizing, closing and hiding of windows, then calls `SetWindowPos` to place the haze in the Z-order **directly beneath** the active window, so everything behind it is dimmed. The haze disappears when the desktop is focused. The taskbar, the Alt+Tab switcher and the Start menu don't affect it.
+- `Core/DimController.cs`: uses `SetWinEventHook` to watch foreground changes, minimizing, closing, hiding and showing of windows, then calls `SetWindowPos` to place the haze in the Z-order **directly beneath** the active window, so everything behind it is dimmed. With **each display separately**, every display gets its own haze (`Core/DimZone.cs`) beneath the highest window on that display. The haze disappears when the desktop is focused. The taskbar, the Alt+Tab switcher and the Start menu don't affect it.
 - `Core/TrayHost.cs`: a hidden window that owns the tray icon, its context menu, the global hotkey and the signal from a second instance.
 - `MainWindow.xaml`: the WinUI 3 settings window (Mica, custom title bar).
 

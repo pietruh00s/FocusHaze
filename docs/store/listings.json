@@ -8,7 +8,9 @@
       "Clicks pass through the haze, so you work as usual",
       "Adjustable intensity and haze color",
       "Smooth transitions when switching windows",
-      "Dim all displays or only the active one",
+      "Dim all displays, only the active one, or each display separately",
+      "Optional delay before dimming",
+      "Optional taskbar dimming",
       "Global shortcut Ctrl+Alt+H",
       "Optional start with Windows",
       "Available in 14 languages",
@@ -23,7 +25,7 @@
       "distraction free",
       "window highlight"
     ],
-    "ReleaseNotes": "First Microsoft Store release.",
+    "ReleaseNotes": "New in 1.3:\n• Each display separately: every monitor keeps its most recently used window bright.\n• Optional delay before dimming after you switch windows, from 1 second to 5 minutes.\n• Optional taskbar dimming.\n• Fixed: opening File Explorer or a Microsoft Store app no longer lifts the haze from every display.",
     "Screenshot": "screenshot-en.png",
     "ScreenshotCaptions": [
       "Everything except your active window fades into a soft haze",
@@ -41,7 +43,9 @@
       "Kliknięcia przechodzą przez mgiełkę, więc pracujesz jak zwykle",
       "Regulowana intensywność i kolor mgiełki",
       "Płynne przejścia przy zmianie okna",
-      "Wszystkie monitory albo tylko aktywny",
+      "Wszystkie monitory, tylko aktywny albo każdy osobno",
+      "Opcjonalne opóźnienie przyciemniania",
+      "Opcjonalne przyciemnianie paska zadań",
       "Globalny skrót Ctrl+Alt+H",
       "Opcjonalne uruchamianie razem z Windows",
       "14 języków interfejsu",
@@ -56,7 +60,7 @@
       "bez rozpraszaczy",
       "podświetlenie okna"
     ],
-    "ReleaseNotes": "Pierwsze wydanie w Microsoft Store.",
+    "ReleaseNotes": "Nowości w 1.3:\n• Każdy ekran osobno: na każdym monitorze jasne zostaje ostatnio używane okno.\n• Opcjonalne opóźnienie przyciemniania po przełączeniu okna, od 1 sekundy do 5 minut.\n• Opcjonalne przyciemnianie paska zadań.\n• Poprawka: otwarcie Eksploratora plików albo aplikacji ze Sklepu nie zdejmuje już przyciemnienia ze wszystkich ekranów.",
     "Screenshot": "screenshot-pl.png",
     "ScreenshotCaptions": [
       "Wszystko poza aktywnym oknem znika pod delikatną mgiełką",
@@ -74,7 +78,9 @@
       "Klicks gehen durch den Schleier, du arbeitest wie gewohnt",
       "Einstellbare Intensität und Farbe",
       "Sanfte Übergänge beim Fensterwechsel",
-      "Alle Bildschirme oder nur der aktive",
+      "Alle Bildschirme, nur der aktive oder jeder einzeln",
+      "Optionale Verzögerung vor dem Abdunkeln",
+      "Optionales Abdunkeln der Taskleiste",
       "Globale Tastenkombination Strg+Alt+H",
       "Optionaler Start mit Windows",
       "In 14 Sprachen verfügbar",
@@ -89,7 +95,7 @@
       "ablenkungsfrei",
       "Fenster hervorheben"
     ],
-    "ReleaseNotes": "Erste Veröffentlichung im Microsoft Store.",
+    "ReleaseNotes": "Neu in 1.3:\n• Jeder Bildschirm einzeln: Auf jedem Monitor bleibt das zuletzt verwendete Fenster hell.\n• Optionale Verzögerung vor dem Abdunkeln nach einem Fensterwechsel, von 1 Sekunde bis 5 Minuten.\n• Optionales Abdunkeln der Taskleiste.\n• Behoben: Das Öffnen des Datei-Explorers oder einer Store-App hebt die Abdunkelung nicht mehr auf allen Bildschirmen auf.",
     "Screenshot": "screenshot-de.png",
     "ScreenshotCaptions": [
       "Alles außer deinem aktiven Fenster verschwindet hinter einem sanften Schleier",
@@ -107,7 +113,9 @@
       "Les clics traversent le voile : vous travaillez comme d'habitude",
       "Intensité et couleur du voile réglables",
       "Transitions fluides lors du changement de fenêtre",
-      "Tous les écrans ou seulement l'écran actif",
+      "Tous les écrans, seulement l'écran actif ou chaque écran séparément",
+      "Délai facultatif avant l'assombrissement",
+      "Assombrissement facultatif de la barre des tâches",
       "Raccourci global Ctrl+Alt+H",
       "Démarrage avec Windows en option",
       "Disponible en 14 langues",
@@ -122,7 +130,7 @@
       "sans distraction",
       "mise en valeur fenêtre"
     ],
-    "ReleaseNotes": "Première version sur le Microsoft Store.",
+    "ReleaseNotes": "Nouveautés de la version 1.3 :\n• Chaque écran séparément : sur chaque moniteur, la dernière fenêtre utilisée reste claire.\n• Délai facultatif avant l'assombrissement après un changement de fenêtre, de 1 seconde à 5 minutes.\n• Assombrissement facultatif de la barre des tâches.\n• Corrigé : ouvrir l'Explorateur de fichiers ou une application du Store ne lève plus le voile sur tous les écrans.",
     "Screenshot": "screenshot-fr.png",
     "ScreenshotCaptions": [
       "Tout sauf votre fenêtre active s'efface sous un léger voile",
@@ -140,7 +148,9 @@
       "Los clics atraviesan el velo: trabajas como siempre",
       "Intensidad y color del velo ajustables",
       "Transiciones suaves al cambiar de ventana",
-      "Todas las pantallas o solo la activa",
+      "Todas las pantallas, solo la activa o cada una por separado",
+      "Retraso opcional antes de atenuar",
+      "Atenuación opcional de la barra de tareas",
       "Atajo global Ctrl+Alt+H",
       "Inicio opcional con Windows",
       "Disponible en 14 idiomas",
@@ -155,7 +165,7 @@
       "sin distracciones",
       "resaltar ventana"
     ],
-    "ReleaseNotes": "Primera versión en Microsoft Store.",
+    "ReleaseNotes": "Novedades de la versión 1.3:\n• Cada pantalla por separado: en cada monitor, la última ventana usada sigue iluminada.\n• Retraso opcional antes de atenuar tras cambiar de ventana, de 1 segundo a 5 minutos.\n• Atenuación opcional de la barra de tareas.\n• Corregido: abrir el Explorador de archivos o una aplicación de Store ya no retira el velo de todas las pantallas.",
     "Screenshot": "screenshot-es.png",
     "ScreenshotCaptions": [
       "Todo excepto tu ventana activa se difumina bajo un velo suave",
@@ -173,7 +183,9 @@
       "I clic attraversano il velo: lavori come sempre",
       "Intensità e colore del velo regolabili",
       "Transizioni fluide al cambio di finestra",
-      "Tutti gli schermi o solo quello attivo",
+      "Tutti gli schermi, solo quello attivo o ciascuno separatamente",
+      "Ritardo facoltativo prima dell'oscuramento",
+      "Oscuramento facoltativo della barra delle applicazioni",
       "Scorciatoia globale Ctrl+Alt+H",
       "Avvio con Windows facoltativo",
       "Disponibile in 14 lingue",
@@ -188,7 +200,7 @@
       "senza distrazioni",
       "evidenziare finestra"
     ],
-    "ReleaseNotes": "Prima versione su Microsoft Store.",
+    "ReleaseNotes": "Novità della versione 1.3:\n• Ogni schermo separatamente: su ogni monitor resta chiara l'ultima finestra usata.\n• Ritardo facoltativo prima dell'oscuramento dopo il cambio di finestra, da 1 secondo a 5 minuti.\n• Oscuramento facoltativo della barra delle applicazioni.\n• Corretto: aprire Esplora file o un'app dello Store non toglie più il velo da tutti gli schermi.",
     "Screenshot": "screenshot-it.png",
     "ScreenshotCaptions": [
       "Tutto tranne la finestra attiva svanisce sotto un velo leggero",
@@ -206,7 +218,9 @@
       "Os cliques atravessam o véu: você trabalha normalmente",
       "Intensidade e cor do véu ajustáveis",
       "Transições suaves ao trocar de janela",
-      "Todas as telas ou só a ativa",
+      "Todas as telas, só a ativa ou cada uma separadamente",
+      "Atraso opcional antes de escurecer",
+      "Escurecimento opcional da barra de tarefas",
       "Atalho global Ctrl+Alt+H",
       "Inicialização com o Windows opcional",
       "Disponível em 14 idiomas",
@@ -221,7 +235,7 @@
       "sem distrações",
       "destacar janela"
     ],
-    "ReleaseNotes": "Primeira versão na Microsoft Store.",
+    "ReleaseNotes": "Novidades da versão 1.3:\n• Cada tela separadamente: em cada monitor, a última janela usada continua clara.\n• Atraso opcional antes de escurecer depois de trocar de janela, de 1 segundo a 5 minutos.\n• Escurecimento opcional da barra de tarefas.\n• Corrigido: abrir o Explorador de Arquivos ou um app da Store não remove mais o véu de todas as telas.",
     "Screenshot": "screenshot-pt.png",
     "ScreenshotCaptions": [
       "Tudo, exceto a janela ativa, some sob um véu suave",
@@ -239,7 +253,9 @@
       "Klikken gaan door de waas, je werkt zoals altijd",
       "Instelbare intensiteit en kleur",
       "Vloeiende overgangen bij het wisselen van venster",
-      "Alle beeldschermen of alleen het actieve",
+      "Alle beeldschermen, alleen het actieve of elk scherm apart",
+      "Optionele vertraging voor het dimmen",
+      "Optioneel dimmen van de taakbalk",
       "Globale sneltoets Ctrl+Alt+H",
       "Optioneel starten met Windows",
       "Beschikbaar in 14 talen",
@@ -254,7 +270,7 @@
       "zonder afleiding",
       "venster markeren"
     ],
-    "ReleaseNotes": "Eerste release in de Microsoft Store.",
+    "ReleaseNotes": "Nieuw in 1.3:\n• Elk scherm apart: op elk beeldscherm blijft het laatst gebruikte venster helder.\n• Optionele vertraging voor het dimmen na het wisselen van venster, van 1 seconde tot 5 minuten.\n• Optioneel dimmen van de taakbalk.\n• Opgelost: Verkenner of een Store-app openen haalt de waas niet meer van alle schermen weg.",
     "Screenshot": "screenshot-nl.png",
     "ScreenshotCaptions": [
       "Alles behalve je actieve venster verdwijnt achter een zachte waas",
@@ -272,7 +288,9 @@
       "Клацання проходять крізь завісу, тож ви працюєте як завжди",
       "Налаштовувані інтенсивність і колір",
       "Плавні переходи під час перемикання вікон",
-      "Усі монітори або лише активний",
+      "Усі монітори, лише активний або кожен окремо",
+      "Необов'язкова затримка перед затемненням",
+      "Необов'язкове затемнення панелі завдань",
       "Глобальне сполучення клавіш Ctrl+Alt+H",
       "Необов'язковий запуск разом з Windows",
       "14 мов інтерфейсу",
@@ -287,7 +305,7 @@
       "без відволікань",
       "підсвічування вікна"
     ],
-    "ReleaseNotes": "Перший випуск у Microsoft Store.",
+    "ReleaseNotes": "Нове у версії 1.3:\n• Кожен екран окремо: на кожному моніторі останнє використане вікно залишається яскравим.\n• Необов'язкова затримка перед затемненням після перемикання вікна, від 1 секунди до 5 хвилин.\n• Необов'язкове затемнення панелі завдань.\n• Виправлено: відкриття Провідника або застосунку з Microsoft Store більше не знімає завісу з усіх екранів.",
     "Screenshot": "screenshot-uk.png",
     "ScreenshotCaptions": [
       "Усе, крім активного вікна, ховається під м'якою завісою",
@@ -305,7 +323,9 @@
       "Щелчки проходят сквозь завесу, поэтому вы работаете как обычно",
       "Настраиваемые интенсивность и цвет",
       "Плавные переходы при переключении окон",
-      "Все мониторы или только активный",
+      "Все мониторы, только активный или каждый отдельно",
+      "Необязательная задержка перед затемнением",
+      "Необязательное затемнение панели задач",
       "Глобальное сочетание клавиш Ctrl+Alt+H",
       "Необязательный запуск вместе с Windows",
       "14 языков интерфейса",
@@ -320,7 +340,7 @@
       "без отвлечений",
       "подсветка окна"
     ],
-    "ReleaseNotes": "Первый выпуск в Microsoft Store.",
+    "ReleaseNotes": "Новое в версии 1.3:\n• Каждый экран отдельно: на каждом мониторе последнее использованное окно остаётся ярким.\n• Необязательная задержка перед затемнением после переключения окна, от 1 секунды до 5 минут.\n• Необязательное затемнение панели задач.\n• Исправлено: открытие Проводника или приложения из Microsoft Store больше не снимает завесу со всех экранов.",
     "Screenshot": "screenshot-ru.png",
     "ScreenshotCaptions": [
       "Всё, кроме активного окна, скрывается под мягкой завесой",
@@ -338,7 +358,9 @@
       "Tıklamalar perdeden geçer, her zamanki gibi çalışırsınız",
       "Ayarlanabilir yoğunluk ve perde rengi",
       "Pencere değiştirirken yumuşak geçişler",
-      "Tüm ekranlar veya yalnızca etkin ekran",
+      "Tüm ekranlar, yalnızca etkin ekran veya her ekran ayrı",
+      "İsteğe bağlı karartma gecikmesi",
+      "İsteğe bağlı görev çubuğu karartma",
       "Genel kısayol Ctrl+Alt+H",
       "İsteğe bağlı olarak Windows ile başlatma",
       "14 dil desteği",
@@ -353,7 +375,7 @@
       "dikkat dağıtmayan",
       "pencere vurgulama"
     ],
-    "ReleaseNotes": "Microsoft Store'daki ilk sürüm.",
+    "ReleaseNotes": "1.3 sürümündeki yenilikler:\n• Her ekran ayrı: her monitörde en son kullanılan pencere parlak kalır.\n• Pencere değiştirdikten sonra karartmadan önce isteğe bağlı gecikme (1 saniyeden 5 dakikaya kadar).\n• İsteğe bağlı görev çubuğu karartma.\n• Düzeltildi: Dosya Gezgini'ni veya bir Store uygulamasını açmak artık tüm ekranlardaki perdeyi kaldırmıyor.",
     "Screenshot": "screenshot-tr.png",
     "ScreenshotCaptions": [
       "Etkin pencere dışındaki her şey yumuşak bir perdenin ardında kaybolur",
@@ -371,7 +393,9 @@
       "クリックはベールを通過するので、いつもどおりに作業できる",
       "濃さとベールの色を調整可能",
       "ウィンドウ切り替え時のなめらかな遷移",
-      "すべてのディスプレイ、またはアクティブなディスプレイのみ",
+      "すべてのディスプレイ、アクティブなディスプレイのみ、または画面ごとに個別",
+      "暗くするまでの遅延 (オプション)",
+      "タスクバーを暗くする (オプション)",
       "グローバル ショートカット Ctrl+Alt+H",
       "Windows 起動時の自動開始 (オプション)",
       "14 言語に対応",
@@ -386,7 +410,7 @@
       "気が散らない",
       "ウィンドウ強調"
     ],
-    "ReleaseNotes": "Microsoft Store での最初のリリース。",
+    "ReleaseNotes": "バージョン 1.3 の新機能:\n• 画面ごとに個別: 各モニターで最後に使ったウィンドウが明るいままになります。\n• ウィンドウ切り替え後、暗くするまでの遅延を設定できます (1 秒～5 分)。\n• タスクバーも暗くできます (オプション)。\n• 修正: エクスプローラーや Store アプリを開いても、すべての画面のベールが外れなくなりました。",
     "Screenshot": "screenshot-ja.png",
     "ScreenshotCaptions": [
       "アクティブなウィンドウ以外が、やわらかなベールの向こうに沈みます",
@@ -404,7 +428,9 @@
       "클릭이 막을 통과하므로 평소처럼 작업",
       "강도와 막 색상 조정 가능",
       "창 전환 시 부드러운 전환 효과",
-      "모든 디스플레이 또는 활성 디스플레이만",
+      "모든 디스플레이, 활성 디스플레이만 또는 화면마다 따로",
+      "어둡게 하기 전 지연 시간 (선택 사항)",
+      "작업 표시줄 어둡게 하기 (선택 사항)",
       "전역 바로 가기 키 Ctrl+Alt+H",
       "Windows 시작 시 실행 (선택 사항)",
       "14개 언어 지원",
@@ -419,7 +445,7 @@
       "방해 금지",
       "창 강조"
     ],
-    "ReleaseNotes": "Microsoft Store 첫 출시.",
+    "ReleaseNotes": "1.3 버전의 새로운 기능:\n• 화면마다 따로: 각 모니터에서 마지막으로 사용한 창이 밝게 유지됩니다.\n• 창을 전환한 후 어둡게 하기 전 지연 시간 설정 (1초~5분).\n• 작업 표시줄 어둡게 하기 (선택 사항).\n• 수정: 파일 탐색기나 Store 앱을 열어도 더 이상 모든 화면의 막이 걷히지 않습니다.",
     "Screenshot": "screenshot-ko.png",
     "ScreenshotCaptions": [
       "활성 창을 제외한 모든 것이 부드러운 막 뒤로 사라집니다",
@@ -437,7 +463,9 @@
       "点击可穿过遮罩，照常工作",
       "可调节强度和遮罩颜色",
       "切换窗口时平滑过渡",
-      "所有显示器或仅活动显示器",
+      "所有显示器、仅活动显示器或每个屏幕单独处理",
+      "可选：调暗前的延迟",
+      "可选：调暗任务栏",
       "全局快捷键 Ctrl+Alt+H",
       "可选随 Windows 启动",
       "支持 14 种语言",
@@ -452,7 +480,7 @@
       "免打扰",
       "窗口高亮"
     ],
-    "ReleaseNotes": "首次在 Microsoft Store 发布。",
+    "ReleaseNotes": "1.3 版新功能：\n• 每个屏幕单独处理：每个显示器上最后使用的窗口保持明亮。\n• 可选：切换窗口后延迟一段时间再调暗（1 秒到 5 分钟）。\n• 可选：调暗任务栏。\n• 修复：打开文件资源管理器或 Store 应用时，不再取消所有屏幕上的遮罩。",
     "Screenshot": "screenshot-zh-Hans.png",
     "ScreenshotCaptions": [
       "除活动窗口外，其他一切都隐入柔和的遮罩",

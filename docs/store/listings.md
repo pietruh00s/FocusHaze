@@ -32,7 +32,9 @@ FocusHaze collects no data, makes no network connections and shows no ads.
 - Clicks pass through the haze, so you work as usual
 - Adjustable intensity and haze color
 - Smooth transitions when switching windows
-- Dim all displays or only the active one
+- Dim all displays, only the active one, or each display separately
+- Optional delay before dimming
+- Optional taskbar dimming
 - Global shortcut Ctrl+Alt+H
 - Optional start with Windows
 - Available in 14 languages
@@ -40,7 +42,11 @@ FocusHaze collects no data, makes no network connections and shows no ads.
 
 **Search terms:** focus; dim windows; dimmer; concentration; productivity; distraction free; window highlight
 
-**What's new in this version:** First Microsoft Store release.
+**What's new in this version:** New in 1.3:  
+• Each display separately: every monitor keeps its most recently used window bright.  
+• Optional delay before dimming after you switch windows, from 1 second to 5 minutes.  
+• Optional taskbar dimming.  
+• Fixed: opening File Explorer or a Microsoft Store app no longer lifts the haze from every display.
 
 ---
 
@@ -63,7 +69,9 @@ FocusHaze nie zbiera żadnych danych, nie łączy się z internetem i nie wyświ
 - Kliknięcia przechodzą przez mgiełkę, więc pracujesz jak zwykle
 - Regulowana intensywność i kolor mgiełki
 - Płynne przejścia przy zmianie okna
-- Wszystkie monitory albo tylko aktywny
+- Wszystkie monitory, tylko aktywny albo każdy osobno
+- Opcjonalne opóźnienie przyciemniania
+- Opcjonalne przyciemnianie paska zadań
 - Globalny skrót Ctrl+Alt+H
 - Opcjonalne uruchamianie razem z Windows
 - 14 języków interfejsu
@@ -71,7 +79,11 @@ FocusHaze nie zbiera żadnych danych, nie łączy się z internetem i nie wyświ
 
 **Słowa kluczowe:** skupienie; przyciemnianie okien; dimmer; koncentracja; produktywność; bez rozpraszaczy; podświetlenie okna
 
-**Co nowego:** Pierwsze wydanie w Microsoft Store.
+**Co nowego:** Nowości w 1.3:  
+• Każdy ekran osobno: na każdym monitorze jasne zostaje ostatnio używane okno.  
+• Opcjonalne opóźnienie przyciemniania po przełączeniu okna, od 1 sekundy do 5 minut.  
+• Opcjonalne przyciemnianie paska zadań.  
+• Poprawka: otwarcie Eksploratora plików albo aplikacji ze Sklepu nie zdejmuje już przyciemnienia ze wszystkich ekranów.
 
 ---
 
@@ -94,7 +106,9 @@ FocusHaze sammelt keine Daten, stellt keine Netzwerkverbindungen her und zeigt k
 - Klicks gehen durch den Schleier, du arbeitest wie gewohnt
 - Einstellbare Intensität und Farbe
 - Sanfte Übergänge beim Fensterwechsel
-- Alle Bildschirme oder nur der aktive
+- Alle Bildschirme, nur der aktive oder jeder einzeln
+- Optionale Verzögerung vor dem Abdunkeln
+- Optionales Abdunkeln der Taskleiste
 - Globale Tastenkombination Strg+Alt+H
 - Optionaler Start mit Windows
 - In 14 Sprachen verfügbar
@@ -102,7 +116,11 @@ FocusHaze sammelt keine Daten, stellt keine Netzwerkverbindungen her und zeigt k
 
 **Suchbegriffe:** Fokus; Fenster abdunkeln; Dimmer; Konzentration; Produktivität; ablenkungsfrei; Fenster hervorheben
 
-**Neuerungen:** Erste Veröffentlichung im Microsoft Store.
+**Neuerungen:** Neu in 1.3:  
+• Jeder Bildschirm einzeln: Auf jedem Monitor bleibt das zuletzt verwendete Fenster hell.  
+• Optionale Verzögerung vor dem Abdunkeln nach einem Fensterwechsel, von 1 Sekunde bis 5 Minuten.  
+• Optionales Abdunkeln der Taskleiste.  
+• Behoben: Das Öffnen des Datei-Explorers oder einer Store-App hebt die Abdunkelung nicht mehr auf allen Bildschirmen auf.
 
 ---
 
@@ -125,7 +143,9 @@ FocusHaze ne collecte aucune donnée, n'établit aucune connexion réseau et n'a
 - Les clics traversent le voile : vous travaillez comme d'habitude
 - Intensité et couleur du voile réglables
 - Transitions fluides lors du changement de fenêtre
-- Tous les écrans ou seulement l'écran actif
+- Tous les écrans, seulement l'écran actif ou chaque écran séparément
+- Délai facultatif avant l'assombrissement
+- Assombrissement facultatif de la barre des tâches
 - Raccourci global Ctrl+Alt+H
 - Démarrage avec Windows en option
 - Disponible en 14 langues
@@ -133,7 +153,11 @@ FocusHaze ne collecte aucune donnée, n'établit aucune connexion réseau et n'a
 
 **Mots-clés :** concentration; assombrir fenêtres; dimmer; focus; productivité; sans distraction; mise en valeur fenêtre
 
-**Nouveautés :** Première version sur le Microsoft Store.
+**Nouveautés :** Nouveautés de la version 1.3 :  
+• Chaque écran séparément : sur chaque moniteur, la dernière fenêtre utilisée reste claire.  
+• Délai facultatif avant l'assombrissement après un changement de fenêtre, de 1 seconde à 5 minutes.  
+• Assombrissement facultatif de la barre des tâches.  
+• Corrigé : ouvrir l'Explorateur de fichiers ou une application du Store ne lève plus le voile sur tous les écrans.
 
 ---
 
@@ -156,7 +180,9 @@ FocusHaze no recopila datos, no se conecta a internet y no muestra anuncios.
 - Los clics atraviesan el velo: trabajas como siempre
 - Intensidad y color del velo ajustables
 - Transiciones suaves al cambiar de ventana
-- Todas las pantallas o solo la activa
+- Todas las pantallas, solo la activa o cada una por separado
+- Retraso opcional antes de atenuar
+- Atenuación opcional de la barra de tareas
 - Atajo global Ctrl+Alt+H
 - Inicio opcional con Windows
 - Disponible en 14 idiomas
@@ -164,7 +190,11 @@ FocusHaze no recopila datos, no se conecta a internet y no muestra anuncios.
 
 **Términos de búsqueda:** concentración; atenuar ventanas; dimmer; enfoque; productividad; sin distracciones; resaltar ventana
 
-**Novedades:** Primera versión en Microsoft Store.
+**Novedades:** Novedades de la versión 1.3:  
+• Cada pantalla por separado: en cada monitor, la última ventana usada sigue iluminada.  
+• Retraso opcional antes de atenuar tras cambiar de ventana, de 1 segundo a 5 minutos.  
+• Atenuación opcional de la barra de tareas.  
+• Corregido: abrir el Explorador de archivos o una aplicación de Store ya no retira el velo de todas las pantallas.
 
 ---
 
@@ -187,7 +217,9 @@ FocusHaze non raccoglie dati, non si connette a internet e non mostra pubblicit�
 - I clic attraversano il velo: lavori come sempre
 - Intensità e colore del velo regolabili
 - Transizioni fluide al cambio di finestra
-- Tutti gli schermi o solo quello attivo
+- Tutti gli schermi, solo quello attivo o ciascuno separatamente
+- Ritardo facoltativo prima dell'oscuramento
+- Oscuramento facoltativo della barra delle applicazioni
 - Scorciatoia globale Ctrl+Alt+H
 - Avvio con Windows facoltativo
 - Disponibile in 14 lingue
@@ -195,7 +227,11 @@ FocusHaze non raccoglie dati, non si connette a internet e non mostra pubblicit�
 
 **Termini di ricerca:** concentrazione; oscurare finestre; dimmer; focus; produttività; senza distrazioni; evidenziare finestra
 
-**Novità:** Prima versione su Microsoft Store.
+**Novità:** Novità della versione 1.3:  
+• Ogni schermo separatamente: su ogni monitor resta chiara l'ultima finestra usata.  
+• Ritardo facoltativo prima dell'oscuramento dopo il cambio di finestra, da 1 secondo a 5 minuti.  
+• Oscuramento facoltativo della barra delle applicazioni.  
+• Corretto: aprire Esplora file o un'app dello Store non toglie più il velo da tutti gli schermi.
 
 ---
 
@@ -218,7 +254,9 @@ O FocusHaze não coleta dados, não se conecta à internet e não exibe anúncio
 - Os cliques atravessam o véu: você trabalha normalmente
 - Intensidade e cor do véu ajustáveis
 - Transições suaves ao trocar de janela
-- Todas as telas ou só a ativa
+- Todas as telas, só a ativa ou cada uma separadamente
+- Atraso opcional antes de escurecer
+- Escurecimento opcional da barra de tarefas
 - Atalho global Ctrl+Alt+H
 - Inicialização com o Windows opcional
 - Disponível em 14 idiomas
@@ -226,7 +264,11 @@ O FocusHaze não coleta dados, não se conecta à internet e não exibe anúncio
 
 **Termos de pesquisa:** foco; escurecer janelas; dimmer; concentração; produtividade; sem distrações; destacar janela
 
-**Novidades:** Primeira versão na Microsoft Store.
+**Novidades:** Novidades da versão 1.3:  
+• Cada tela separadamente: em cada monitor, a última janela usada continua clara.  
+• Atraso opcional antes de escurecer depois de trocar de janela, de 1 segundo a 5 minutos.  
+• Escurecimento opcional da barra de tarefas.  
+• Corrigido: abrir o Explorador de Arquivos ou um app da Store não remove mais o véu de todas as telas.
 
 ---
 
@@ -249,7 +291,9 @@ FocusHaze verzamelt geen gegevens, maakt geen netwerkverbindingen en toont geen 
 - Klikken gaan door de waas, je werkt zoals altijd
 - Instelbare intensiteit en kleur
 - Vloeiende overgangen bij het wisselen van venster
-- Alle beeldschermen of alleen het actieve
+- Alle beeldschermen, alleen het actieve of elk scherm apart
+- Optionele vertraging voor het dimmen
+- Optioneel dimmen van de taakbalk
 - Globale sneltoets Ctrl+Alt+H
 - Optioneel starten met Windows
 - Beschikbaar in 14 talen
@@ -257,7 +301,11 @@ FocusHaze verzamelt geen gegevens, maakt geen netwerkverbindingen en toont geen 
 
 **Zoektermen:** focus; vensters dimmen; dimmer; concentratie; productiviteit; zonder afleiding; venster markeren
 
-**Nieuw in deze versie:** Eerste release in de Microsoft Store.
+**Nieuw in deze versie:** Nieuw in 1.3:  
+• Elk scherm apart: op elk beeldscherm blijft het laatst gebruikte venster helder.  
+• Optionele vertraging voor het dimmen na het wisselen van venster, van 1 seconde tot 5 minuten.  
+• Optioneel dimmen van de taakbalk.  
+• Opgelost: Verkenner of een Store-app openen haalt de waas niet meer van alle schermen weg.
 
 ---
 
@@ -280,7 +328,9 @@ FocusHaze не збирає жодних даних, не підключаєть
 - Клацання проходять крізь завісу, тож ви працюєте як завжди
 - Налаштовувані інтенсивність і колір
 - Плавні переходи під час перемикання вікон
-- Усі монітори або лише активний
+- Усі монітори, лише активний або кожен окремо
+- Необов'язкова затримка перед затемненням
+- Необов'язкове затемнення панелі завдань
 - Глобальне сполучення клавіш Ctrl+Alt+H
 - Необов'язковий запуск разом з Windows
 - 14 мов інтерфейсу
@@ -288,7 +338,11 @@ FocusHaze не збирає жодних даних, не підключаєть
 
 **Пошукові терміни:** зосередженість; затемнення вікон; dimmer; концентрація; продуктивність; без відволікань; підсвічування вікна
 
-**Що нового:** Перший випуск у Microsoft Store.
+**Що нового:** Нове у версії 1.3:  
+• Кожен екран окремо: на кожному моніторі останнє використане вікно залишається яскравим.  
+• Необов'язкова затримка перед затемненням після перемикання вікна, від 1 секунди до 5 хвилин.  
+• Необов'язкове затемнення панелі завдань.  
+• Виправлено: відкриття Провідника або застосунку з Microsoft Store більше не знімає завісу з усіх екранів.
 
 ---
 
@@ -311,7 +365,9 @@ FocusHaze не собирает никаких данных, не подключ
 - Щелчки проходят сквозь завесу, поэтому вы работаете как обычно
 - Настраиваемые интенсивность и цвет
 - Плавные переходы при переключении окон
-- Все мониторы или только активный
+- Все мониторы, только активный или каждый отдельно
+- Необязательная задержка перед затемнением
+- Необязательное затемнение панели задач
 - Глобальное сочетание клавиш Ctrl+Alt+H
 - Необязательный запуск вместе с Windows
 - 14 языков интерфейса
@@ -319,7 +375,11 @@ FocusHaze не собирает никаких данных, не подключ
 
 **Поисковые запросы:** фокус; затемнение окон; dimmer; концентрация; продуктивность; без отвлечений; подсветка окна
 
-**Что нового:** Первый выпуск в Microsoft Store.
+**Что нового:** Новое в версии 1.3:  
+• Каждый экран отдельно: на каждом мониторе последнее использованное окно остаётся ярким.  
+• Необязательная задержка перед затемнением после переключения окна, от 1 секунды до 5 минут.  
+• Необязательное затемнение панели задач.  
+• Исправлено: открытие Проводника или приложения из Microsoft Store больше не снимает завесу со всех экранов.
 
 ---
 
@@ -342,7 +402,9 @@ FocusHaze hiçbir veri toplamaz, ağ bağlantısı kurmaz ve reklam göstermez.
 - Tıklamalar perdeden geçer, her zamanki gibi çalışırsınız
 - Ayarlanabilir yoğunluk ve perde rengi
 - Pencere değiştirirken yumuşak geçişler
-- Tüm ekranlar veya yalnızca etkin ekran
+- Tüm ekranlar, yalnızca etkin ekran veya her ekran ayrı
+- İsteğe bağlı karartma gecikmesi
+- İsteğe bağlı görev çubuğu karartma
 - Genel kısayol Ctrl+Alt+H
 - İsteğe bağlı olarak Windows ile başlatma
 - 14 dil desteği
@@ -350,7 +412,11 @@ FocusHaze hiçbir veri toplamaz, ağ bağlantısı kurmaz ve reklam göstermez.
 
 **Arama terimleri:** odaklanma; pencere karartma; dimmer; konsantrasyon; verimlilik; dikkat dağıtmayan; pencere vurgulama
 
-**Yenilikler:** Microsoft Store'daki ilk sürüm.
+**Yenilikler:** 1.3 sürümündeki yenilikler:  
+• Her ekran ayrı: her monitörde en son kullanılan pencere parlak kalır.  
+• Pencere değiştirdikten sonra karartmadan önce isteğe bağlı gecikme (1 saniyeden 5 dakikaya kadar).  
+• İsteğe bağlı görev çubuğu karartma.  
+• Düzeltildi: Dosya Gezgini'ni veya bir Store uygulamasını açmak artık tüm ekranlardaki perdeyi kaldırmıyor.
 
 ---
 
@@ -373,7 +439,9 @@ FocusHaze はデータを一切収集せず、ネットワークに接続せず�
 - クリックはベールを通過するので、いつもどおりに作業できる
 - 濃さとベールの色を調整可能
 - ウィンドウ切り替え時のなめらかな遷移
-- すべてのディスプレイ、またはアクティブなディスプレイのみ
+- すべてのディスプレイ、アクティブなディスプレイのみ、または画面ごとに個別
+- 暗くするまでの遅延 (オプション)
+- タスクバーを暗くする (オプション)
 - グローバル ショートカット Ctrl+Alt+H
 - Windows 起動時の自動開始 (オプション)
 - 14 言語に対応
@@ -381,7 +449,11 @@ FocusHaze はデータを一切収集せず、ネットワークに接続せず�
 
 **検索語句:** 集中; ウィンドウを暗く; 減光; フォーカス; 生産性; 気が散らない; ウィンドウ強調
 
-**新機能:** Microsoft Store での最初のリリース。
+**新機能:** バージョン 1.3 の新機能:  
+• 画面ごとに個別: 各モニターで最後に使ったウィンドウが明るいままになります。  
+• ウィンドウ切り替え後、暗くするまでの遅延を設定できます (1 秒～5 分)。  
+• タスクバーも暗くできます (オプション)。  
+• 修正: エクスプローラーや Store アプリを開いても、すべての画面のベールが外れなくなりました。
 
 ---
 
@@ -404,7 +476,9 @@ FocusHaze는 어떤 데이터도 수집하지 않으며, 네트워크에 연결�
 - 클릭이 막을 통과하므로 평소처럼 작업
 - 강도와 막 색상 조정 가능
 - 창 전환 시 부드러운 전환 효과
-- 모든 디스플레이 또는 활성 디스플레이만
+- 모든 디스플레이, 활성 디스플레이만 또는 화면마다 따로
+- 어둡게 하기 전 지연 시간 (선택 사항)
+- 작업 표시줄 어둡게 하기 (선택 사항)
 - 전역 바로 가기 키 Ctrl+Alt+H
 - Windows 시작 시 실행 (선택 사항)
 - 14개 언어 지원
@@ -412,7 +486,11 @@ FocusHaze는 어떤 데이터도 수집하지 않으며, 네트워크에 연결�
 
 **검색어:** 집중; 창 어둡게; 디머; 포커스; 생산성; 방해 금지; 창 강조
 
-**새로운 기능:** Microsoft Store 첫 출시.
+**새로운 기능:** 1.3 버전의 새로운 기능:  
+• 화면마다 따로: 각 모니터에서 마지막으로 사용한 창이 밝게 유지됩니다.  
+• 창을 전환한 후 어둡게 하기 전 지연 시간 설정 (1초~5분).  
+• 작업 표시줄 어둡게 하기 (선택 사항).  
+• 수정: 파일 탐색기나 Store 앱을 열어도 더 이상 모든 화면의 막이 걷히지 않습니다.
 
 ---
 
@@ -435,7 +513,9 @@ FocusHaze 不收集任何数据，不进行网络连接，也不显示广告。
 - 点击可穿过遮罩，照常工作
 - 可调节强度和遮罩颜色
 - 切换窗口时平滑过渡
-- 所有显示器或仅活动显示器
+- 所有显示器、仅活动显示器或每个屏幕单独处理
+- 可选：调暗前的延迟
+- 可选：调暗任务栏
 - 全局快捷键 Ctrl+Alt+H
 - 可选随 Windows 启动
 - 支持 14 种语言
@@ -443,7 +523,11 @@ FocusHaze 不收集任何数据，不进行网络连接，也不显示广告。
 
 **搜索词:** 专注; 调暗窗口; 屏幕变暗; 聚焦; 效率; 免打扰; 窗口高亮
 
-**新增功能:** 首次在 Microsoft Store 发布。
+**新增功能:** 1.3 版新功能：  
+• 每个屏幕单独处理：每个显示器上最后使用的窗口保持明亮。  
+• 可选：切换窗口后延迟一段时间再调暗（1 秒到 5 分钟）。  
+• 可选：调暗任务栏。  
+• 修复：打开文件资源管理器或 Store 应用时，不再取消所有屏幕上的遮罩。
 
 ---
 

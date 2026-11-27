@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.3.0] – 2026-11-27
+
+### Dodane
+- Tryb **Każdy ekran osobno** (ustawienie „Wiele ekranów”): na każdym monitorze jasne zostaje okno używane tam ostatnio, a nie tylko jedno aktywne okno na wszystkich ekranach.
+- **Opóźnienie przyciemniania** (od „Natychmiast” do 5 minut): po przełączeniu okna poprzednie zostaje jasne przez ustawiony czas, a potem płynnie się przyciemnia.
+- Opcja **Przyciemniaj pasek zadań**, na każdym ekranie i przy każdym położeniu paska. Gdy używasz paska, menu Start albo zasobnika, pasek wraca do pełnej jasności.
+
+### Poprawione
+- Otwarcie Eksploratora plików albo aplikacji ze Sklepu (np. Kalkulatora) zdejmowało przyciemnienie ze wszystkich ekranów, aż do kliknięcia innego okna.
+
 ## [1.2.0] – 2026-10-11
 
 ### Dodane

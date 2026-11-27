@@ -29,7 +29,9 @@ FocusHaze jest dostępny w **[Microsoft Store](https://apps.microsoft.com/detail
 - Półprzezroczysta zasłona pod aktywnym oknem, przepuszczająca kliknięcia
 - Regulowana intensywność i kolor zasłony
 - Płynne przejścia przy zmianie okna (z regulowanym czasem trwania)
-- Przyciemnianie wszystkich monitorów albo tylko tego z aktywnym oknem
+- Przyciemnianie wszystkich monitorów, tylko tego z aktywnym oknem albo każdego osobno (na każdym monitorze jasne zostaje ostatnio używane okno)
+- Opcjonalne opóźnienie przyciemniania po przełączeniu okna (do 5 minut)
+- Opcjonalne przyciemnianie paska zadań
 - Ikona w zasobniku systemowym: lewy klik otwiera ustawienia, prawy otwiera menu
 - Globalny skrót **Ctrl+Alt+H** włącza i wyłącza przyciemnianie
 - Opcjonalne uruchamianie razem z Windows (startuje od razu w zasobniku)
@@ -70,7 +72,7 @@ Ustawienia są zapisywane w `%LOCALAPPDATA%\FocusHaze\settings.json`.
 ## Jak to działa
 
 - `Core/DimOverlay.cs`: natywne okno Win32 (`WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_NOACTIVATE`) wypełnione jednolitym kolorem, z przezroczystością ustawianą przez `SetLayeredWindowAttributes`.
-- `Core/DimController.cs`: przez `SetWinEventHook` nasłuchuje zmian okna pierwszoplanowego, minimalizacji, zamknięcia i ukrycia okien, a potem `SetWindowPos` wstawia zasłonę w Z-order **bezpośrednio pod** aktywnym oknem. Wszystko, co leży pod spodem, zostaje przyciemnione. Gdy aktywny jest pulpit, zasłona znika. Pasek zadań, przełącznik Alt+Tab i menu Start są ignorowane.
+- `Core/DimController.cs`: przez `SetWinEventHook` nasłuchuje zmian okna pierwszoplanowego, minimalizacji, zamknięcia, ukrycia i pokazania okien, a potem `SetWindowPos` wstawia zasłonę w Z-order **bezpośrednio pod** aktywnym oknem. W trybie **każdy ekran osobno** każdy ekran ma własną zasłonę (`Core/DimZone.cs`) pod najwyższym oknem na tym ekranie. Wszystko, co leży pod spodem, zostaje przyciemnione. Gdy aktywny jest pulpit, zasłona znika. Pasek zadań, przełącznik Alt+Tab i menu Start są ignorowane.
 - `Core/TrayHost.cs`: ukryte okno, które obsługuje ikonę w zasobniku, menu kontekstowe, skrót globalny i sygnał od kolejnej instancji.
 - `MainWindow.xaml`: okno ustawień w WinUI 3 (Mica, własny pasek tytułu).
 
