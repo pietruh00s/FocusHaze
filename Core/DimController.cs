@@ -54,9 +54,8 @@ internal sealed class DimController : IDisposable
         Hook(Win32.EVENT_SYSTEM_FOREGROUND);
         Hook(Win32.EVENT_SYSTEM_MOVESIZEEND);
         Hook(Win32.EVENT_SYSTEM_MINIMIZESTART, Win32.EVENT_SYSTEM_MINIMIZEEND);
-        Hook(Win32.EVENT_OBJECT_DESTROY);
-        Hook(Win32.EVENT_OBJECT_HIDE);
-        Hook(Win32.EVENT_OBJECT_CLOAKED);
+        Hook(Win32.EVENT_OBJECT_DESTROY, Win32.EVENT_OBJECT_HIDE);
+        Hook(Win32.EVENT_OBJECT_CLOAKED, Win32.EVENT_OBJECT_UNCLOAKED);
 
         Refresh();
     }
@@ -116,6 +115,13 @@ internal sealed class DimController : IDisposable
 
             case Win32.EVENT_SYSTEM_MOVESIZEEND when hwnd == _target && _settings.ActiveDisplayOnly:
                 Refresh();
+                break;
+
+            // Explorer and packaged apps take the foreground while still hidden or cloaked, which lifted the
+            // haze; once the foreground window actually appears, dim around it.
+            case Win32.EVENT_OBJECT_SHOW or Win32.EVENT_OBJECT_UNCLOAKED
+                when hwnd != _target && hwnd == Win32.GetForegroundWindow():
+                Refresh(switching: true);
                 break;
 
             case Win32.EVENT_OBJECT_DESTROY when hwnd == _target:
@@ -231,8 +237,11 @@ internal sealed class DimController : IDisposable
             return TargetKind.Hide;
         if (IgnoredClasses.Contains(className))
             return TargetKind.Ignore;
-        if (Win32.IsIconic(hwnd) || !Win32.IsWindowVisible(hwnd) || Win32.IsCloaked(hwnd))
+        if (Win32.IsIconic(hwnd))
             return TargetKind.Hide;
+        // Still appearing (EVENT_OBJECT_SHOW/UNCLOAKED follows), or hidden for good: keep the haze where it is.
+        if (!Win32.IsWindowVisible(hwnd) || Win32.IsCloaked(hwnd))
+            return TargetKind.Ignore;
 
         return TargetKind.Dim;
     }
