@@ -18,7 +18,8 @@ public partial class App : Application
     private TrayMenu? _trayMenu;
     private MainWindow? _window;
 
-    // Gives memory back to Windows a few seconds after the settings window or the tray menu closes.
+    // Gives memory back to Windows a few seconds after starting in the tray, or after the settings window
+    // or the tray menu closes.
     private DispatcherQueueTimer? _trim;
 
     internal static new App Current => (App)Application.Current;
@@ -79,6 +80,8 @@ public partial class App : Application
 
         if (!AppEnvironment.LaunchedAtStartup())
             ShowSettings();
+        else
+            ScheduleTrim();
     }
 
     private static void SignalRunningInstance()
