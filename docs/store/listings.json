@@ -25,7 +25,7 @@
       "distraction free",
       "window highlight"
     ],
-    "ReleaseNotes": "New in 1.3:\n• Each display separately: every monitor keeps its most recently used window bright.\n• Optional delay before dimming after you switch windows, from 1 second to 5 minutes.\n• Optional taskbar dimming.\n• Fixed: opening File Explorer or a Microsoft Store app no longer lifts the haze from every display.",
+    "ReleaseNotes": "New in 1.3:\n• Each display separately: every monitor keeps its most recently used window bright.\n• Optional delay before dimming after you switch windows, from 1 second to 5 minutes.\n• Optional taskbar dimming.\n• The menu of the notification-area icon now looks like other Windows 11 menus and follows the light or dark theme.\n• Fixed: opening File Explorer or a Microsoft Store app no longer lifts the haze from every display.",
     "Screenshot": "screenshot-en.png",
     "ScreenshotCaptions": [
       "Everything except your active window fades into a soft haze",
@@ -60,7 +60,7 @@
       "bez rozpraszaczy",
       "podświetlenie okna"
     ],
-    "ReleaseNotes": "Nowości w 1.3:\n• Każdy ekran osobno: na każdym monitorze jasne zostaje ostatnio używane okno.\n• Opcjonalne opóźnienie przyciemniania po przełączeniu okna, od 1 sekundy do 5 minut.\n• Opcjonalne przyciemnianie paska zadań.\n• Poprawka: otwarcie Eksploratora plików albo aplikacji ze Sklepu nie zdejmuje już przyciemnienia ze wszystkich ekranów.",
+    "ReleaseNotes": "Nowości w 1.3:\n• Każdy ekran osobno: na każdym monitorze jasne zostaje ostatnio używane okno.\n• Opcjonalne opóźnienie przyciemniania po przełączeniu okna, od 1 sekundy do 5 minut.\n• Opcjonalne przyciemnianie paska zadań.\n• Menu ikony w zasobniku wygląda teraz jak inne menu Windows 11 i dopasowuje się do jasnego lub ciemnego motywu.\n• Poprawka: otwarcie Eksploratora plików albo aplikacji ze Sklepu nie zdejmuje już przyciemnienia ze wszystkich ekranów.",
     "Screenshot": "screenshot-pl.png",
     "ScreenshotCaptions": [
       "Wszystko poza aktywnym oknem znika pod delikatną mgiełką",
@@ -95,7 +95,7 @@
       "ablenkungsfrei",
       "Fenster hervorheben"
     ],
-    "ReleaseNotes": "Neu in 1.3:\n• Jeder Bildschirm einzeln: Auf jedem Monitor bleibt das zuletzt verwendete Fenster hell.\n• Optionale Verzögerung vor dem Abdunkeln nach einem Fensterwechsel, von 1 Sekunde bis 5 Minuten.\n• Optionales Abdunkeln der Taskleiste.\n• Behoben: Das Öffnen des Datei-Explorers oder einer Store-App hebt die Abdunkelung nicht mehr auf allen Bildschirmen auf.",
+    "ReleaseNotes": "Neu in 1.3:\n• Jeder Bildschirm einzeln: Auf jedem Monitor bleibt das zuletzt verwendete Fenster hell.\n• Optionale Verzögerung vor dem Abdunkeln nach einem Fensterwechsel, von 1 Sekunde bis 5 Minuten.\n• Optionales Abdunkeln der Taskleiste.\n• Das Menü des Infobereichssymbols sieht jetzt wie andere Windows 11-Menüs aus und folgt dem hellen oder dunklen Design.\n• Behoben: Das Öffnen des Datei-Explorers oder einer Store-App hebt die Abdunkelung nicht mehr auf allen Bildschirmen auf.",
     "Screenshot": "screenshot-de.png",
     "ScreenshotCaptions": [
       "Alles außer deinem aktiven Fenster verschwindet hinter einem sanften Schleier",
@@ -130,7 +130,7 @@
       "sans distraction",
       "mise en valeur fenêtre"
     ],
-    "ReleaseNotes": "Nouveautés de la version 1.3 :\n• Chaque écran séparément : sur chaque moniteur, la dernière fenêtre utilisée reste claire.\n• Délai facultatif avant l'assombrissement après un changement de fenêtre, de 1 seconde à 5 minutes.\n• Assombrissement facultatif de la barre des tâches.\n• Corrigé : ouvrir l'Explorateur de fichiers ou une application du Store ne lève plus le voile sur tous les écrans.",
+    "ReleaseNotes": "Nouveautés de la version 1.3 :\n• Chaque écran séparément : sur chaque moniteur, la dernière fenêtre utilisée reste claire.\n• Délai facultatif avant l'assombrissement après un changement de fenêtre, de 1 seconde à 5 minutes.\n• Assombrissement facultatif de la barre des tâches.\n• Le menu de l'icône de la zone de notification ressemble désormais aux autres menus de Windows 11 et suit le thème clair ou sombre.\n• Corrigé : ouvrir l'Explorateur de fichiers ou une application du Store ne lève plus le voile sur tous les écrans.",
     "Screenshot": "screenshot-fr.png",
     "ScreenshotCaptions": [
       "Tout sauf votre fenêtre active s'efface sous un léger voile",
@@ -165,7 +165,7 @@
       "sin distracciones",
       "resaltar ventana"
     ],
-    "ReleaseNotes": "Novedades de la versión 1.3:\n• Cada pantalla por separado: en cada monitor, la última ventana usada sigue iluminada.\n• Retraso opcional antes de atenuar tras cambiar de ventana, de 1 segundo a 5 minutos.\n• Atenuación opcional de la barra de tareas.\n• Corregido: abrir el Explorador de archivos o una aplicación de Store ya no retira el velo de todas las pantallas.",
+    "ReleaseNotes": "Novedades de la versión 1.3:\n• Cada pantalla por separado: en cada monitor, la última ventana usada sigue iluminada.\n• Retraso opcional antes de atenuar tras cambiar de ventana, de 1 segundo a 5 minutos.\n• Atenuación opcional de la barra de tareas.\n• El menú del icono del área de notificación ahora se parece a los demás menús de Windows 11 y sigue el tema claro u oscuro.\n• Corregido: abrir el Explorador de archivos o una aplicación de Store ya no retira el velo de todas las pantallas.",
     "Screenshot": "screenshot-es.png",
     "ScreenshotCaptions": [
       "Todo excepto tu ventana activa se difumina bajo un velo suave",
@@ -200,7 +200,7 @@
       "senza distrazioni",
       "evidenziare finestra"
     ],
-    "ReleaseNotes": "Novità della versione 1.3:\n• Ogni schermo separatamente: su ogni monitor resta chiara l'ultima finestra usata.\n• Ritardo facoltativo prima dell'oscuramento dopo il cambio di finestra, da 1 secondo a 5 minuti.\n• Oscuramento facoltativo della barra delle applicazioni.\n• Corretto: aprire Esplora file o un'app dello Store non toglie più il velo da tutti gli schermi.",
+    "ReleaseNotes": "Novità della versione 1.3:\n• Ogni schermo separatamente: su ogni monitor resta chiara l'ultima finestra usata.\n• Ritardo facoltativo prima dell'oscuramento dopo il cambio di finestra, da 1 secondo a 5 minuti.\n• Oscuramento facoltativo della barra delle applicazioni.\n• Il menu dell'icona nell'area di notifica ora ha l'aspetto degli altri menu di Windows 11 e segue il tema chiaro o scuro.\n• Corretto: aprire Esplora file o un'app dello Store non toglie più il velo da tutti gli schermi.",
     "Screenshot": "screenshot-it.png",
     "ScreenshotCaptions": [
       "Tutto tranne la finestra attiva svanisce sotto un velo leggero",
@@ -235,7 +235,7 @@
       "sem distrações",
       "destacar janela"
     ],
-    "ReleaseNotes": "Novidades da versão 1.3:\n• Cada tela separadamente: em cada monitor, a última janela usada continua clara.\n• Atraso opcional antes de escurecer depois de trocar de janela, de 1 segundo a 5 minutos.\n• Escurecimento opcional da barra de tarefas.\n• Corrigido: abrir o Explorador de Arquivos ou um app da Store não remove mais o véu de todas as telas.",
+    "ReleaseNotes": "Novidades da versão 1.3:\n• Cada tela separadamente: em cada monitor, a última janela usada continua clara.\n• Atraso opcional antes de escurecer depois de trocar de janela, de 1 segundo a 5 minutos.\n• Escurecimento opcional da barra de tarefas.\n• O menu do ícone na área de notificação agora tem a aparência dos outros menus do Windows 11 e segue o tema claro ou escuro.\n• Corrigido: abrir o Explorador de Arquivos ou um app da Store não remove mais o véu de todas as telas.",
     "Screenshot": "screenshot-pt.png",
     "ScreenshotCaptions": [
       "Tudo, exceto a janela ativa, some sob um véu suave",
@@ -270,7 +270,7 @@
       "zonder afleiding",
       "venster markeren"
     ],
-    "ReleaseNotes": "Nieuw in 1.3:\n• Elk scherm apart: op elk beeldscherm blijft het laatst gebruikte venster helder.\n• Optionele vertraging voor het dimmen na het wisselen van venster, van 1 seconde tot 5 minuten.\n• Optioneel dimmen van de taakbalk.\n• Opgelost: Verkenner of een Store-app openen haalt de waas niet meer van alle schermen weg.",
+    "ReleaseNotes": "Nieuw in 1.3:\n• Elk scherm apart: op elk beeldscherm blijft het laatst gebruikte venster helder.\n• Optionele vertraging voor het dimmen na het wisselen van venster, van 1 seconde tot 5 minuten.\n• Optioneel dimmen van de taakbalk.\n• Het menu van het pictogram in het systeemvak ziet er nu uit als andere menu's in Windows 11 en volgt het lichte of donkere thema.\n• Opgelost: Verkenner of een Store-app openen haalt de waas niet meer van alle schermen weg.",
     "Screenshot": "screenshot-nl.png",
     "ScreenshotCaptions": [
       "Alles behalve je actieve venster verdwijnt achter een zachte waas",
@@ -305,7 +305,7 @@
       "без відволікань",
       "підсвічування вікна"
     ],
-    "ReleaseNotes": "Нове у версії 1.3:\n• Кожен екран окремо: на кожному моніторі останнє використане вікно залишається яскравим.\n• Необов'язкова затримка перед затемненням після перемикання вікна, від 1 секунди до 5 хвилин.\n• Необов'язкове затемнення панелі завдань.\n• Виправлено: відкриття Провідника або застосунку з Microsoft Store більше не знімає завісу з усіх екранів.",
+    "ReleaseNotes": "Нове у версії 1.3:\n• Кожен екран окремо: на кожному моніторі останнє використане вікно залишається яскравим.\n• Необов'язкова затримка перед затемненням після перемикання вікна, від 1 секунди до 5 хвилин.\n• Необов'язкове затемнення панелі завдань.\n• Меню значка в області сповіщень тепер виглядає як інші меню Windows 11 і відповідає світлій або темній темі.\n• Виправлено: відкриття Провідника або застосунку з Microsoft Store більше не знімає завісу з усіх екранів.",
     "Screenshot": "screenshot-uk.png",
     "ScreenshotCaptions": [
       "Усе, крім активного вікна, ховається під м'якою завісою",
@@ -340,7 +340,7 @@
       "без отвлечений",
       "подсветка окна"
     ],
-    "ReleaseNotes": "Новое в версии 1.3:\n• Каждый экран отдельно: на каждом мониторе последнее использованное окно остаётся ярким.\n• Необязательная задержка перед затемнением после переключения окна, от 1 секунды до 5 минут.\n• Необязательное затемнение панели задач.\n• Исправлено: открытие Проводника или приложения из Microsoft Store больше не снимает завесу со всех экранов.",
+    "ReleaseNotes": "Новое в версии 1.3:\n• Каждый экран отдельно: на каждом мониторе последнее использованное окно остаётся ярким.\n• Необязательная задержка перед затемнением после переключения окна, от 1 секунды до 5 минут.\n• Необязательное затемнение панели задач.\n• Меню значка в области уведомлений теперь выглядит как другие меню Windows 11 и следует светлой или тёмной теме.\n• Исправлено: открытие Проводника или приложения из Microsoft Store больше не снимает завесу со всех экранов.",
     "Screenshot": "screenshot-ru.png",
     "ScreenshotCaptions": [
       "Всё, кроме активного окна, скрывается под мягкой завесой",
@@ -375,7 +375,7 @@
       "dikkat dağıtmayan",
       "pencere vurgulama"
     ],
-    "ReleaseNotes": "1.3 sürümündeki yenilikler:\n• Her ekran ayrı: her monitörde en son kullanılan pencere parlak kalır.\n• Pencere değiştirdikten sonra karartmadan önce isteğe bağlı gecikme (1 saniyeden 5 dakikaya kadar).\n• İsteğe bağlı görev çubuğu karartma.\n• Düzeltildi: Dosya Gezgini'ni veya bir Store uygulamasını açmak artık tüm ekranlardaki perdeyi kaldırmıyor.",
+    "ReleaseNotes": "1.3 sürümündeki yenilikler:\n• Her ekran ayrı: her monitörde en son kullanılan pencere parlak kalır.\n• Pencere değiştirdikten sonra karartmadan önce isteğe bağlı gecikme (1 saniyeden 5 dakikaya kadar).\n• İsteğe bağlı görev çubuğu karartma.\n• Bildirim alanı simgesinin menüsü artık diğer Windows 11 menüleri gibi görünüyor ve açık veya koyu temayı izliyor.\n• Düzeltildi: Dosya Gezgini'ni veya bir Store uygulamasını açmak artık tüm ekranlardaki perdeyi kaldırmıyor.",
     "Screenshot": "screenshot-tr.png",
     "ScreenshotCaptions": [
       "Etkin pencere dışındaki her şey yumuşak bir perdenin ardında kaybolur",
@@ -410,7 +410,7 @@
       "気が散らない",
       "ウィンドウ強調"
     ],
-    "ReleaseNotes": "バージョン 1.3 の新機能:\n• 画面ごとに個別: 各モニターで最後に使ったウィンドウが明るいままになります。\n• ウィンドウ切り替え後、暗くするまでの遅延を設定できます (1 秒～5 分)。\n• タスクバーも暗くできます (オプション)。\n• 修正: エクスプローラーや Store アプリを開いても、すべての画面のベールが外れなくなりました。",
+    "ReleaseNotes": "バージョン 1.3 の新機能:\n• 画面ごとに個別: 各モニターで最後に使ったウィンドウが明るいままになります。\n• ウィンドウ切り替え後、暗くするまでの遅延を設定できます (1 秒～5 分)。\n• タスクバーも暗くできます (オプション)。\n• 通知領域アイコンのメニューが他の Windows 11 メニューと同じ見た目になり、ライト/ダーク テーマに合わせて表示されます。\n• 修正: エクスプローラーや Store アプリを開いても、すべての画面のベールが外れなくなりました。",
     "Screenshot": "screenshot-ja.png",
     "ScreenshotCaptions": [
       "アクティブなウィンドウ以外が、やわらかなベールの向こうに沈みます",
@@ -445,7 +445,7 @@
       "방해 금지",
       "창 강조"
     ],
-    "ReleaseNotes": "1.3 버전의 새로운 기능:\n• 화면마다 따로: 각 모니터에서 마지막으로 사용한 창이 밝게 유지됩니다.\n• 창을 전환한 후 어둡게 하기 전 지연 시간 설정 (1초~5분).\n• 작업 표시줄 어둡게 하기 (선택 사항).\n• 수정: 파일 탐색기나 Store 앱을 열어도 더 이상 모든 화면의 막이 걷히지 않습니다.",
+    "ReleaseNotes": "1.3 버전의 새로운 기능:\n• 화면마다 따로: 각 모니터에서 마지막으로 사용한 창이 밝게 유지됩니다.\n• 창을 전환한 후 어둡게 하기 전 지연 시간 설정 (1초~5분).\n• 작업 표시줄 어둡게 하기 (선택 사항).\n• 알림 영역 아이콘의 메뉴가 다른 Windows 11 메뉴와 같은 모양이 되었으며 밝은 테마 또는 어두운 테마를 따릅니다.\n• 수정: 파일 탐색기나 Store 앱을 열어도 더 이상 모든 화면의 막이 걷히지 않습니다.",
     "Screenshot": "screenshot-ko.png",
     "ScreenshotCaptions": [
       "활성 창을 제외한 모든 것이 부드러운 막 뒤로 사라집니다",
@@ -480,7 +480,7 @@
       "免打扰",
       "窗口高亮"
     ],
-    "ReleaseNotes": "1.3 版新功能：\n• 每个屏幕单独处理：每个显示器上最后使用的窗口保持明亮。\n• 可选：切换窗口后延迟一段时间再调暗（1 秒到 5 分钟）。\n• 可选：调暗任务栏。\n• 修复：打开文件资源管理器或 Store 应用时，不再取消所有屏幕上的遮罩。",
+    "ReleaseNotes": "1.3 版新功能：\n• 每个屏幕单独处理：每个显示器上最后使用的窗口保持明亮。\n• 可选：切换窗口后延迟一段时间再调暗（1 秒到 5 分钟）。\n• 可选：调暗任务栏。\n• 通知区域图标的菜单现在与其他 Windows 11 菜单外观一致，并跟随浅色或深色主题。\n• 修复：打开文件资源管理器或 Store 应用时，不再取消所有屏幕上的遮罩。",
     "Screenshot": "screenshot-zh-Hans.png",
     "ScreenshotCaptions": [
       "除活动窗口外，其他一切都隐入柔和的遮罩",

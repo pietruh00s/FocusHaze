@@ -1,7 +1,7 @@
 <Project>
   <!-- Version and product metadata. -->
   <PropertyGroup>
-    <Version>1.3.0</Version>
+    <Version>1.3.1</Version>
     <Product>FocusHaze</Product>
     <Authors>Piotr Osika</Authors>
     <Copyright>© 2026 Piotr Osika</Copyright>

@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.3.1] – 2026-11-27
+
+### Zmienione
+- Menu ikony w zasobniku (prawy klik) wygląda teraz jak inne menu Windows 11 i dopasowuje się do jasnego albo ciemnego motywu. Pozycje bez zmian: Ustawienia, Przyciemnianie (Ctrl+Alt+H) i Zakończ.
+
 ## [1.3.0] – 2026-11-27
 
 ### Dodane

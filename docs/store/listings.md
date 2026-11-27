@@ -46,6 +46,7 @@ FocusHaze collects no data, makes no network connections and shows no ads.
 • Each display separately: every monitor keeps its most recently used window bright.  
 • Optional delay before dimming after you switch windows, from 1 second to 5 minutes.  
 • Optional taskbar dimming.  
+• The menu of the notification-area icon now looks like other Windows 11 menus and follows the light or dark theme.  
 • Fixed: opening File Explorer or a Microsoft Store app no longer lifts the haze from every display.
 
 ---
@@ -83,6 +84,7 @@ FocusHaze nie zbiera żadnych danych, nie łączy się z internetem i nie wyświ
 • Każdy ekran osobno: na każdym monitorze jasne zostaje ostatnio używane okno.  
 • Opcjonalne opóźnienie przyciemniania po przełączeniu okna, od 1 sekundy do 5 minut.  
 • Opcjonalne przyciemnianie paska zadań.  
+• Menu ikony w zasobniku wygląda teraz jak inne menu Windows 11 i dopasowuje się do jasnego lub ciemnego motywu.  
 • Poprawka: otwarcie Eksploratora plików albo aplikacji ze Sklepu nie zdejmuje już przyciemnienia ze wszystkich ekranów.
 
 ---
@@ -120,6 +122,7 @@ FocusHaze sammelt keine Daten, stellt keine Netzwerkverbindungen her und zeigt k
 • Jeder Bildschirm einzeln: Auf jedem Monitor bleibt das zuletzt verwendete Fenster hell.  
 • Optionale Verzögerung vor dem Abdunkeln nach einem Fensterwechsel, von 1 Sekunde bis 5 Minuten.  
 • Optionales Abdunkeln der Taskleiste.  
+• Das Menü des Infobereichssymbols sieht jetzt wie andere Windows 11-Menüs aus und folgt dem hellen oder dunklen Design.  
 • Behoben: Das Öffnen des Datei-Explorers oder einer Store-App hebt die Abdunkelung nicht mehr auf allen Bildschirmen auf.
 
 ---
@@ -157,6 +160,7 @@ FocusHaze ne collecte aucune donnée, n'établit aucune connexion réseau et n'a
 • Chaque écran séparément : sur chaque moniteur, la dernière fenêtre utilisée reste claire.  
 • Délai facultatif avant l'assombrissement après un changement de fenêtre, de 1 seconde à 5 minutes.  
 • Assombrissement facultatif de la barre des tâches.  
+• Le menu de l'icône de la zone de notification ressemble désormais aux autres menus de Windows 11 et suit le thème clair ou sombre.  
 • Corrigé : ouvrir l'Explorateur de fichiers ou une application du Store ne lève plus le voile sur tous les écrans.
 
 ---
@@ -194,6 +198,7 @@ FocusHaze no recopila datos, no se conecta a internet y no muestra anuncios.
 • Cada pantalla por separado: en cada monitor, la última ventana usada sigue iluminada.  
 • Retraso opcional antes de atenuar tras cambiar de ventana, de 1 segundo a 5 minutos.  
 • Atenuación opcional de la barra de tareas.  
+• El menú del icono del área de notificación ahora se parece a los demás menús de Windows 11 y sigue el tema claro u oscuro.  
 • Corregido: abrir el Explorador de archivos o una aplicación de Store ya no retira el velo de todas las pantallas.
 
 ---
@@ -231,6 +236,7 @@ FocusHaze non raccoglie dati, non si connette a internet e non mostra pubblicit�
 • Ogni schermo separatamente: su ogni monitor resta chiara l'ultima finestra usata.  
 • Ritardo facoltativo prima dell'oscuramento dopo il cambio di finestra, da 1 secondo a 5 minuti.  
 • Oscuramento facoltativo della barra delle applicazioni.  
+• Il menu dell'icona nell'area di notifica ora ha l'aspetto degli altri menu di Windows 11 e segue il tema chiaro o scuro.  
 • Corretto: aprire Esplora file o un'app dello Store non toglie più il velo da tutti gli schermi.
 
 ---
@@ -268,6 +274,7 @@ O FocusHaze não coleta dados, não se conecta à internet e não exibe anúncio
 • Cada tela separadamente: em cada monitor, a última janela usada continua clara.  
 • Atraso opcional antes de escurecer depois de trocar de janela, de 1 segundo a 5 minutos.  
 • Escurecimento opcional da barra de tarefas.  
+• O menu do ícone na área de notificação agora tem a aparência dos outros menus do Windows 11 e segue o tema claro ou escuro.  
 • Corrigido: abrir o Explorador de Arquivos ou um app da Store não remove mais o véu de todas as telas.
 
 ---
@@ -305,6 +312,7 @@ FocusHaze verzamelt geen gegevens, maakt geen netwerkverbindingen en toont geen 
 • Elk scherm apart: op elk beeldscherm blijft het laatst gebruikte venster helder.  
 • Optionele vertraging voor het dimmen na het wisselen van venster, van 1 seconde tot 5 minuten.  
 • Optioneel dimmen van de taakbalk.  
+• Het menu van het pictogram in het systeemvak ziet er nu uit als andere menu's in Windows 11 en volgt het lichte of donkere thema.  
 • Opgelost: Verkenner of een Store-app openen haalt de waas niet meer van alle schermen weg.
 
 ---
@@ -342,6 +350,7 @@ FocusHaze не збирає жодних даних, не підключаєть
 • Кожен екран окремо: на кожному моніторі останнє використане вікно залишається яскравим.  
 • Необов'язкова затримка перед затемненням після перемикання вікна, від 1 секунди до 5 хвилин.  
 • Необов'язкове затемнення панелі завдань.  
+• Меню значка в області сповіщень тепер виглядає як інші меню Windows 11 і відповідає світлій або темній темі.  
 • Виправлено: відкриття Провідника або застосунку з Microsoft Store більше не знімає завісу з усіх екранів.
 
 ---
@@ -379,6 +388,7 @@ FocusHaze не собирает никаких данных, не подключ
 • Каждый экран отдельно: на каждом мониторе последнее использованное окно остаётся ярким.  
 • Необязательная задержка перед затемнением после переключения окна, от 1 секунды до 5 минут.  
 • Необязательное затемнение панели задач.  
+• Меню значка в области уведомлений теперь выглядит как другие меню Windows 11 и следует светлой или тёмной теме.  
 • Исправлено: открытие Проводника или приложения из Microsoft Store больше не снимает завесу со всех экранов.
 
 ---
@@ -416,6 +426,7 @@ FocusHaze hiçbir veri toplamaz, ağ bağlantısı kurmaz ve reklam göstermez.
 • Her ekran ayrı: her monitörde en son kullanılan pencere parlak kalır.  
 • Pencere değiştirdikten sonra karartmadan önce isteğe bağlı gecikme (1 saniyeden 5 dakikaya kadar).  
 • İsteğe bağlı görev çubuğu karartma.  
+• Bildirim alanı simgesinin menüsü artık diğer Windows 11 menüleri gibi görünüyor ve açık veya koyu temayı izliyor.  
 • Düzeltildi: Dosya Gezgini'ni veya bir Store uygulamasını açmak artık tüm ekranlardaki perdeyi kaldırmıyor.
 
 ---
@@ -453,6 +464,7 @@ FocusHaze はデータを一切収集せず、ネットワークに接続せず�
 • 画面ごとに個別: 各モニターで最後に使ったウィンドウが明るいままになります。  
 • ウィンドウ切り替え後、暗くするまでの遅延を設定できます (1 秒～5 分)。  
 • タスクバーも暗くできます (オプション)。  
+• 通知領域アイコンのメニューが他の Windows 11 メニューと同じ見た目になり、ライト/ダーク テーマに合わせて表示されます。  
 • 修正: エクスプローラーや Store アプリを開いても、すべての画面のベールが外れなくなりました。
 
 ---
@@ -490,6 +502,7 @@ FocusHaze는 어떤 데이터도 수집하지 않으며, 네트워크에 연결�
 • 화면마다 따로: 각 모니터에서 마지막으로 사용한 창이 밝게 유지됩니다.  
 • 창을 전환한 후 어둡게 하기 전 지연 시간 설정 (1초~5분).  
 • 작업 표시줄 어둡게 하기 (선택 사항).  
+• 알림 영역 아이콘의 메뉴가 다른 Windows 11 메뉴와 같은 모양이 되었으며 밝은 테마 또는 어두운 테마를 따릅니다.  
 • 수정: 파일 탐색기나 Store 앱을 열어도 더 이상 모든 화면의 막이 걷히지 않습니다.
 
 ---
@@ -527,6 +540,7 @@ FocusHaze 不收集任何数据，不进行网络连接，也不显示广告。
 • 每个屏幕单独处理：每个显示器上最后使用的窗口保持明亮。  
 • 可选：切换窗口后延迟一段时间再调暗（1 秒到 5 分钟）。  
 • 可选：调暗任务栏。  
+• 通知区域图标的菜单现在与其他 Windows 11 菜单外观一致，并跟随浅色或深色主题。  
 • 修复：打开文件资源管理器或 Store 应用时，不再取消所有屏幕上的遮罩。
 
 ---
