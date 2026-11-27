@@ -12,7 +12,7 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="FocusHaze – One window. Full focus.">
-  <meta property="og:description" content="Dims every window except the one you're working in. A HazeOver-style focus tool for Windows 11.">
+  <meta property="og:description" content="Dims every window except the one you're working in. A HazeOver-style focus tool for Windows 10 and 11.">
   <meta property="og:url" content="https://pietruh00s.github.io/FocusHaze/">
   <meta property="og:image" content="https://pietruh00s.github.io/FocusHaze/banner.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -79,13 +79,18 @@
     nav.links a:hover { color: var(--text); }
 
     .hero { display: grid; grid-template-columns: 1fr 1.15fr; gap: 56px; align-items: center; padding: 48px 0 72px; }
-    .eyebrow { font: 600 13px/1 var(--mono); letter-spacing: 0.22em; color: var(--accent); text-transform: uppercase; }
-    h1 { font: 700 clamp(44px, 6vw, 76px)/1.02 var(--font-display); margin: 18px 0 20px; letter-spacing: -0.02em; }
+    h1 { font: 700 clamp(44px, 6vw, 76px)/1.02 var(--font-display); margin: 0 0 20px; letter-spacing: -0.02em; text-wrap: balance; }
     h1 .accent, h2 .accent { color: var(--accent); }
-    .lead { color: var(--muted); font-size: 20px; max-width: 30ch; margin: 0 0 32px; }
+    .lead { color: var(--muted); font-size: 20px; max-width: 42ch; margin: 0 0 32px; }
     .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
     .store-badge img { height: 58px; width: auto; }
-    .cta small { color: var(--muted); font-size: 14px; }
+    .cta-meta { color: var(--muted); font-size: 15px; line-height: 1.5; }
+    .cta-meta strong { color: var(--text); font-weight: 600; }
+    .cta-meta small { display: block; font-size: 14px; }
+    .winget { display: inline-flex; align-items: center; gap: 4px; margin-top: 22px; padding: 4px 4px 4px 14px; border: 1px solid var(--card-line); border-radius: 10px; background: var(--card); max-width: 100%; }
+    .winget code { font: 14px var(--mono); color: var(--muted); overflow-x: auto; white-space: nowrap; }
+    .copy { font: 600 13px var(--font); color: var(--text); background: rgba(255, 255, 255, 0.08); border: 0; border-radius: 7px; padding: 7px 12px; cursor: pointer; min-width: 64px; }
+    .copy:hover { background: rgba(255, 255, 255, 0.14); }
 
     .video {
       border-radius: var(--radius); overflow: hidden;
@@ -96,7 +101,8 @@
     .video video { width: 100%; aspect-ratio: 16 / 9; }
 
     section { padding: 72px 0; }
-    h2 { font: 700 clamp(32px, 4vw, 48px)/1.1 var(--font-display); margin: 12px 0 16px; letter-spacing: -0.015em; }
+    h2 { font: 700 clamp(32px, 4vw, 48px)/1.1 var(--font-display); margin: 0 0 16px; letter-spacing: -0.015em; text-wrap: balance; }
+    p, li { text-wrap: pretty; }
     .section-lead { color: var(--muted); max-width: 62ch; margin: 0 0 40px; }
 
     /* Grid items default to min-width:auto, which lets a 1920px image stretch the page. */
@@ -104,19 +110,23 @@
     .step { display: grid; grid-template-columns: 0.8fr 1.4fr; gap: 48px; align-items: center; margin-bottom: 72px; }
     .step:nth-child(even) { grid-template-columns: 1.4fr 0.8fr; }
     .step:nth-child(even) .step-text { order: 2; }
-    .step h3 { font: 700 30px/1.2 var(--font-display); margin: 12px 0 10px; }
+    .step h3 { font: 700 30px/1.2 var(--font-display); margin: 0 0 10px; }
+    /* The page does what the app does: steps you are not looking at sit in the haze, with the app's default 500 ms fade. */
+    .haze .step .shot { filter: brightness(0.45) saturate(0.8); transition: filter 500ms ease-out; }
+    .haze .step.is-focus .shot { filter: none; }
+    @media (prefers-reduced-motion: reduce) { .haze .step .shot { transition: none; } }
     .step p { color: var(--muted); margin: 0; }
     .shot { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--card-line); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4); }
 
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card { background: var(--card); border: 1px solid var(--card-line); border-radius: var(--radius); padding: 26px; }
-    .card .icon { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(134, 230, 132, 0.12); color: var(--accent); margin-bottom: 16px; }
-    .card .icon svg { width: 22px; height: 22px; }
-    .card h3 { margin: 0 0 6px; font-size: 19px; }
-    .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+    .feats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 40px; }
+    .feat { display: grid; grid-template-columns: 22px 1fr; gap: 4px 14px; padding: 22px 0; border-top: 1px solid var(--card-line); }
+    .feat .icon { grid-row: span 2; color: var(--accent); padding-top: 3px; }
+    .feat .icon svg { width: 22px; height: 22px; display: block; }
+    .feat h3 { margin: 0; font-size: 18px; font-weight: 600; }
+    .feat p { margin: 0; color: var(--muted); font-size: 15.5px; }
 
-    .langs { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-    .langs span { border: 1px solid var(--card-line); border-radius: 999px; padding: 6px 14px; font-size: 14px; color: var(--muted); background: var(--card); }
+    .langs { color: var(--muted); font-size: 15px; margin: 24px 0 0; max-width: 75ch; }
+    .langs span { color: var(--text); font-weight: 600; }
 
     details { background: var(--card); border: 1px solid var(--card-line); border-radius: 14px; padding: 18px 22px; margin-bottom: 12px; }
     summary { cursor: pointer; font-weight: 600; list-style: none; }
@@ -128,33 +138,52 @@
     .final { text-align: center; padding: 96px 0; }
     .final img.app-icon { width: 120px; height: 120px; margin: 0 auto 24px; filter: drop-shadow(0 20px 40px rgba(134, 230, 132, 0.25)); }
     .final .cta { justify-content: center; }
+    .final .section-lead { margin: 0 auto 32px; }
 
     footer { border-top: 1px solid var(--card-line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
     footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
-    footer a { color: var(--muted); }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
 
-    .manual-group { margin-top: 40px; }
-    .manual-group > h3 { font: 600 13px/1 var(--mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px; }
+    .manual-group { margin-top: 12px; }
+    div.manual-group { margin-top: 40px; }
+    .manual-group > h3 { font: 600 19px/1.3 var(--font); margin: 0 0 8px; }
+    .manual-group summary h3 { display: inline; font: inherit; margin: 0; }
+    .manual-group summary .count { color: var(--muted); font-weight: 400; font-size: 15px; margin-left: 8px; }
+    details.manual-group .opt:first-of-type { margin-top: 12px; }
+    details.manual-group .opt:last-child { border-bottom: 0; padding-bottom: 4px; }
     .opt { display: grid; grid-template-columns: minmax(180px, 1fr) 2.2fr; gap: 8px 32px; padding: 20px 0; border-top: 1px solid var(--card-line); }
     .opt:last-child { border-bottom: 1px solid var(--card-line); }
     .opt h4 { margin: 0; font-size: 17px; font-weight: 600; }
-    .opt p { margin: 0; color: var(--muted); }
+    .opt p { margin: 0; color: var(--muted); max-width: 68ch; }
     .opt ul { margin: 8px 0 0; padding-left: 20px; color: var(--muted); }
     .opt li + li { margin-top: 4px; }
     .opt strong { color: var(--text); font-weight: 600; }
     .meta { display: block; margin-top: 10px; font: 13px/1.5 var(--mono); color: var(--muted); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+    ::selection { background: rgba(134, 230, 132, 0.3); color: var(--text); }
+    .getbar { display: none; }
     kbd { font: 13px var(--mono); border: 1px solid var(--card-line); border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; background: var(--card); color: var(--text); }
 
     @media (max-width: 880px) {
       .opt { grid-template-columns: 1fr; }
       .hero, .step, .step:nth-child(even) { grid-template-columns: 1fr; gap: 28px; }
       .step:nth-child(even) .step-text { order: 0; }
-      .grid { grid-template-columns: 1fr; }
-      nav.links { display: none; }
+      .feats { grid-template-columns: 1fr; }
+      header.top { flex-wrap: wrap; gap: 10px 0; padding: 16px 0; }
+      nav.links { width: 100%; gap: 20px; overflow-x: auto; }
+      .hero { padding-top: 16px; }
+      /* Thumb-reach way to the Store; hidden while a full badge is on screen. */
+      .getbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 10; padding: 10px 10px 10px 16px; border-radius: 14px; background: rgba(16, 27, 20, 0.92); border: 1px solid var(--card-line); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45); backdrop-filter: blur(12px); transition: transform 300ms ease-out, opacity 300ms ease-out; }
+      .getbar.is-hidden { transform: translateY(140%); opacity: 0; pointer-events: none; }
+      .getbar span { font-size: 14px; color: var(--muted); }
+      .getbar span strong { color: var(--text); }
+      .getbar a { background: var(--accent); color: var(--accent-ink); font-weight: 600; text-decoration: none; border-radius: 9px; padding: 10px 16px; white-space: nowrap; }
+      footer { padding-bottom: 96px; }
       section { padding: 48px 0; }
       .step { margin-bottom: 48px; }
     }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .getbar { transition: none; } }
   </style>
 </head>
 <body>
@@ -171,29 +200,33 @@
   <main>
     <section class="wrap hero" aria-labelledby="hero-title">
       <div>
-        <div class="eyebrow">Focus tool for Windows 11</div>
         <h1 id="hero-title">One window.<br><span class="accent">Full focus.</span></h1>
         <p class="lead">FocusHaze dims every window except the one you're working in, so the rest of your screen fades into the background.</p>
         <div class="cta">
-          <a class="store-badge" href="https://apps.microsoft.com/detail/9P3J7F0RK3RT"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" width="174" height="58"></a>
-          <small>Windows 10 &amp; 11 · x64 and ARM64 · about 2–4 MB of RAM</small>
+          <a class="store-badge" href="https://apps.microsoft.com/detail/9P3J7F0RK3RT"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Download FocusHaze from the Microsoft Store" width="174" height="58"></a>
+          <div class="cta-meta">
+            <strong>$0.99, one-time purchase</strong> · no subscription, no ads
+            <small>Windows 10 &amp; 11 · x64 and ARM64 · about 2–4&nbsp;MB of&nbsp;RAM</small>
+          </div>
+        </div>
+        <div class="winget">
+          <code>winget install 9P3J7F0RK3RT</code>
+          <button type="button" class="copy" data-copy="winget install 9P3J7F0RK3RT">Copy</button>
         </div>
       </div>
       <div class="video">
-        <video src="assets/focushaze-trailer.mp4" poster="assets/trailer-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="FocusHaze trailer"></video>
+        <video src="assets/focushaze-trailer.mp4" poster="assets/focus-mail.jpg" muted playsinline controls preload="none" aria-label="FocusHaze trailer, 36 seconds. Poster: the Mail window stays bright while every other window is dimmed."></video>
       </div>
     </section>
 
     <section class="wrap" id="how" aria-labelledby="how-title">
-      <div class="eyebrow">How it works</div>
-      <h2 id="how-title">The haze follows <span class="accent">your focus.</span></h2>
+      <h2 id="how-title">The haze follows your focus.</h2>
       <p class="section-lead">A translucent haze sits right beneath the active window. Clicks pass straight through it, so you work exactly as before – just with less noise around you.</p>
 
       <div class="steps">
 
       <div class="step">
         <div class="step-text">
-          <div class="eyebrow">01 — Focus</div>
           <h3>Dim the rest</h3>
           <p>Everything except the window you're working in fades into a soft haze: other apps, the desktop, all of it.</p>
         </div>
@@ -202,7 +235,6 @@
 
       <div class="step">
         <div class="step-text">
-          <div class="eyebrow">02 — Follow</div>
           <h3>Switch, and it follows</h3>
           <p>Click any window and the haze moves with you. The window you leave fades out smoothly instead of flashing.</p>
         </div>
@@ -211,7 +243,6 @@
 
       <div class="step">
         <div class="step-text">
-          <div class="eyebrow">03 — Compare</div>
           <h3>Calmer at a glance</h3>
           <p>Left: a normal busy desktop. Right: the same desktop with FocusHaze. Your eyes go straight to what matters.</p>
         </div>
@@ -220,7 +251,6 @@
 
       <div class="step">
         <div class="step-text">
-          <div class="eyebrow">04 — Tune</div>
           <h3>Make it yours</h3>
           <p>Choose how strong the haze is, its color and how fast it follows you. Changes apply instantly.</p>
         </div>
@@ -230,53 +260,49 @@
     </section>
 
     <section class="wrap" id="features" aria-labelledby="features-title">
-      <div class="eyebrow">Features</div>
-      <h2 id="features-title">Hotkey, tray, every display. <span class="accent">Covered.</span></h2>
+      <h2 id="features-title">Small, quiet, everywhere you need it.</h2>
       <p class="section-lead">FocusHaze runs quietly in your notification area and stays out of your way.</p>
-      <div class="grid">
-        <div class="card">
+      <div class="feats">
+        <div class="feat">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2.5"/><path d="M6 10h.01M9 10h.01M12 10h.01M15 10h.01M18 10h.01M7 14h10"/></svg></div>
           <h3>Ctrl+Alt+H</h3>
           <p>Turn dimming on and off from anywhere.</p>
         </div>
-        <div class="card">
+        <div class="feat">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l5.5 15 2.2-6.3L19 9.5z"/><path d="M13 13l5 5"/></svg></div>
           <h3>Click-through haze</h3>
           <p>It never gets in the way of your clicks.</p>
         </div>
-        <div class="card">
+        <div class="feat">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2.5" y="4" width="13" height="9" rx="1.5"/><rect x="9" y="10" width="12.5" height="8.5" rx="1.5"/></svg></div>
           <h3>Every display</h3>
           <p>Dim all monitors, only the active one, or each one separately.</p>
         </div>
-        <div class="card">
+        <div class="feat">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v8"/><path d="M6.3 6.5a8 8 0 1 0 11.4 0"/></svg></div>
           <h3>Starts with Windows</h3>
           <p>Optional – it starts quietly in the tray.</p>
         </div>
-        <div class="card">
+        <div class="feat">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg></div>
           <h3>14 languages</h3>
           <p>Follows your Windows display language.</p>
         </div>
-        <div class="card">
+        <div class="feat">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></div>
           <h3>Private by design</h3>
           <p>No data collection, no ads, no network connections.</p>
         </div>
       </div>
-      <div class="langs" aria-label="Supported languages">
-        <span>English</span><span>Polski</span><span>Deutsch</span><span>Français</span><span>Español</span><span>Italiano</span><span>Português</span><span>Nederlands</span><span>Українська</span><span>Русский</span><span>Türkçe</span><span>日本語</span><span>한국어</span><span>中文(简体)</span>
-      </div>
+      <p class="langs"><span>Languages:</span> English, Polski, Deutsch, Français, Español, Italiano, Português, Nederlands, Українська, Русский, Türkçe, 日本語, 한국어, 中文(简体).</p>
     </section>
 
     <section class="wrap" id="manual" aria-labelledby="manual-title">
-      <div class="eyebrow">Manual</div>
-      <h2 id="manual-title">Every option, <span class="accent">explained.</span></h2>
+      <h2 id="manual-title">Every option, explained</h2>
       <p class="section-lead">Open the settings by clicking the FocusHaze icon in the notification area. Changes apply immediately and are saved automatically.</p>
 
-      <div class="manual-group">
-        <h3>Background dimming</h3>
+      <details class="manual-group">
+        <summary><h3>Background dimming</h3> <span class="count">7 options</span></summary>
         <div class="opt">
           <h4>Dim background windows</h4>
           <div>
@@ -331,10 +357,9 @@
             <span class="meta">Default: All displays</span>
           </div>
         </div>
-      </div>
-
-      <div class="manual-group">
-        <h3>App</h3>
+      </details>
+      <details class="manual-group">
+        <summary><h3>App</h3> <span class="count">3 options</span></summary>
         <div class="opt">
           <h4>Language</h4>
           <div>
@@ -355,10 +380,9 @@
             <p>Closing the settings window keeps FocusHaze running in the notification area. To stop it completely, click <strong>Quit FocusHaze</strong>.</p>
           </div>
         </div>
-      </div>
-
-      <div class="manual-group">
-        <h3>Tray icon and shortcut</h3>
+      </details>
+      <details class="manual-group">
+        <summary><h3>Tray icon and shortcut</h3> <span class="count">3 options</span></summary>
         <div class="opt">
           <h4>Notification area icon</h4>
           <div>
@@ -377,8 +401,7 @@
             <p>Only one copy of FocusHaze runs at a time. Starting it again, for example from the Start menu, opens the settings of the copy that is already running.</p>
           </div>
         </div>
-      </div>
-
+      </details>
       <div class="manual-group">
         <h3>Good to know</h3>
         <div class="opt">
@@ -409,7 +432,6 @@
     </section>
 
     <section class="wrap" id="faq" aria-labelledby="faq-title">
-      <div class="eyebrow">FAQ</div>
       <h2 id="faq-title">Questions</h2>
       <details>
         <summary>Is FocusHaze like HazeOver for Windows?</summary>
@@ -445,9 +467,9 @@
       <div class="wrap">
         <img class="app-icon" src="assets/icon.png" alt="FocusHaze icon" width="120" height="120">
         <h2 id="final-title">Less noise. <span class="accent">More focus.</span></h2>
-        <p class="section-lead" style="margin: 0 auto 32px;">Install FocusHaze from the Microsoft Store – it updates automatically.</p>
+        <p class="section-lead">$0.99, one-time purchase from the Microsoft Store. It updates automatically.</p>
         <div class="cta">
-          <a class="store-badge" href="https://apps.microsoft.com/detail/9P3J7F0RK3RT"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Get it from Microsoft" width="174" height="58"></a>
+          <a class="store-badge" href="https://apps.microsoft.com/detail/9P3J7F0RK3RT"><img src="https://get.microsoft.com/images/en-us%20dark.svg" alt="Download FocusHaze from the Microsoft Store" width="174" height="58"></a>
         </div>
       </div>
     </section>
@@ -459,5 +481,43 @@
       <span><a href="https://github.com/pietruh00s/FocusHaze">Source on GitHub</a> · <a href="https://github.com/pietruh00s/FocusHaze/blob/main/PRIVACY.md">Privacy</a> · <a href="https://buymeacoffee.com/piotrosika">Buy me a coffee</a></span>
     </div>
   </footer>
+  <div class="getbar is-hidden" aria-hidden="true">
+    <span><strong>FocusHaze</strong> · $0.99 · Windows 10 &amp; 11</span>
+    <a href="https://apps.microsoft.com/detail/9P3J7F0RK3RT" tabindex="-1">Get it</a>
+  </div>
+  <script>
+    (function () {
+      // Steps outside the reading band sit in the haze, like inactive windows.
+      if ('IntersectionObserver' in window) {
+        document.documentElement.classList.add('haze');
+        // Exactly one step stays bright, like the one active window; it keeps focus until another takes it.
+        var steps = document.querySelectorAll('.step');
+        var focusIO = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) steps.forEach(function (s) { s.classList.toggle('is-focus', s === e.target); });
+          });
+        }, { rootMargin: '-45% 0px -45% 0px' });
+        steps[0].classList.add('is-focus');
+        steps.forEach(function (s) { focusIO.observe(s); });
+
+        var bar = document.querySelector('.getbar'), visible = new Set();
+        var update = function () { bar.classList.toggle('is-hidden', visible.size > 0 || scrollY < 200); };
+        var badgeIO = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { e.isIntersecting ? visible.add(e.target) : visible.delete(e.target); });
+          update();
+        });
+        document.querySelectorAll('.store-badge').forEach(function (b) { badgeIO.observe(b); });
+        addEventListener('scroll', update, { passive: true });
+      }
+      document.querySelectorAll('.copy').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          navigator.clipboard.writeText(btn.dataset.copy).then(function () {
+            btn.textContent = 'Copied';
+            setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+          }, function () { btn.textContent = 'Press Ctrl+C'; });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
