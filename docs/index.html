@@ -454,6 +454,11 @@
         <p>No. FocusHaze is built on plain Windows windows, so dimming costs next to nothing. A few seconds after it starts, or after you close its settings or menu, it gives unused memory back to Windows and uses only about 2–4 MB of RAM in Task Manager.</p>
       </details>
       <details>
+        <summary>Why is the download about 60 MB if it uses only 2–4 MB of RAM?</summary>
+        <p>Most of the download is .NET, the runtime FocusHaze is built on. The app carries its own copy, so you don't have to install anything else, and it keeps working when other apps update or remove theirs. The code is also precompiled for your processor, which makes the files bigger but lets the app start faster. The Windows App SDK, the library behind the Windows 11 look of the settings window, is a shared Microsoft package that the Store installs once for all apps that use it. Your PC downloads only the version for its processor (x64 or ARM64).</p>
+        <p>Download size isn't memory use. While it runs, FocusHaze loads only what it needs and gives the rest back to Windows, so Task Manager shows about 2–4 MB.</p>
+      </details>
+      <details>
         <summary>Which Windows versions are supported?</summary>
         <p>Windows 10 version 2004 or later and Windows 11, on both x64 and ARM64 PCs.</p>
       </details>
