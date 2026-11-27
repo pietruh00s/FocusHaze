@@ -134,6 +134,9 @@
     summary::after { content: "+"; float: right; color: var(--accent); font-weight: 400; font-size: 22px; line-height: 1; }
     details[open] summary::after { content: "–"; }
     details p { color: var(--muted); margin: 12px 0 0; }
+    details > ul { color: var(--muted); margin: 8px 0 0; padding-left: 20px; }
+    details > ul li + li { margin-top: 6px; }
+    details strong { color: var(--text); font-weight: 600; }
 
     .final { text-align: center; padding: 96px 0; }
     .final img.app-icon { width: 120px; height: 120px; margin: 0 auto 24px; filter: drop-shadow(0 20px 40px rgba(134, 230, 132, 0.25)); }
@@ -443,7 +446,13 @@
       </details>
       <details>
         <summary>Does it work with multiple monitors?</summary>
-        <p>Yes. You can dim all displays, only the display that contains the active window, or each display separately, so every monitor keeps the window you used there last.</p>
+        <p>Yes. Choose how the haze treats your monitors under <strong>Multiple displays</strong> in the settings:</p>
+        <ul>
+          <li><strong>All displays</strong>: one window is bright, and everything else on every monitor is dimmed.</li>
+          <li><strong>Active display only</strong>: only the monitor you're working on is dimmed. The others stay as they are, which suits a video or a dashboard on a second screen.</li>
+          <li><strong>Each display separately</strong>: every monitor keeps the window you used there last bright, so a reference window on your second screen stays readable while you work on the first.</li>
+        </ul>
+        <p>With <strong>Dim the taskbar</strong> on, the taskbar on every monitor dims too, wherever you've placed it. When you plug in, unplug or rearrange a display, the haze adjusts by itself.</p>
       </details>
       <details>
         <summary>Does FocusHaze collect any data?</summary>
