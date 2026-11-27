@@ -18,6 +18,9 @@ public partial class App : Application
     private TrayMenu? _trayMenu;
     private MainWindow? _window;
 
+    // Gives memory back to Windows a few seconds after the settings window or the tray menu closes.
+    private DispatcherQueueTimer? _trim;
+
     internal static new App Current => (App)Application.Current;
 
     internal AppSettings Settings { get; private set; } = new();
@@ -93,7 +96,11 @@ public partial class App : Application
         {
             // The window is recreated on demand so the app stays light while it sits in the tray.
             _window = new MainWindow();
-            _window.Closed += (_, _) => _window = null;
+            _window.Closed += (_, _) =>
+            {
+                _window = null;
+                ScheduleTrim();
+            };
         }
         _window.Activate();
     }
@@ -109,8 +116,32 @@ public partial class App : Application
             _trayMenu.ToggleRequested += ToggleEnabled;
             // Defer: the menu item's click handler is still running.
             _trayMenu.ExitRequested += () => _dispatcher.TryEnqueue(Shutdown);
+            _trayMenu.Closed += ScheduleTrim;
         }
         _trayMenu.Show(Settings.Enabled);
+    }
+
+    // WinUI keeps tens of megabytes of window resources after a window closes. While FocusHaze sits in the
+    // tray none of it is used, so the pages go back to Windows; they come back on their own if needed.
+    private void ScheduleTrim()
+    {
+        if (_trim is null)
+        {
+            _trim = _dispatcher.CreateTimer();
+            _trim.IsRepeating = false;
+            _trim.Interval = TimeSpan.FromSeconds(3);
+            _trim.Tick += (_, _) =>
+            {
+                if (_window is not null)
+                    return;
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                GC.Collect();
+                Win32.SetProcessWorkingSetSize(Win32.GetCurrentProcess(), -1, -1);
+            };
+        }
+        _trim.Stop();
+        _trim.Start();
     }
 
     internal void ToggleEnabled()

@@ -318,6 +318,13 @@ internal static class Win32
     [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
     public static extern IntPtr GetModuleHandle(string? moduleName);
 
+    [DllImport("kernel32.dll")]
+    public static extern IntPtr GetCurrentProcess();
+
+    /// <summary>With -1, -1 removes as many pages as possible from the process's working set.</summary>
+    [DllImport("kernel32.dll")]
+    public static extern bool SetProcessWorkingSetSize(IntPtr process, nint minimum, nint maximum);
+
     [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
     public static extern bool Shell_NotifyIcon(uint message, ref NOTIFYICONDATA data);
 

@@ -28,6 +28,7 @@ internal sealed class TrayMenu
     public event Action? SettingsRequested;
     public event Action? ToggleRequested;
     public event Action? ExitRequested;
+    public event Action? Closed;
 
     public IntPtr Handle { get; }
 
@@ -56,7 +57,11 @@ internal sealed class TrayMenu
         _menu.Items.Add(new MenuFlyoutSeparator());
         _menu.Items.Add(_quit);
 
-        _menu.Closed += (_, _) => _host.AppWindow.Hide();
+        _menu.Closed += (_, _) =>
+        {
+            _host.AppWindow.Hide();
+            Closed?.Invoke();
+        };
         // Clicking anywhere else deactivates the host window, which closes the menu.
         _host.Activated += (_, e) =>
         {
