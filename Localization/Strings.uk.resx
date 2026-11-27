@@ -16,8 +16,11 @@
   <data name="Animate_Title" xml:space="preserve"><value>Плавні переходи</value></data>
   <data name="Animate_Description" xml:space="preserve"><value>Завіса плавно з&apos;являється та зникає під час перемикання вікон</value></data>
   <data name="FadeDuration_Label" xml:space="preserve"><value>Тривалість переходу</value></data>
-  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Лише екран з активним вікном</value></data>
-  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Інші монітори не затемнюватимуться</value></data>
+  <data name="Displays_Title" xml:space="preserve"><value>Кілька екранів</value></data>
+  <data name="Displays_Description" xml:space="preserve"><value>У режимі «Кожен екран окремо» останнє використане вікно на кожному екрані залишається яскравим</value></data>
+  <data name="Displays_All" xml:space="preserve"><value>Усі екрани</value></data>
+  <data name="Displays_Active" xml:space="preserve"><value>Лише активний екран</value></data>
+  <data name="Displays_Each" xml:space="preserve"><value>Кожен екран окремо</value></data>
   <data name="Section_App" xml:space="preserve"><value>Програма</value></data>
   <data name="Language_Title" xml:space="preserve"><value>Мова</value></data>
   <data name="Language_Description" xml:space="preserve"><value>Зміни застосовуються одразу</value></data>

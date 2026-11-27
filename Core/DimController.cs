@@ -4,7 +4,8 @@ using Microsoft.UI.Dispatching;
 namespace FocusHaze.Core;
 
 /// <summary>
-/// Watches foreground/minimize/destroy events system-wide and keeps the haze positioned under the active window.
+/// Watches foreground/minimize/destroy events system-wide and keeps the haze positioned under the active window
+/// (with <see cref="DisplayMode.Each"/>, under the most recently used window of every display).
 /// </summary>
 internal sealed class DimController : IDisposable
 {
@@ -28,13 +29,9 @@ internal sealed class DimController : IDisposable
 
     private enum TargetKind { Dim, Hide, Ignore }
 
-    // Full-screen haze kept directly beneath the active window.
-    private readonly DimOverlay _haze;
-
-    // Window-sized haze that fades in over the window that just lost focus, while _haze stays
-    // beneath it; once faded in, _haze moves beneath the new active window in a single step.
-    private readonly DimOverlay _transition;
-    private IntPtr _transitionFrom;
+    // One zone for the whole desktop or the active display, or one per display. Created on demand and
+    // kept (hidden) when unused, since their window classes can only be registered once.
+    private readonly List<DimZone> _zones = [];
 
     // Topmost haze cut to the taskbars of dimmed displays (AppSettings.DimTaskbar); spans the virtual screen.
     private readonly DimOverlay _taskbar;
@@ -42,7 +39,10 @@ internal sealed class DimController : IDisposable
     private readonly Win32.WinEventProc _winEventProc;
     private readonly List<IntPtr> _hooks = [];
     private readonly HashSet<IntPtr> _ownWindows = [];
+    private readonly DispatcherQueue _dispatcher;
     private AppSettings _settings;
+
+    // The foreground window the zones were last arranged for.
     private IntPtr _target;
 
     // Holds back dimming after a window switch for AppSettings.DimDelayMs.
@@ -52,17 +52,14 @@ internal sealed class DimController : IDisposable
     public DimController(AppSettings settings)
     {
         _settings = settings;
-        _haze = new DimOverlay("FocusHaze.Overlay", settings.ColorRef);
-        _haze.DisplayChanged += () => Refresh();
-        _transition = new DimOverlay("FocusHaze.TransitionOverlay", settings.ColorRef);
-        _ownWindows.Add(_haze.Handle);
+        _dispatcher = DispatcherQueue.GetForCurrentThread();
+        AddZone().DisplayChanged += () => Refresh();
         _taskbar = new DimOverlay("FocusHaze.TaskbarOverlay", settings.ColorRef);
-        _ownWindows.Add(_transition.Handle);
         _ownWindows.Add(_taskbar.Handle);
 
-        _delay = DispatcherQueue.GetForCurrentThread().CreateTimer();
+        _delay = _dispatcher.CreateTimer();
         _delay.IsRepeating = false;
-        _delay.Tick += OnDelayElapsed;
+        _delay.Tick += (_, _) => SafeRefresh(switching: true, delayed: true);
 
         _winEventProc = OnWinEvent;
         Hook(Win32.EVENT_SYSTEM_FOREGROUND);
@@ -80,10 +77,18 @@ internal sealed class DimController : IDisposable
     public void Apply(AppSettings settings)
     {
         _settings = settings;
-        _haze.SetColor(settings.ColorRef);
-        _transition.SetColor(settings.ColorRef);
+        foreach (DimZone zone in _zones)
+            zone.SetColor(settings.ColorRef);
         _taskbar.SetColor(settings.ColorRef);
         Refresh();
+    }
+
+    private DimZone AddZone()
+    {
+        var zone = new DimZone(_zones.Count, _settings.ColorRef);
+        _zones.Add(zone);
+        _ownWindows.UnionWith(zone.Handles);
+        return zone;
     }
 
     private void Hook(uint eventMin, uint? eventMax = null)
@@ -113,9 +118,13 @@ internal sealed class DimController : IDisposable
             return;
 
         // The window being faded in went away: finish its transition right away.
-        if (hwnd == _transitionFrom && eventType is Win32.EVENT_SYSTEM_MINIMIZESTART
-                or Win32.EVENT_OBJECT_DESTROY or Win32.EVENT_OBJECT_HIDE or Win32.EVENT_OBJECT_CLOAKED)
-            CompleteTransition();
+        if (eventType is Win32.EVENT_SYSTEM_MINIMIZESTART or Win32.EVENT_OBJECT_DESTROY
+                or Win32.EVENT_OBJECT_HIDE or Win32.EVENT_OBJECT_CLOAKED)
+        {
+            foreach (DimZone zone in _zones)
+                if (zone.TransitionFrom == hwnd)
+                    zone.CompleteTransition();
+        }
 
         switch (eventType)
         {
@@ -128,7 +137,12 @@ internal sealed class DimController : IDisposable
                 HideAll();
                 break;
 
-            case Win32.EVENT_SYSTEM_MOVESIZEEND when hwnd == _target && _settings.ActiveDisplayOnly:
+            // The bright window of another display was minimized: once it is, the next one there takes its place.
+            case Win32.EVENT_SYSTEM_MINIMIZESTART when IsZoneTarget(hwnd):
+                _dispatcher.TryEnqueue(() => SafeRefresh());
+                break;
+
+            case Win32.EVENT_SYSTEM_MOVESIZEEND when IsZoneTarget(hwnd) && _settings.Displays != DisplayMode.All:
                 Refresh();
                 break;
 
@@ -139,25 +153,28 @@ internal sealed class DimController : IDisposable
                 Refresh(switching: true);
                 break;
 
-            case Win32.EVENT_OBJECT_DESTROY when hwnd == _target:
-            case Win32.EVENT_OBJECT_HIDE when hwnd == _target:
-            case Win32.EVENT_OBJECT_CLOAKED when hwnd == _target:
+            case Win32.EVENT_OBJECT_DESTROY when IsZoneTarget(hwnd):
+            case Win32.EVENT_OBJECT_HIDE when IsZoneTarget(hwnd):
+            case Win32.EVENT_OBJECT_CLOAKED when IsZoneTarget(hwnd):
                 Refresh(switching: true);
                 break;
         }
     }
 
+    private bool IsZoneTarget(IntPtr hwnd) => hwnd != IntPtr.Zero && _zones.Exists(zone => zone.Target == hwnd);
+
     private int FadeMs => _settings.Animate ? _settings.FadeDurationMs : 0;
 
-    private void OnDelayElapsed(DispatcherQueueTimer timer, object args)
+    // For callbacks from the dispatcher, where an exception would take the app down.
+    private void SafeRefresh(bool switching = false, bool delayed = false)
     {
         try
         {
-            Refresh(switching: true, delayed: true);
+            Refresh(switching, delayed);
         }
         catch (Exception ex)
         {
-            CrashLog.Write(ex, "dim delay");
+            CrashLog.Write(ex, "refresh");
         }
     }
 
@@ -196,34 +213,80 @@ internal sealed class DimController : IDisposable
         }
         _delay.Stop();
 
-        // A switch that arrives mid-transition snaps the previous one to its end state first.
-        CompleteTransition();
-
-        IntPtr previous = _target;
         _target = foreground;
-        Win32.RECT bounds = GetBounds(foreground);
+        List<(IntPtr Target, Win32.RECT Bounds)> plan = Plan(foreground);
+        while (_zones.Count < plan.Count)
+            AddZone();
+
         byte alpha = _settings.Alpha;
         int fadeMs = FadeMs;
-        ShowTaskbarHaze(bounds, alpha, fadeMs);
+        for (int i = 0; i < _zones.Count; i++)
+        {
+            if (i < plan.Count && plan[i].Target != IntPtr.Zero)
+                _zones[i].Show(plan[i].Target, plan[i].Bounds, switching, alpha, fadeMs);
+            else
+                _zones[i].Hide(fadeMs);
+        }
 
-        // Switching windows within an already dimmed area: only the window that lost focus fades in.
-        if (switching && fadeMs > 0 && previous != foreground && _haze.IsShown && _haze.Bounds.Equals(bounds)
-            && TryStartTransition(previous, foreground, bounds, alpha, fadeMs))
-            return;
-
-        // The area was clear until now (haze hidden, or moved to another display): fade it in from zero.
-        bool newArea = !_haze.IsShown || (switching && !_haze.Bounds.Equals(bounds));
-        if (newArea && fadeMs > 0)
-            _haze.SetAlpha(0);
-
-        _haze.Place(InsertBelow(foreground), bounds);
-        _haze.FadeTo(alpha, fadeMs);
+        ShowTaskbarHaze(plan.Where(p => p.Target != IntPtr.Zero).Select(p => p.Bounds), alpha, fadeMs);
     }
 
-    private void ShowTaskbarHaze(Win32.RECT dimmed, byte alpha, int fadeMs)
+    /// <summary>Which window stays bright over which area, one entry per zone.</summary>
+    private List<(IntPtr Target, Win32.RECT Bounds)> Plan(IntPtr foreground)
+    {
+        switch (_settings.Displays)
+        {
+            case DisplayMode.Active:
+                IntPtr monitor = Win32.MonitorFromWindow(foreground, Win32.MONITOR_DEFAULTTONEAREST);
+                return [(foreground, MonitorBounds(monitor) ?? VirtualScreen())];
+
+            case DisplayMode.Each:
+                IntPtr active = Win32.MonitorFromWindow(foreground, Win32.MONITOR_DEFAULTTONEAREST);
+                return Monitors()
+                    .Select(m => (m.Handle == active ? foreground : TopWindowOn(m.Handle), m.Bounds))
+                    .ToList();
+
+            default:
+                return [(foreground, VirtualScreen())];
+        }
+    }
+
+    // The highest app window on a display, which is the one used there most recently (activating a window
+    // brings it to the top). Topmost windows are skipped: they are never dimmed anyway.
+    private IntPtr TopWindowOn(IntPtr monitor)
+    {
+        for (IntPtr h = Win32.GetTopWindow(IntPtr.Zero); h != IntPtr.Zero; h = Win32.GetWindow(h, Win32.GW_HWNDNEXT))
+        {
+            if (Win32.IsTopmost(h) || Win32.IsToolWindow(h) || Win32.GetWindow(h, Win32.GW_OWNER) != IntPtr.Zero
+                || Classify(h) != TargetKind.Dim || !Win32.TryGetFrameBounds(h, out var frame) || frame.IsEmpty)
+                continue;
+            if (Win32.MonitorFromWindow(h, Win32.MONITOR_DEFAULTTONEAREST) == monitor)
+                return h;
+        }
+        return IntPtr.Zero;
+    }
+
+    private static List<(IntPtr Handle, Win32.RECT Bounds)> Monitors()
+    {
+        var monitors = new List<(IntPtr, Win32.RECT)>();
+        Win32.EnumDisplayMonitors(IntPtr.Zero, IntPtr.Zero, (IntPtr monitor, IntPtr hdc, ref Win32.RECT rect, IntPtr data) =>
+        {
+            monitors.Add((monitor, rect));
+            return true;
+        }, IntPtr.Zero);
+        return monitors;
+    }
+
+    private static Win32.RECT? MonitorBounds(IntPtr monitor)
+    {
+        var info = new Win32.MONITORINFO { cbSize = (uint)System.Runtime.InteropServices.Marshal.SizeOf<Win32.MONITORINFO>() };
+        return Win32.GetMonitorInfo(monitor, ref info) ? info.rcMonitor : null;
+    }
+
+    private void ShowTaskbarHaze(IEnumerable<Win32.RECT> dimmed, byte alpha, int fadeMs)
     {
         var rects = _settings.DimTaskbar
-            ? TaskbarRects().Select(r => r.Intersect(dimmed)).Where(r => !r.IsEmpty).ToList()
+            ? TaskbarRects().SelectMany(t => dimmed.Select(d => t.Intersect(d))).Where(r => !r.IsEmpty).ToList()
             : [];
         if (rects.Count == 0)
         {
@@ -255,57 +318,14 @@ internal sealed class DimController : IDisposable
         }
     }
 
-    private bool TryStartTransition(IntPtr previous, IntPtr foreground, Win32.RECT bounds, byte alpha, int fadeMs)
-    {
-        if (previous == IntPtr.Zero || !Win32.IsWindow(previous) || Win32.IsIconic(previous)
-            || !Win32.IsWindowVisible(previous) || Win32.IsCloaked(previous) || Win32.IsTopmost(previous)
-            || !Win32.TryGetFrameBounds(previous, out var frame))
-            return false;
-
-        Win32.RECT area = frame.Intersect(bounds);
-        if (area.IsEmpty)
-            return false;
-
-        // _haze still sits beneath the previous window, so the rest of the screen stays dimmed throughout.
-        _haze.FadeTo(alpha, fadeMs);
-
-        _transitionFrom = previous;
-        _transition.SetAlpha(0);
-        _transition.Place(InsertBelow(foreground), area);
-        _transition.FadeTo(alpha, fadeMs, CompleteTransition);
-        return true;
-    }
-
-    /// <summary>Moves the haze beneath the active window and drops the transition overlay in one step.</summary>
-    private void CompleteTransition()
-    {
-        if (_transitionFrom == IntPtr.Zero)
-            return;
-        _transitionFrom = IntPtr.Zero;
-
-        IntPtr batch = Win32.BeginDeferWindowPos(2);
-        if (_target != IntPtr.Zero && Win32.IsWindow(_target))
-            batch = _haze.DeferPlace(batch, InsertBelow(_target));
-        batch = _transition.DeferHide(batch);
-        Win32.EndDeferWindowPos(batch);
-        _transition.MarkHidden();
-    }
-
     private void HideAll()
     {
         _delay.Stop();
         _target = IntPtr.Zero;
-        if (_transitionFrom != IntPtr.Zero)
-        {
-            _transitionFrom = IntPtr.Zero;
-            _transition.HideNow();
-        }
-        _haze.Hide(FadeMs);
+        foreach (DimZone zone in _zones)
+            zone.Hide(FadeMs);
         _taskbar.Hide(FadeMs);
     }
-
-    // A regular window can't sit between topmost ones; for a topmost target, go above all regular windows.
-    private static IntPtr InsertBelow(IntPtr target) => Win32.IsTopmost(target) ? Win32.HWND_TOP : target;
 
     // Popup menus are ignored too, but they belong to apps rather than to the taskbar.
     private static bool IsShellSurface(IntPtr hwnd)
@@ -335,19 +355,6 @@ internal sealed class DimController : IDisposable
         return TargetKind.Dim;
     }
 
-    private Win32.RECT GetBounds(IntPtr hwnd)
-    {
-        if (_settings.ActiveDisplayOnly)
-        {
-            var info = new Win32.MONITORINFO { cbSize = (uint)System.Runtime.InteropServices.Marshal.SizeOf<Win32.MONITORINFO>() };
-            IntPtr monitor = Win32.MonitorFromWindow(hwnd, Win32.MONITOR_DEFAULTTONEAREST);
-            if (Win32.GetMonitorInfo(monitor, ref info))
-                return info.rcMonitor;
-        }
-
-        return VirtualScreen();
-    }
-
     private static Win32.RECT VirtualScreen()
     {
         int x = Win32.GetSystemMetrics(Win32.SM_XVIRTUALSCREEN);
@@ -363,8 +370,8 @@ internal sealed class DimController : IDisposable
             Win32.UnhookWinEvent(hook);
         _hooks.Clear();
         _delay.Stop();
-        _transition.Dispose();
+        foreach (DimZone zone in _zones)
+            zone.Dispose();
         _taskbar.Dispose();
-        _haze.Dispose();
     }
 }

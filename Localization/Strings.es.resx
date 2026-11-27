@@ -16,8 +16,11 @@
   <data name="Animate_Title" xml:space="preserve"><value>Transiciones suaves</value></data>
   <data name="Animate_Description" xml:space="preserve"><value>El velo aparece y desaparece suavemente al cambiar de ventana</value></data>
   <data name="FadeDuration_Label" xml:space="preserve"><value>Duración de la transición</value></data>
-  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Solo la pantalla con la ventana activa</value></data>
-  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Los demás monitores no se atenuarán</value></data>
+  <data name="Displays_Title" xml:space="preserve"><value>Varias pantallas</value></data>
+  <data name="Displays_Description" xml:space="preserve"><value>Con «Cada pantalla por separado», la última ventana usada en cada pantalla sigue iluminada</value></data>
+  <data name="Displays_All" xml:space="preserve"><value>Todas las pantallas</value></data>
+  <data name="Displays_Active" xml:space="preserve"><value>Solo la pantalla activa</value></data>
+  <data name="Displays_Each" xml:space="preserve"><value>Cada pantalla por separado</value></data>
   <data name="Section_App" xml:space="preserve"><value>Aplicación</value></data>
   <data name="Language_Title" xml:space="preserve"><value>Idioma</value></data>
   <data name="Language_Description" xml:space="preserve"><value>Los cambios se aplican al instante</value></data>

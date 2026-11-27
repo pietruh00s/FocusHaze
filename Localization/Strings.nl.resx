@@ -16,8 +16,11 @@
   <data name="Animate_Title" xml:space="preserve"><value>Vloeiende overgangen</value></data>
   <data name="Animate_Description" xml:space="preserve"><value>De waas verschijnt en verdwijnt geleidelijk wanneer je van venster wisselt</value></data>
   <data name="FadeDuration_Label" xml:space="preserve"><value>Duur van de overgang</value></data>
-  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Alleen het scherm met het actieve venster</value></data>
-  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Andere beeldschermen worden niet gedimd</value></data>
+  <data name="Displays_Title" xml:space="preserve"><value>Meerdere schermen</value></data>
+  <data name="Displays_Description" xml:space="preserve"><value>Bij ‘Elk scherm apart’ blijft op elk scherm het laatst gebruikte venster helder</value></data>
+  <data name="Displays_All" xml:space="preserve"><value>Alle schermen</value></data>
+  <data name="Displays_Active" xml:space="preserve"><value>Alleen het actieve scherm</value></data>
+  <data name="Displays_Each" xml:space="preserve"><value>Elk scherm apart</value></data>
   <data name="Section_App" xml:space="preserve"><value>App</value></data>
   <data name="Language_Title" xml:space="preserve"><value>Taal</value></data>
   <data name="Language_Description" xml:space="preserve"><value>Wijzigingen worden direct toegepast</value></data>

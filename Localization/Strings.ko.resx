@@ -16,8 +16,11 @@
   <data name="Animate_Title" xml:space="preserve"><value>부드러운 전환</value></data>
   <data name="Animate_Description" xml:space="preserve"><value>창을 전환할 때 막이 부드럽게 나타나고 사라집니다</value></data>
   <data name="FadeDuration_Label" xml:space="preserve"><value>전환 시간</value></data>
-  <data name="ActiveDisplay_Title" xml:space="preserve"><value>활성 창이 있는 화면만</value></data>
-  <data name="ActiveDisplay_Description" xml:space="preserve"><value>다른 모니터는 어두워지지 않습니다</value></data>
+  <data name="Displays_Title" xml:space="preserve"><value>여러 화면</value></data>
+  <data name="Displays_Description" xml:space="preserve"><value>&apos;화면마다 따로&apos;를 선택하면 각 화면에서 마지막으로 사용한 창이 밝게 유지됩니다</value></data>
+  <data name="Displays_All" xml:space="preserve"><value>모든 화면</value></data>
+  <data name="Displays_Active" xml:space="preserve"><value>활성 화면만</value></data>
+  <data name="Displays_Each" xml:space="preserve"><value>화면마다 따로</value></data>
   <data name="Section_App" xml:space="preserve"><value>앱</value></data>
   <data name="Language_Title" xml:space="preserve"><value>언어</value></data>
   <data name="Language_Description" xml:space="preserve"><value>변경 사항이 즉시 적용됩니다</value></data>

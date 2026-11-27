@@ -16,8 +16,11 @@
   <data name="Animate_Title" xml:space="preserve"><value>Sanfte Übergänge</value></data>
   <data name="Animate_Description" xml:space="preserve"><value>Der Schleier wird beim Fensterwechsel sanft ein- und ausgeblendet</value></data>
   <data name="FadeDuration_Label" xml:space="preserve"><value>Übergangsdauer</value></data>
-  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Nur der Bildschirm mit dem aktiven Fenster</value></data>
-  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Andere Monitore werden nicht abgedunkelt</value></data>
+  <data name="Displays_Title" xml:space="preserve"><value>Mehrere Bildschirme</value></data>
+  <data name="Displays_Description" xml:space="preserve"><value>Bei „Jeder Bildschirm einzeln“ bleibt auf jedem Bildschirm das zuletzt verwendete Fenster hell</value></data>
+  <data name="Displays_All" xml:space="preserve"><value>Alle Bildschirme</value></data>
+  <data name="Displays_Active" xml:space="preserve"><value>Nur der aktive Bildschirm</value></data>
+  <data name="Displays_Each" xml:space="preserve"><value>Jeder Bildschirm einzeln</value></data>
   <data name="Section_App" xml:space="preserve"><value>App</value></data>
   <data name="Language_Title" xml:space="preserve"><value>Sprache</value></data>
   <data name="Language_Description" xml:space="preserve"><value>Änderungen werden sofort übernommen</value></data>

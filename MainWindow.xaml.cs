@@ -41,6 +41,8 @@ public sealed partial class MainWindow : Window
         BuildLanguageList();
         foreach (int ms in DelayOptionsMs)
             DelayCombo.Items.Add(new ComboBoxItem { Tag = ms });
+        foreach (DisplayMode mode in Enum.GetValues<DisplayMode>())
+            DisplaysCombo.Items.Add(new ComboBoxItem { Tag = mode });
         SyncFromSettings();
 
         App.Current.SettingsChanged += SyncFromSettings;
@@ -98,6 +100,7 @@ public sealed partial class MainWindow : Window
             AutomationProperties.SetName(ColorButton, Loc.Get("Color_Title"));
             AutomationProperties.SetName(LanguageCombo, Loc.Get("Language_Title"));
             AutomationProperties.SetName(DelayCombo, Loc.Get("Delay_Title"));
+            AutomationProperties.SetName(DisplaysCombo, Loc.Get("Displays_Title"));
 
             EnabledToggle.IsOn = Settings.Enabled;
             IntensitySlider.Value = Settings.Intensity;
@@ -108,7 +111,10 @@ public sealed partial class MainWindow : Window
             FadeSlider.Value = Settings.FadeDurationMs;
             FadeText.Text = $"{Settings.FadeDurationMs} ms";
             FadePanel.Visibility = Settings.Animate ? Visibility.Visible : Visibility.Collapsed;
-            ActiveDisplayToggle.IsOn = Settings.ActiveDisplayOnly;
+            foreach (ComboBoxItem item in DisplaysCombo.Items)
+                item.Content = Loc.Get("Displays_" + item.Tag);
+            DisplaysCombo.SelectedItem = DisplaysCombo.Items.Cast<ComboBoxItem>()
+                .FirstOrDefault(item => (DisplayMode)item.Tag == Settings.Displays) ?? DisplaysCombo.Items[0];
             TaskbarToggle.IsOn = Settings.DimTaskbar;
             foreach (ComboBoxItem item in DelayCombo.Items)
                 item.Content = DelayText((int)item.Tag);
@@ -159,8 +165,11 @@ public sealed partial class MainWindow : Window
         Update(s => s.FadeDurationMs = (int)e.NewValue);
     }
 
-    private void OnActiveDisplayToggled(object sender, RoutedEventArgs e) =>
-        Update(s => s.ActiveDisplayOnly = ActiveDisplayToggle.IsOn);
+    private void OnDisplaysChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (DisplaysCombo.SelectedItem is ComboBoxItem { Tag: DisplayMode mode })
+            Update(s => s.Displays = mode);
+    }
 
     private void OnTaskbarToggled(object sender, RoutedEventArgs e) =>
         Update(s => s.DimTaskbar = TaskbarToggle.IsOn);

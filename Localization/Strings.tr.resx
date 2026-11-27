@@ -16,8 +16,11 @@
   <data name="Animate_Title" xml:space="preserve"><value>Yumuşak geçişler</value></data>
   <data name="Animate_Description" xml:space="preserve"><value>Pencere değiştirdiğinizde perde yumuşakça belirir ve kaybolur</value></data>
   <data name="FadeDuration_Label" xml:space="preserve"><value>Geçiş süresi</value></data>
-  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Yalnızca etkin pencerenin bulunduğu ekran</value></data>
-  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Diğer monitörler karartılmaz</value></data>
+  <data name="Displays_Title" xml:space="preserve"><value>Birden fazla ekran</value></data>
+  <data name="Displays_Description" xml:space="preserve"><value>“Her ekran ayrı” seçeneğinde her ekranda en son kullanılan pencere parlak kalır</value></data>
+  <data name="Displays_All" xml:space="preserve"><value>Tüm ekranlar</value></data>
+  <data name="Displays_Active" xml:space="preserve"><value>Yalnızca etkin ekran</value></data>
+  <data name="Displays_Each" xml:space="preserve"><value>Her ekran ayrı</value></data>
   <data name="Section_App" xml:space="preserve"><value>Uygulama</value></data>
   <data name="Language_Title" xml:space="preserve"><value>Dil</value></data>
   <data name="Language_Description" xml:space="preserve"><value>Değişiklikler hemen uygulanır</value></data>

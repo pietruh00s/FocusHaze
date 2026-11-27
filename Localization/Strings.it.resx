@@ -16,8 +16,11 @@
   <data name="Animate_Title" xml:space="preserve"><value>Transizioni fluide</value></data>
   <data name="Animate_Description" xml:space="preserve"><value>Il velo appare e scompare dolcemente quando cambi finestra</value></data>
   <data name="FadeDuration_Label" xml:space="preserve"><value>Durata della transizione</value></data>
-  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Solo lo schermo con la finestra attiva</value></data>
-  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Gli altri monitor non verranno oscurati</value></data>
+  <data name="Displays_Title" xml:space="preserve"><value>Più schermi</value></data>
+  <data name="Displays_Description" xml:space="preserve"><value>Con «Ogni schermo separatamente», l&apos;ultima finestra usata su ogni schermo resta chiara</value></data>
+  <data name="Displays_All" xml:space="preserve"><value>Tutti gli schermi</value></data>
+  <data name="Displays_Active" xml:space="preserve"><value>Solo lo schermo attivo</value></data>
+  <data name="Displays_Each" xml:space="preserve"><value>Ogni schermo separatamente</value></data>
   <data name="Section_App" xml:space="preserve"><value>App</value></data>
   <data name="Language_Title" xml:space="preserve"><value>Lingua</value></data>
   <data name="Language_Description" xml:space="preserve"><value>Le modifiche vengono applicate subito</value></data>

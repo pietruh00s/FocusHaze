@@ -16,8 +16,11 @@
   <data name="Animate_Title" xml:space="preserve"><value>平滑过渡</value></data>
   <data name="Animate_Description" xml:space="preserve"><value>切换窗口时遮罩会平滑地淡入淡出</value></data>
   <data name="FadeDuration_Label" xml:space="preserve"><value>过渡时长</value></data>
-  <data name="ActiveDisplay_Title" xml:space="preserve"><value>仅限活动窗口所在的屏幕</value></data>
-  <data name="ActiveDisplay_Description" xml:space="preserve"><value>其他显示器不会变暗</value></data>
+  <data name="Displays_Title" xml:space="preserve"><value>多个屏幕</value></data>
+  <data name="Displays_Description" xml:space="preserve"><value>选择“每个屏幕单独处理”时，每个屏幕上最后使用的窗口保持明亮</value></data>
+  <data name="Displays_All" xml:space="preserve"><value>所有屏幕</value></data>
+  <data name="Displays_Active" xml:space="preserve"><value>仅活动屏幕</value></data>
+  <data name="Displays_Each" xml:space="preserve"><value>每个屏幕单独处理</value></data>
   <data name="Section_App" xml:space="preserve"><value>应用</value></data>
   <data name="Language_Title" xml:space="preserve"><value>语言</value></data>
   <data name="Language_Description" xml:space="preserve"><value>更改会立即生效</value></data>

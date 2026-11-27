@@ -16,8 +16,11 @@
   <data name="Animate_Title" xml:space="preserve"><value>Smooth transitions</value></data>
   <data name="Animate_Description" xml:space="preserve"><value>The haze fades in and out gently when you switch windows</value></data>
   <data name="FadeDuration_Label" xml:space="preserve"><value>Transition time</value></data>
-  <data name="ActiveDisplay_Title" xml:space="preserve"><value>Only the display with the active window</value></data>
-  <data name="ActiveDisplay_Description" xml:space="preserve"><value>Other monitors won&apos;t be dimmed</value></data>
+  <data name="Displays_Title" xml:space="preserve"><value>Multiple displays</value></data>
+  <data name="Displays_Description" xml:space="preserve"><value>With “Each display separately”, the last used window on every display stays bright</value></data>
+  <data name="Displays_All" xml:space="preserve"><value>All displays</value></data>
+  <data name="Displays_Active" xml:space="preserve"><value>Active display only</value></data>
+  <data name="Displays_Each" xml:space="preserve"><value>Each display separately</value></data>
   <data name="Section_App" xml:space="preserve"><value>App</value></data>
   <data name="Language_Title" xml:space="preserve"><value>Language</value></data>
   <data name="Language_Description" xml:space="preserve"><value>Changes apply immediately</value></data>

@@ -4,6 +4,16 @@ using System.Text.Json.Serialization;
 
 namespace FocusHaze.Core;
 
+internal enum DisplayMode
+{
+    /// <summary>Everything except the active window, on every display.</summary>
+    All,
+    /// <summary>Only the display that contains the active window.</summary>
+    Active,
+    /// <summary>Every display, each keeping its most recently used window bright.</summary>
+    Each,
+}
+
 internal sealed class AppSettings
 {
     public const int MinIntensity = 5;
@@ -35,8 +45,16 @@ internal sealed class AppSettings
 
     public bool DimTaskbar { get; set; }
 
-    /// <summary>Dim only the display that contains the active window.</summary>
-    public bool ActiveDisplayOnly { get; set; }
+    [JsonConverter(typeof(JsonStringEnumConverter<DisplayMode>))]
+    public DisplayMode Displays { get; set; } = DisplayMode.All;
+
+    /// <summary>The on/off setting saved before 1.3 ("only the display with the active window"); read, never written.</summary>
+    [JsonPropertyName("ActiveDisplayOnly"), JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+    public bool LegacyActiveDisplayOnly
+    {
+        get => false;
+        set { if (value) Displays = DisplayMode.Active; }
+    }
 
     /// <summary>UI language code (e.g. "de"); empty follows the Windows display language.</summary>
     public string Language { get; set; } = "";

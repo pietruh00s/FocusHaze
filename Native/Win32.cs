@@ -7,6 +7,8 @@ internal static class Win32
 {
     public delegate IntPtr WndProc(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam);
 
+    public delegate bool MonitorEnumProc(IntPtr monitor, IntPtr hdc, ref RECT rect, IntPtr data);
+
     public delegate void WinEventProc(IntPtr hWinEventHook, uint eventType, IntPtr hwnd,
         int idObject, int idChild, uint idEventThread, uint dwmsEventTime);
 
@@ -36,6 +38,9 @@ internal static class Win32
     public const int RGN_OR = 2;
 
     public const uint GA_ROOT = 2;
+
+    public const uint GW_HWNDNEXT = 2;
+    public const uint GW_OWNER = 4;
 
     // Messages
     public const uint WM_NULL = 0x0000;
@@ -225,6 +230,15 @@ internal static class Win32
     public static extern bool IsIconic(IntPtr hWnd);
 
     [DllImport("user32.dll")]
+    public static extern IntPtr GetTopWindow(IntPtr hWnd);
+
+    [DllImport("user32.dll")]
+    public static extern IntPtr GetWindow(IntPtr hWnd, uint cmd);
+
+    [DllImport("user32.dll")]
+    public static extern bool EnumDisplayMonitors(IntPtr hdc, IntPtr clip, MonitorEnumProc callback, IntPtr data);
+
+    [DllImport("user32.dll")]
     public static extern IntPtr MonitorFromWindow(IntPtr hWnd, uint flags);
 
     [DllImport("user32.dll", CharSet = CharSet.Unicode)]
@@ -333,6 +347,8 @@ internal static class Win32
     /// <summary>The window's visible frame, without the invisible resize borders and shadow.</summary>
     public static bool TryGetFrameBounds(IntPtr hWnd, out RECT bounds) =>
         DwmGetWindowAttribute(hWnd, DWMWA_EXTENDED_FRAME_BOUNDS, out bounds, Marshal.SizeOf<RECT>()) == 0;
+
+    public static bool IsToolWindow(IntPtr hWnd) => ((long)GetWindowLongPtr(hWnd, GWL_EXSTYLE) & WS_EX_TOOLWINDOW) != 0;
 
     public static bool IsTopmost(IntPtr hWnd) => ((long)GetWindowLongPtr(hWnd, GWL_EXSTYLE) & WS_EX_TOPMOST) != 0;
 
