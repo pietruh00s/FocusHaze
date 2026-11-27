@@ -133,7 +133,20 @@
     footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
     footer a { color: var(--muted); }
 
+    .manual-group { margin-top: 40px; }
+    .manual-group > h3 { font: 600 13px/1 var(--mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin: 0 0 14px; }
+    .opt { display: grid; grid-template-columns: minmax(180px, 1fr) 2.2fr; gap: 8px 32px; padding: 20px 0; border-top: 1px solid var(--card-line); }
+    .opt:last-child { border-bottom: 1px solid var(--card-line); }
+    .opt h4 { margin: 0; font-size: 17px; font-weight: 600; }
+    .opt p { margin: 0; color: var(--muted); }
+    .opt ul { margin: 8px 0 0; padding-left: 20px; color: var(--muted); }
+    .opt li + li { margin-top: 4px; }
+    .opt strong { color: var(--text); font-weight: 600; }
+    .meta { display: block; margin-top: 10px; font: 13px/1.5 var(--mono); color: var(--muted); }
+    kbd { font: 13px var(--mono); border: 1px solid var(--card-line); border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; background: var(--card); color: var(--text); }
+
     @media (max-width: 880px) {
+      .opt { grid-template-columns: 1fr; }
       .hero, .step, .step:nth-child(even) { grid-template-columns: 1fr; gap: 28px; }
       .step:nth-child(even) .step-text { order: 0; }
       .grid { grid-template-columns: 1fr; }
@@ -150,6 +163,7 @@
     <nav class="links" aria-label="Sections">
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
+      <a href="#manual">Manual</a>
       <a href="#faq">FAQ</a>
     </nav>
   </header>
@@ -253,6 +267,138 @@
       </div>
       <div class="langs" aria-label="Supported languages">
         <span>English</span><span>Polski</span><span>Deutsch</span><span>Français</span><span>Español</span><span>Italiano</span><span>Português</span><span>Nederlands</span><span>Українська</span><span>Русский</span><span>Türkçe</span><span>日本語</span><span>한국어</span><span>中文(简体)</span>
+      </div>
+    </section>
+
+    <section class="wrap" id="manual" aria-labelledby="manual-title">
+      <div class="eyebrow">Manual</div>
+      <h2 id="manual-title">Every option, <span class="accent">explained.</span></h2>
+      <p class="section-lead">Open the settings by clicking the FocusHaze icon in the notification area. Changes apply immediately and are saved automatically.</p>
+
+      <div class="manual-group">
+        <h3>Background dimming</h3>
+        <div class="opt">
+          <h4>Dim background windows</h4>
+          <div>
+            <p>Turns the haze on or off. The line underneath shows the keyboard shortcut, or tells you that another app already uses it.</p>
+            <span class="meta">Default: on · Shortcut: <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>H</kbd></span>
+          </div>
+        </div>
+        <div class="opt">
+          <h4>Intensity</h4>
+          <div>
+            <p>How strongly inactive windows are dimmed. Low values give a gentle hint; high values leave the active window almost alone on the screen.</p>
+            <span class="meta">Default: 50% · Range: 5–90%</span>
+          </div>
+        </div>
+        <div class="opt">
+          <h4>Haze color</h4>
+          <div>
+            <p>The color of the haze. Black looks the most natural. Pick one of the presets (black, navy, brown, dark green, gray) or any color in the color picker, which also takes a hex value.</p>
+            <span class="meta">Default: black (#000000)</span>
+          </div>
+        </div>
+        <div class="opt">
+          <h4>Smooth transitions</h4>
+          <div>
+            <p>When you switch windows, the window you leave fades into the haze instead of being dimmed at once, while the rest of the screen stays dimmed. <strong>Transition time</strong> sets how long the fade takes. Turn it off for instant switching.</p>
+            <span class="meta">Default: on, 500 ms · Range: 50–800 ms</span>
+          </div>
+        </div>
+        <div class="opt">
+          <h4>Delay before dimming</h4>
+          <div>
+            <p>How long the window you leave stays bright after you switch. The new window is bright right away; when the delay runs out, the previous one fades. Switching back before then changes nothing. Handy when you keep glancing between two windows.</p>
+            <span class="meta">Default: Immediately · Options: Immediately, 1, 2, 5, 10, 30 s, 1, 2, 5 min</span>
+          </div>
+        </div>
+        <div class="opt">
+          <h4>Dim the taskbar</h4>
+          <div>
+            <p>Dims the taskbar along with inactive windows, on every display and in any taskbar position. While you use the taskbar, Start or the system tray, it goes back to full brightness.</p>
+            <span class="meta">Default: off</span>
+          </div>
+        </div>
+        <div class="opt">
+          <h4>Multiple displays</h4>
+          <div>
+            <p>How the haze works with more than one monitor:</p>
+            <ul>
+              <li><strong>All displays</strong>: one active window; everything else on every monitor is dimmed.</li>
+              <li><strong>Active display only</strong>: only the monitor with the active window is dimmed; the others stay as they are.</li>
+              <li><strong>Each display separately</strong>: every monitor keeps the window you used there most recently bright, so a reference window on your second screen stays readable while you work on the first.</li>
+            </ul>
+            <span class="meta">Default: All displays</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="manual-group">
+        <h3>App</h3>
+        <div class="opt">
+          <h4>Language</h4>
+          <div>
+            <p>The language of FocusHaze, switched on the fly. <strong>System default</strong> follows your Windows display language.</p>
+            <span class="meta">Default: System default · 14 languages</span>
+          </div>
+        </div>
+        <div class="opt">
+          <h4>Start with Windows</h4>
+          <div>
+            <p>Starts FocusHaze quietly in the notification area when you sign in. If it was turned off in Windows Settings › Apps › Startup, FocusHaze tells you so, and it can only be turned back on there.</p>
+            <span class="meta">Default: off</span>
+          </div>
+        </div>
+        <div class="opt">
+          <h4>Running in the background</h4>
+          <div>
+            <p>Closing the settings window keeps FocusHaze running in the notification area. To stop it completely, click <strong>Quit FocusHaze</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="manual-group">
+        <h3>Tray icon and shortcut</h3>
+        <div class="opt">
+          <h4>Notification area icon</h4>
+          <div>
+            <p><strong>Left-click</strong> opens the settings. <strong>Right-click</strong> opens a menu with <strong>Settings…</strong>, <strong>Dimming</strong> (checked while the haze is on) and <strong>Quit</strong>. Hover over the icon to see whether dimming is on.</p>
+          </div>
+        </div>
+        <div class="opt">
+          <h4><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>H</kbd></h4>
+          <div>
+            <p>Turns dimming on or off from anywhere, just like the first switch in the settings.</p>
+          </div>
+        </div>
+        <div class="opt">
+          <h4>Starting it again</h4>
+          <div>
+            <p>Only one copy of FocusHaze runs at a time. Starting it again, for example from the Start menu, opens the settings of the copy that is already running.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="manual-group">
+        <h3>Good to know</h3>
+        <div class="opt">
+          <h4>The desktop</h4>
+          <div>
+            <p>When you click the desktop or press <kbd>Win</kbd>+<kbd>D</kbd>, the haze is lifted. It comes back as soon as you activate a window.</p>
+          </div>
+        </div>
+        <div class="opt">
+          <h4>Always-on-top windows</h4>
+          <div>
+            <p>Windows that stay on top of everything else, such as picture-in-picture video, are never dimmed.</p>
+          </div>
+        </div>
+        <div class="opt">
+          <h4>Start, Alt+Tab and menus</h4>
+          <div>
+            <p>Opening Start, the task switcher or a context menu doesn&rsquo;t move the haze; it follows the window you actually switch to.</p>
+          </div>
+        </div>
       </div>
     </section>
 
