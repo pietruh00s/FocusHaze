@@ -32,6 +32,7 @@ FocusHaze jest dostępny w **[Microsoft Store](https://apps.microsoft.com/detail
 - Przyciemnianie wszystkich monitorów, tylko tego z aktywnym oknem albo każdego osobno (na każdym monitorze jasne zostaje ostatnio używane okno)
 - Opcjonalne opóźnienie przyciemniania po przełączeniu okna (do 5 minut)
 - Opcjonalne przyciemnianie paska zadań
+- Oszczędna pamięć: kilka sekund po starcie albo po zamknięciu ustawień lub menu zajmuje tylko ok. 2–4 MB RAM
 - Ikona w zasobniku systemowym: lewy klik otwiera ustawienia, prawy otwiera menu
 - Globalny skrót **Ctrl+Alt+H** włącza i wyłącza przyciemnianie
 - Opcjonalne uruchamianie razem z Windows (startuje od razu w zasobniku)

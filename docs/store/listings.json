@@ -2,7 +2,7 @@
   "en-us": {
     "Title": "FocusHaze",
     "ShortDescription": "Dim everything except the window you're working in.",
-    "Description": "FocusHaze helps you concentrate by gently dimming every window except the one you're working in. Background apps and screen clutter fade into a soft haze, so your attention stays on the task at hand.\n\nWhen you switch windows, the haze follows you instantly and the window you just left fades smoothly into the background. Clicks pass straight through the haze, so you work exactly as before.\n\nFocusHaze runs quietly in the system tray. Turn it on or off with Ctrl+Alt+H, adjust the intensity and color to suit your eyes and screen, and choose whether to dim all displays or only the one you're using.\n\nFocusHaze collects no data, makes no network connections and shows no ads.",
+    "Description": "FocusHaze helps you concentrate by gently dimming every window except the one you're working in. Background apps and screen clutter fade into a soft haze, so your attention stays on the task at hand.\n\nWhen you switch windows, the haze follows you instantly and the window you just left fades smoothly into the background. Clicks pass straight through the haze, so you work exactly as before.\n\nFocusHaze runs quietly in the system tray. Turn it on or off with Ctrl+Alt+H, adjust the intensity and color to suit your eyes and screen, and choose whether to dim all displays or only the one you're using.\n\nFocusHaze collects no data, makes no network connections and shows no ads. It's also light: in the background it uses only about 2–4 MB of memory.",
     "Features": [
       "Dims every window except the active one",
       "Clicks pass through the haze, so you work as usual",
@@ -14,6 +14,7 @@
       "Global shortcut Ctrl+Alt+H",
       "Optional start with Windows",
       "Available in 14 languages",
+      "Uses only about 2–4 MB of memory in the background",
       "No data collection, no ads"
     ],
     "SearchTerms": [
@@ -25,7 +26,7 @@
       "distraction free",
       "window highlight"
     ],
-    "ReleaseNotes": "New in 1.3:\n• Each display separately: every monitor keeps its most recently used window bright.\n• Optional delay before dimming after you switch windows, from 1 second to 5 minutes.\n• Optional taskbar dimming.\n• The menu of the notification-area icon now looks like other Windows 11 menus and follows the light or dark theme.\n• Fixed: opening File Explorer or a Microsoft Store app no longer lifts the haze from every display.",
+    "ReleaseNotes": "New in 1.3:\n• Each display separately: every monitor keeps its most recently used window bright.\n• Optional delay before dimming after you switch windows, from 1 second to 5 minutes.\n• Optional taskbar dimming.\n• The menu of the notification-area icon now looks like other Windows 11 menus and follows the light or dark theme.\n• Lighter in the background: a few seconds after start-up, or after you close the settings or the menu, FocusHaze uses only about 2–4 MB of memory (previously 25–100 MB).\n• Fixed: opening File Explorer or a Microsoft Store app no longer lifts the haze from every display.",
     "Screenshot": "screenshot-en.png",
     "ScreenshotCaptions": [
       "Everything except your active window fades into a soft haze",
@@ -37,7 +38,7 @@
   "pl-pl": {
     "Title": "FocusHaze",
     "ShortDescription": "Przyciemnia wszystko poza oknem, w którym pracujesz.",
-    "Description": "FocusHaze pomaga się skupić, delikatnie przyciemniając wszystkie okna poza tym, w którym pracujesz. Aplikacje w tle i bałagan na ekranie znikają pod miękką mgiełką, a Twoja uwaga zostaje przy bieżącym zadaniu.\n\nGdy przełączasz okna, mgiełka od razu podąża za Tobą, a okno, które opuszczasz, płynnie się przyciemnia. Kliknięcia przechodzą przez mgiełkę, więc pracujesz dokładnie tak jak wcześniej.\n\nFocusHaze działa po cichu w zasobniku systemowym. Włączasz i wyłączasz go skrótem Ctrl+Alt+H, intensywność i kolor dopasujesz do swoich oczu i ekranu, a przyciemniać możesz wszystkie monitory albo tylko ten, na którym pracujesz.\n\nFocusHaze nie zbiera żadnych danych, nie łączy się z internetem i nie wyświetla reklam.",
+    "Description": "FocusHaze pomaga się skupić, delikatnie przyciemniając wszystkie okna poza tym, w którym pracujesz. Aplikacje w tle i bałagan na ekranie znikają pod miękką mgiełką, a Twoja uwaga zostaje przy bieżącym zadaniu.\n\nGdy przełączasz okna, mgiełka od razu podąża za Tobą, a okno, które opuszczasz, płynnie się przyciemnia. Kliknięcia przechodzą przez mgiełkę, więc pracujesz dokładnie tak jak wcześniej.\n\nFocusHaze działa po cichu w zasobniku systemowym. Włączasz i wyłączasz go skrótem Ctrl+Alt+H, intensywność i kolor dopasujesz do swoich oczu i ekranu, a przyciemniać możesz wszystkie monitory albo tylko ten, na którym pracujesz.\n\nFocusHaze nie zbiera żadnych danych, nie łączy się z internetem i nie wyświetla reklam. Jest też lekki: w tle zajmuje tylko ok. 2–4 MB pamięci.",
     "Features": [
       "Przyciemnia wszystkie okna poza aktywnym",
       "Kliknięcia przechodzą przez mgiełkę, więc pracujesz jak zwykle",
@@ -49,6 +50,7 @@
       "Globalny skrót Ctrl+Alt+H",
       "Opcjonalne uruchamianie razem z Windows",
       "14 języków interfejsu",
+      "W tle zajmuje tylko ok. 2–4 MB pamięci",
       "Bez zbierania danych i bez reklam"
     ],
     "SearchTerms": [
@@ -60,7 +62,7 @@
       "bez rozpraszaczy",
       "podświetlenie okna"
     ],
-    "ReleaseNotes": "Nowości w 1.3:\n• Każdy ekran osobno: na każdym monitorze jasne zostaje ostatnio używane okno.\n• Opcjonalne opóźnienie przyciemniania po przełączeniu okna, od 1 sekundy do 5 minut.\n• Opcjonalne przyciemnianie paska zadań.\n• Menu ikony w zasobniku wygląda teraz jak inne menu Windows 11 i dopasowuje się do jasnego lub ciemnego motywu.\n• Poprawka: otwarcie Eksploratora plików albo aplikacji ze Sklepu nie zdejmuje już przyciemnienia ze wszystkich ekranów.",
+    "ReleaseNotes": "Nowości w 1.3:\n• Każdy ekran osobno: na każdym monitorze jasne zostaje ostatnio używane okno.\n• Opcjonalne opóźnienie przyciemniania po przełączeniu okna, od 1 sekundy do 5 minut.\n• Opcjonalne przyciemnianie paska zadań.\n• Menu ikony w zasobniku wygląda teraz jak inne menu Windows 11 i dopasowuje się do jasnego lub ciemnego motywu.\n• Lżejsza praca w tle: kilka sekund po starcie albo po zamknięciu ustawień lub menu FocusHaze zajmuje tylko ok. 2–4 MB pamięci (wcześniej 25–100 MB).\n• Poprawka: otwarcie Eksploratora plików albo aplikacji ze Sklepu nie zdejmuje już przyciemnienia ze wszystkich ekranów.",
     "Screenshot": "screenshot-pl.png",
     "ScreenshotCaptions": [
       "Wszystko poza aktywnym oknem znika pod delikatną mgiełką",
@@ -72,7 +74,7 @@
   "de-de": {
     "Title": "FocusHaze",
     "ShortDescription": "Dunkelt alles ab außer dem Fenster, in dem du arbeitest.",
-    "Description": "FocusHaze hilft dir, dich zu konzentrieren, indem es alle Fenster außer dem, in dem du gerade arbeitest, sanft abdunkelt. Hintergrund-Apps und Unordnung auf dem Bildschirm verschwinden hinter einem weichen Schleier, und deine Aufmerksamkeit bleibt bei der aktuellen Aufgabe.\n\nWenn du das Fenster wechselst, folgt dir der Schleier sofort, und das Fenster, das du verlässt, wird sanft abgedunkelt. Klicks gehen direkt durch den Schleier hindurch, sodass du genauso arbeitest wie bisher.\n\nFocusHaze läuft unauffällig im Infobereich. Mit Strg+Alt+H schaltest du es ein und aus, Intensität und Farbe passt du an deine Augen und deinen Bildschirm an, und du entscheidest, ob alle Bildschirme oder nur der aktive abgedunkelt werden.\n\nFocusHaze sammelt keine Daten, stellt keine Netzwerkverbindungen her und zeigt keine Werbung.",
+    "Description": "FocusHaze hilft dir, dich zu konzentrieren, indem es alle Fenster außer dem, in dem du gerade arbeitest, sanft abdunkelt. Hintergrund-Apps und Unordnung auf dem Bildschirm verschwinden hinter einem weichen Schleier, und deine Aufmerksamkeit bleibt bei der aktuellen Aufgabe.\n\nWenn du das Fenster wechselst, folgt dir der Schleier sofort, und das Fenster, das du verlässt, wird sanft abgedunkelt. Klicks gehen direkt durch den Schleier hindurch, sodass du genauso arbeitest wie bisher.\n\nFocusHaze läuft unauffällig im Infobereich. Mit Strg+Alt+H schaltest du es ein und aus, Intensität und Farbe passt du an deine Augen und deinen Bildschirm an, und du entscheidest, ob alle Bildschirme oder nur der aktive abgedunkelt werden.\n\nFocusHaze sammelt keine Daten, stellt keine Netzwerkverbindungen her und zeigt keine Werbung. Außerdem ist es schlank: Im Hintergrund belegt es nur etwa 2–4 MB Arbeitsspeicher.",
     "Features": [
       "Dunkelt alle Fenster außer dem aktiven ab",
       "Klicks gehen durch den Schleier, du arbeitest wie gewohnt",
@@ -84,6 +86,7 @@
       "Globale Tastenkombination Strg+Alt+H",
       "Optionaler Start mit Windows",
       "In 14 Sprachen verfügbar",
+      "Belegt im Hintergrund nur etwa 2–4 MB Arbeitsspeicher",
       "Keine Datenerfassung, keine Werbung"
     ],
     "SearchTerms": [
@@ -95,7 +98,7 @@
       "ablenkungsfrei",
       "Fenster hervorheben"
     ],
-    "ReleaseNotes": "Neu in 1.3:\n• Jeder Bildschirm einzeln: Auf jedem Monitor bleibt das zuletzt verwendete Fenster hell.\n• Optionale Verzögerung vor dem Abdunkeln nach einem Fensterwechsel, von 1 Sekunde bis 5 Minuten.\n• Optionales Abdunkeln der Taskleiste.\n• Das Menü des Infobereichssymbols sieht jetzt wie andere Windows 11-Menüs aus und folgt dem hellen oder dunklen Design.\n• Behoben: Das Öffnen des Datei-Explorers oder einer Store-App hebt die Abdunkelung nicht mehr auf allen Bildschirmen auf.",
+    "ReleaseNotes": "Neu in 1.3:\n• Jeder Bildschirm einzeln: Auf jedem Monitor bleibt das zuletzt verwendete Fenster hell.\n• Optionale Verzögerung vor dem Abdunkeln nach einem Fensterwechsel, von 1 Sekunde bis 5 Minuten.\n• Optionales Abdunkeln der Taskleiste.\n• Das Menü des Infobereichssymbols sieht jetzt wie andere Windows 11-Menüs aus und folgt dem hellen oder dunklen Design.\n• Schlanker im Hintergrund: Wenige Sekunden nach dem Start oder nach dem Schließen der Einstellungen bzw. des Menüs belegt FocusHaze nur noch etwa 2–4 MB Arbeitsspeicher (bisher 25–100 MB).\n• Behoben: Das Öffnen des Datei-Explorers oder einer Store-App hebt die Abdunkelung nicht mehr auf allen Bildschirmen auf.",
     "Screenshot": "screenshot-de.png",
     "ScreenshotCaptions": [
       "Alles außer deinem aktiven Fenster verschwindet hinter einem sanften Schleier",
@@ -107,7 +110,7 @@
   "fr-fr": {
     "Title": "FocusHaze",
     "ShortDescription": "Assombrit tout sauf la fenêtre dans laquelle vous travaillez.",
-    "Description": "FocusHaze vous aide à vous concentrer en assombrissant doucement toutes les fenêtres sauf celle dans laquelle vous travaillez. Les applications en arrière-plan et le désordre à l'écran disparaissent sous un léger voile, et votre attention reste sur la tâche en cours.\n\nQuand vous changez de fenêtre, le voile vous suit instantanément et la fenêtre que vous quittez s'assombrit en douceur. Les clics traversent le voile : vous travaillez exactement comme avant.\n\nFocusHaze se fait discret dans la zone de notification. Activez-le ou désactivez-le avec Ctrl+Alt+H, réglez l'intensité et la couleur selon vos yeux et votre écran, et choisissez d'assombrir tous les écrans ou seulement celui que vous utilisez.\n\nFocusHaze ne collecte aucune donnée, n'établit aucune connexion réseau et n'affiche aucune publicité.",
+    "Description": "FocusHaze vous aide à vous concentrer en assombrissant doucement toutes les fenêtres sauf celle dans laquelle vous travaillez. Les applications en arrière-plan et le désordre à l'écran disparaissent sous un léger voile, et votre attention reste sur la tâche en cours.\n\nQuand vous changez de fenêtre, le voile vous suit instantanément et la fenêtre que vous quittez s'assombrit en douceur. Les clics traversent le voile : vous travaillez exactement comme avant.\n\nFocusHaze se fait discret dans la zone de notification. Activez-le ou désactivez-le avec Ctrl+Alt+H, réglez l'intensité et la couleur selon vos yeux et votre écran, et choisissez d'assombrir tous les écrans ou seulement celui que vous utilisez.\n\nFocusHaze ne collecte aucune donnée, n'établit aucune connexion réseau et n'affiche aucune publicité. Il est aussi léger : en arrière-plan, il n'utilise qu'environ 2 à 4 Mo de mémoire.",
     "Features": [
       "Assombrit toutes les fenêtres sauf la fenêtre active",
       "Les clics traversent le voile : vous travaillez comme d'habitude",
@@ -119,6 +122,7 @@
       "Raccourci global Ctrl+Alt+H",
       "Démarrage avec Windows en option",
       "Disponible en 14 langues",
+      "N'utilise qu'environ 2 à 4 Mo de mémoire en arrière-plan",
       "Aucune collecte de données, aucune publicité"
     ],
     "SearchTerms": [
@@ -130,7 +134,7 @@
       "sans distraction",
       "mise en valeur fenêtre"
     ],
-    "ReleaseNotes": "Nouveautés de la version 1.3 :\n• Chaque écran séparément : sur chaque moniteur, la dernière fenêtre utilisée reste claire.\n• Délai facultatif avant l'assombrissement après un changement de fenêtre, de 1 seconde à 5 minutes.\n• Assombrissement facultatif de la barre des tâches.\n• Le menu de l'icône de la zone de notification ressemble désormais aux autres menus de Windows 11 et suit le thème clair ou sombre.\n• Corrigé : ouvrir l'Explorateur de fichiers ou une application du Store ne lève plus le voile sur tous les écrans.",
+    "ReleaseNotes": "Nouveautés de la version 1.3 :\n• Chaque écran séparément : sur chaque moniteur, la dernière fenêtre utilisée reste claire.\n• Délai facultatif avant l'assombrissement après un changement de fenêtre, de 1 seconde à 5 minutes.\n• Assombrissement facultatif de la barre des tâches.\n• Le menu de l'icône de la zone de notification ressemble désormais aux autres menus de Windows 11 et suit le thème clair ou sombre.\n• Plus léger en arrière-plan : quelques secondes après le démarrage ou la fermeture des paramètres ou du menu, FocusHaze n'utilise plus qu'environ 2 à 4 Mo de mémoire (contre 25 à 100 Mo auparavant).\n• Corrigé : ouvrir l'Explorateur de fichiers ou une application du Store ne lève plus le voile sur tous les écrans.",
     "Screenshot": "screenshot-fr.png",
     "ScreenshotCaptions": [
       "Tout sauf votre fenêtre active s'efface sous un léger voile",
@@ -142,7 +146,7 @@
   "es-es": {
     "Title": "FocusHaze",
     "ShortDescription": "Atenúa todo excepto la ventana en la que trabajas.",
-    "Description": "FocusHaze te ayuda a concentrarte atenuando suavemente todas las ventanas excepto aquella en la que estás trabajando. Las aplicaciones en segundo plano y el desorden de la pantalla desaparecen bajo un velo suave, y tu atención se queda en la tarea actual.\n\nCuando cambias de ventana, el velo te sigue al instante y la ventana que dejas se atenúa con suavidad. Los clics atraviesan el velo, así que trabajas exactamente como antes.\n\nFocusHaze funciona discretamente en la bandeja del sistema. Actívalo o desactívalo con Ctrl+Alt+H, ajusta la intensidad y el color a tus ojos y a tu pantalla, y elige si atenuar todas las pantallas o solo la que estás usando.\n\nFocusHaze no recopila datos, no se conecta a internet y no muestra anuncios.",
+    "Description": "FocusHaze te ayuda a concentrarte atenuando suavemente todas las ventanas excepto aquella en la que estás trabajando. Las aplicaciones en segundo plano y el desorden de la pantalla desaparecen bajo un velo suave, y tu atención se queda en la tarea actual.\n\nCuando cambias de ventana, el velo te sigue al instante y la ventana que dejas se atenúa con suavidad. Los clics atraviesan el velo, así que trabajas exactamente como antes.\n\nFocusHaze funciona discretamente en la bandeja del sistema. Actívalo o desactívalo con Ctrl+Alt+H, ajusta la intensidad y el color a tus ojos y a tu pantalla, y elige si atenuar todas las pantallas o solo la que estás usando.\n\nFocusHaze no recopila datos, no se conecta a internet y no muestra anuncios. Además es ligero: en segundo plano usa solo unos 2–4 MB de memoria.",
     "Features": [
       "Atenúa todas las ventanas excepto la activa",
       "Los clics atraviesan el velo: trabajas como siempre",
@@ -154,6 +158,7 @@
       "Atajo global Ctrl+Alt+H",
       "Inicio opcional con Windows",
       "Disponible en 14 idiomas",
+      "Usa solo unos 2–4 MB de memoria en segundo plano",
       "Sin recopilación de datos ni anuncios"
     ],
     "SearchTerms": [
@@ -165,7 +170,7 @@
       "sin distracciones",
       "resaltar ventana"
     ],
-    "ReleaseNotes": "Novedades de la versión 1.3:\n• Cada pantalla por separado: en cada monitor, la última ventana usada sigue iluminada.\n• Retraso opcional antes de atenuar tras cambiar de ventana, de 1 segundo a 5 minutos.\n• Atenuación opcional de la barra de tareas.\n• El menú del icono del área de notificación ahora se parece a los demás menús de Windows 11 y sigue el tema claro u oscuro.\n• Corregido: abrir el Explorador de archivos o una aplicación de Store ya no retira el velo de todas las pantallas.",
+    "ReleaseNotes": "Novedades de la versión 1.3:\n• Cada pantalla por separado: en cada monitor, la última ventana usada sigue iluminada.\n• Retraso opcional antes de atenuar tras cambiar de ventana, de 1 segundo a 5 minutos.\n• Atenuación opcional de la barra de tareas.\n• El menú del icono del área de notificación ahora se parece a los demás menús de Windows 11 y sigue el tema claro u oscuro.\n• Más ligero en segundo plano: unos segundos después de iniciarse o de cerrar la configuración o el menú, FocusHaze usa solo unos 2–4 MB de memoria (antes, 25–100 MB).\n• Corregido: abrir el Explorador de archivos o una aplicación de Store ya no retira el velo de todas las pantallas.",
     "Screenshot": "screenshot-es.png",
     "ScreenshotCaptions": [
       "Todo excepto tu ventana activa se difumina bajo un velo suave",
@@ -177,7 +182,7 @@
   "it-it": {
     "Title": "FocusHaze",
     "ShortDescription": "Oscura tutto tranne la finestra in cui stai lavorando.",
-    "Description": "FocusHaze ti aiuta a concentrarti oscurando delicatamente tutte le finestre tranne quella in cui stai lavorando. Le app in background e il disordine sullo schermo svaniscono sotto un velo leggero, e la tua attenzione resta sull'attività in corso.\n\nQuando cambi finestra, il velo ti segue all'istante e la finestra che lasci si oscura dolcemente. I clic attraversano il velo, quindi lavori esattamente come prima.\n\nFocusHaze resta discretamente nell'area di notifica. Attivalo o disattivalo con Ctrl+Alt+H, regola intensità e colore in base ai tuoi occhi e al tuo schermo e scegli se oscurare tutti gli schermi o solo quello che stai usando.\n\nFocusHaze non raccoglie dati, non si connette a internet e non mostra pubblicità.",
+    "Description": "FocusHaze ti aiuta a concentrarti oscurando delicatamente tutte le finestre tranne quella in cui stai lavorando. Le app in background e il disordine sullo schermo svaniscono sotto un velo leggero, e la tua attenzione resta sull'attività in corso.\n\nQuando cambi finestra, il velo ti segue all'istante e la finestra che lasci si oscura dolcemente. I clic attraversano il velo, quindi lavori esattamente come prima.\n\nFocusHaze resta discretamente nell'area di notifica. Attivalo o disattivalo con Ctrl+Alt+H, regola intensità e colore in base ai tuoi occhi e al tuo schermo e scegli se oscurare tutti gli schermi o solo quello che stai usando.\n\nFocusHaze non raccoglie dati, non si connette a internet e non mostra pubblicità. Ed è leggero: in background usa solo circa 2–4 MB di memoria.",
     "Features": [
       "Oscura tutte le finestre tranne quella attiva",
       "I clic attraversano il velo: lavori come sempre",
@@ -189,6 +194,7 @@
       "Scorciatoia globale Ctrl+Alt+H",
       "Avvio con Windows facoltativo",
       "Disponibile in 14 lingue",
+      "In background usa solo circa 2–4 MB di memoria",
       "Nessuna raccolta di dati, nessuna pubblicità"
     ],
     "SearchTerms": [
@@ -200,7 +206,7 @@
       "senza distrazioni",
       "evidenziare finestra"
     ],
-    "ReleaseNotes": "Novità della versione 1.3:\n• Ogni schermo separatamente: su ogni monitor resta chiara l'ultima finestra usata.\n• Ritardo facoltativo prima dell'oscuramento dopo il cambio di finestra, da 1 secondo a 5 minuti.\n• Oscuramento facoltativo della barra delle applicazioni.\n• Il menu dell'icona nell'area di notifica ora ha l'aspetto degli altri menu di Windows 11 e segue il tema chiaro o scuro.\n• Corretto: aprire Esplora file o un'app dello Store non toglie più il velo da tutti gli schermi.",
+    "ReleaseNotes": "Novità della versione 1.3:\n• Ogni schermo separatamente: su ogni monitor resta chiara l'ultima finestra usata.\n• Ritardo facoltativo prima dell'oscuramento dopo il cambio di finestra, da 1 secondo a 5 minuti.\n• Oscuramento facoltativo della barra delle applicazioni.\n• Il menu dell'icona nell'area di notifica ora ha l'aspetto degli altri menu di Windows 11 e segue il tema chiaro o scuro.\n• Più leggero in background: pochi secondi dopo l'avvio o la chiusura delle impostazioni o del menu, FocusHaze usa solo circa 2–4 MB di memoria (prima 25–100 MB).\n• Corretto: aprire Esplora file o un'app dello Store non toglie più il velo da tutti gli schermi.",
     "Screenshot": "screenshot-it.png",
     "ScreenshotCaptions": [
       "Tutto tranne la finestra attiva svanisce sotto un velo leggero",
@@ -212,7 +218,7 @@
   "pt-br": {
     "Title": "FocusHaze",
     "ShortDescription": "Escurece tudo, exceto a janela em que você está trabalhando.",
-    "Description": "O FocusHaze ajuda você a se concentrar escurecendo suavemente todas as janelas, exceto aquela em que você está trabalhando. Apps em segundo plano e a bagunça da tela somem sob um véu suave, e sua atenção fica na tarefa atual.\n\nQuando você troca de janela, o véu acompanha você na hora e a janela que você deixou escurece suavemente. Os cliques atravessam o véu, então você trabalha exatamente como antes.\n\nO FocusHaze fica discreto na bandeja do sistema. Ative ou desative com Ctrl+Alt+H, ajuste a intensidade e a cor para seus olhos e sua tela e escolha escurecer todas as telas ou só a que você está usando.\n\nO FocusHaze não coleta dados, não se conecta à internet e não exibe anúncios.",
+    "Description": "O FocusHaze ajuda você a se concentrar escurecendo suavemente todas as janelas, exceto aquela em que você está trabalhando. Apps em segundo plano e a bagunça da tela somem sob um véu suave, e sua atenção fica na tarefa atual.\n\nQuando você troca de janela, o véu acompanha você na hora e a janela que você deixou escurece suavemente. Os cliques atravessam o véu, então você trabalha exatamente como antes.\n\nO FocusHaze fica discreto na bandeja do sistema. Ative ou desative com Ctrl+Alt+H, ajuste a intensidade e a cor para seus olhos e sua tela e escolha escurecer todas as telas ou só a que você está usando.\n\nO FocusHaze não coleta dados, não se conecta à internet e não exibe anúncios. E é leve: em segundo plano, usa apenas cerca de 2–4 MB de memória.",
     "Features": [
       "Escurece todas as janelas, exceto a ativa",
       "Os cliques atravessam o véu: você trabalha normalmente",
@@ -224,6 +230,7 @@
       "Atalho global Ctrl+Alt+H",
       "Inicialização com o Windows opcional",
       "Disponível em 14 idiomas",
+      "Usa apenas cerca de 2–4 MB de memória em segundo plano",
       "Sem coleta de dados e sem anúncios"
     ],
     "SearchTerms": [
@@ -235,7 +242,7 @@
       "sem distrações",
       "destacar janela"
     ],
-    "ReleaseNotes": "Novidades da versão 1.3:\n• Cada tela separadamente: em cada monitor, a última janela usada continua clara.\n• Atraso opcional antes de escurecer depois de trocar de janela, de 1 segundo a 5 minutos.\n• Escurecimento opcional da barra de tarefas.\n• O menu do ícone na área de notificação agora tem a aparência dos outros menus do Windows 11 e segue o tema claro ou escuro.\n• Corrigido: abrir o Explorador de Arquivos ou um app da Store não remove mais o véu de todas as telas.",
+    "ReleaseNotes": "Novidades da versão 1.3:\n• Cada tela separadamente: em cada monitor, a última janela usada continua clara.\n• Atraso opcional antes de escurecer depois de trocar de janela, de 1 segundo a 5 minutos.\n• Escurecimento opcional da barra de tarefas.\n• O menu do ícone na área de notificação agora tem a aparência dos outros menus do Windows 11 e segue o tema claro ou escuro.\n• Mais leve em segundo plano: alguns segundos depois de iniciar ou de fechar as configurações ou o menu, o FocusHaze usa apenas cerca de 2–4 MB de memória (antes, 25–100 MB).\n• Corrigido: abrir o Explorador de Arquivos ou um app da Store não remove mais o véu de todas as telas.",
     "Screenshot": "screenshot-pt.png",
     "ScreenshotCaptions": [
       "Tudo, exceto a janela ativa, some sob um véu suave",
@@ -247,7 +254,7 @@
   "nl-nl": {
     "Title": "FocusHaze",
     "ShortDescription": "Dimt alles behalve het venster waarin je werkt.",
-    "Description": "FocusHaze helpt je te concentreren door alle vensters behalve het venster waarin je werkt zacht te dimmen. Apps op de achtergrond en rommel op je scherm verdwijnen achter een zachte waas, zodat je aandacht bij je taak blijft.\n\nWissel je van venster, dan volgt de waas je direct en wordt het venster dat je verlaat geleidelijk gedimd. Klikken gaan dwars door de waas heen, dus je werkt precies zoals voorheen.\n\nFocusHaze draait onopvallend in het systeemvak. Zet het aan of uit met Ctrl+Alt+H, stem intensiteit en kleur af op je ogen en je scherm, en kies of alle beeldschermen worden gedimd of alleen het scherm dat je gebruikt.\n\nFocusHaze verzamelt geen gegevens, maakt geen netwerkverbindingen en toont geen advertenties.",
+    "Description": "FocusHaze helpt je te concentreren door alle vensters behalve het venster waarin je werkt zacht te dimmen. Apps op de achtergrond en rommel op je scherm verdwijnen achter een zachte waas, zodat je aandacht bij je taak blijft.\n\nWissel je van venster, dan volgt de waas je direct en wordt het venster dat je verlaat geleidelijk gedimd. Klikken gaan dwars door de waas heen, dus je werkt precies zoals voorheen.\n\nFocusHaze draait onopvallend in het systeemvak. Zet het aan of uit met Ctrl+Alt+H, stem intensiteit en kleur af op je ogen en je scherm, en kies of alle beeldschermen worden gedimd of alleen het scherm dat je gebruikt.\n\nFocusHaze verzamelt geen gegevens, maakt geen netwerkverbindingen en toont geen advertenties. En het is licht: op de achtergrond gebruikt het maar ongeveer 2–4 MB geheugen.",
     "Features": [
       "Dimt alle vensters behalve het actieve",
       "Klikken gaan door de waas, je werkt zoals altijd",
@@ -259,6 +266,7 @@
       "Globale sneltoets Ctrl+Alt+H",
       "Optioneel starten met Windows",
       "Beschikbaar in 14 talen",
+      "Gebruikt op de achtergrond maar ongeveer 2–4 MB geheugen",
       "Geen gegevensverzameling, geen advertenties"
     ],
     "SearchTerms": [
@@ -270,7 +278,7 @@
       "zonder afleiding",
       "venster markeren"
     ],
-    "ReleaseNotes": "Nieuw in 1.3:\n• Elk scherm apart: op elk beeldscherm blijft het laatst gebruikte venster helder.\n• Optionele vertraging voor het dimmen na het wisselen van venster, van 1 seconde tot 5 minuten.\n• Optioneel dimmen van de taakbalk.\n• Het menu van het pictogram in het systeemvak ziet er nu uit als andere menu's in Windows 11 en volgt het lichte of donkere thema.\n• Opgelost: Verkenner of een Store-app openen haalt de waas niet meer van alle schermen weg.",
+    "ReleaseNotes": "Nieuw in 1.3:\n• Elk scherm apart: op elk beeldscherm blijft het laatst gebruikte venster helder.\n• Optionele vertraging voor het dimmen na het wisselen van venster, van 1 seconde tot 5 minuten.\n• Optioneel dimmen van de taakbalk.\n• Het menu van het pictogram in het systeemvak ziet er nu uit als andere menu's in Windows 11 en volgt het lichte of donkere thema.\n• Lichter op de achtergrond: een paar seconden na het starten of na het sluiten van de instellingen of het menu gebruikt FocusHaze nog maar ongeveer 2–4 MB geheugen (eerder 25–100 MB).\n• Opgelost: Verkenner of een Store-app openen haalt de waas niet meer van alle schermen weg.",
     "Screenshot": "screenshot-nl.png",
     "ScreenshotCaptions": [
       "Alles behalve je actieve venster verdwijnt achter een zachte waas",
@@ -282,7 +290,7 @@
   "uk-ua": {
     "Title": "FocusHaze",
     "ShortDescription": "Затемнює все, крім вікна, у якому ви працюєте.",
-    "Description": "FocusHaze допомагає зосередитися, м'яко затемнюючи всі вікна, крім того, у якому ви працюєте. Фонові програми й безлад на екрані ховаються під легкою завісою, а ваша увага залишається на поточному завданні.\n\nКоли ви перемикаєте вікна, завіса миттєво йде за вами, а вікно, яке ви залишили, плавно затемнюється. Клацання проходять крізь завісу, тож ви працюєте так само, як і раніше.\n\nFocusHaze непомітно працює в системному треї. Вмикайте й вимикайте його сполученням Ctrl+Alt+H, налаштуйте інтенсивність і колір під свої очі та екран і виберіть, чи затемнювати всі монітори, чи лише той, яким ви користуєтеся.\n\nFocusHaze не збирає жодних даних, не підключається до мережі й не показує рекламу.",
+    "Description": "FocusHaze допомагає зосередитися, м'яко затемнюючи всі вікна, крім того, у якому ви працюєте. Фонові програми й безлад на екрані ховаються під легкою завісою, а ваша увага залишається на поточному завданні.\n\nКоли ви перемикаєте вікна, завіса миттєво йде за вами, а вікно, яке ви залишили, плавно затемнюється. Клацання проходять крізь завісу, тож ви працюєте так само, як і раніше.\n\nFocusHaze непомітно працює в системному треї. Вмикайте й вимикайте його сполученням Ctrl+Alt+H, налаштуйте інтенсивність і колір під свої очі та екран і виберіть, чи затемнювати всі монітори, чи лише той, яким ви користуєтеся.\n\nFocusHaze не збирає жодних даних, не підключається до мережі й не показує рекламу. До того ж він легкий: у фоновому режимі використовує лише близько 2–4 МБ пам'яті.",
     "Features": [
       "Затемнює всі вікна, крім активного",
       "Клацання проходять крізь завісу, тож ви працюєте як завжди",
@@ -294,6 +302,7 @@
       "Глобальне сполучення клавіш Ctrl+Alt+H",
       "Необов'язковий запуск разом з Windows",
       "14 мов інтерфейсу",
+      "У фоновому режимі використовує лише близько 2–4 МБ пам'яті",
       "Жодного збору даних і реклами"
     ],
     "SearchTerms": [
@@ -305,7 +314,7 @@
       "без відволікань",
       "підсвічування вікна"
     ],
-    "ReleaseNotes": "Нове у версії 1.3:\n• Кожен екран окремо: на кожному моніторі останнє використане вікно залишається яскравим.\n• Необов'язкова затримка перед затемненням після перемикання вікна, від 1 секунди до 5 хвилин.\n• Необов'язкове затемнення панелі завдань.\n• Меню значка в області сповіщень тепер виглядає як інші меню Windows 11 і відповідає світлій або темній темі.\n• Виправлено: відкриття Провідника або застосунку з Microsoft Store більше не знімає завісу з усіх екранів.",
+    "ReleaseNotes": "Нове у версії 1.3:\n• Кожен екран окремо: на кожному моніторі останнє використане вікно залишається яскравим.\n• Необов'язкова затримка перед затемненням після перемикання вікна, від 1 секунди до 5 хвилин.\n• Необов'язкове затемнення панелі завдань.\n• Меню значка в області сповіщень тепер виглядає як інші меню Windows 11 і відповідає світлій або темній темі.\n• Легша робота у фоні: через кілька секунд після запуску або після закриття налаштувань чи меню FocusHaze використовує лише близько 2–4 МБ пам'яті (раніше 25–100 МБ).\n• Виправлено: відкриття Провідника або застосунку з Microsoft Store більше не знімає завісу з усіх екранів.",
     "Screenshot": "screenshot-uk.png",
     "ScreenshotCaptions": [
       "Усе, крім активного вікна, ховається під м'якою завісою",
@@ -317,7 +326,7 @@
   "ru-ru": {
     "Title": "FocusHaze",
     "ShortDescription": "Затемняет всё, кроме окна, в котором вы работаете.",
-    "Description": "FocusHaze помогает сосредоточиться, мягко затемняя все окна, кроме того, в котором вы работаете. Фоновые приложения и беспорядок на экране скрываются под лёгкой завесой, а ваше внимание остаётся на текущей задаче.\n\nКогда вы переключаете окна, завеса мгновенно следует за вами, а окно, которое вы оставили, плавно затемняется. Щелчки проходят сквозь завесу, поэтому вы работаете так же, как раньше.\n\nFocusHaze незаметно работает в области уведомлений. Включайте и выключайте его сочетанием Ctrl+Alt+H, настройте интенсивность и цвет под свои глаза и экран и выберите, затемнять все мониторы или только тот, которым вы пользуетесь.\n\nFocusHaze не собирает никаких данных, не подключается к сети и не показывает рекламу.",
+    "Description": "FocusHaze помогает сосредоточиться, мягко затемняя все окна, кроме того, в котором вы работаете. Фоновые приложения и беспорядок на экране скрываются под лёгкой завесой, а ваше внимание остаётся на текущей задаче.\n\nКогда вы переключаете окна, завеса мгновенно следует за вами, а окно, которое вы оставили, плавно затемняется. Щелчки проходят сквозь завесу, поэтому вы работаете так же, как раньше.\n\nFocusHaze незаметно работает в области уведомлений. Включайте и выключайте его сочетанием Ctrl+Alt+H, настройте интенсивность и цвет под свои глаза и экран и выберите, затемнять все мониторы или только тот, которым вы пользуетесь.\n\nFocusHaze не собирает никаких данных, не подключается к сети и не показывает рекламу. К тому же он лёгкий: в фоновом режиме использует всего около 2–4 МБ памяти.",
     "Features": [
       "Затемняет все окна, кроме активного",
       "Щелчки проходят сквозь завесу, поэтому вы работаете как обычно",
@@ -329,6 +338,7 @@
       "Глобальное сочетание клавиш Ctrl+Alt+H",
       "Необязательный запуск вместе с Windows",
       "14 языков интерфейса",
+      "В фоновом режиме использует всего около 2–4 МБ памяти",
       "Никакого сбора данных и рекламы"
     ],
     "SearchTerms": [
@@ -340,7 +350,7 @@
       "без отвлечений",
       "подсветка окна"
     ],
-    "ReleaseNotes": "Новое в версии 1.3:\n• Каждый экран отдельно: на каждом мониторе последнее использованное окно остаётся ярким.\n• Необязательная задержка перед затемнением после переключения окна, от 1 секунды до 5 минут.\n• Необязательное затемнение панели задач.\n• Меню значка в области уведомлений теперь выглядит как другие меню Windows 11 и следует светлой или тёмной теме.\n• Исправлено: открытие Проводника или приложения из Microsoft Store больше не снимает завесу со всех экранов.",
+    "ReleaseNotes": "Новое в версии 1.3:\n• Каждый экран отдельно: на каждом мониторе последнее использованное окно остаётся ярким.\n• Необязательная задержка перед затемнением после переключения окна, от 1 секунды до 5 минут.\n• Необязательное затемнение панели задач.\n• Меню значка в области уведомлений теперь выглядит как другие меню Windows 11 и следует светлой или тёмной теме.\n• Легче в фоне: через несколько секунд после запуска или после закрытия настроек или меню FocusHaze использует всего около 2–4 МБ памяти (раньше 25–100 МБ).\n• Исправлено: открытие Проводника или приложения из Microsoft Store больше не снимает завесу со всех экранов.",
     "Screenshot": "screenshot-ru.png",
     "ScreenshotCaptions": [
       "Всё, кроме активного окна, скрывается под мягкой завесой",
@@ -352,7 +362,7 @@
   "tr-tr": {
     "Title": "FocusHaze",
     "ShortDescription": "Üzerinde çalıştığınız pencere dışındaki her şeyi karartır.",
-    "Description": "FocusHaze, üzerinde çalıştığınız pencere dışındaki tüm pencereleri yumuşakça karartarak odaklanmanıza yardımcı olur. Arka plandaki uygulamalar ve ekran kalabalığı hafif bir perdenin ardında kaybolur, dikkatiniz elinizdeki işte kalır.\n\nPencere değiştirdiğinizde perde sizi anında takip eder, ayrıldığınız pencere ise yumuşakça kararır. Tıklamalar perdenin içinden geçer, böylece tıpkı eskisi gibi çalışırsınız.\n\nFocusHaze sistem tepsisinde sessizce çalışır. Ctrl+Alt+H ile açıp kapatın, yoğunluğu ve rengi gözlerinize ve ekranınıza göre ayarlayın, tüm ekranların mı yoksa yalnızca kullandığınız ekranın mı karartılacağını seçin.\n\nFocusHaze hiçbir veri toplamaz, ağ bağlantısı kurmaz ve reklam göstermez.",
+    "Description": "FocusHaze, üzerinde çalıştığınız pencere dışındaki tüm pencereleri yumuşakça karartarak odaklanmanıza yardımcı olur. Arka plandaki uygulamalar ve ekran kalabalığı hafif bir perdenin ardında kaybolur, dikkatiniz elinizdeki işte kalır.\n\nPencere değiştirdiğinizde perde sizi anında takip eder, ayrıldığınız pencere ise yumuşakça kararır. Tıklamalar perdenin içinden geçer, böylece tıpkı eskisi gibi çalışırsınız.\n\nFocusHaze sistem tepsisinde sessizce çalışır. Ctrl+Alt+H ile açıp kapatın, yoğunluğu ve rengi gözlerinize ve ekranınıza göre ayarlayın, tüm ekranların mı yoksa yalnızca kullandığınız ekranın mı karartılacağını seçin.\n\nFocusHaze hiçbir veri toplamaz, ağ bağlantısı kurmaz ve reklam göstermez. Üstelik hafiftir: Arka planda yalnızca yaklaşık 2–4 MB bellek kullanır.",
     "Features": [
       "Etkin pencere dışındaki tüm pencereleri karartır",
       "Tıklamalar perdeden geçer, her zamanki gibi çalışırsınız",
@@ -364,6 +374,7 @@
       "Genel kısayol Ctrl+Alt+H",
       "İsteğe bağlı olarak Windows ile başlatma",
       "14 dil desteği",
+      "Arka planda yalnızca yaklaşık 2–4 MB bellek kullanır",
       "Veri toplama ve reklam yok"
     ],
     "SearchTerms": [
@@ -375,7 +386,7 @@
       "dikkat dağıtmayan",
       "pencere vurgulama"
     ],
-    "ReleaseNotes": "1.3 sürümündeki yenilikler:\n• Her ekran ayrı: her monitörde en son kullanılan pencere parlak kalır.\n• Pencere değiştirdikten sonra karartmadan önce isteğe bağlı gecikme (1 saniyeden 5 dakikaya kadar).\n• İsteğe bağlı görev çubuğu karartma.\n• Bildirim alanı simgesinin menüsü artık diğer Windows 11 menüleri gibi görünüyor ve açık veya koyu temayı izliyor.\n• Düzeltildi: Dosya Gezgini'ni veya bir Store uygulamasını açmak artık tüm ekranlardaki perdeyi kaldırmıyor.",
+    "ReleaseNotes": "1.3 sürümündeki yenilikler:\n• Her ekran ayrı: her monitörde en son kullanılan pencere parlak kalır.\n• Pencere değiştirdikten sonra karartmadan önce isteğe bağlı gecikme (1 saniyeden 5 dakikaya kadar).\n• İsteğe bağlı görev çubuğu karartma.\n• Bildirim alanı simgesinin menüsü artık diğer Windows 11 menüleri gibi görünüyor ve açık veya koyu temayı izliyor.\n• Arka planda daha hafif: Başlatıldıktan veya ayarlar ya da menü kapatıldıktan birkaç saniye sonra FocusHaze yalnızca yaklaşık 2–4 MB bellek kullanır (önceden 25–100 MB).\n• Düzeltildi: Dosya Gezgini'ni veya bir Store uygulamasını açmak artık tüm ekranlardaki perdeyi kaldırmıyor.",
     "Screenshot": "screenshot-tr.png",
     "ScreenshotCaptions": [
       "Etkin pencere dışındaki her şey yumuşak bir perdenin ardında kaybolur",
@@ -387,7 +398,7 @@
   "ja-jp": {
     "Title": "FocusHaze",
     "ShortDescription": "作業中のウィンドウ以外をすべて暗くします。",
-    "Description": "FocusHaze は、作業中のウィンドウ以外のすべてのウィンドウをやさしく暗くして、集中を助けます。バックグラウンドのアプリや画面の散らかりは柔らかなベールの向こうに沈み、目の前の作業に意識を向け続けられます。\n\nウィンドウを切り替えると、ベールはすぐに追従し、離れたウィンドウはなめらかに暗くなります。クリックはベールを通り抜けるので、これまでどおりに作業できます。\n\nFocusHaze はシステム トレイで静かに動作します。Ctrl+Alt+H でオン/オフを切り替え、濃さと色を目や画面に合わせて調整し、すべてのディスプレイを暗くするか、使用中のディスプレイだけにするかを選べます。\n\nFocusHaze はデータを一切収集せず、ネットワークに接続せず、広告も表示しません。",
+    "Description": "FocusHaze は、作業中のウィンドウ以外のすべてのウィンドウをやさしく暗くして、集中を助けます。バックグラウンドのアプリや画面の散らかりは柔らかなベールの向こうに沈み、目の前の作業に意識を向け続けられます。\n\nウィンドウを切り替えると、ベールはすぐに追従し、離れたウィンドウはなめらかに暗くなります。クリックはベールを通り抜けるので、これまでどおりに作業できます。\n\nFocusHaze はシステム トレイで静かに動作します。Ctrl+Alt+H でオン/オフを切り替え、濃さと色を目や画面に合わせて調整し、すべてのディスプレイを暗くするか、使用中のディスプレイだけにするかを選べます。\n\nFocusHaze はデータを一切収集せず、ネットワークに接続せず、広告も表示しません。また軽量で、バックグラウンドでのメモリ使用量はわずか約 2～4 MB です。",
     "Features": [
       "アクティブなウィンドウ以外をすべて暗くする",
       "クリックはベールを通過するので、いつもどおりに作業できる",
@@ -399,6 +410,7 @@
       "グローバル ショートカット Ctrl+Alt+H",
       "Windows 起動時の自動開始 (オプション)",
       "14 言語に対応",
+      "バックグラウンドでのメモリ使用量はわずか約 2～4 MB",
       "データ収集なし、広告なし"
     ],
     "SearchTerms": [
@@ -410,7 +422,7 @@
       "気が散らない",
       "ウィンドウ強調"
     ],
-    "ReleaseNotes": "バージョン 1.3 の新機能:\n• 画面ごとに個別: 各モニターで最後に使ったウィンドウが明るいままになります。\n• ウィンドウ切り替え後、暗くするまでの遅延を設定できます (1 秒～5 分)。\n• タスクバーも暗くできます (オプション)。\n• 通知領域アイコンのメニューが他の Windows 11 メニューと同じ見た目になり、ライト/ダーク テーマに合わせて表示されます。\n• 修正: エクスプローラーや Store アプリを開いても、すべての画面のベールが外れなくなりました。",
+    "ReleaseNotes": "バージョン 1.3 の新機能:\n• 画面ごとに個別: 各モニターで最後に使ったウィンドウが明るいままになります。\n• ウィンドウ切り替え後、暗くするまでの遅延を設定できます (1 秒～5 分)。\n• タスクバーも暗くできます (オプション)。\n• 通知領域アイコンのメニューが他の Windows 11 メニューと同じ見た目になり、ライト/ダーク テーマに合わせて表示されます。\n• バックグラウンドでより軽量に: 起動後、または設定やメニューを閉じてから数秒で、メモリ使用量は約 2～4 MB になります (以前は 25～100 MB)。\n• 修正: エクスプローラーや Store アプリを開いても、すべての画面のベールが外れなくなりました。",
     "Screenshot": "screenshot-ja.png",
     "ScreenshotCaptions": [
       "アクティブなウィンドウ以外が、やわらかなベールの向こうに沈みます",
@@ -422,7 +434,7 @@
   "ko-kr": {
     "Title": "FocusHaze",
     "ShortDescription": "작업 중인 창을 제외한 모든 것을 어둡게 합니다.",
-    "Description": "FocusHaze는 작업 중인 창을 제외한 모든 창을 부드럽게 어둡게 하여 집중을 돕습니다. 백그라운드 앱과 어수선한 화면은 은은한 막 뒤로 사라지고, 주의는 지금 하는 일에 머뭅니다.\n\n창을 전환하면 막이 즉시 따라오고, 방금 떠난 창은 부드럽게 어두워집니다. 클릭은 막을 그대로 통과하므로 평소처럼 작업할 수 있습니다.\n\nFocusHaze는 시스템 트레이에서 조용히 실행됩니다. Ctrl+Alt+H로 켜고 끄고, 눈과 화면에 맞게 강도와 색상을 조정하며, 모든 디스플레이를 어둡게 할지 사용 중인 디스플레이만 어둡게 할지 선택할 수 있습니다.\n\nFocusHaze는 어떤 데이터도 수집하지 않으며, 네트워크에 연결하지 않고, 광고를 표시하지 않습니다.",
+    "Description": "FocusHaze는 작업 중인 창을 제외한 모든 창을 부드럽게 어둡게 하여 집중을 돕습니다. 백그라운드 앱과 어수선한 화면은 은은한 막 뒤로 사라지고, 주의는 지금 하는 일에 머뭅니다.\n\n창을 전환하면 막이 즉시 따라오고, 방금 떠난 창은 부드럽게 어두워집니다. 클릭은 막을 그대로 통과하므로 평소처럼 작업할 수 있습니다.\n\nFocusHaze는 시스템 트레이에서 조용히 실행됩니다. Ctrl+Alt+H로 켜고 끄고, 눈과 화면에 맞게 강도와 색상을 조정하며, 모든 디스플레이를 어둡게 할지 사용 중인 디스플레이만 어둡게 할지 선택할 수 있습니다.\n\nFocusHaze는 어떤 데이터도 수집하지 않으며, 네트워크에 연결하지 않고, 광고를 표시하지 않습니다. 또한 가볍습니다. 백그라운드에서 메모리를 약 2~4MB만 사용합니다.",
     "Features": [
       "활성 창을 제외한 모든 창을 어둡게 표시",
       "클릭이 막을 통과하므로 평소처럼 작업",
@@ -434,6 +446,7 @@
       "전역 바로 가기 키 Ctrl+Alt+H",
       "Windows 시작 시 실행 (선택 사항)",
       "14개 언어 지원",
+      "백그라운드에서 메모리를 약 2~4MB만 사용",
       "데이터 수집 및 광고 없음"
     ],
     "SearchTerms": [
@@ -445,7 +458,7 @@
       "방해 금지",
       "창 강조"
     ],
-    "ReleaseNotes": "1.3 버전의 새로운 기능:\n• 화면마다 따로: 각 모니터에서 마지막으로 사용한 창이 밝게 유지됩니다.\n• 창을 전환한 후 어둡게 하기 전 지연 시간 설정 (1초~5분).\n• 작업 표시줄 어둡게 하기 (선택 사항).\n• 알림 영역 아이콘의 메뉴가 다른 Windows 11 메뉴와 같은 모양이 되었으며 밝은 테마 또는 어두운 테마를 따릅니다.\n• 수정: 파일 탐색기나 Store 앱을 열어도 더 이상 모든 화면의 막이 걷히지 않습니다.",
+    "ReleaseNotes": "1.3 버전의 새로운 기능:\n• 화면마다 따로: 각 모니터에서 마지막으로 사용한 창이 밝게 유지됩니다.\n• 창을 전환한 후 어둡게 하기 전 지연 시간 설정 (1초~5분).\n• 작업 표시줄 어둡게 하기 (선택 사항).\n• 알림 영역 아이콘의 메뉴가 다른 Windows 11 메뉴와 같은 모양이 되었으며 밝은 테마 또는 어두운 테마를 따릅니다.\n• 백그라운드에서 더 가볍게: 시작 후 또는 설정이나 메뉴를 닫은 후 몇 초가 지나면 FocusHaze의 메모리 사용량이 약 2~4MB로 줄어듭니다(이전 25~100MB).\n• 수정: 파일 탐색기나 Store 앱을 열어도 더 이상 모든 화면의 막이 걷히지 않습니다.",
     "Screenshot": "screenshot-ko.png",
     "ScreenshotCaptions": [
       "활성 창을 제외한 모든 것이 부드러운 막 뒤로 사라집니다",
@@ -457,7 +470,7 @@
   "zh-cn": {
     "Title": "FocusHaze",
     "ShortDescription": "将正在使用的窗口之外的一切调暗。",
-    "Description": "FocusHaze 会柔和地调暗除当前工作窗口以外的所有窗口，帮助你保持专注。后台应用和杂乱的屏幕隐入一层柔和的遮罩之后，让你的注意力始终集中在手头的任务上。\n\n切换窗口时，遮罩会立即跟随，刚离开的窗口会平滑变暗。点击可以直接穿过遮罩，因此你可以像往常一样工作。\n\nFocusHaze 安静地在系统托盘中运行。使用 Ctrl+Alt+H 开启或关闭，根据你的眼睛和屏幕调整强度和颜色，并选择调暗所有显示器还是只调暗正在使用的那一台。\n\nFocusHaze 不收集任何数据，不进行网络连接，也不显示广告。",
+    "Description": "FocusHaze 会柔和地调暗除当前工作窗口以外的所有窗口，帮助你保持专注。后台应用和杂乱的屏幕隐入一层柔和的遮罩之后，让你的注意力始终集中在手头的任务上。\n\n切换窗口时，遮罩会立即跟随，刚离开的窗口会平滑变暗。点击可以直接穿过遮罩，因此你可以像往常一样工作。\n\nFocusHaze 安静地在系统托盘中运行。使用 Ctrl+Alt+H 开启或关闭，根据你的眼睛和屏幕调整强度和颜色，并选择调暗所有显示器还是只调暗正在使用的那一台。\n\nFocusHaze 不收集任何数据，不进行网络连接，也不显示广告。它也很轻巧：后台仅占用约 2–4 MB 内存。",
     "Features": [
       "调暗除活动窗口外的所有窗口",
       "点击可穿过遮罩，照常工作",
@@ -469,6 +482,7 @@
       "全局快捷键 Ctrl+Alt+H",
       "可选随 Windows 启动",
       "支持 14 种语言",
+      "后台仅占用约 2–4 MB 内存",
       "不收集数据，无广告"
     ],
     "SearchTerms": [
@@ -480,7 +494,7 @@
       "免打扰",
       "窗口高亮"
     ],
-    "ReleaseNotes": "1.3 版新功能：\n• 每个屏幕单独处理：每个显示器上最后使用的窗口保持明亮。\n• 可选：切换窗口后延迟一段时间再调暗（1 秒到 5 分钟）。\n• 可选：调暗任务栏。\n• 通知区域图标的菜单现在与其他 Windows 11 菜单外观一致，并跟随浅色或深色主题。\n• 修复：打开文件资源管理器或 Store 应用时，不再取消所有屏幕上的遮罩。",
+    "ReleaseNotes": "1.3 版新功能：\n• 每个屏幕单独处理：每个显示器上最后使用的窗口保持明亮。\n• 可选：切换窗口后延迟一段时间再调暗（1 秒到 5 分钟）。\n• 可选：调暗任务栏。\n• 通知区域图标的菜单现在与其他 Windows 11 菜单外观一致，并跟随浅色或深色主题。\n• 后台更轻量：启动后或关闭设置或菜单几秒后，FocusHaze 仅占用约 2–4 MB 内存（以前为 25–100 MB）。\n• 修复：打开文件资源管理器或 Store 应用时，不再取消所有屏幕上的遮罩。",
     "Screenshot": "screenshot-zh-Hans.png",
     "ScreenshotCaptions": [
       "除活动窗口外，其他一切都隐入柔和的遮罩",

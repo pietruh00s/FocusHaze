@@ -4,7 +4,7 @@
 
 ### Zmienione
 - Menu ikony w zasobniku (prawy klik) wygląda teraz jak inne menu Windows 11 i dopasowuje się do jasnego albo ciemnego motywu. Pozycje bez zmian: Ustawienia, Przyciemnianie (Ctrl+Alt+H) i Zakończ.
-- Mniejsze zużycie pamięci w tle: kilka sekund po zamknięciu okna ustawień albo menu FocusHaze oddaje Windows nieużywaną pamięć (w Menedżerze zadań kilka MB zamiast 60–100 MB).
+- Mniejsze zużycie pamięci w tle: kilka sekund po starcie albo po zamknięciu okna ustawień lub menu FocusHaze oddaje Windows nieużywaną pamięć i zajmuje tylko ok. 2–4 MB (wcześniej 25–100 MB w Menedżerze zadań).
 
 ## [1.3.0] – 2026-11-27
 

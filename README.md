@@ -32,6 +32,7 @@ FocusHaze is available on the **[Microsoft Store](https://apps.microsoft.com/det
 - Dim all displays, only the display with the active window, or each display separately (every monitor keeps its most recently used window bright)
 - Optional delay before dimming after you switch windows (up to 5 minutes)
 - Optional taskbar dimming
+- Light on memory: a few seconds after start-up, or after you close the settings or the menu, it uses only about 2–4 MB of RAM
 - System tray icon: left-click opens settings, right-click opens a menu
 - Global hotkey **Ctrl+Alt+H** to turn dimming on or off
 - Optional start with Windows (straight to the tray)
