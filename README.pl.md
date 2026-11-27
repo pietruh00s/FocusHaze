@@ -17,7 +17,7 @@
 **FocusHaze** (dawniej **WinDimmer**) to odpowiednik [HazeOver](https://hazeover.com/) dla Windows 11, napisany w WinUI 3: przyciemnia wszystkie okna poza aktywnym, żeby łatwiej było się skupić.
 
 <p align="center">
-  <img src="docs/screenshot.png" alt="Okno ustawień FocusHaze" width="480">
+  <img src="docs/screenshot-pl.png" alt="Okno ustawień FocusHaze" width="480">
 </p>
 
 ## Pobieranie
